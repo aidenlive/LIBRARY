@@ -10,7 +10,7 @@ version: 1.0.0
 
 Create modular static HTML/CSS/JS projects with zero build step. Clean, portable, token-driven, and fully accessible output.
 
-ALWAYS READ: `/SKILLS/SYSTEM-MESSAGE.xml` located in the root for:
+ALWAYS READ: `/SYSTEM-MESSAGE.xml` located in the root for:
 - Agent Specific Role on this project 
 - Core Technologies / Capabilities 
 - Design Principles & Philosophy 
