@@ -127,6 +127,17 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-border-default) transparent;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+}
+
+/* Scroll snap for smoother mobile experience */
+.overflow-x-auto.snap {
+  scroll-snap-type: x proximity;
+}
+
+.overflow-x-auto.snap > * {
+  scroll-snap-align: start;
 }
 
 .overflow-x-auto::-webkit-scrollbar {
@@ -140,6 +151,18 @@
 .overflow-x-auto::-webkit-scrollbar-thumb {
   background-color: var(--color-border-default);
   border-radius: var(--radius-full);
+}
+
+/* Hide scrollbar on mobile for cleaner look */
+@media (max-width: 639px) {
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overflow-x-auto {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
 }
 
 .overflow-hidden {
@@ -197,6 +220,8 @@
   box-shadow: var(--shadow-floating);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base);
 }
 
 .navbar-content {
@@ -204,23 +229,41 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
-/* Mobile: Icon-only logo */
+/* Mobile navbar optimizations */
 @media (max-width: 639px) {
+  .navbar {
+    top: var(--space-3);
+    left: var(--space-3);
+    right: var(--space-3);
+    padding: var(--space-2);
+    border-radius: var(--radius-lg);
+  }
+
+  .navbar-content {
+    gap: var(--space-2);
+  }
+
   .navbar-logo-text {
     display: none;
   }
+
   .navbar-logo-icon {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
   }
 }
 
 @media (min-width: 640px) {
   .navbar-logo-text {
-    display: block;
+    display: flex;
   }
+
   .navbar-logo-icon {
     display: none;
   }
@@ -266,7 +309,12 @@
   justify-content: center;
   box-shadow: var(--shadow-floating);
   transition: transform var(--transition-base),
-              box-shadow var(--transition-base);
+              box-shadow var(--transition-base),
+              background-color var(--transition-fast);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .fab:hover {
@@ -277,6 +325,26 @@
 
 .fab:active {
   transform: scale(0.95);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-interactive-active);
+}
+
+/* Mobile FAB optimizations */
+@media (max-width: 639px) {
+  .fab {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 56px;
+    height: 56px;
+  }
+
+  .fab:hover {
+    transform: none;
+  }
+
+  .fab:active {
+    transform: scale(0.92);
+  }
 }
 
 /* ============================================

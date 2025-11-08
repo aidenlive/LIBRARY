@@ -278,7 +278,7 @@ function showTypefaceModal(typeface) {
           </div>
         </div>
 
-        <div class="flex gap-2 flex-wrap">
+        <div class="flex gap-2 overflow-x-auto">
           ${typeface.tags.map(tag => `<span class="badge badge-subtle">${tag}</span>`).join('')}
         </div>
       </div>
