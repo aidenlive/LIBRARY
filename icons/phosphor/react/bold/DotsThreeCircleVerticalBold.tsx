@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * DotsThreeCircleVerticalBold icon component
+ * Generated from Phosphor Icons
+ */
+export const DotsThreeCircleVerticalBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212ZM144,96a16,16,0,1,1-16-16A16,16,0,0,1,144,96Zm0,64a16,16,0,1,1-16-16A16,16,0,0,1,144,160Z"/>
+  </svg>
+));
+
+DotsThreeCircleVerticalBold.displayName = 'DotsThreeCircleVerticalBold';

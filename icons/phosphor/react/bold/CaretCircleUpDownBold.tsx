@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * CaretCircleUpDownBold icon component
+ * Generated from Phosphor Icons
+ */
+export const CaretCircleUpDownBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M128,20A108,108,0,1,0,236,128,108.12,108.12,0,0,0,128,20Zm0,192a84,84,0,1,1,84-84A84.09,84.09,0,0,1,128,212ZM168.49,95.51a12,12,0,0,1-17,17L128,89l-23.51,23.52a12,12,0,0,1-17-17l32-32a12,12,0,0,1,17,0Zm0,48a12,12,0,0,1,0,17l-32,32a12,12,0,0,1-17,0l-32-32a12,12,0,0,1,17-17L128,167l23.51-23.52A12,12,0,0,1,168.49,143.51Z"/>
+  </svg>
+));
+
+CaretCircleUpDownBold.displayName = 'CaretCircleUpDownBold';

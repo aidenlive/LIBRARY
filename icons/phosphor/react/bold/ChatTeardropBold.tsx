@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * ChatTeardropBold icon component
+ * Generated from Phosphor Icons
+ */
+export const ChatTeardropBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M132,20A104.11,104.11,0,0,0,28,124v84a20,20,0,0,0,20,20h84a104,104,0,0,0,0-208Zm0,184H52V124a80,80,0,1,1,80,80Z"/>
+  </svg>
+));
+
+ChatTeardropBold.displayName = 'ChatTeardropBold';

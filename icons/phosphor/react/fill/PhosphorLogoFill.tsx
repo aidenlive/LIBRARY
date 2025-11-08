@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * PhosphorLogoFill icon component
+ * Generated from Phosphor Icons
+ */
+export const PhosphorLogoFill = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M152,32H72a8,8,0,0,0-8,8V168a80.09,80.09,0,0,0,80,80,8,8,0,0,0,8-8V176a72,72,0,0,0,0-144ZM136,231.5A64.14,64.14,0,0,1,80.51,176H136Zm0-94L85.68,48H136ZM152,160V48a56,56,0,0,1,0,112Z"/>
+  </svg>
+));
+
+PhosphorLogoFill.displayName = 'PhosphorLogoFill';

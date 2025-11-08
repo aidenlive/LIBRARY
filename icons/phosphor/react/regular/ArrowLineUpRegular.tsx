@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * ArrowLineUpRegular icon component
+ * Generated from Phosphor Icons
+ */
+export const ArrowLineUpRegular = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M205.66,138.34a8,8,0,0,1-11.32,11.32L136,91.31V224a8,8,0,0,1-16,0V91.31L61.66,149.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0ZM216,32H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/>
+  </svg>
+));
+
+ArrowLineUpRegular.displayName = 'ArrowLineUpRegular';

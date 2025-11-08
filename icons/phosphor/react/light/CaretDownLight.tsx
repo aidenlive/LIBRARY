@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * CaretDownLight icon component
+ * Generated from Phosphor Icons
+ */
+export const CaretDownLight = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M212.24,100.24l-80,80a6,6,0,0,1-8.48,0l-80-80a6,6,0,0,1,8.48-8.48L128,167.51l75.76-75.75a6,6,0,0,1,8.48,8.48Z"/>
+  </svg>
+));
+
+CaretDownLight.displayName = 'CaretDownLight';

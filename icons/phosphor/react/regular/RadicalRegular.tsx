@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * RadicalRegular icon component
+ * Generated from Phosphor Icons
+ */
+export const RadicalRegular = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M248,80v24a8,8,0,0,1-16,0V88H133.55L87.49,210.81a8,8,0,0,1-15,0l-48-128a8,8,0,1,1,15-5.62L80,185.22l40.51-108A8,8,0,0,1,128,72H240A8,8,0,0,1,248,80Z"/>
+  </svg>
+));
+
+RadicalRegular.displayName = 'RadicalRegular';

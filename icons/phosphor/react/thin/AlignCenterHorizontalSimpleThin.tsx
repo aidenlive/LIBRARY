@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * AlignCenterHorizontalSimpleThin icon component
+ * Generated from Phosphor Icons
+ */
+export const AlignCenterHorizontalSimpleThin = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M208,84H132V48a4,4,0,0,0-8,0V84H48A12,12,0,0,0,36,96v64a12,12,0,0,0,12,12h76v36a4,4,0,0,0,8,0V172h76a12,12,0,0,0,12-12V96A12,12,0,0,0,208,84Zm4,76a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V96a4,4,0,0,1,4-4H208a4,4,0,0,1,4,4Z"/>
+  </svg>
+));
+
+AlignCenterHorizontalSimpleThin.displayName = 'AlignCenterHorizontalSimpleThin';

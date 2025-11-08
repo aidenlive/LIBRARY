@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * CaretLineLeftDuotone icon component
+ * Generated from Phosphor Icons
+ */
+export const CaretLineLeftDuotone = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M192,48V208l-80-80Z" opacity="0.2"/><path d="M195.06,40.61a8,8,0,0,0-8.72,1.73l-80,80a8,8,0,0,0,0,11.32l80,80A8,8,0,0,0,200,208V48A8,8,0,0,0,195.06,40.61ZM184,188.69,123.31,128,184,67.31ZM80,48V208a8,8,0,0,1-16,0V48a8,8,0,0,1,16,0Z"/>
+  </svg>
+));
+
+CaretLineLeftDuotone.displayName = 'CaretLineLeftDuotone';

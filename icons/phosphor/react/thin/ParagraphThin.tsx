@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * ParagraphThin icon component
+ * Generated from Phosphor Icons
+ */
+export const ParagraphThin = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M208,44H96a60,60,0,0,0,0,120h44v44a4,4,0,0,0,8,0V52h32V208a4,4,0,0,0,8,0V52h20a4,4,0,0,0,0-8ZM140,156H96A52,52,0,0,1,96,52h44Z"/>
+  </svg>
+));
+
+ParagraphThin.displayName = 'ParagraphThin';

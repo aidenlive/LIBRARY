@@ -1,0 +1,421 @@
+/**
+ * Design Tokens
+ * Comprehensive OKLCH color system for Apple Design Awards quality
+ * Mathematical precision, perceptual harmony, and award-winning experiences
+ */
+
+:root {
+  /* ============================================
+     COLOR SYSTEM - OKLCH Monochrome Palette
+     ============================================ */
+  /* Lightness (L): 0-1, Chroma (C): 0-0.4, Hue (H): 0-360 */
+  
+  /* Base Neutral Scale - 11-step grayscale */
+  --color-neutral-0: oklch(1 0 0);      /* Pure white */
+  --color-neutral-50: oklch(0.98 0 0);
+  --color-neutral-100: oklch(0.95 0 0);
+  --color-neutral-200: oklch(0.90 0 0);
+  --color-neutral-300: oklch(0.85 0 0);
+  --color-neutral-400: oklch(0.70 0 0);
+  --color-neutral-500: oklch(0.55 0 0);
+  --color-neutral-600: oklch(0.45 0 0);
+  --color-neutral-700: oklch(0.35 0 0);
+  --color-neutral-800: oklch(0.25 0 0);
+  --color-neutral-900: oklch(0.15 0 0);
+  --color-neutral-950: oklch(0.10 0 0);
+  --color-neutral-1000: oklch(0 0 0);    /* Pure black */
+  
+  /* Semantic Color Tokens - Text */
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-600);
+  --color-text-tertiary: var(--color-neutral-500);
+  --color-text-quaternary: var(--color-neutral-400);
+  --color-text-inverse: var(--color-neutral-50);
+  --color-text-disabled: var(--color-neutral-400);
+  --color-text-link: var(--color-neutral-700);
+  --color-text-link-hover: var(--color-neutral-900);
+  --color-text-link-active: var(--color-neutral-950);
+  --color-text-link-visited: var(--color-neutral-600);
+  --color-text-error: var(--color-neutral-700);
+  --color-text-success: var(--color-neutral-700);
+  --color-text-warning: var(--color-neutral-700);
+  --color-text-info: var(--color-neutral-700);
+
+  /* Semantic Color Tokens - Background */
+  --color-bg-primary: var(--color-neutral-50);
+  --color-bg-secondary: var(--color-neutral-100);
+  --color-bg-tertiary: var(--color-neutral-200);
+  --color-bg-quaternary: var(--color-neutral-300);
+  --color-bg-inverse: var(--color-neutral-900);
+  --color-bg-disabled: var(--color-neutral-200);
+  --color-bg-hover: var(--color-neutral-100);
+  --color-bg-active: var(--color-neutral-200);
+  --color-bg-selected: var(--color-neutral-200);
+  --color-bg-overlay: oklch(0 0 0 / 0.5);
+  --color-bg-overlay-light: oklch(0 0 0 / 0.1);
+  --color-bg-overlay-heavy: oklch(0 0 0 / 0.8);
+  --color-bg-modal: var(--color-neutral-50);
+  --color-bg-backdrop: oklch(0.15 0 0 / 0.8);
+
+  /* Semantic Color Tokens - Border */
+  --color-border-light: var(--color-neutral-200);
+  --color-border-medium: var(--color-neutral-300);
+  --color-border-strong: var(--color-neutral-400);
+  --color-border-focus: var(--color-neutral-700);
+  --color-border-error: var(--color-neutral-600);
+  --color-border-hover: var(--color-neutral-500);
+  --color-border-active: var(--color-neutral-700);
+  --color-border-disabled: var(--color-neutral-200);
+
+  /* Semantic Color Tokens - Interactive States */
+  --color-accent: var(--color-neutral-900);
+  --color-accent-hover: var(--color-neutral-800);
+  --color-accent-active: var(--color-neutral-950);
+  --color-accent-disabled: var(--color-neutral-400);
+  --color-accent-focus: var(--color-neutral-700);
+  --color-accent-light: var(--color-neutral-100);
+  --color-accent-dark: var(--color-neutral-950);
+
+  /* Focus & Accessibility */
+  --color-focus-ring: var(--color-neutral-700);
+  --color-focus-ring-offset: var(--color-bg-primary);
+  --color-focus-ring-width: 2px;
+  --color-focus-ring-offset-width: 2px;
+  --color-focus-ring-style: solid;
+
+  /* ============================================
+     SPACING SYSTEM - 4px Base Scale
+     ============================================ */
+  /* Mathematical rhythm with micro-spacing support */
+  --space-0: 0;
+  --space-px: 0.0625rem;    /* 1px */
+  --space-0\.5: 0.125rem;    /* 2px */
+  --space-1: 0.25rem;       /* 4px */
+  --space-1\.5: 0.375rem;   /* 6px */
+  --space-2: 0.5rem;        /* 8px */
+  --space-2\.5: 0.625rem;   /* 10px */
+  --space-3: 0.75rem;       /* 12px */
+  --space-3\.5: 0.875rem;   /* 14px */
+  --space-4: 1rem;          /* 16px */
+  --space-5: 1.25rem;       /* 20px */
+  --space-6: 1.5rem;        /* 24px */
+  --space-7: 1.75rem;       /* 28px */
+  --space-8: 2rem;          /* 32px */
+  --space-9: 2.25rem;       /* 36px */
+  --space-10: 2.5rem;       /* 40px */
+  --space-11: 2.75rem;      /* 44px */
+  --space-12: 3rem;         /* 48px */
+  --space-14: 3.5rem;       /* 56px */
+  --space-16: 4rem;         /* 64px */
+  --space-20: 5rem;         /* 80px */
+  --space-24: 6rem;         /* 96px */
+  --space-28: 7rem;         /* 112px */
+  --space-32: 8rem;          /* 128px */
+  --space-36: 9rem;          /* 144px */
+  --space-40: 10rem;         /* 160px */
+  --space-44: 11rem;         /* 176px */
+  --space-48: 12rem;         /* 192px */
+  --space-52: 13rem;         /* 208px */
+  --space-56: 14rem;         /* 224px */
+  --space-60: 15rem;         /* 240px */
+  --space-64: 16rem;         /* 256px */
+  --space-72: 18rem;         /* 288px */
+  --space-80: 20rem;         /* 320px */
+  --space-96: 24rem;         /* 384px */
+
+  /* ============================================
+     TYPOGRAPHY SYSTEM
+     ============================================ */
+  /* Font Families */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  --font-family-display: var(--font-family-sans);
+
+  /* Font Sizes - Precise Scale */
+  --font-size-xs: 0.75rem;      /* 12px */
+  --font-size-sm: 0.875rem;     /* 14px */
+  --font-size-base: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;     /* 18px */
+  --font-size-xl: 1.25rem;      /* 20px */
+  --font-size-2xl: 1.5rem;      /* 24px */
+  --font-size-3xl: 1.875rem;    /* 30px */
+  --font-size-4xl: 2.25rem;     /* 36px */
+  --font-size-5xl: 3rem;        /* 48px */
+  --font-size-6xl: 3.75rem;     /* 60px */
+  --font-size-7xl: 4.5rem;      /* 72px */
+  --font-size-8xl: 6rem;        /* 96px */
+  --font-size-9xl: 8rem;        /* 128px */
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* Text Transform */
+  --text-transform-none: none;
+  --text-transform-uppercase: uppercase;
+  --text-transform-lowercase: lowercase;
+  --text-transform-capitalize: capitalize;
+
+  /* ============================================
+     BORDER RADIUS SYSTEM
+     ============================================ */
+  --radius-none: 0;
+  --radius-xs: 0.125rem;      /* 2px */
+  --radius-sm: 0.25rem;       /* 4px */
+  --radius-md: 0.5rem;         /* 8px */
+  --radius-lg: 0.75rem;       /* 12px */
+  --radius-xl: 1rem;         /* 16px */
+  --radius-2xl: 1.5rem;      /* 24px */
+  --radius-3xl: 2rem;        /* 32px */
+  --radius-full: 9999px;
+
+  /* ============================================
+     SHADOW SYSTEM - Layered Depth
+     ============================================ */
+  --shadow-none: none;
+  --shadow-xs: 0 1px 1px 0 oklch(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 2px 0 oklch(0 0 0 / 0.05), 0 1px 1px 0 oklch(0 0 0 / 0.03);
+  --shadow-md: 0 4px 6px -1px oklch(0 0 0 / 0.1), 0 2px 4px -1px oklch(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px oklch(0 0 0 / 0.1), 0 4px 6px -2px oklch(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px oklch(0 0 0 / 0.1), 0 10px 10px -5px oklch(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px -12px oklch(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 oklch(0 0 0 / 0.06);
+  --shadow-focus: 0 0 0 3px oklch(0.5 0 0 / 0.1);
+
+  /* ============================================
+     ANIMATION & TRANSITION SYSTEM
+     ============================================ */
+  /* Timing Functions - Apple-inspired easing */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Duration */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 400ms;
+  --duration-slowest: 500ms;
+
+  /* Transitions */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-base: var(--duration-base) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-out);
+  --transition-smooth: var(--duration-base) var(--ease-smooth);
+  --transition-spring: var(--duration-slow) var(--ease-spring);
+  --transition-all: all var(--transition-base);
+  --transition-colors: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+  --transition-opacity: opacity var(--transition-fast);
+  --transition-transform: transform var(--transition-base);
+  --transition-shadow: box-shadow var(--transition-fast);
+
+  /* ============================================
+     OPACITY SYSTEM
+     ============================================ */
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+
+  /* ============================================
+     BACKDROP FILTER SYSTEM
+     ============================================ */
+  --backdrop-blur-none: blur(0);
+  --backdrop-blur-sm: blur(4px);
+  --backdrop-blur-md: blur(8px);
+  --backdrop-blur-lg: blur(12px);
+  --backdrop-blur-xl: blur(16px);
+  --backdrop-blur-2xl: blur(24px);
+  --backdrop-blur-3xl: blur(40px);
+  --backdrop-saturate-0: saturate(0);
+  --backdrop-saturate-50: saturate(0.5);
+  --backdrop-saturate-100: saturate(1);
+  --backdrop-saturate-150: saturate(1.5);
+  --backdrop-saturate-200: saturate(2);
+
+  /* ============================================
+     Z-INDEX SYSTEM - Layered Stacking
+     ============================================ */
+  --z-base: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  --z-max: 9999;
+
+  /* ============================================
+     LAYOUT SYSTEM
+     ============================================ */
+  /* Container */
+  --container-max-width: 1280px;
+  --container-max-width-sm: 640px;
+  --container-max-width-md: 768px;
+  --container-max-width-lg: 1024px;
+  --container-max-width-xl: 1280px;
+  --container-max-width-2xl: 1536px;
+  --container-padding: var(--space-4);
+  --container-padding-sm: var(--space-2);
+  --container-padding-lg: var(--space-6);
+
+  /* Grid System - 24 Column Fluid */
+  --grid-columns: 24;
+  --grid-gap: var(--space-4);
+  --grid-gap-sm: var(--space-2);
+  --grid-gap-lg: var(--space-6);
+
+  /* Aspect Ratios */
+  --aspect-square: 1 / 1;
+  --aspect-video: 16 / 9;
+  --aspect-photo: 4 / 3;
+  --aspect-portrait: 3 / 4;
+  --aspect-ultrawide: 21 / 9;
+
+  /* Min/Max Dimensions */
+  --min-width-0: 0;
+  --min-width-full: 100%;
+  --min-width-min: min-content;
+  --min-width-max: max-content;
+  --min-width-fit: fit-content;
+  --max-width-none: none;
+  --max-width-xs: 20rem;      /* 320px */
+  --max-width-sm: 24rem;      /* 384px */
+  --max-width-md: 28rem;      /* 448px */
+  --max-width-lg: 32rem;      /* 512px */
+  --max-width-xl: 36rem;      /* 576px */
+  --max-width-2xl: 42rem;     /* 672px */
+  --max-width-3xl: 48rem;     /* 768px */
+  --max-width-4xl: 56rem;     /* 896px */
+  --max-width-5xl: 64rem;     /* 1024px */
+  --max-width-6xl: 72rem;     /* 1152px */
+  --max-width-7xl: 80rem;     /* 1280px */
+  --max-width-full: 100%;
+  --max-width-min: min-content;
+  --max-width-max: max-content;
+  --max-width-fit: fit-content;
+
+  /* ============================================
+     BREAKPOINTS - Mobile-First
+     ============================================ */
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ============================================
+     INTERACTION STATES
+     ============================================ */
+  --interaction-hover-opacity: 0.9;
+  --interaction-active-opacity: 0.8;
+  --interaction-disabled-opacity: 0.5;
+  --interaction-focus-opacity: 1;
+  --interaction-scale-hover: 1.02;
+  --interaction-scale-active: 0.98;
+  --interaction-scale-press: 0.95;
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Text Colors - Inverted */
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-400);
+    --color-text-tertiary: var(--color-neutral-500);
+    --color-text-quaternary: var(--color-neutral-600);
+    --color-text-inverse: var(--color-neutral-900);
+    --color-text-disabled: var(--color-neutral-600);
+    --color-text-link: var(--color-neutral-300);
+    --color-text-link-hover: var(--color-neutral-100);
+    --color-text-link-active: var(--color-neutral-50);
+    --color-text-link-visited: var(--color-neutral-400);
+
+    /* Background Colors - Inverted */
+    --color-bg-primary: var(--color-neutral-900);
+    --color-bg-secondary: var(--color-neutral-800);
+    --color-bg-tertiary: var(--color-neutral-700);
+    --color-bg-quaternary: var(--color-neutral-600);
+    --color-bg-inverse: var(--color-neutral-50);
+    --color-bg-disabled: var(--color-neutral-800);
+    --color-bg-hover: var(--color-neutral-800);
+    --color-bg-active: var(--color-neutral-700);
+    --color-bg-selected: var(--color-neutral-700);
+    --color-bg-overlay: oklch(0 0 0 / 0.7);
+    --color-bg-overlay-light: oklch(0 0 0 / 0.3);
+    --color-bg-overlay-heavy: oklch(0 0 0 / 0.9);
+    --color-bg-modal: var(--color-neutral-800);
+    --color-bg-backdrop: oklch(0.85 0 0 / 0.8);
+
+    /* Border Colors - Adjusted */
+    --color-border-light: var(--color-neutral-700);
+    --color-border-medium: var(--color-neutral-600);
+    --color-border-strong: var(--color-neutral-500);
+    --color-border-focus: var(--color-neutral-300);
+    --color-border-hover: var(--color-neutral-500);
+    --color-border-active: var(--color-neutral-300);
+    --color-border-disabled: var(--color-neutral-800);
+
+    /* Accent Colors - Lighter for visibility */
+    --color-accent: var(--color-neutral-100);
+    --color-accent-hover: var(--color-neutral-200);
+    --color-accent-active: var(--color-neutral-50);
+    --color-accent-focus: var(--color-neutral-300);
+    --color-accent-light: var(--color-neutral-800);
+    --color-accent-dark: var(--color-neutral-50);
+
+    /* Focus Ring - Adjusted */
+    --color-focus-ring: var(--color-neutral-300);
+    --color-focus-ring-offset: var(--color-bg-primary);
+  }
+}
+

@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * CirclesFourThin icon component
+ * Generated from Phosphor Icons
+ */
+export const CirclesFourThin = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M80,44a36,36,0,1,0,36,36A36,36,0,0,0,80,44Zm0,64a28,28,0,1,1,28-28A28,28,0,0,1,80,108Zm96,8a36,36,0,1,0-36-36A36,36,0,0,0,176,116Zm0-64a28,28,0,1,1-28,28A28,28,0,0,1,176,52ZM80,140a36,36,0,1,0,36,36A36,36,0,0,0,80,140Zm0,64a28,28,0,1,1,28-28A28,28,0,0,1,80,204Zm96-64a36,36,0,1,0,36,36A36,36,0,0,0,176,140Zm0,64a28,28,0,1,1,28-28A28,28,0,0,1,176,204Z"/>
+  </svg>
+));
+
+CirclesFourThin.displayName = 'CirclesFourThin';
