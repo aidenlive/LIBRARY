@@ -6,7 +6,7 @@ A centralized repository for design assets accessible remotely across projects.
 
 ```
 LIBRARY/
-├── SKILLS/              # CLAUDE SKILLS (Agent Guidelines)
+├── SKILLS/              # CLAUDE SKILLS (Guidelines)
 ├── typefaces/           # Custom font files (TTF, OTF)
 ├── icons/               # Icon collections
 │   ├── phosphor/        # Phosphor icons (web/React/Swift)
