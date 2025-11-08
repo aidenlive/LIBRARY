@@ -1,0 +1,24 @@
+{
+  "siteName": "Asset Library",
+  "siteDescription": "Browse, preview, and download premium typefaces and icon assets",
+  "repository": "https://github.com/aidenlive/LIBRARY",
+  "sections": [
+    {
+      "id": "typefaces",
+      "name": "Typefaces",
+      "icon": "text-aa",
+      "path": "../typefaces",
+      "description": "Premium typeface collection with 443+ font families"
+    },
+    {
+      "id": "icons",
+      "name": "Icons",
+      "icon": "shapes",
+      "path": "../icons/phosphor",
+      "description": "1,512+ Phosphor icons optimized for web, React, and Swift"
+    }
+  ],
+  "theme": {
+    "prefersDark": false
+  }
+}

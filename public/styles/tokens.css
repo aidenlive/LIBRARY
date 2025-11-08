@@ -1,0 +1,244 @@
+/**
+ * Design Tokens - OKLCH Monochrome Palette
+ * Mobile-first, theme-ready design system
+ * Apple Design Awards standard
+ */
+
+:root {
+  /* ============================================
+     SPACING SCALE - 4px base
+     ============================================ */
+  --space-0: 0;
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+  --space-32: 8rem;    /* 128px */
+
+  /* ============================================
+     MONOCHROME PALETTE - OKLCH (Light Theme)
+     ============================================ */
+  --color-bg-primary: oklch(100% 0 0);        /* Pure white */
+  --color-bg-secondary: oklch(98% 0 0);       /* Off-white */
+  --color-bg-tertiary: oklch(96% 0 0);        /* Light gray bg */
+  --color-bg-elevated: oklch(100% 0 0);       /* Elevated surfaces */
+  --color-bg-overlay: oklch(0% 0 0 / 0.05);   /* Subtle overlay */
+
+  --color-surface-1: oklch(97% 0 0);
+  --color-surface-2: oklch(94% 0 0);
+  --color-surface-3: oklch(91% 0 0);
+  --color-surface-hover: oklch(95% 0 0);
+  --color-surface-active: oklch(92% 0 0);
+
+  --color-border-subtle: oklch(90% 0 0);
+  --color-border-default: oklch(85% 0 0);
+  --color-border-strong: oklch(75% 0 0);
+  --color-border-focus: oklch(40% 0 0);
+
+  --color-text-primary: oklch(20% 0 0);       /* Near black */
+  --color-text-secondary: oklch(45% 0 0);     /* Medium gray */
+  --color-text-tertiary: oklch(60% 0 0);      /* Light gray text */
+  --color-text-inverse: oklch(98% 0 0);       /* Light on dark */
+  --color-text-disabled: oklch(70% 0 0);
+
+  --color-icon-primary: oklch(25% 0 0);
+  --color-icon-secondary: oklch(50% 0 0);
+  --color-icon-tertiary: oklch(65% 0 0);
+  --color-icon-inverse: oklch(95% 0 0);
+
+  --color-interactive-default: oklch(30% 0 0);
+  --color-interactive-hover: oklch(20% 0 0);
+  --color-interactive-active: oklch(10% 0 0);
+  --color-interactive-disabled: oklch(80% 0 0);
+
+  --color-accent-primary: oklch(15% 0 0);
+  --color-accent-secondary: oklch(35% 0 0);
+
+  /* Shadow colors */
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.05);
+  --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.07);
+  --shadow-lg: 0 10px 15px oklch(0% 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px oklch(0% 0 0 / 0.12);
+  --shadow-floating: 0 8px 32px oklch(0% 0 0 / 0.08);
+
+  /* ============================================
+     TYPOGRAPHY SCALE
+     ============================================ */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+
+  /* ============================================
+     LAYOUT & GRID
+     ============================================ */
+  --grid-columns: 24;
+  --container-max: 90rem;     /* 1440px */
+  --container-padding: var(--space-4);
+
+  --radius-sm: 0.25rem;       /* 4px */
+  --radius-md: 0.5rem;        /* 8px */
+  --radius-lg: 0.75rem;       /* 12px */
+  --radius-xl: 1rem;          /* 16px */
+  --radius-2xl: 1.5rem;       /* 24px */
+  --radius-full: 9999px;
+
+  /* ============================================
+     Z-INDEX SCALE
+     ============================================ */
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 450ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ============================================
+     MOBILE BREAKPOINTS
+     ============================================ */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
+
+/* ============================================
+   DARK THEME - OKLCH Monochrome
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: oklch(15% 0 0);
+    --color-bg-secondary: oklch(18% 0 0);
+    --color-bg-tertiary: oklch(21% 0 0);
+    --color-bg-elevated: oklch(20% 0 0);
+    --color-bg-overlay: oklch(100% 0 0 / 0.05);
+
+    --color-surface-1: oklch(19% 0 0);
+    --color-surface-2: oklch(22% 0 0);
+    --color-surface-3: oklch(25% 0 0);
+    --color-surface-hover: oklch(23% 0 0);
+    --color-surface-active: oklch(26% 0 0);
+
+    --color-border-subtle: oklch(28% 0 0);
+    --color-border-default: oklch(35% 0 0);
+    --color-border-strong: oklch(45% 0 0);
+    --color-border-focus: oklch(70% 0 0);
+
+    --color-text-primary: oklch(95% 0 0);
+    --color-text-secondary: oklch(70% 0 0);
+    --color-text-tertiary: oklch(55% 0 0);
+    --color-text-inverse: oklch(15% 0 0);
+    --color-text-disabled: oklch(45% 0 0);
+
+    --color-icon-primary: oklch(90% 0 0);
+    --color-icon-secondary: oklch(65% 0 0);
+    --color-icon-tertiary: oklch(50% 0 0);
+    --color-icon-inverse: oklch(20% 0 0);
+
+    --color-interactive-default: oklch(85% 0 0);
+    --color-interactive-hover: oklch(95% 0 0);
+    --color-interactive-active: oklch(100% 0 0);
+    --color-interactive-disabled: oklch(35% 0 0);
+
+    --color-accent-primary: oklch(90% 0 0);
+    --color-accent-secondary: oklch(75% 0 0);
+
+    --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.3);
+    --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.4);
+    --shadow-lg: 0 10px 15px oklch(0% 0 0 / 0.5);
+    --shadow-xl: 0 20px 25px oklch(0% 0 0 / 0.6);
+    --shadow-floating: 0 8px 32px oklch(0% 0 0 / 0.4);
+  }
+}
+
+/* ============================================
+   FORCED DARK THEME (user preference)
+   ============================================ */
+[data-theme="dark"] {
+  --color-bg-primary: oklch(15% 0 0);
+  --color-bg-secondary: oklch(18% 0 0);
+  --color-bg-tertiary: oklch(21% 0 0);
+  --color-bg-elevated: oklch(20% 0 0);
+  --color-bg-overlay: oklch(100% 0 0 / 0.05);
+
+  --color-surface-1: oklch(19% 0 0);
+  --color-surface-2: oklch(22% 0 0);
+  --color-surface-3: oklch(25% 0 0);
+  --color-surface-hover: oklch(23% 0 0);
+  --color-surface-active: oklch(26% 0 0);
+
+  --color-border-subtle: oklch(28% 0 0);
+  --color-border-default: oklch(35% 0 0);
+  --color-border-strong: oklch(45% 0 0);
+  --color-border-focus: oklch(70% 0 0);
+
+  --color-text-primary: oklch(95% 0 0);
+  --color-text-secondary: oklch(70% 0 0);
+  --color-text-tertiary: oklch(55% 0 0);
+  --color-text-inverse: oklch(15% 0 0);
+  --color-text-disabled: oklch(45% 0 0);
+
+  --color-icon-primary: oklch(90% 0 0);
+  --color-icon-secondary: oklch(65% 0 0);
+  --color-icon-tertiary: oklch(50% 0 0);
+  --color-icon-inverse: oklch(20% 0 0);
+
+  --color-interactive-default: oklch(85% 0 0);
+  --color-interactive-hover: oklch(95% 0 0);
+  --color-interactive-active: oklch(100% 0 0);
+  --color-interactive-disabled: oklch(35% 0 0);
+
+  --color-accent-primary: oklch(90% 0 0);
+  --color-accent-secondary: oklch(75% 0 0);
+
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.3);
+  --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.4);
+  --shadow-lg: 0 10px 15px oklch(0% 0 0 / 0.5);
+  --shadow-xl: 0 20px 25px oklch(0% 0 0 / 0.6);
+  --shadow-floating: 0 8px 32px oklch(0% 0 0 / 0.4);
+}
