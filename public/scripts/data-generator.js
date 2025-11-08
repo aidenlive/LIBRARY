@@ -76,18 +76,31 @@ export const TYPEFACE_CATEGORIES = {
   'handwritten': 'Handwritten typefaces'
 };
 
-// Generate typeface objects
+// Common font weights
+const FONT_WEIGHTS = ['Regular', 'Bold', 'Light', 'Medium', 'SemiBold', 'Black'];
+
+// Generate typeface objects with variants
 export function generateTypefaceData(names) {
-  return names.map(name => ({
-    name,
-    category: inferTypefaceCategory(name),
-    categories: [inferTypefaceCategory(name)],
-    path: `https://github.com/aidenlive/LIBRARY/tree/main/typefaces/${name}`,
-    rawPath: `https://raw.githubusercontent.com/aidenlive/LIBRARY/main/typefaces/${name}`,
-    preview: 'The quick brown fox jumps over the lazy dog',
-    alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789',
-    tags: [inferTypefaceCategory(name), 'font', 'typeface', 'typography']
-  }));
+  return names.map(name => {
+    // Simulate weight detection (in real implementation, would scan directory)
+    const availableWeights = FONT_WEIGHTS.filter(() => Math.random() > 0.5);
+    const weights = availableWeights.length > 0 ? availableWeights : ['Regular'];
+
+    return {
+      name,
+      category: inferTypefaceCategory(name),
+      categories: [inferTypefaceCategory(name)],
+      path: `https://github.com/aidenlive/LIBRARY/tree/main/typefaces/${name}`,
+      rawPath: `https://raw.githubusercontent.com/aidenlive/LIBRARY/main/typefaces/${name}`,
+      preview: 'The quick brown fox jumps over the lazy dog',
+      alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789',
+      weights,
+      variants: weights.length,
+      tags: [inferTypefaceCategory(name), 'font', 'typeface', 'typography'],
+      // Font face URL for preview
+      fontUrl: `https://raw.githubusercontent.com/aidenlive/LIBRARY/main/typefaces/${name}/${name}-Regular.otf`
+    };
+  });
 }
 
 // Infer typeface category from name

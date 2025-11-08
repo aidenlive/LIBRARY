@@ -113,24 +113,47 @@ async function loadIcons() {
   console.log('🎨 Loading icons...');
 
   try {
-    // Sample icon names from Phosphor
+    // Phosphor icon names (using actual Phosphor CSS class names)
     const iconNames = [
-      'AddressBook', 'Acorn', 'Airplane', 'AirplaneInFlight', 'AirplaneLanding',
-      'AirplaneTakeoff', 'AirplaneTilt', 'Airplay', 'Alarm', 'Alien', 'AlignBottom',
-      'AlignCenterHorizontal', 'AlignCenterVertical', 'AlignLeft', 'AlignRight',
-      'AlignTop', 'Anchor', 'AnchorSimple', 'AndroidLogo', 'Angle', 'AngularLogo',
-      'Aperture', 'AppStoreLogo', 'AppWindow', 'AppleLogo', 'ApplePodcastsLogo',
-      'Archive', 'Armchair', 'ArrowArcLeft', 'ArrowArcRight'
-      // Note: Full list would include all 1,512+ icons
+      'address-book', 'airplane', 'airplane-in-flight', 'airplane-landing',
+      'airplane-takeoff', 'airplane-tilt', 'airplay', 'alarm', 'alien',
+      'align-bottom', 'align-center-horizontal', 'align-center-vertical',
+      'align-left', 'align-right', 'align-top', 'anchor', 'anchor-simple',
+      'android-logo', 'angular-logo', 'aperture', 'app-store-logo',
+      'app-window', 'apple-logo', 'apple-podcasts-logo', 'archive', 'armchair',
+      'arrow-arc-left', 'arrow-arc-right', 'arrow-bend-down-left', 'arrow-bend-down-right',
+      'arrow-circle-down', 'arrow-circle-left', 'arrow-circle-right', 'arrow-circle-up',
+      'arrow-clockwise', 'arrow-down', 'arrow-left', 'arrow-right', 'arrow-up',
+      'article', 'asterisk', 'at', 'atom', 'baby', 'backpack', 'backspace',
+      'bag', 'bag-simple', 'balloon', 'bandaids', 'bank', 'barbell', 'barcode',
+      'battery-charging', 'battery-empty', 'battery-full', 'battery-high',
+      'battery-low', 'battery-medium', 'battery-warning', 'bell', 'bell-ringing',
+      'bell-simple', 'bell-simple-ringing', 'bell-slash', 'bicycle', 'book',
+      'book-bookmark', 'book-open', 'bookmark', 'bookmarks', 'briefcase',
+      'broadcast', 'bug', 'building', 'calendar', 'calendar-blank', 'camera',
+      'car', 'caret-down', 'caret-left', 'caret-right', 'caret-up',
+      'chart-bar', 'chart-line', 'chart-pie', 'check', 'check-circle',
+      'circle', 'clock', 'cloud', 'code', 'coffee', 'coin', 'compass',
+      'copy', 'copyright', 'cpu', 'credit-card', 'crown', 'cube', 'database',
+      'desktop', 'download', 'download-simple', 'envelope', 'eye', 'file',
+      'flag', 'folder', 'gear', 'gift', 'globe', 'graduation-cap', 'hamburger',
+      'heart', 'house', 'image', 'info', 'key', 'lightbulb', 'link', 'lock',
+      'magnifying-glass', 'map-pin', 'medal', 'megaphone', 'microphone',
+      'moon', 'music-note', 'newspaper', 'note', 'notification', 'paint-brush',
+      'paperclip', 'pause', 'pencil', 'phone', 'play', 'plus', 'power',
+      'printer', 'question', 'rocket', 'share', 'shield', 'shopping-cart',
+      'sign-in', 'sign-out', 'star', 'sun', 'tag', 'target', 'trash',
+      'trophy', 'upload', 'user', 'users', 'video', 'warning', 'x'
     ];
 
     state.icons = iconNames.map(name => ({
       name,
-      category: 'bold',
+      displayName: name.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+      category: 'regular',
       categories: ['bold', 'regular', 'light', 'fill'],
-      component: `${name}Bold`,
-      path: `${REPO_BASE}/icons/phosphor/react/bold/${name}Bold.tsx`,
-      tags: ['icon', 'phosphor', 'react']
+      className: `ph-${name}`,
+      path: `${REPO_BASE}/icons/phosphor`,
+      tags: ['icon', 'phosphor', name.replace(/-/g, ' ')]
     }));
 
     // Set up filter manager
@@ -174,18 +197,32 @@ function renderTypefaces(typefaces) {
   grid.classList.remove('hidden');
   emptyState?.classList.add('hidden');
 
-  // Render typeface cards
-  grid.innerHTML = typefaces.map(typeface => `
-    <article class="card card-interactive hover-lift" data-typeface="${typeface.name}">
-      <div class="stack-sm">
-        <h3 class="text-xl font-semibold truncate">${typeface.name}</h3>
-        <div class="badge badge-default">${typeface.category}</div>
-        <div class="mt-4 text-sm text-secondary line-clamp-2" style="font-family: Inter">
-          ${typeface.preview}
+  // Render typeface cards with actual font preview
+  grid.innerHTML = typefaces.map(typeface => {
+    const fontId = `font-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+
+    return `
+      <style>
+        @font-face {
+          font-family: '${typeface.name}';
+          src: url('${typeface.fontUrl}') format('opentype');
+          font-display: swap;
+        }
+      </style>
+      <article class="card card-interactive hover-lift" data-typeface="${typeface.name}">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="text-lg font-semibold truncate" style="flex: 1; margin-right: 0.5rem;">${typeface.name}</h3>
+          <div class="badge badge-subtle">${typeface.category}</div>
         </div>
-      </div>
-    </article>
-  `).join('');
+        <div class="text-xs text-tertiary mb-3">
+          ${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}
+        </div>
+        <div class="text-2xl text-primary line-clamp-2" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.2;">
+          Aa Bb Cc
+        </div>
+      </article>
+    `;
+  }).join('');
 
   // Add click handlers
   grid.querySelectorAll('.card').forEach(card => {
@@ -227,9 +264,9 @@ function renderIcons(icons) {
     <article class="card card-compact card-interactive hover-lift text-center" data-icon="${icon.name}">
       <div class="stack-sm">
         <div class="flex-center" style="height: 64px;">
-          <i class="ph ph-${icon.name.toLowerCase()} text-5xl"></i>
+          <i class="ph ${icon.className} text-5xl"></i>
         </div>
-        <h4 class="text-sm font-medium truncate">${icon.name}</h4>
+        <h4 class="text-sm font-medium truncate">${icon.displayName}</h4>
       </div>
     </article>
   `).join('');
@@ -250,36 +287,148 @@ function renderIcons(icons) {
 function showTypefaceModal(typeface) {
   if (!typeface) return;
 
-  const downloadUrl = typeface.path;
-  const cssCode = `@font-face {
+  // HTML/CSS Code (default static use case)
+  const htmlCode = `<!-- Add to your HTML -->
+<link rel="stylesheet" href="fonts/${typeface.name}/style.css">
+
+<!-- Use in your HTML -->
+<p style="font-family: '${typeface.name}', sans-serif;">
+  Your text here
+</p>`;
+
+  const cssCode = `/* CSS @font-face declaration */
+@font-face {
   font-family: '${typeface.name}';
-  src: url('${downloadUrl}/font.otf') format('opentype');
-  font-weight: normal;
+  src: url('fonts/${typeface.name}/${typeface.name}-Regular.otf') format('opentype');
+  font-weight: 400;
   font-style: normal;
+}
+
+/* Use in your CSS */
+.custom-text {
+  font-family: '${typeface.name}', sans-serif;
 }`;
+
+  // React Code
+  const reactCode = `// Import in your component
+import '${typeface.name}/style.css';
+
+// Use in JSX
+export function MyComponent() {
+  return (
+    <p style={{ fontFamily: "'${typeface.name}', sans-serif" }}>
+      Your text here
+    </p>
+  );
+}`;
+
+  // Swift/iOS Code
+  const swiftCode = `// Add ${typeface.name}.ttf to your Xcode project
+// Update Info.plist with font name
+
+// Use in SwiftUI
+Text("Your text here")
+  .font(.custom("${typeface.name}", size: 16))
+
+// Use in UIKit
+let label = UILabel()
+label.font = UIFont(name: "${typeface.name}", size: 16)`;
+
+  // All weights preview
+  const weightsPreview = typeface.weights.map(weight => `
+    <div class="mb-4 pb-4 border-b border-subtle">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-sm font-medium text-secondary">${weight}</span>
+        <span class="text-xs text-tertiary">otf</span>
+      </div>
+      <div class="text-3xl text-primary" style="font-family: '${typeface.name}', Inter, sans-serif;">
+        ${typeface.preview}
+      </div>
+      <div class="text-sm text-tertiary mt-2" style="font-family: '${typeface.name}', Inter, sans-serif;">
+        ${typeface.alphabet}
+      </div>
+    </div>
+  `).join('');
 
   state.modal.open({
     title: typeface.name,
     body: `
       <div class="stack-lg">
-        <div class="badge badge-default">${typeface.category}</div>
-
-        <div class="stack">
-          <h3 class="text-2xl" style="font-family: Inter">${typeface.preview}</h3>
-          <p class="text-sm text-tertiary">Preview with Inter font (actual font files available in repository)</p>
-        </div>
-
-        <div class="code-block">
-          <div class="code-header">
-            <span class="code-title">CSS</span>
-          </div>
-          <div class="code-content">
-            <pre><code>${cssCode}</code></pre>
-          </div>
-        </div>
-
-        <div class="flex gap-2 overflow-x-auto">
+        <div class="flex items-center gap-3 flex-wrap">
+          <div class="badge badge-default">${typeface.category}</div>
+          <div class="badge badge-subtle">${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}</div>
           ${typeface.tags.map(tag => `<span class="badge badge-subtle">${tag}</span>`).join('')}
+        </div>
+
+        <!-- All Weights Preview -->
+        <div class="stack">
+          <h3 class="text-lg font-semibold">All Weights</h3>
+          <div class="p-4 bg-surface-1 rounded-lg" style="max-height: 300px; overflow-y: auto;">
+            ${weightsPreview}
+          </div>
+        </div>
+
+        <!-- Code Examples with Tabs -->
+        <div class="stack">
+          <h3 class="text-lg font-semibold">Usage</h3>
+          <div class="tabs" role="tablist" id="code-tabs">
+            <button class="tab active" data-code-tab="html">HTML/CSS</button>
+            <button class="tab" data-code-tab="react">React</button>
+            <button class="tab" data-code-tab="swift">Swift</button>
+          </div>
+
+          <div id="code-html" class="code-panel">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">HTML</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${htmlCode}</code></pre>
+              </div>
+            </div>
+            <div class="code-block mt-3">
+              <div class="code-header flex-between">
+                <span class="code-title">CSS</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${cssCode}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="code-react" class="code-panel hidden">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">React</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${reactCode}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="code-swift" class="code-panel hidden">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">Swift</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${swiftCode}</code></pre>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     `,
@@ -291,6 +440,23 @@ function showTypefaceModal(typeface) {
       showToast(`Opening ${typeface.name} in GitHub`);
     }
   });
+
+  // Add tab switching
+  setTimeout(() => {
+    document.querySelectorAll('#code-tabs .tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const codeType = tab.dataset.codeTab;
+
+        // Update tabs
+        document.querySelectorAll('#code-tabs .tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Update panels
+        document.querySelectorAll('.code-panel').forEach(p => p.classList.add('hidden'));
+        document.getElementById(`code-${codeType}`).classList.remove('hidden');
+      });
+    });
+  }, 100);
 }
 
 // ============================================
@@ -299,42 +465,189 @@ function showTypefaceModal(typeface) {
 function showIconModal(icon) {
   if (!icon) return;
 
-  const reactCode = `import { ${icon.component} } from '@phosphor-icons/react';
+  const componentName = icon.displayName.replace(/\s+/g, '');
 
-function MyComponent() {
-  return <${icon.component} size={32} weight="bold" />;
+  // HTML/CSS Code (default static use case)
+  const htmlCode = `<!-- Add Phosphor Icons CDN to your HTML -->
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+
+<!-- Use icon in HTML -->
+<i class="${icon.className}"></i>
+
+<!-- Different weights -->
+<i class="ph-bold ${icon.className}"></i>
+<i class="ph-light ${icon.className}"></i>
+<i class="ph-fill ${icon.className}"></i>`;
+
+  const cssCode = `/* Style your icon */
+.${icon.className} {
+  font-size: 24px;
+  color: #000;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .${icon.className} {
+    font-size: 20px;
+  }
 }`;
 
+  // React Code
+  const reactCode = `// Install: npm install @phosphor-icons/react
+import { ${componentName} } from '@phosphor-icons/react';
+
+export function MyComponent() {
+  return (
+    <div>
+      {/* Regular weight */}
+      <${componentName} size={32} weight="regular" />
+
+      {/* Other weights */}
+      <${componentName} size={32} weight="bold" />
+      <${componentName} size={32} weight="light" />
+      <${componentName} size={32} weight="fill" />
+    </div>
+  );
+}`;
+
+  // Swift/iOS Code
+  const swiftCode = `// Install via SPM: https://github.com/phosphor-icons/phosphor-icons-swift
+
+import SwiftUI
+import PhosphorSwift
+
+struct ContentView: View {
+  var body: some View {
+    // Regular weight
+    Image(systemName: "${icon.name}")
+      .font(.system(size: 24))
+
+    // Different weights
+    PhosphorIcon.${icon.name}
+      .font(.system(size: 24, weight: .bold))
+  }
+}`;
+
+  // All variants preview
+  const variantsPreview = ['regular', 'bold', 'light', 'fill', 'duotone', 'thin'].map(weight => `
+    <div class="flex items-center justify-between py-3 border-b border-subtle">
+      <span class="text-sm font-medium text-secondary capitalize">${weight}</span>
+      <i class="ph-${weight} ${icon.className}" style="font-size: 32px;"></i>
+    </div>
+  `).join('');
+
   state.modal.open({
-    title: icon.name,
+    title: icon.displayName,
     body: `
       <div class="stack-lg">
-        <div class="flex-center bg-surface-2 rounded-xl" style="height: 200px;">
-          <i class="ph ph-${icon.name.toLowerCase()}" style="font-size: 128px;"></i>
-        </div>
-
-        <div class="code-block">
-          <div class="code-header">
-            <span class="code-title">React Component</span>
-          </div>
-          <div class="code-content">
-            <pre><code>${reactCode}</code></pre>
-          </div>
-        </div>
-
-        <div class="flex gap-2">
+        <div class="flex items-center gap-3 flex-wrap">
+          <div class="badge badge-default">Icon</div>
+          <div class="badge badge-subtle">6 weights</div>
           ${icon.tags.map(tag => `<span class="badge badge-subtle">${tag}</span>`).join('')}
+        </div>
+
+        <!-- Large Preview -->
+        <div class="flex-center bg-surface-2 rounded-xl" style="height: 200px;">
+          <i class="ph ${icon.className}" style="font-size: 128px;"></i>
+        </div>
+
+        <!-- All Variants Preview -->
+        <div class="stack">
+          <h3 class="text-lg font-semibold">All Weights</h3>
+          <div class="p-4 bg-surface-1 rounded-lg">
+            ${variantsPreview}
+          </div>
+        </div>
+
+        <!-- Code Examples with Tabs -->
+        <div class="stack">
+          <h3 class="text-lg font-semibold">Usage</h3>
+          <div class="tabs" role="tablist" id="code-tabs-icon">
+            <button class="tab active" data-code-tab="html">HTML/CSS</button>
+            <button class="tab" data-code-tab="react">React</button>
+            <button class="tab" data-code-tab="swift">Swift</button>
+          </div>
+
+          <div id="code-icon-html" class="code-panel">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">HTML</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${htmlCode}</code></pre>
+              </div>
+            </div>
+            <div class="code-block mt-3">
+              <div class="code-header flex-between">
+                <span class="code-title">CSS</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${cssCode}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="code-icon-react" class="code-panel hidden">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">React</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${reactCode}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="code-icon-swift" class="code-panel hidden">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">Swift</span>
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`)">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${swiftCode}</code></pre>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     `,
     onCopy: () => {
-      copyToClipboard(reactCode);
+      copyToClipboard(htmlCode);
     },
     onDownload: () => {
       window.open(icon.path, '_blank');
-      showToast(`Opening ${icon.name} in GitHub`);
+      showToast(`Opening ${icon.displayName} in GitHub`);
     }
   });
+
+  // Add tab switching for icon modal
+  setTimeout(() => {
+    document.querySelectorAll('#code-tabs-icon .tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const codeType = tab.dataset.codeTab;
+
+        // Update tabs
+        document.querySelectorAll('#code-tabs-icon .tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Update panels
+        document.querySelectorAll('.code-panel').forEach(p => p.classList.add('hidden'));
+        document.getElementById(`code-icon-${codeType}`).classList.remove('hidden');
+      });
+    });
+  }, 100);
 }
 
 // ============================================
