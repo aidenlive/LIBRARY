@@ -211,6 +211,8 @@ function renderTypefaces(typefaces) {
   emptyState?.classList.add('hidden');
 
   // Render typeface cards with actual font preview
+  const previewText = "Typography is the art and technique of arranging type.";
+
   grid.innerHTML = typefaces.map(typeface => {
     const fontId = `font-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
 
@@ -230,8 +232,8 @@ function renderTypefaces(typefaces) {
         <div class="text-xs text-tertiary mb-3">
           ${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}
         </div>
-        <div class="text-2xl text-primary line-clamp-2" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.2;">
-          Aa Bb Cc
+        <div class="text-base text-primary line-clamp-2" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
+          ${previewText}
         </div>
       </article>
     `;
@@ -332,8 +334,8 @@ function escapeHtml(text) {
 function showTypefaceModal(typeface) {
   if (!typeface) return;
 
-  // Default preview paragraph
-  const defaultPreview = "The quick brown fox jumps over the lazy dog. Typography is the art and technique of arranging type to make written language legible, readable, and appealing.";
+  // Default preview paragraph - professional and readable
+  const defaultPreview = "Typography is the art and technique of arranging type to make written language legible, readable and appealing when displayed. The arrangement of type involves selecting typefaces, point sizes, line lengths, line-spacing and letter-spacing.";
 
   // Code examples with syntax highlighting
   const htmlCode = `<!-- Add to your HTML -->
@@ -389,33 +391,41 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
   state.modal.open({
     title: typeface.name,
     body: `
-      <div class="stack-lg">
+      <div>
         <!-- Metadata Badges -->
-        <div class="flex items-center gap-2 flex-wrap">
+        <div class="flex items-center gap-2 flex-wrap" style="margin-bottom: var(--space-4);">
           <div class="badge badge-default">${typeface.category}</div>
           <div class="badge badge-subtle">${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}</div>
         </div>
 
-        <!-- Custom Text Preview Section -->
-        <div class="modal-section">
-          <h3 class="modal-section-title">
+        <!-- Segmented Control -->
+        <div class="segment-control">
+          <button class="segment-button active" data-segment="preview">
             <i class="ph ph-text-aa"></i>
-            Live Preview
-          </h3>
+            <span>Preview</span>
+          </button>
+          <button class="segment-button" data-segment="weights">
+            <i class="ph ph-selection-all"></i>
+            <span>Weights</span>
+          </button>
+          <button class="segment-button" data-segment="usage">
+            <i class="ph ph-code"></i>
+            <span>Usage</span>
+          </button>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="modal-section active" data-section="preview">
           <textarea
             class="font-preview-input"
-            id="font-preview-text"
+            id="font-preview-text-${typeface.name.replace(/\s/g, '')}"
             placeholder="Type to preview this typeface..."
             style="font-family: '${typeface.name}', Inter, sans-serif;"
           >${defaultPreview}</textarea>
         </div>
 
-        <!-- Weights Overview -->
-        <div class="modal-section">
-          <h3 class="modal-section-title">
-            <i class="ph ph-selection-all"></i>
-            Available Weights
-          </h3>
+        <!-- Weights Section -->
+        <div class="modal-section" data-section="weights">
           <div class="grid grid-mobile-1" style="gap: var(--space-3);">
             ${typeface.weights.map(weight => `
               <div class="weight-preview-card">
@@ -423,21 +433,16 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
                   <span class="text-xs font-medium text-secondary capitalize">${weight}</span>
                   <span class="badge badge-subtle" style="font-size: 10px;">OTF</span>
                 </div>
-                <div class="text-lg" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
-                  The quick brown fox jumps over the lazy dog.
+                <div class="text-lg weight-preview-sample" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
+                  ${defaultPreview.split('.')[0]}.
                 </div>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Code Examples -->
-        <div class="modal-section">
-          <h3 class="modal-section-title">
-            <i class="ph ph-code"></i>
-            Implementation
-          </h3>
-
+        <!-- Usage Section -->
+        <div class="modal-section" data-section="usage">
           <div class="tabs" role="tablist" id="code-tabs" style="margin-bottom: var(--space-3);">
             <button class="tab active" data-code-tab="html">HTML/CSS</button>
             <button class="tab" data-code-tab="react">React</button>
@@ -448,7 +453,7 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             <div class="code-block" style="margin-bottom: var(--space-3);">
               <div class="code-header flex-between">
                 <span class="code-title">HTML</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`); showToast('Copied HTML code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(htmlCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -459,7 +464,7 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">CSS</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`); showToast('Copied CSS code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(cssCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -473,7 +478,7 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">React</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`); showToast('Copied React code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(reactCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -487,7 +492,7 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">Swift</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`); showToast('Copied Swift code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(swiftCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -508,8 +513,24 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
     }
   });
 
-  // Add tab switching
+  // Add event handlers after modal opens
   setTimeout(() => {
+    // Segmented control switching
+    document.querySelectorAll('.segment-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const segment = btn.dataset.segment;
+
+        // Update buttons
+        document.querySelectorAll('.segment-button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update sections
+        document.querySelectorAll('.modal-section').forEach(s => s.classList.remove('active'));
+        document.querySelector(`[data-section="${segment}"]`).classList.add('active');
+      });
+    });
+
+    // Code tab switching
     document.querySelectorAll('#code-tabs .tab').forEach(tab => {
       tab.addEventListener('click', () => {
         const codeType = tab.dataset.codeTab;
@@ -523,6 +544,28 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
         document.getElementById(`code-${codeType}`).classList.remove('hidden');
       });
     });
+
+    // Copy code buttons
+    document.querySelectorAll('.copy-code-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.dataset.code;
+        navigator.clipboard.writeText(code).then(() => {
+          showToast('Copied to clipboard!');
+        });
+      });
+    });
+
+    // Dynamic text preview update
+    const previewInput = document.querySelector('.font-preview-input');
+    if (previewInput) {
+      previewInput.addEventListener('input', (e) => {
+        const text = e.target.value || defaultPreview;
+        // Update weight preview samples
+        document.querySelectorAll('.weight-preview-sample').forEach(sample => {
+          sample.textContent = text.split('.')[0] + '.';
+        });
+      });
+    }
   }, 100);
 }
 
@@ -604,30 +647,38 @@ struct ContentView: View {
   state.modal.open({
     title: icon.displayName,
     body: `
-      <div class="stack-lg">
+      <div>
         <!-- Metadata Badges -->
-        <div class="flex items-center gap-2 flex-wrap">
+        <div class="flex items-center gap-2 flex-wrap" style="margin-bottom: var(--space-4);">
           <div class="badge badge-default">Phosphor Icon</div>
           <div class="badge badge-subtle capitalize">${icon.weight}</div>
         </div>
 
-        <!-- Large Preview -->
-        <div class="modal-section">
-          <h3 class="modal-section-title">
+        <!-- Segmented Control -->
+        <div class="segment-control">
+          <button class="segment-button active" data-segment="preview">
             <i class="ph ph-eye"></i>
-            Preview
-          </h3>
-          <div class="flex-center" style="background: linear-gradient(135deg, var(--color-surface-1) 0%, var(--color-surface-2) 100%); border-radius: var(--radius-xl); height: 200px; border: 1px solid var(--color-border-subtle);">
-            <i class="ph ${icon.weightClass} ${icon.className}" style="font-size: 120px; color: var(--color-icon-primary);"></i>
+            <span>Preview</span>
+          </button>
+          <button class="segment-button" data-segment="weights">
+            <i class="ph ph-selection-all"></i>
+            <span>Weights</span>
+          </button>
+          <button class="segment-button" data-segment="usage">
+            <i class="ph ph-code"></i>
+            <span>Usage</span>
+          </button>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="modal-section active" data-section="preview">
+          <div class="flex-center" style="background: linear-gradient(135deg, var(--color-surface-1) 0%, var(--color-surface-2) 100%); border-radius: var(--radius-xl); height: 240px; border: 1px solid var(--color-border-subtle);">
+            <i class="ph ${icon.weightClass} ${icon.className}" style="font-size: 128px; color: var(--color-icon-primary);"></i>
           </div>
         </div>
 
-        <!-- All Weight Variants -->
-        <div class="modal-section">
-          <h3 class="modal-section-title">
-            <i class="ph ph-selection-all"></i>
-            Available Weights
-          </h3>
+        <!-- Weights Section -->
+        <div class="modal-section" data-section="weights">
           <div class="grid grid-mobile-2 grid-tablet-3" style="gap: var(--space-3);">
             ${['regular', 'bold', 'light', 'fill', 'thin', 'duotone'].map(weight => `
               <div class="weight-preview-card text-center">
@@ -638,13 +689,8 @@ struct ContentView: View {
           </div>
         </div>
 
-        <!-- Code Examples -->
-        <div class="modal-section">
-          <h3 class="modal-section-title">
-            <i class="ph ph-code"></i>
-            Implementation
-          </h3>
-
+        <!-- Usage Section -->
+        <div class="modal-section" data-section="usage">
           <div class="tabs" role="tablist" id="code-tabs-icon" style="margin-bottom: var(--space-3);">
             <button class="tab active" data-code-tab="html">HTML/CSS</button>
             <button class="tab" data-code-tab="react">React</button>
@@ -655,7 +701,7 @@ struct ContentView: View {
             <div class="code-block" style="margin-bottom: var(--space-3);">
               <div class="code-header flex-between">
                 <span class="code-title">HTML</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`); showToast('Copied HTML code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(htmlCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -666,7 +712,7 @@ struct ContentView: View {
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">CSS</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`); showToast('Copied CSS code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(cssCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -680,7 +726,7 @@ struct ContentView: View {
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">React</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`); showToast('Copied React code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(reactCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -694,7 +740,7 @@ struct ContentView: View {
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">Swift</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`); showToast('Copied Swift code!')">
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(swiftCode)}">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
@@ -715,8 +761,24 @@ struct ContentView: View {
     }
   });
 
-  // Add tab switching for icon modal
+  // Add event handlers after modal opens
   setTimeout(() => {
+    // Segmented control switching
+    document.querySelectorAll('.segment-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const segment = btn.dataset.segment;
+
+        // Update buttons
+        document.querySelectorAll('.segment-button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update sections
+        document.querySelectorAll('.modal-section').forEach(s => s.classList.remove('active'));
+        document.querySelector(`[data-section="${segment}"]`).classList.add('active');
+      });
+    });
+
+    // Code tab switching
     document.querySelectorAll('#code-tabs-icon .tab').forEach(tab => {
       tab.addEventListener('click', () => {
         const codeType = tab.dataset.codeTab;
@@ -728,6 +790,16 @@ struct ContentView: View {
         // Update panels
         document.querySelectorAll('.code-panel').forEach(p => p.classList.add('hidden'));
         document.getElementById(`code-icon-${codeType}`).classList.remove('hidden');
+      });
+    });
+
+    // Copy code buttons
+    document.querySelectorAll('.copy-code-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.dataset.code;
+        navigator.clipboard.writeText(code).then(() => {
+          showToast('Copied to clipboard!');
+        });
       });
     });
   }, 100);

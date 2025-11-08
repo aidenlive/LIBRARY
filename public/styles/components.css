@@ -318,10 +318,9 @@
   max-width: 640px;
   width: 100%;
   max-height: 90vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .modal-header {
@@ -337,7 +336,10 @@
 
 .modal-body {
   padding: var(--space-6);
+  overflow-y: auto;
   overflow-x: hidden;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-footer {
@@ -357,19 +359,29 @@
 
 /* Mobile optimizations */
 @media (max-width: 639px) {
+  .modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
   .modal {
-    max-height: 95vh;
+    max-height: 85vh;
     border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
   }
 
-  .modal-header,
-  .modal-body,
-  .modal-footer {
+  .modal-header {
+    padding: var(--space-4);
+    flex-shrink: 0;
+  }
+
+  .modal-body {
     padding: var(--space-4);
   }
 
   .modal-footer {
+    padding: var(--space-4);
     gap: var(--space-2);
+    flex-shrink: 0;
   }
 }
 
@@ -755,35 +767,78 @@
    Modal Content Sections
    ============================================ */
 .modal-section {
+  display: none;
+}
+
+.modal-section.active {
+  display: block;
+}
+
+/* ============================================
+   Segmented Control
+   ============================================ */
+.segment-control {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  background-color: var(--color-surface-1);
+  border-radius: var(--radius-lg);
   margin-bottom: var(--space-6);
 }
 
-.modal-section:last-child {
-  margin-bottom: 0;
-}
-
-.modal-section-title {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-3);
+.segment-button {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 40px;
 }
 
-.modal-section-title i {
-  color: var(--color-icon-secondary);
-  font-size: 18px;
+.segment-button:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-hover);
+}
+
+.segment-button.active {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-elevated);
+  box-shadow: var(--shadow-sm);
+}
+
+.segment-button i {
+  font-size: 16px;
 }
 
 @media (max-width: 639px) {
-  .modal-section {
+  .segment-control {
     margin-bottom: var(--space-4);
   }
 
-  .modal-section-title {
-    font-size: var(--font-size-sm);
+  .segment-button {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+    min-height: 44px;
+  }
+
+  .segment-button span {
+    display: none;
+  }
+
+  .segment-button i {
+    font-size: 18px;
   }
 }
 
