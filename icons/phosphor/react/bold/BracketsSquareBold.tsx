@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * BracketsSquareBold icon component
+ * Generated from Phosphor Icons
+ */
+export const BracketsSquareBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M52,52V204H80a12,12,0,0,1,0,24H40a12,12,0,0,1-12-12V40A12,12,0,0,1,40,28H80a12,12,0,0,1,0,24ZM216,28H176a12,12,0,0,0,0,24h28V204H176a12,12,0,0,0,0,24h40a12,12,0,0,0,12-12V40A12,12,0,0,0,216,28Z"/>
+  </svg>
+));
+
+BracketsSquareBold.displayName = 'BracketsSquareBold';

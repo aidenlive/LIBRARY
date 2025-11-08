@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * MapPinSimpleLineFill icon component
+ * Generated from Phosphor Icons
+ */
+export const MapPinSimpleLineFill = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16h80V135.42a56,56,0,1,1,16,0V208h80A8,8,0,0,1,224,216Z"/>
+  </svg>
+));
+
+MapPinSimpleLineFill.displayName = 'MapPinSimpleLineFill';

@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * ArrowElbowUpRightThin icon component
+ * Generated from Phosphor Icons
+ */
+export const ArrowElbowUpRightThin = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M218.83,82.83l-48,48a4,4,0,0,1-5.66-5.66L206.34,84H76V224a4,4,0,0,1-8,0V80a4,4,0,0,1,4-4H206.34L165.17,34.83a4,4,0,0,1,5.66-5.66l48,48A4,4,0,0,1,218.83,82.83Z"/>
+  </svg>
+));
+
+ArrowElbowUpRightThin.displayName = 'ArrowElbowUpRightThin';

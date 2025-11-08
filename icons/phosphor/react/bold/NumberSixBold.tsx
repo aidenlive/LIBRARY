@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * NumberSixBold icon component
+ * Generated from Phosphor Icons
+ */
+export const NumberSixBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M128,100a59.21,59.21,0,0,0-7.81.53l26.27-46.64a12,12,0,0,0-20.92-11.78L76,130.13A60,60,0,1,0,128,100Zm0,96a36,36,0,1,1,36-36A36,36,0,0,1,128,196Z"/>
+  </svg>
+));
+
+NumberSixBold.displayName = 'NumberSixBold';

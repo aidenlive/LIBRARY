@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * ArrowUUpRightBold icon component
+ * Generated from Phosphor Icons
+ */
+export const ArrowUUpRightBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M167.51,127.51,195,100H88a44,44,0,0,0,0,88h88a12,12,0,0,1,0,24H88A68,68,0,0,1,88,76H195L167.51,48.49a12,12,0,1,1,17-17l48,48a12,12,0,0,1,0,17l-48,48a12,12,0,0,1-17-17Z"/>
+  </svg>
+));
+
+ArrowUUpRightBold.displayName = 'ArrowUUpRightBold';

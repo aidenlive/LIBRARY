@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * CellSignalLowBold icon component
+ * Generated from Phosphor Icons
+ */
+export const CellSignalLowBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M92,152v48a12,12,0,0,1-24,0V152a12,12,0,0,1,24,0ZM40,180a12,12,0,0,0-12,12v8a12,12,0,0,0,24,0v-8A12,12,0,0,0,40,180Z"/>
+  </svg>
+));
+
+CellSignalLowBold.displayName = 'CellSignalLowBold';

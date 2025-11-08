@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * LayoutThin icon component
+ * Generated from Phosphor Icons
+ */
+export const LayoutThin = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M216,44H40A12,12,0,0,0,28,56V200a12,12,0,0,0,12,12H216a12,12,0,0,0,12-12V56A12,12,0,0,0,216,44ZM40,52H216a4,4,0,0,1,4,4v44H36V56A4,4,0,0,1,40,52ZM36,200V108h64v96H40A4,4,0,0,1,36,200Zm180,4H108V108H220v92A4,4,0,0,1,216,204Z"/>
+  </svg>
+));
+
+LayoutThin.displayName = 'LayoutThin';

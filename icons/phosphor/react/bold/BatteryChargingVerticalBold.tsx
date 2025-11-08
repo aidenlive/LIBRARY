@@ -1,0 +1,22 @@
+import React from 'react';
+
+/**
+ * BatteryChargingVerticalBold icon component
+ * Generated from Phosphor Icons
+ */
+export const BatteryChargingVerticalBold = React.forwardRef<
+  SVGSVGElement,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M154.21,133.69a12,12,0,0,1,.52,11.68l-16,32a12,12,0,1,1-21.46-10.74L124.58,152H112a12,12,0,0,1-10.73-17.37l16-32a12,12,0,1,1,21.46,10.74L131.42,128H144A12,12,0,0,1,154.21,133.69ZM104,24h48a12,12,0,0,0,0-24H104a12,12,0,0,0,0,24ZM204,60V228a28,28,0,0,1-28,28H80a28,28,0,0,1-28-28V60A28,28,0,0,1,80,32h96A28,28,0,0,1,204,60Zm-24,0a4,4,0,0,0-4-4H80a4,4,0,0,0-4,4V228a4,4,0,0,0,4,4h96a4,4,0,0,0,4-4Z"/>
+  </svg>
+));
+
+BatteryChargingVerticalBold.displayName = 'BatteryChargingVerticalBold';
