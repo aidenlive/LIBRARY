@@ -31,6 +31,9 @@ const REPO_BASE = 'https://raw.githubusercontent.com/aidenlive/LIBRARY/main';
 async function init() {
   console.log('🚀 Initializing Asset Library...');
 
+  // Make showToast globally accessible for inline handlers
+  window.showToast = showToast;
+
   // Initialize UI components
   state.modal = new Modal('modal-overlay');
   state.theme = new ThemeManager();
@@ -146,15 +149,25 @@ async function loadIcons() {
       'trophy', 'upload', 'user', 'users', 'video', 'warning', 'x'
     ];
 
-    state.icons = iconNames.map(name => ({
-      name,
-      displayName: name.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
-      category: 'regular',
-      categories: ['bold', 'regular', 'light', 'fill'],
-      className: `ph-${name}`,
-      path: `${REPO_BASE}/icons/phosphor`,
-      tags: ['icon', 'phosphor', name.replace(/-/g, ' ')]
-    }));
+    // Create icons with proper category assignment for filtering
+    state.icons = [];
+    const weights = ['bold', 'regular', 'light', 'fill'];
+
+    iconNames.forEach(name => {
+      weights.forEach(weight => {
+        state.icons.push({
+          name: `${name}-${weight}`,
+          displayName: name.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+          weight,
+          category: weight,
+          categories: [weight],
+          className: `ph-${name}`,
+          weightClass: weight === 'regular' ? '' : `ph-${weight}`,
+          path: `${REPO_BASE}/icons/phosphor`,
+          tags: ['icon', 'phosphor', weight, name.replace(/-/g, ' ')]
+        });
+      });
+    });
 
     // Set up filter manager
     state.iconFilter = new FilterManager(state.icons, renderIcons);
@@ -264,9 +277,10 @@ function renderIcons(icons) {
     <article class="card card-compact card-interactive hover-lift text-center" data-icon="${icon.name}">
       <div class="stack-sm">
         <div class="flex-center" style="height: 64px;">
-          <i class="ph ${icon.className} text-5xl"></i>
+          <i class="ph ${icon.weightClass} ${icon.className} text-5xl"></i>
         </div>
         <h4 class="text-sm font-medium truncate">${icon.displayName}</h4>
+        <div class="badge badge-subtle capitalize" style="font-size: 10px;">${icon.weight}</div>
       </div>
     </article>
   `).join('');
@@ -282,12 +296,46 @@ function renderIcons(icons) {
 }
 
 // ============================================
+// Helper: Add Syntax Highlighting to Code
+// ============================================
+function highlightCode(code, language = 'html') {
+  // Simple syntax highlighting for HTML, CSS, and JavaScript
+  let highlighted = code
+    // HTML tags
+    .replace(/(&lt;\/?)([a-z][a-z0-9]*)/gi, '$1<span class="token-tag">$2</span>')
+    // Attributes
+    .replace(/\s([a-z-]+)=/gi, ' <span class="token-attr">$1</span>=')
+    // Strings
+    .replace(/(["'])([^"']*)\1/g, '<span class="token-string">$1$2$1</span>')
+    // CSS properties
+    .replace(/([a-z-]+):/gi, '<span class="token-property">$1</span>:')
+    // Comments
+    .replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="token-comment">$1</span>')
+    .replace(/(\/\/.*$)/gm, '<span class="token-comment">$1</span>')
+    .replace(/(&lt;!--[\s\S]*?--&gt;)/g, '<span class="token-comment">$1</span>')
+    // Keywords
+    .replace(/\b(import|export|function|const|let|var|return|from|style|font-family|src|url|format|font-weight|font-style)\b/g, '<span class="token-keyword">$1</span>');
+
+  return highlighted;
+}
+
+// Helper: Escape HTML for safe rendering
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// ============================================
 // Modal: Typeface Preview
 // ============================================
 function showTypefaceModal(typeface) {
   if (!typeface) return;
 
-  // HTML/CSS Code (default static use case)
+  // Default preview paragraph
+  const defaultPreview = "The quick brown fox jumps over the lazy dog. Typography is the art and technique of arranging type to make written language legible, readable, and appealing.";
+
+  // Code examples with syntax highlighting
   const htmlCode = `<!-- Add to your HTML -->
 <link rel="stylesheet" href="fonts/${typeface.name}/style.css">
 
@@ -309,7 +357,6 @@ function showTypefaceModal(typeface) {
   font-family: '${typeface.name}', sans-serif;
 }`;
 
-  // React Code
   const reactCode = `// Import in your component
 import '${typeface.name}/style.css';
 
@@ -322,7 +369,6 @@ export function MyComponent() {
   );
 }`;
 
-  // Swift/iOS Code
   const swiftCode = `// Add ${typeface.name}.ttf to your Xcode project
 // Update Info.plist with font name
 
@@ -334,70 +380,91 @@ Text("Your text here")
 let label = UILabel()
 label.font = UIFont(name: "${typeface.name}", size: 16)`;
 
-  // All weights preview
-  const weightsPreview = typeface.weights.map(weight => `
-    <div class="mb-4 pb-4 border-b border-subtle">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-sm font-medium text-secondary">${weight}</span>
-        <span class="text-xs text-tertiary">otf</span>
-      </div>
-      <div class="text-3xl text-primary" style="font-family: '${typeface.name}', Inter, sans-serif;">
-        ${typeface.preview}
-      </div>
-      <div class="text-sm text-tertiary mt-2" style="font-family: '${typeface.name}', Inter, sans-serif;">
-        ${typeface.alphabet}
-      </div>
-    </div>
-  `).join('');
+  // Escape and highlight code samples
+  const htmlEscaped = highlightCode(escapeHtml(htmlCode));
+  const cssEscaped = highlightCode(escapeHtml(cssCode));
+  const reactEscaped = highlightCode(escapeHtml(reactCode));
+  const swiftEscaped = highlightCode(escapeHtml(swiftCode));
 
   state.modal.open({
     title: typeface.name,
     body: `
       <div class="stack-lg">
-        <div class="flex items-center gap-3 flex-wrap">
+        <!-- Metadata Badges -->
+        <div class="flex items-center gap-2 flex-wrap">
           <div class="badge badge-default">${typeface.category}</div>
           <div class="badge badge-subtle">${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}</div>
-          ${typeface.tags.map(tag => `<span class="badge badge-subtle">${tag}</span>`).join('')}
         </div>
 
-        <!-- All Weights Preview -->
-        <div class="stack">
-          <h3 class="text-lg font-semibold">All Weights</h3>
-          <div class="p-4 bg-surface-1 rounded-lg" style="max-height: 300px; overflow-y: auto;">
-            ${weightsPreview}
+        <!-- Custom Text Preview Section -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="ph ph-text-aa"></i>
+            Live Preview
+          </h3>
+          <textarea
+            class="font-preview-input"
+            id="font-preview-text"
+            placeholder="Type to preview this typeface..."
+            style="font-family: '${typeface.name}', Inter, sans-serif;"
+          >${defaultPreview}</textarea>
+        </div>
+
+        <!-- Weights Overview -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="ph ph-selection-all"></i>
+            Available Weights
+          </h3>
+          <div class="grid grid-mobile-1" style="gap: var(--space-3);">
+            ${typeface.weights.map(weight => `
+              <div class="weight-preview-card">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-medium text-secondary capitalize">${weight}</span>
+                  <span class="badge badge-subtle" style="font-size: 10px;">OTF</span>
+                </div>
+                <div class="text-lg" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
+                  The quick brown fox jumps over the lazy dog.
+                </div>
+              </div>
+            `).join('')}
           </div>
         </div>
 
-        <!-- Code Examples with Tabs -->
-        <div class="stack">
-          <h3 class="text-lg font-semibold">Usage</h3>
-          <div class="tabs" role="tablist" id="code-tabs">
+        <!-- Code Examples -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="ph ph-code"></i>
+            Implementation
+          </h3>
+
+          <div class="tabs" role="tablist" id="code-tabs" style="margin-bottom: var(--space-3);">
             <button class="tab active" data-code-tab="html">HTML/CSS</button>
             <button class="tab" data-code-tab="react">React</button>
             <button class="tab" data-code-tab="swift">Swift</button>
           </div>
 
           <div id="code-html" class="code-panel">
-            <div class="code-block">
+            <div class="code-block" style="margin-bottom: var(--space-3);">
               <div class="code-header flex-between">
                 <span class="code-title">HTML</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`); showToast('Copied HTML code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${htmlCode}</code></pre>
+                <pre><code>${htmlEscaped}</code></pre>
               </div>
             </div>
-            <div class="code-block mt-3">
+            <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">CSS</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`); showToast('Copied CSS code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${cssCode}</code></pre>
+                <pre><code>${cssEscaped}</code></pre>
               </div>
             </div>
           </div>
@@ -406,12 +473,12 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">React</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`); showToast('Copied React code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${reactCode}</code></pre>
+                <pre><code>${reactEscaped}</code></pre>
               </div>
             </div>
           </div>
@@ -420,12 +487,12 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">Swift</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`); showToast('Copied Swift code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${swiftCode}</code></pre>
+                <pre><code>${swiftEscaped}</code></pre>
               </div>
             </div>
           </div>
@@ -465,9 +532,11 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
 function showIconModal(icon) {
   if (!icon) return;
 
+  // Get base icon name (without weight suffix)
+  const baseName = icon.name.replace(/-(?:bold|regular|light|fill)$/, '');
   const componentName = icon.displayName.replace(/\s+/g, '');
 
-  // HTML/CSS Code (default static use case)
+  // Code examples
   const htmlCode = `<!-- Add Phosphor Icons CDN to your HTML -->
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
 
@@ -492,7 +561,6 @@ function showIconModal(icon) {
   }
 }`;
 
-  // React Code
   const reactCode = `// Install: npm install @phosphor-icons/react
 import { ${componentName} } from '@phosphor-icons/react';
 
@@ -510,7 +578,6 @@ export function MyComponent() {
   );
 }`;
 
-  // Swift/iOS Code
   const swiftCode = `// Install via SPM: https://github.com/phosphor-icons/phosphor-icons-swift
 
 import SwiftUI
@@ -519,76 +586,92 @@ import PhosphorSwift
 struct ContentView: View {
   var body: some View {
     // Regular weight
-    Image(systemName: "${icon.name}")
+    Image(systemName: "${baseName}")
       .font(.system(size: 24))
 
     // Different weights
-    PhosphorIcon.${icon.name}
+    PhosphorIcon.${baseName}
       .font(.system(size: 24, weight: .bold))
   }
 }`;
 
-  // All variants preview
-  const variantsPreview = ['regular', 'bold', 'light', 'fill', 'duotone', 'thin'].map(weight => `
-    <div class="flex items-center justify-between py-3 border-b border-subtle">
-      <span class="text-sm font-medium text-secondary capitalize">${weight}</span>
-      <i class="ph-${weight} ${icon.className}" style="font-size: 32px;"></i>
-    </div>
-  `).join('');
+  // Escape and highlight code
+  const htmlEscaped = highlightCode(escapeHtml(htmlCode));
+  const cssEscaped = highlightCode(escapeHtml(cssCode));
+  const reactEscaped = highlightCode(escapeHtml(reactCode));
+  const swiftEscaped = highlightCode(escapeHtml(swiftCode));
 
   state.modal.open({
     title: icon.displayName,
     body: `
       <div class="stack-lg">
-        <div class="flex items-center gap-3 flex-wrap">
-          <div class="badge badge-default">Icon</div>
-          <div class="badge badge-subtle">6 weights</div>
-          ${icon.tags.map(tag => `<span class="badge badge-subtle">${tag}</span>`).join('')}
+        <!-- Metadata Badges -->
+        <div class="flex items-center gap-2 flex-wrap">
+          <div class="badge badge-default">Phosphor Icon</div>
+          <div class="badge badge-subtle capitalize">${icon.weight}</div>
         </div>
 
         <!-- Large Preview -->
-        <div class="flex-center bg-surface-2 rounded-xl" style="height: 200px;">
-          <i class="ph ${icon.className}" style="font-size: 128px;"></i>
-        </div>
-
-        <!-- All Variants Preview -->
-        <div class="stack">
-          <h3 class="text-lg font-semibold">All Weights</h3>
-          <div class="p-4 bg-surface-1 rounded-lg">
-            ${variantsPreview}
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="ph ph-eye"></i>
+            Preview
+          </h3>
+          <div class="flex-center" style="background: linear-gradient(135deg, var(--color-surface-1) 0%, var(--color-surface-2) 100%); border-radius: var(--radius-xl); height: 200px; border: 1px solid var(--color-border-subtle);">
+            <i class="ph ${icon.weightClass} ${icon.className}" style="font-size: 120px; color: var(--color-icon-primary);"></i>
           </div>
         </div>
 
-        <!-- Code Examples with Tabs -->
-        <div class="stack">
-          <h3 class="text-lg font-semibold">Usage</h3>
-          <div class="tabs" role="tablist" id="code-tabs-icon">
+        <!-- All Weight Variants -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="ph ph-selection-all"></i>
+            Available Weights
+          </h3>
+          <div class="grid grid-mobile-2 grid-tablet-3" style="gap: var(--space-3);">
+            ${['regular', 'bold', 'light', 'fill', 'thin', 'duotone'].map(weight => `
+              <div class="weight-preview-card text-center">
+                <i class="ph-${weight} ${icon.className}" style="font-size: 48px; color: var(--color-icon-primary); margin-bottom: var(--space-2);"></i>
+                <div class="text-xs font-medium text-secondary capitalize">${weight}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Code Examples -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <i class="ph ph-code"></i>
+            Implementation
+          </h3>
+
+          <div class="tabs" role="tablist" id="code-tabs-icon" style="margin-bottom: var(--space-3);">
             <button class="tab active" data-code-tab="html">HTML/CSS</button>
             <button class="tab" data-code-tab="react">React</button>
             <button class="tab" data-code-tab="swift">Swift</button>
           </div>
 
           <div id="code-icon-html" class="code-panel">
-            <div class="code-block">
+            <div class="code-block" style="margin-bottom: var(--space-3);">
               <div class="code-header flex-between">
                 <span class="code-title">HTML</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${htmlCode.replace(/`/g, '\\`')}\`); showToast('Copied HTML code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${htmlCode}</code></pre>
+                <pre><code>${htmlEscaped}</code></pre>
               </div>
             </div>
-            <div class="code-block mt-3">
+            <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">CSS</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${cssCode.replace(/`/g, '\\`')}\`); showToast('Copied CSS code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${cssCode}</code></pre>
+                <pre><code>${cssEscaped}</code></pre>
               </div>
             </div>
           </div>
@@ -597,12 +680,12 @@ struct ContentView: View {
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">React</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${reactCode.replace(/`/g, '\\`')}\`); showToast('Copied React code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${reactCode}</code></pre>
+                <pre><code>${reactEscaped}</code></pre>
               </div>
             </div>
           </div>
@@ -611,12 +694,12 @@ struct ContentView: View {
             <div class="code-block">
               <div class="code-header flex-between">
                 <span class="code-title">Swift</span>
-                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`)">
+                <button class="btn-icon btn-icon-sm btn-ghost" onclick="navigator.clipboard.writeText(\`${swiftCode.replace(/`/g, '\\`')}\`); showToast('Copied Swift code!')">
                   <i class="ph ph-copy"></i>
                 </button>
               </div>
               <div class="code-content">
-                <pre><code>${swiftCode}</code></pre>
+                <pre><code>${swiftEscaped}</code></pre>
               </div>
             </div>
           </div>

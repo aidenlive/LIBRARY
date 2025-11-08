@@ -637,6 +637,156 @@
   background: transparent;
 }
 
+.code-content code {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+/* Syntax highlighting for code snippets */
+.code-content .token-tag,
+.code-content .token-selector {
+  color: var(--color-accent-blue);
+}
+
+.code-content .token-attr,
+.code-content .token-property {
+  color: var(--color-accent-purple);
+}
+
+.code-content .token-string,
+.code-content .token-value {
+  color: var(--color-accent-green);
+}
+
+.code-content .token-function,
+.code-content .token-keyword {
+  color: var(--color-accent-red);
+}
+
+.code-content .token-comment {
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.code-content .token-number {
+  color: var(--color-accent-orange);
+}
+
+/* Mobile code block optimizations */
+@media (max-width: 639px) {
+  .code-block {
+    border-radius: var(--radius-md);
+  }
+
+  .code-header {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .code-content {
+    padding: var(--space-3);
+    font-size: 13px;
+  }
+
+  .code-content code {
+    font-size: 13px;
+  }
+}
+
+/* ============================================
+   Font Preview Input
+   ============================================ */
+.font-preview-input {
+  width: 100%;
+  padding: var(--space-4);
+  font-size: var(--font-size-2xl);
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-1);
+  border: 2px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+  resize: vertical;
+  min-height: 120px;
+}
+
+.font-preview-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.font-preview-input:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 4px var(--color-bg-overlay);
+  outline: none;
+}
+
+@media (max-width: 639px) {
+  .font-preview-input {
+    font-size: var(--font-size-xl);
+    padding: var(--space-3);
+    min-height: 100px;
+  }
+}
+
+/* ============================================
+   Weight Preview Card
+   ============================================ */
+.weight-preview-card {
+  padding: var(--space-4);
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast);
+}
+
+.weight-preview-card:hover {
+  border-color: var(--color-border-default);
+}
+
+@media (max-width: 639px) {
+  .weight-preview-card {
+    padding: var(--space-3);
+  }
+}
+
+/* ============================================
+   Modal Content Sections
+   ============================================ */
+.modal-section {
+  margin-bottom: var(--space-6);
+}
+
+.modal-section:last-child {
+  margin-bottom: 0;
+}
+
+.modal-section-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.modal-section-title i {
+  color: var(--color-icon-secondary);
+  font-size: 18px;
+}
+
+@media (max-width: 639px) {
+  .modal-section {
+    margin-bottom: var(--space-4);
+  }
+
+  .modal-section-title {
+    font-size: var(--font-size-sm);
+  }
+}
+
 /* ============================================
    Skeleton Loader
    ============================================ */
