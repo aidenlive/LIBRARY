@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse, preview, and download premium typefaces and icon assets. Mobile-first asset library.">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Asset Library">
+  <meta property="og:description" content="Browse, preview, and download premium typefaces and icon assets">
+  <meta property="og:type" content="website">
+
+  <title>Asset Library — Typefaces & Icons</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web/src/fill/style.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+</head>
+<body>
+
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- Floating Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-content">
+      <div class="flex items-center gap-3">
+        <!-- Icon-only logo for mobile -->
+        <div class="navbar-logo-icon">
+          <i class="ph ph-stack text-2xl" aria-hidden="true"></i>
+        </div>
+        <!-- Full logo for desktop -->
+        <div class="navbar-logo-text flex items-center gap-3">
+          <i class="ph ph-stack text-2xl" aria-hidden="true"></i>
+          <span class="font-semibold text-lg tracking-tight">Asset Library</span>
+        </div>
+      </div>
+
+      <!-- Search (Mobile adapts) -->
+      <div class="search-wrapper" style="flex: 1; max-width: 400px;">
+        <i class="ph ph-magnifying-glass search-icon"></i>
+        <input
+          type="search"
+          id="global-search"
+          class="input search-input input-sm"
+          placeholder="Search assets..."
+          aria-label="Search assets"
+        >
+      </div>
+
+      <!-- User Menu -->
+      <div class="dropdown">
+        <button
+          class="btn-icon btn-icon-sm btn-ghost"
+          aria-label="User menu"
+          id="user-menu-btn"
+        >
+          <i class="ph ph-user-circle text-xl"></i>
+        </button>
+        <div class="dropdown-menu" id="user-menu">
+          <div class="dropdown-item">
+            <i class="ph ph-gear"></i>
+            <span>Settings</span>
+          </div>
+          <div class="dropdown-item" id="theme-toggle">
+            <i class="ph ph-moon"></i>
+            <span>Dark Mode</span>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a href="https://github.com/aidenlive/LIBRARY" target="_blank" rel="noopener" class="dropdown-item">
+            <i class="ph ph-github-logo"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" class="main-content" role="main">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <section class="section text-center">
+        <h1 class="text-4xl font-bold mb-4 tracking-tight">
+          Premium Design Assets
+        </h1>
+        <p class="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
+          Browse, preview, and download 443+ typefaces and 1,512+ icons. Mobile-first, high-performance asset library designed to Apple Design Award standards.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex justify-center gap-8 mt-8 overflow-x-auto">
+          <div class="text-center">
+            <div class="text-3xl font-bold">443+</div>
+            <div class="text-sm text-tertiary mt-1">Typefaces</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold">1,512+</div>
+            <div class="text-sm text-tertiary mt-1">Icons</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold">100%</div>
+            <div class="text-sm text-tertiary mt-1">Free</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tabs Navigation -->
+      <section class="section-compact">
+        <div class="tabs" role="tablist">
+          <button
+            class="tab active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="typefaces-panel"
+            id="typefaces-tab"
+            data-tab="typefaces"
+          >
+            <i class="ph ph-text-aa" aria-hidden="true"></i>
+            <span class="hide-mobile ml-2">Typefaces</span>
+          </button>
+          <button
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="icons-panel"
+            id="icons-tab"
+            data-tab="icons"
+          >
+            <i class="ph ph-shapes" aria-hidden="true"></i>
+            <span class="hide-mobile ml-2">Icons</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Tab Panels -->
+      <div class="tab-panels">
+
+        <!-- Typefaces Panel -->
+        <div
+          id="typefaces-panel"
+          class="tab-panel active"
+          role="tabpanel"
+          aria-labelledby="typefaces-tab"
+        >
+          <div class="section-compact">
+
+            <!-- Filters -->
+            <div class="flex items-center gap-3 mb-6 overflow-x-auto">
+              <div class="chip cursor-pointer" data-filter="all">
+                <span>All Typefaces</span>
+                <span class="badge badge-subtle" id="typeface-count">443</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="serif">
+                <span>Serif</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="sans-serif">
+                <span>Sans Serif</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="mono">
+                <span>Monospace</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="display">
+                <span>Display</span>
+              </div>
+            </div>
+
+            <!-- Typefaces Grid -->
+            <div class="grid grid-tablet-2 grid-desktop-6" id="typefaces-grid">
+              <!-- Loading State -->
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="typefaces-empty" class="text-center py-16 hidden">
+              <i class="ph ph-file-text text-6xl text-tertiary mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2">No typefaces found</h3>
+              <p class="text-secondary">Try adjusting your search or filters</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icons Panel -->
+        <div
+          id="icons-panel"
+          class="tab-panel hidden"
+          role="tabpanel"
+          aria-labelledby="icons-tab"
+        >
+          <div class="section-compact">
+
+            <!-- Icon Filters -->
+            <div class="flex items-center gap-3 mb-6 overflow-x-auto">
+              <div class="chip cursor-pointer" data-filter="all">
+                <span>All Icons</span>
+                <span class="badge badge-subtle" id="icon-count">1512</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="bold">
+                <span>Bold</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="regular">
+                <span>Regular</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="light">
+                <span>Light</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="fill">
+                <span>Fill</span>
+              </div>
+            </div>
+
+            <!-- Icons Grid -->
+            <div class="grid grid-mobile-2 grid-tablet-4 grid-desktop-8" id="icons-grid">
+              <!-- Loading State -->
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="icons-empty" class="text-center py-16 hidden">
+              <i class="ph ph-shapes text-6xl text-tertiary mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2">No icons found</h3>
+              <p class="text-secondary">Try adjusting your search or filters</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FAB for Quick Actions -->
+  <button class="fab" aria-label="Quick download" id="fab-btn">
+    <i class="ph-fill ph-download-simple text-2xl"></i>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="ph ph-check-circle"></i>
+    <span id="toast-message">Action completed</span>
+  </div>
+
+  <!-- Modal for Asset Preview -->
+  <div class="modal-overlay hidden" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-header flex-between">
+        <h2 class="text-xl font-semibold" id="modal-title">Asset Preview</h2>
+        <button class="btn-icon btn-icon-sm btn-ghost" aria-label="Close modal" id="modal-close">
+          <i class="ph ph-x text-xl"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Dynamic content loaded here -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modal-copy">
+          <i class="ph ph-copy"></i>
+          <span>Copy Code</span>
+        </button>
+        <button class="btn btn-primary" id="modal-download">
+          <i class="ph ph-download-simple"></i>
+          <span>Download</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="scripts/app.js"></script>
+
+</body>
+</html>
