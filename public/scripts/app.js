@@ -211,7 +211,7 @@ function renderTypefaces(typefaces) {
   emptyState?.classList.add('hidden');
 
   // Render typeface cards with actual font preview
-  const previewText = "Typography is the art and technique of arranging type.";
+  const previewText = "Typography is the art and technique of arranging type to make written language legible, readable and appealing when displayed.";
 
   grid.innerHTML = typefaces.map(typeface => {
     const fontId = `font-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
@@ -416,11 +416,23 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
 
         <!-- Preview Section -->
         <div class="modal-section active" data-section="preview">
+          <!-- Color Controls -->
+          <div class="preview-controls">
+            <div class="preview-control-item">
+              <label class="preview-control-label" for="text-color-picker">Text Color</label>
+              <input type="color" id="text-color-picker" class="color-picker-input" value="#000000">
+            </div>
+            <div class="preview-control-item">
+              <label class="preview-control-label" for="bg-color-picker">Background</label>
+              <input type="color" id="bg-color-picker" class="color-picker-input" value="#f5f5f5">
+            </div>
+          </div>
+
           <textarea
             class="font-preview-input"
             id="font-preview-text-${typeface.name.replace(/\s/g, '')}"
             placeholder="Type to preview this typeface..."
-            style="font-family: '${typeface.name}', Inter, sans-serif;"
+            style="font-family: '${typeface.name}', Inter, sans-serif; color: #000000; background-color: #f5f5f5;"
           >${defaultPreview}</textarea>
         </div>
 
@@ -566,6 +578,22 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
         });
       });
     }
+
+    // Color picker controls
+    const textColorPicker = document.getElementById('text-color-picker');
+    const bgColorPicker = document.getElementById('bg-color-picker');
+
+    if (textColorPicker && previewInput) {
+      textColorPicker.addEventListener('input', (e) => {
+        previewInput.style.color = e.target.value;
+      });
+    }
+
+    if (bgColorPicker && previewInput) {
+      bgColorPicker.addEventListener('input', (e) => {
+        previewInput.style.backgroundColor = e.target.value;
+      });
+    }
   }, 100);
 }
 
@@ -672,8 +700,20 @@ struct ContentView: View {
 
         <!-- Preview Section -->
         <div class="modal-section active" data-section="preview">
-          <div class="flex-center" style="background: linear-gradient(135deg, var(--color-surface-1) 0%, var(--color-surface-2) 100%); border-radius: var(--radius-xl); height: 240px; border: 1px solid var(--color-border-subtle);">
-            <i class="ph ${icon.weightClass} ${icon.className}" style="font-size: 128px; color: var(--color-icon-primary);"></i>
+          <!-- Color Controls -->
+          <div class="preview-controls">
+            <div class="preview-control-item">
+              <label class="preview-control-label" for="icon-color-picker">Icon Color</label>
+              <input type="color" id="icon-color-picker" class="color-picker-input" value="#000000">
+            </div>
+            <div class="preview-control-item">
+              <label class="preview-control-label" for="icon-bg-picker">Background</label>
+              <input type="color" id="icon-bg-picker" class="color-picker-input" value="#f5f5f5">
+            </div>
+          </div>
+
+          <div class="flex-center" id="icon-preview-container" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); border-radius: var(--radius-xl); height: 240px; border: 1px solid var(--color-border-subtle); transition: background var(--transition-base);">
+            <i class="ph ${icon.weightClass} ${icon.className}" id="icon-preview-element" style="font-size: 128px; color: #000000; transition: color var(--transition-base);"></i>
           </div>
         </div>
 
@@ -802,6 +842,26 @@ struct ContentView: View {
         });
       });
     });
+
+    // Icon color picker controls
+    const iconColorPicker = document.getElementById('icon-color-picker');
+    const iconBgPicker = document.getElementById('icon-bg-picker');
+    const iconPreviewElement = document.getElementById('icon-preview-element');
+    const iconPreviewContainer = document.getElementById('icon-preview-container');
+
+    if (iconColorPicker && iconPreviewElement) {
+      iconColorPicker.addEventListener('input', (e) => {
+        iconPreviewElement.style.color = e.target.value;
+      });
+    }
+
+    if (iconBgPicker && iconPreviewContainer) {
+      iconBgPicker.addEventListener('input', (e) => {
+        const color = e.target.value;
+        // Create a lighter gradient based on the selected color
+        iconPreviewContainer.style.background = `linear-gradient(135deg, ${color} 0%, ${color}dd 100%)`;
+      });
+    }
   }, 100);
 }
 
