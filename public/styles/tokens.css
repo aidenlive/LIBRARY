@@ -62,6 +62,14 @@
   --color-accent-primary: oklch(15% 0 0);
   --color-accent-secondary: oklch(35% 0 0);
 
+  /* Subtle accent colors for indicators & code highlighting */
+  --color-accent-blue: oklch(60% 0.08 240);
+  --color-accent-green: oklch(60% 0.08 150);
+  --color-accent-purple: oklch(60% 0.08 280);
+  --color-accent-orange: oklch(60% 0.08 50);
+  --color-accent-red: oklch(60% 0.08 20);
+  --color-accent-yellow: oklch(85% 0.08 90);
+
   /* Shadow colors */
   --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.05);
   --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.07);
@@ -188,6 +196,14 @@
     --color-accent-primary: oklch(90% 0 0);
     --color-accent-secondary: oklch(75% 0 0);
 
+    /* Subtle accent colors for indicators & code highlighting (dark mode) */
+    --color-accent-blue: oklch(70% 0.10 240);
+    --color-accent-green: oklch(70% 0.10 150);
+    --color-accent-purple: oklch(70% 0.10 280);
+    --color-accent-orange: oklch(70% 0.10 50);
+    --color-accent-red: oklch(70% 0.10 20);
+    --color-accent-yellow: oklch(75% 0.10 90);
+
     --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.3);
     --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.4);
     --shadow-lg: 0 10px 15px oklch(0% 0 0 / 0.5);
@@ -235,6 +251,14 @@
 
   --color-accent-primary: oklch(90% 0 0);
   --color-accent-secondary: oklch(75% 0 0);
+
+  /* Subtle accent colors for indicators & code highlighting (dark mode) */
+  --color-accent-blue: oklch(70% 0.10 240);
+  --color-accent-green: oklch(70% 0.10 150);
+  --color-accent-purple: oklch(70% 0.10 280);
+  --color-accent-orange: oklch(70% 0.10 50);
+  --color-accent-red: oklch(70% 0.10 20);
+  --color-accent-yellow: oklch(75% 0.10 90);
 
   --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.3);
   --shadow-md: 0 4px 6px oklch(0% 0 0 / 0.4);
