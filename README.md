@@ -6,13 +6,14 @@ A centralized repository for design assets accessible remotely across projects.
 
 ```
 LIBRARY/
-├── typefaces/         # Custom font files (TTF, OTF)
-├── icons/             # Icon collections
-│   ├── phosphor/     # Phosphor icons (web/React/Swift)
-│   └── scripts/      # Generation and optimization scripts
-│       └── phosphor/ # Platform-specific scripts (React, Swift, Web)
-├── progress-tracker.md # Development progress tracking
-└── README.md          # This file
+├── SKILLS/              # CLAUDE SKILLS (Agent Guidelines)
+├── typefaces/           # Custom font files (TTF, OTF)
+├── icons/               # Icon collections
+│   ├── phosphor/        # Phosphor icons (web/React/Swift)
+│   └── scripts/         # Generation and optimization scripts
+│       └── phosphor/    # Platform-specific scripts (React, Swift, Web)
+├── progress-tracker.md  # Development progress tracking
+└── README.md            # This file
 ```
 
 ## Usage
