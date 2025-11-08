@@ -10,12 +10,12 @@ version: 1.0.0
 
 Create modular static HTML/CSS/JS projects with zero build step. Clean, portable, token-driven, and fully accessible output.
 
-ALWAYS READ: `/SYSTEM-MESSAGE.xml` located in the root for:
+START BY READING: `/SYSTEM-MESSAGE.xml` located in the root for:
 - Agent Specific Role on this project 
-- Core Technologies / Capabilities 
+- Core Technologies & Capabilities 
 - Design Principles & Philosophy 
-- Apple Design Awards Adherence 
-- Monochrome Base / Floating Navs / No Flex-wraps / Flex Spaced Between Policies
+- Apple Design Awards Standards 
+- Global Policies: (eg: Monochrome Base / Floating Navs / No Flex-wraps / Flex Spaced Between / etc..) 
 - CDN Usage and additional instructions not included in this file. 
 
 
