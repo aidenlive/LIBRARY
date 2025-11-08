@@ -64,7 +64,7 @@ a {
 a:hover,
 a:focus {
   color: var(--color-text-link-hover);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:focus-visible {

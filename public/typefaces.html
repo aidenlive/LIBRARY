@@ -32,13 +32,16 @@
       <div class="nav-links">
         <a href="typefaces.html" class="nav-link active">Typefaces</a>
         <a href="phosphor-icons.html" class="nav-link">Icons</a>
+        <a href="https://github.com/aidenvault/LIBRARY" target="_blank" rel="noopener noreferrer" class="nav-link-icon" aria-label="View repository on GitHub">
+          <i class="ph ph-github-logo" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </nav>
 
   <div class="page">
 
-    <main class="page-main" style="padding-top: calc(var(--space-4) + 48px + var(--space-8));">
+    <main class="page-main">
       <div class="container">
         <section class="section">
           <h1 class="text-4xl font-semibold mb-4">Typefaces</h1>
@@ -176,7 +179,7 @@
     }
 
     // Open font modal
-    function openFontModal(font) {
+    async function openFontModal(font) {
       const modal = document.getElementById('font-modal');
       const title = document.getElementById('modal-title');
       const content = document.getElementById('modal-content');
@@ -197,16 +200,20 @@
       
       // Build modal content
       content.innerHTML = `
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-4">Preview</h3>
-          <input 
-            type="text" 
-            id="preview-text-input" 
-            class="search-input mb-4" 
-            value="${previewText}"
-            placeholder="Enter preview text"
-          >
-          <div id="font-preview-container" class="font-card-preview" style="min-height: 200px;">
+        <div class="modal-section">
+          <h3 class="modal-section-title">Preview</h3>
+          <div class="control-group mb-4">
+            <label class="control-label" for="preview-text-input">Preview Text</label>
+            <input 
+              type="text" 
+              id="preview-text-input" 
+              class="search-input" 
+              value="${previewText}"
+              placeholder="Enter preview text"
+              aria-label="Preview text input"
+            >
+          </div>
+          <div id="font-preview-container" class="font-preview-grid">
             ${Object.keys(filesByWeight).sort().map(weight => {
               const files = filesByWeight[weight];
               return files.map(file => {
@@ -223,14 +230,16 @@
                 }
                 
                 return `
-                  <div class="mb-6">
-                    <div class="flex items-center justify-between mb-2">
-                      <span class="font-medium">${file.baseName}</span>
-                      <span class="text-sm text-secondary">${formatFileSize(file.size)}</span>
+                  <div class="font-preview-item">
+                    <div class="font-preview-header">
+                      <span class="font-preview-name">${file.baseName}</span>
+                      <span class="font-preview-size">${formatFileSize(file.size)}</span>
                     </div>
                     <div 
-                      class="p-4 bg-secondary rounded-lg"
-                      style="font-family: '${font.name}', sans-serif; font-weight: ${file.weight}; font-style: ${file.style}; font-size: 1.5rem;"
+                      class="font-preview-text"
+                      style="font-family: '${font.name}', sans-serif; font-weight: ${file.weight}; font-style: ${file.style};"
+                      data-weight="${file.weight}"
+                      data-style="${file.style}"
                     >
                       ${previewText}
                     </div>
@@ -241,44 +250,44 @@
           </div>
         </div>
 
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-4">Code Snippets</h3>
-          <div class="mb-4">
-            <h4 class="font-medium mb-2">CSS @font-face</h4>
+        <div class="modal-section">
+          <h3 class="modal-section-title">Code Snippets</h3>
+          <div class="code-snippet-group">
+            <h4 class="code-snippet-label">CSS @font-face</h4>
             <div class="code-snippet">
-              <button class="code-snippet-copy">Copy</button>
-              <pre id="font-face-code">${font.files.map(file => 
+              <button class="code-snippet-copy" type="button" aria-label="Copy font-face code">Copy</button>
+              <pre id="font-face-code"><code>${font.files.map(file => 
                 CodeSnippet.generateFontFace(font.name, file.path, file.weight, file.style, file.format)
-              ).join('\n\n')}</pre>
+              ).join('\n\n')}</code></pre>
             </div>
           </div>
-          <div>
-            <h4 class="font-medium mb-2">CSS Usage</h4>
+          <div class="code-snippet-group">
+            <h4 class="code-snippet-label">CSS Usage</h4>
             <div class="code-snippet">
-              <button class="code-snippet-copy">Copy</button>
-              <pre>${CodeSnippet.generateFontCSS(font.name)}</pre>
+              <button class="code-snippet-copy" type="button" aria-label="Copy CSS usage">Copy</button>
+              <pre><code>${CodeSnippet.generateFontCSS(font.name)}</code></pre>
             </div>
           </div>
         </div>
 
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Metadata</h3>
-          <dl class="grid grid-cols-2 gap-4">
-            <div>
-              <dt class="text-sm text-secondary">Family Name</dt>
-              <dd class="font-medium">${font.name}</dd>
+        <div class="modal-section">
+          <h3 class="modal-section-title">Metadata</h3>
+          <dl class="metadata-grid">
+            <div class="metadata-item">
+              <dt class="metadata-label">Family Name</dt>
+              <dd class="metadata-value">${font.name}</dd>
             </div>
-            <div>
-              <dt class="text-sm text-secondary">Total Files</dt>
-              <dd class="font-medium">${font.fileCount}</dd>
+            <div class="metadata-item">
+              <dt class="metadata-label">Total Files</dt>
+              <dd class="metadata-value">${font.fileCount}</dd>
             </div>
-            <div>
-              <dt class="text-sm text-secondary">Weights</dt>
-              <dd class="font-medium">${[...new Set(font.files.map(f => f.weight))].sort().join(', ')}</dd>
+            <div class="metadata-item">
+              <dt class="metadata-label">Weights</dt>
+              <dd class="metadata-value">${[...new Set(font.files.map(f => f.weight))].sort().join(', ')}</dd>
             </div>
-            <div>
-              <dt class="text-sm text-secondary">Styles</dt>
-              <dd class="font-medium">${[...new Set(font.files.map(f => f.style))].join(', ')}</dd>
+            <div class="metadata-item">
+              <dt class="metadata-label">Styles</dt>
+              <dd class="metadata-value">${[...new Set(font.files.map(f => f.style))].join(', ')}</dd>
             </div>
           </dl>
         </div>
@@ -290,13 +299,13 @@
       
       previewInput.addEventListener('input', (e) => {
         const newText = e.target.value || previewText;
-        previewContainer.querySelectorAll('[style*="font-family"]').forEach(el => {
+        previewContainer.querySelectorAll('.font-preview-text').forEach(el => {
           el.textContent = newText;
         });
       });
 
       // Open modal
-      openModal('font-modal');
+      await openModal('font-modal');
     }
 
     // Search functionality

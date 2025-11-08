@@ -3,7 +3,6 @@
  * Initializes app and coordinates modules
  */
 
-import { Modal } from './ui-helpers.js';
 import { debounce } from './ui-helpers.js';
 
 /**
@@ -26,7 +25,7 @@ export function initApp() {
 /**
  * Initialize modal system
  */
-function initModals() {
+async function initModals() {
   // Create backdrop if it doesn't exist
   if (!document.querySelector('.modal-backdrop')) {
     const backdrop = document.createElement('div');
@@ -36,6 +35,7 @@ function initModals() {
   }
 
   // Initialize all modals on the page
+  const { Modal } = await import('./ui-helpers.js');
   const modals = document.querySelectorAll('.modal');
   modals.forEach(modal => {
     const modalId = modal.id;
@@ -123,7 +123,7 @@ function initCodeSnippets() {
 /**
  * Open modal helper
  */
-export function openModal(modalId, title, content) {
+export async function openModal(modalId, title, content) {
   const modalVar = window[`modal_${modalId}`];
   if (modalVar) {
     if (title || content) {
@@ -131,7 +131,19 @@ export function openModal(modalId, title, content) {
     }
     modalVar.open();
   } else {
-    console.warn(`Modal "${modalId}" not initialized`);
+    // Initialize modal if not already initialized
+    const modalEl = document.getElementById(modalId);
+    if (modalEl) {
+      const { Modal } = await import('./ui-helpers.js');
+      const modal = new Modal(modalId);
+      window[`modal_${modalId}`] = modal;
+      if (title || content) {
+        modal.setContent(title, content);
+      }
+      modal.open();
+    } else {
+      console.warn(`Modal element with id "${modalId}" not found`);
+    }
   }
 }
 

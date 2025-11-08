@@ -32,13 +32,16 @@
       <div class="nav-links">
         <a href="typefaces.html" class="nav-link">Typefaces</a>
         <a href="phosphor-icons.html" class="nav-link active">Icons</a>
+        <a href="https://github.com/aidenvault/LIBRARY" target="_blank" rel="noopener noreferrer" class="nav-link-icon" aria-label="View repository on GitHub">
+          <i class="ph ph-github-logo" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   </nav>
 
   <div class="page">
 
-    <main class="page-main" style="padding-top: calc(var(--space-4) + 48px + var(--space-8));">
+    <main class="page-main">
       <div class="container">
         <section class="section">
           <h1 class="text-4xl font-semibold mb-4">Phosphor Icons</h1>
@@ -126,7 +129,8 @@
 
     let iconsData = [];
     let filteredIcons = [];
-    let currentVariant = 'regular';
+    let selectedVariantFilter = 'all'; // Track selected filter ('all' or specific variant)
+    let currentVariant = 'regular'; // Used for rendering in modal
     let currentSize = 48;
     let currentColor = '#000000';
 
@@ -164,8 +168,15 @@
       emptyState.classList.add('hidden');
       
       grid.innerHTML = filteredIcons.map(icon => {
-        const variantPath = icon.path[currentVariant] || icon.path.regular;
-        const hasVariant = icon.variants.includes(currentVariant);
+        // Determine which variant to render
+        let renderVariant = selectedVariantFilter;
+        if (renderVariant === 'all') {
+          // When "All" is selected, use the first available variant (prefer regular)
+          renderVariant = icon.variants.includes('regular') ? 'regular' : icon.variants[0];
+        }
+        
+        const variantPath = icon.path[renderVariant] || icon.path.regular;
+        const hasVariant = icon.variants.includes(renderVariant);
         
         return `
           <div class="card icon-card" data-icon-name="${icon.name}">
@@ -224,32 +235,34 @@
 
       // Build modal content
       content.innerHTML = `
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-4">Variants</h3>
-          <div class="grid grid-cols-3 gap-4 mb-4">
+        <div class="modal-section">
+          <h3 class="modal-section-title">Variants</h3>
+          <div class="variant-grid">
             ${icon.variants.map(variant => {
               const svg = variantPreviews[variant] || '';
               const isActive = variant === currentVariant;
               return `
-                <div class="p-4 border rounded-lg cursor-pointer ${isActive ? 'border-neutral-900 bg-neutral-100' : ''}" 
+                <button class="variant-selector ${isActive ? 'variant-selector-active' : ''}" 
                      data-variant="${variant}"
-                     style="text-align: center;">
-                  <div class="mb-2" style="display: flex; align-items: center; justify-content: center; height: 64px;">
-                    ${svg ? `<div style="width: 48px; height: 48px; color: ${currentColor};">${svg}</div>` : '<div style="width: 48px; height: 48px;"></div>'}
+                     type="button"
+                     aria-pressed="${isActive}"
+                     aria-label="Select ${variant} variant">
+                  <div class="variant-preview">
+                    ${svg ? `<div class="variant-icon" style="color: ${currentColor};">${svg}</div>` : '<div class="variant-icon-placeholder"></div>'}
                   </div>
-                  <div class="text-sm font-medium capitalize">${variant}</div>
-                </div>
+                  <div class="variant-label">${variant}</div>
+                </button>
               `;
             }).join('')}
           </div>
         </div>
 
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-4">Customize</h3>
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-medium mb-2">Size</label>
-              <select id="size-selector" class="search-input">
+        <div class="modal-section">
+          <h3 class="modal-section-title">Customize</h3>
+          <div class="customize-controls">
+            <div class="control-group">
+              <label class="control-label" for="size-selector">Size</label>
+              <select id="size-selector" class="control-input">
                 <option value="16">16px</option>
                 <option value="24">24px</option>
                 <option value="32" selected>32px</option>
@@ -257,74 +270,86 @@
                 <option value="64">64px</option>
               </select>
             </div>
-            <div>
-              <label class="block text-sm font-medium mb-2">Color</label>
-              <input type="color" id="color-selector" class="w-full h-10 rounded" value="${currentColor}">
+            <div class="control-group">
+              <label class="control-label" for="color-selector">Color</label>
+              <input type="color" id="color-selector" class="control-color" value="${currentColor}">
             </div>
           </div>
-          <div class="mt-4 p-6 bg-secondary rounded-lg" style="text-align: center;">
-            <div id="icon-preview" style="display: inline-block; color: ${currentColor};">
+          <div class="preview-container">
+            <div id="icon-preview" class="icon-preview" style="color: ${currentColor};">
               ${variantPreviews[currentVariant] || ''}
             </div>
           </div>
         </div>
 
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-4">Code Snippets</h3>
+        <div class="modal-section">
+          <h3 class="modal-section-title">Code Snippets</h3>
           
-          <div class="mb-4">
-            <h4 class="font-medium mb-2">SVG Inline</h4>
+          <div class="code-snippet-group">
+            <h4 class="code-snippet-label">SVG Inline</h4>
             <div class="code-snippet">
-              <button class="code-snippet-copy">Copy</button>
-              <pre id="svg-code">${variantPreviews[currentVariant] || 'N/A'}</pre>
+              <button class="code-snippet-copy" type="button" aria-label="Copy SVG code">Copy</button>
+              <pre id="svg-code"><code>${variantPreviews[currentVariant] || 'N/A'}</code></pre>
             </div>
           </div>
 
-          <div class="mb-4">
-            <h4 class="font-medium mb-2">React Component</h4>
+          <div class="code-snippet-group">
+            <h4 class="code-snippet-label">React Component</h4>
             <div class="code-snippet">
-              <button class="code-snippet-copy">Copy</button>
-              <pre id="react-import-code">${CodeSnippet.generateReactImport(icon.name, currentVariant)}</pre>
+              <button class="code-snippet-copy" type="button" aria-label="Copy React import">Copy</button>
+              <pre id="react-import-code"><code>${CodeSnippet.generateReactImport(icon.name, currentVariant)}</code></pre>
             </div>
-            <div class="code-snippet mt-2">
-              <button class="code-snippet-copy">Copy</button>
-              <pre id="react-usage-code">${CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize)}</pre>
+            <div class="code-snippet">
+              <button class="code-snippet-copy" type="button" aria-label="Copy React usage">Copy</button>
+              <pre id="react-usage-code"><code>${CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize)}</code></pre>
             </div>
           </div>
 
-          <div>
-            <h4 class="font-medium mb-2">CSS Background</h4>
+          <div class="code-snippet-group">
+            <h4 class="code-snippet-label">CSS Background</h4>
             <div class="code-snippet">
-              <button class="code-snippet-copy">Copy</button>
-              <pre>${CodeSnippet.generateCSSBackground(icon.path[currentVariant] || icon.path.regular)}</pre>
+              <button class="code-snippet-copy" type="button" aria-label="Copy CSS code">Copy</button>
+              <pre id="css-background-code"><code>${CodeSnippet.generateCSSBackground(icon.path[currentVariant] || icon.path.regular || '')}</code></pre>
             </div>
           </div>
         </div>
 
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Metadata</h3>
-          <dl class="grid grid-cols-2 gap-4">
-            <div>
-              <dt class="text-sm text-secondary">Icon Name</dt>
-              <dd class="font-medium">${icon.name}</dd>
+        <div class="modal-section">
+          <h3 class="modal-section-title">Metadata</h3>
+          <dl class="metadata-grid">
+            <div class="metadata-item">
+              <dt class="metadata-label">Icon Name</dt>
+              <dd class="metadata-value">${icon.name}</dd>
             </div>
-            <div>
-              <dt class="text-sm text-secondary">Display Name</dt>
-              <dd class="font-medium">${icon.displayName}</dd>
+            <div class="metadata-item">
+              <dt class="metadata-label">Display Name</dt>
+              <dd class="metadata-value">${icon.displayName}</dd>
             </div>
-            <div>
-              <dt class="text-sm text-secondary">Available Variants</dt>
-              <dd class="font-medium">${icon.variants.join(', ')}</dd>
+            <div class="metadata-item">
+              <dt class="metadata-label">Available Variants</dt>
+              <dd class="metadata-value">${icon.variants.join(', ')}</dd>
             </div>
           </dl>
         </div>
       `;
 
-      // Variant selector
-      content.querySelectorAll('[data-variant]').forEach(el => {
-        el.addEventListener('click', () => {
-          currentVariant = el.dataset.variant;
-          updateIconPreview();
+      // Variant selector with keyboard support
+      content.querySelectorAll('.variant-selector').forEach(el => {
+        const handleVariantSelect = () => {
+          const newVariant = el.dataset.variant;
+          if (newVariant && icon.variants.includes(newVariant)) {
+            currentVariant = newVariant;
+            updateIconPreview();
+            updateVariantActiveState();
+          }
+        };
+
+        el.addEventListener('click', handleVariantSelect);
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleVariantSelect();
+          }
         });
       });
 
@@ -343,30 +368,119 @@
         updateIconPreview();
       });
 
+      // Update variant active state
+      function updateVariantActiveState() {
+        content.querySelectorAll('.variant-selector').forEach(el => {
+          const isActive = el.dataset.variant === currentVariant;
+          el.setAttribute('aria-pressed', isActive);
+          if (isActive) {
+            el.classList.add('variant-selector-active');
+          } else {
+            el.classList.remove('variant-selector-active');
+          }
+        });
+      }
+
+      // Update icon preview and all code snippets
       function updateIconPreview() {
         const preview = document.getElementById('icon-preview');
         const svg = variantPreviews[currentVariant];
+        
         if (svg && preview) {
-          // Update SVG size and color
-          const svgWithSize = svg.replace(/width="[^"]*"/, `width="${currentSize}"`);
-          const svgWithSizeAndColor = svgWithSize.replace(/height="[^"]*"/, `height="${currentSize}"`);
-          const svgWithColor = svgWithSizeAndColor.replace(/fill="[^"]*"/g, `fill="${currentColor}"`);
+          // Create a temporary container to parse and modify SVG
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = svg;
+          const svgElement = tempDiv.querySelector('svg');
           
-          preview.innerHTML = svgWithColor;
-          preview.style.width = `${currentSize}px`;
-          preview.style.height = `${currentSize}px`;
-          preview.style.color = currentColor;
-
-          // Update code snippets
-          const reactUsage = document.getElementById('react-usage-code');
-          if (reactUsage) {
-            reactUsage.textContent = CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize);
+          if (svgElement) {
+            // Update SVG attributes
+            svgElement.setAttribute('width', currentSize.toString());
+            svgElement.setAttribute('height', currentSize.toString());
+            
+            // Update fill attributes (handle both fill and stroke)
+            const allElements = svgElement.querySelectorAll('*');
+            allElements.forEach(el => {
+              if (el.hasAttribute('fill') && el.getAttribute('fill') !== 'none') {
+                el.setAttribute('fill', currentColor);
+              }
+              if (el.hasAttribute('stroke') && el.getAttribute('stroke') !== 'none') {
+                el.setAttribute('stroke', currentColor);
+              }
+            });
+            
+            // Update root SVG fill if present
+            if (svgElement.hasAttribute('fill') && svgElement.getAttribute('fill') !== 'none') {
+              svgElement.setAttribute('fill', currentColor);
+            }
+            
+            preview.innerHTML = svgElement.outerHTML;
+            preview.style.width = `${currentSize}px`;
+            preview.style.height = `${currentSize}px`;
+            preview.style.color = currentColor;
+          } else {
+            // Fallback: simple string replacement
+            let modifiedSvg = svg
+              .replace(/width="[^"]*"/, `width="${currentSize}"`)
+              .replace(/height="[^"]*"/, `height="${currentSize}"`)
+              .replace(/fill="[^"]*"/g, (match) => {
+                if (match.includes('none')) return match;
+                return `fill="${currentColor}"`;
+              });
+            preview.innerHTML = modifiedSvg;
+            preview.style.width = `${currentSize}px`;
+            preview.style.height = `${currentSize}px`;
+            preview.style.color = currentColor;
           }
         }
+
+        // Update all code snippets
+        const svgCode = document.getElementById('svg-code');
+        if (svgCode && variantPreviews[currentVariant]) {
+          const codeEl = svgCode.querySelector('code');
+          if (codeEl) {
+            codeEl.textContent = variantPreviews[currentVariant];
+          } else {
+            svgCode.textContent = variantPreviews[currentVariant];
+          }
+        }
+
+        const reactImportCode = document.getElementById('react-import-code');
+        if (reactImportCode) {
+          const codeEl = reactImportCode.querySelector('code');
+          if (codeEl) {
+            codeEl.textContent = CodeSnippet.generateReactImport(icon.name, currentVariant);
+          } else {
+            reactImportCode.textContent = CodeSnippet.generateReactImport(icon.name, currentVariant);
+          }
+        }
+
+        const reactUsageCode = document.getElementById('react-usage-code');
+        if (reactUsageCode) {
+          const codeEl = reactUsageCode.querySelector('code');
+          if (codeEl) {
+            codeEl.textContent = CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize);
+          } else {
+            reactUsageCode.textContent = CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize);
+          }
+        }
+
+        const cssBackgroundCode = document.getElementById('css-background-code');
+        if (cssBackgroundCode) {
+          const variantPath = icon.path[currentVariant] || icon.path.regular || '';
+          const codeEl = cssBackgroundCode.querySelector('code');
+          if (codeEl) {
+            codeEl.textContent = CodeSnippet.generateCSSBackground(variantPath);
+          } else {
+            cssBackgroundCode.textContent = CodeSnippet.generateCSSBackground(variantPath);
+          }
+        }
+
+        // Update variant active state
+        updateVariantActiveState();
       }
 
       // Open modal
-      openModal('icon-modal');
+      await openModal('icon-modal');
     }
 
     // Search functionality
@@ -374,7 +488,10 @@
     const debouncedSearch = debounce(() => {
       const searchTerm = searchInput.value;
       let filtered = filterBySearch(iconsData, searchTerm, ['name', 'displayName']);
-      filtered = filterByVariant(filtered, currentVariant, 'variants');
+      // Only filter by variant if a specific variant is selected (not 'all')
+      if (selectedVariantFilter !== 'all') {
+        filtered = filterByVariant(filtered, selectedVariantFilter, 'variants');
+      }
       filteredIcons = filtered;
       renderIcons();
     }, 300);
@@ -385,7 +502,11 @@
     document.querySelectorAll('[data-variant]').forEach(btn => {
       btn.addEventListener('click', () => {
         const variant = btn.dataset.variant;
-        currentVariant = variant === 'all' ? 'regular' : variant;
+        selectedVariantFilter = variant; // Track the selected filter
+        // Keep currentVariant for modal rendering (default to regular if 'all' is selected)
+        if (variant !== 'all') {
+          currentVariant = variant;
+        }
         
         // Update active state
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -393,6 +514,7 @@
         
         // Filter icons
         let filtered = filterBySearch(iconsData, searchInput.value, ['name', 'displayName']);
+        // Only filter by variant if a specific variant is selected (not 'all')
         if (variant !== 'all') {
           filtered = filterByVariant(filtered, variant, 'variants');
         }
