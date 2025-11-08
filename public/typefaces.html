@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and preview typefaces from the Asset Library">
+  <title>Typefaces - Asset Library</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+</head>
+<body>
+  <!-- Floating Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav">
+      <a href="index.html" class="nav-logo">
+        <i class="ph ph-books nav-logo-icon" aria-hidden="true"></i>
+        <span class="nav-logo-text">Asset Library</span>
+      </a>
+      <div class="nav-links">
+        <a href="typefaces.html" class="nav-link active">Typefaces</a>
+        <a href="phosphor-icons.html" class="nav-link">Icons</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <main class="page-main" style="padding-top: calc(var(--space-4) + 48px + var(--space-8));">
+      <div class="container">
+        <section class="section">
+          <h1 class="text-4xl font-semibold mb-4">Typefaces</h1>
+          <p class="text-lg text-secondary mb-8">
+            Browse <span id="total-families">441</span> font families with <span id="total-files">1,279</span> font files
+          </p>
+
+          <!-- Search -->
+          <div class="mb-6">
+            <input 
+              type="search" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search font families..."
+              aria-label="Search font families"
+            >
+          </div>
+
+          <!-- Font Grid -->
+          <div id="font-grid" class="card-grid">
+            <!-- Fonts will be loaded here -->
+          </div>
+
+          <!-- Empty State -->
+          <div id="empty-state" class="empty-state hidden">
+            <i class="ph ph-magnifying-glass empty-state-icon" aria-hidden="true"></i>
+            <h2 class="empty-state-title">No fonts found</h2>
+            <p class="empty-state-description">Try adjusting your search terms</p>
+          </div>
+
+          <!-- Loading State -->
+          <div id="loading-state" class="loading">
+            <div class="loading-spinner" aria-label="Loading"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p class="text-center text-sm text-secondary">
+          Asset Library &copy; 2024
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Font Modal -->
+  <div class="modal-backdrop" aria-hidden="true"></div>
+  <div id="font-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal-header">
+      <h2 id="modal-title" class="modal-title">Font Family</h2>
+      <button class="modal-close" aria-label="Close modal">
+        <i class="ph ph-x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div id="modal-content">
+        <!-- Modal content will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initApp, openModal } from './scripts/app.js';
+    import { filterBySearch } from './scripts/filters.js';
+    import { CodeSnippet, copyToClipboard, showToast, formatFileSize } from './scripts/ui-helpers.js';
+    import { debounce } from './scripts/ui-helpers.js';
+
+    let fontsData = [];
+    let filteredFonts = [];
+
+    // Load fonts data
+    async function loadFonts() {
+      try {
+        const response = await fetch('data/fonts.json');
+        const data = await response.json();
+        fontsData = data.families;
+        filteredFonts = fontsData;
+        
+        document.getElementById('total-families').textContent = data.totalFamilies.toLocaleString();
+        document.getElementById('total-files').textContent = data.totalFiles.toLocaleString();
+        
+        renderFonts();
+        document.getElementById('loading-state').classList.add('hidden');
+      } catch (err) {
+        console.error('Error loading fonts:', err);
+        document.getElementById('loading-state').classList.add('hidden');
+      }
+    }
+
+    // Render font cards
+    function renderFonts() {
+      const grid = document.getElementById('font-grid');
+      const emptyState = document.getElementById('empty-state');
+      
+      if (filteredFonts.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      grid.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+      
+      grid.innerHTML = filteredFonts.map(font => {
+        const previewText = font.name.length > 20 ? font.name.substring(0, 20) + '...' : font.name;
+        const weights = [...new Set(font.files.map(f => f.weight))].sort();
+        const styles = [...new Set(font.files.map(f => f.style))];
+        
+        return `
+          <div class="card font-card" data-font-family="${font.name}">
+            <div class="font-card-preview" style="font-family: '${font.name}', sans-serif;">
+              <span style="font-size: 2rem; font-weight: ${weights[0] || '400'};">${previewText}</span>
+            </div>
+            <div class="font-card-name">${font.name}</div>
+            <div class="font-card-meta">
+              ${font.fileCount} file${font.fileCount !== 1 ? 's' : ''} &bull; 
+              ${weights.length} weight${weights.length !== 1 ? 's' : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Add click handlers
+      grid.querySelectorAll('.font-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const fontFamily = card.dataset.fontFamily;
+          const font = fontsData.find(f => f.name === fontFamily);
+          if (font) {
+            openFontModal(font);
+          }
+        });
+      });
+    }
+
+    // Open font modal
+    function openFontModal(font) {
+      const modal = document.getElementById('font-modal');
+      const title = document.getElementById('modal-title');
+      const content = document.getElementById('modal-content');
+      
+      title.textContent = font.name;
+      
+      // Group files by weight
+      const filesByWeight = {};
+      font.files.forEach(file => {
+        if (!filesByWeight[file.weight]) {
+          filesByWeight[file.weight] = [];
+        }
+        filesByWeight[file.weight].push(file);
+      });
+
+      // Generate preview text input
+      const previewText = 'The quick brown fox jumps over the lazy dog';
+      
+      // Build modal content
+      content.innerHTML = `
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-4">Preview</h3>
+          <input 
+            type="text" 
+            id="preview-text-input" 
+            class="search-input mb-4" 
+            value="${previewText}"
+            placeholder="Enter preview text"
+          >
+          <div id="font-preview-container" class="font-card-preview" style="min-height: 200px;">
+            ${Object.keys(filesByWeight).sort().map(weight => {
+              const files = filesByWeight[weight];
+              return files.map(file => {
+                const fontFace = `font-${font.slug}-${file.weight}-${file.style}`;
+                const css = CodeSnippet.generateFontFace(font.name, file.path, file.weight, file.style, file.format);
+                
+                // Inject @font-face
+                const styleId = `style-${fontFace}`;
+                if (!document.getElementById(styleId)) {
+                  const style = document.createElement('style');
+                  style.id = styleId;
+                  style.textContent = css;
+                  document.head.appendChild(style);
+                }
+                
+                return `
+                  <div class="mb-6">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="font-medium">${file.baseName}</span>
+                      <span class="text-sm text-secondary">${formatFileSize(file.size)}</span>
+                    </div>
+                    <div 
+                      class="p-4 bg-secondary rounded-lg"
+                      style="font-family: '${font.name}', sans-serif; font-weight: ${file.weight}; font-style: ${file.style}; font-size: 1.5rem;"
+                    >
+                      ${previewText}
+                    </div>
+                  </div>
+                `;
+              }).join('');
+            }).join('')}
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-4">Code Snippets</h3>
+          <div class="mb-4">
+            <h4 class="font-medium mb-2">CSS @font-face</h4>
+            <div class="code-snippet">
+              <button class="code-snippet-copy">Copy</button>
+              <pre id="font-face-code">${font.files.map(file => 
+                CodeSnippet.generateFontFace(font.name, file.path, file.weight, file.style, file.format)
+              ).join('\n\n')}</pre>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-medium mb-2">CSS Usage</h4>
+            <div class="code-snippet">
+              <button class="code-snippet-copy">Copy</button>
+              <pre>${CodeSnippet.generateFontCSS(font.name)}</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Metadata</h3>
+          <dl class="grid grid-cols-2 gap-4">
+            <div>
+              <dt class="text-sm text-secondary">Family Name</dt>
+              <dd class="font-medium">${font.name}</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-secondary">Total Files</dt>
+              <dd class="font-medium">${font.fileCount}</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-secondary">Weights</dt>
+              <dd class="font-medium">${[...new Set(font.files.map(f => f.weight))].sort().join(', ')}</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-secondary">Styles</dt>
+              <dd class="font-medium">${[...new Set(font.files.map(f => f.style))].join(', ')}</dd>
+            </div>
+          </dl>
+        </div>
+      `;
+
+      // Update preview on text input change
+      const previewInput = document.getElementById('preview-text-input');
+      const previewContainer = document.getElementById('font-preview-container');
+      
+      previewInput.addEventListener('input', (e) => {
+        const newText = e.target.value || previewText;
+        previewContainer.querySelectorAll('[style*="font-family"]').forEach(el => {
+          el.textContent = newText;
+        });
+      });
+
+      // Open modal
+      openModal('font-modal');
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    const debouncedSearch = debounce(() => {
+      const searchTerm = searchInput.value;
+      filteredFonts = filterBySearch(fontsData, searchTerm, ['name']);
+      renderFonts();
+    }, 300);
+
+    searchInput.addEventListener('input', debouncedSearch);
+
+    // Initialize app
+    initApp();
+    loadFonts();
+  </script>
+</body>
+</html>
+

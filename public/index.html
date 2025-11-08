@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and preview typefaces and icons from the Asset Library">
+  <title>Asset Library - Typefaces & Icons</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+</head>
+<body>
+  <!-- Floating Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav">
+      <a href="index.html" class="nav-logo">
+        <i class="ph ph-books nav-logo-icon" aria-hidden="true"></i>
+        <span class="nav-logo-text">Asset Library</span>
+      </a>
+      <div class="nav-links">
+        <a href="typefaces.html" class="nav-link">Typefaces</a>
+        <a href="phosphor-icons.html" class="nav-link">Icons</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <main class="page-main" style="padding-top: calc(var(--space-4) + 48px + var(--space-8));">
+      <div class="container">
+        <section class="hero">
+          <h1 class="hero-title">Asset Library</h1>
+          <p class="hero-description">
+            Browse and preview our collection of typefaces and icons. 
+            Explore fonts, view icon variants, and get code snippets for your projects.
+          </p>
+        </section>
+
+        <section class="section">
+          <div class="card-grid">
+            <!-- Typefaces Card -->
+            <a href="typefaces.html" class="card nav-card">
+              <i class="ph ph-text-aa nav-card-icon" aria-hidden="true"></i>
+              <h2 class="nav-card-title">Typefaces</h2>
+              <p class="nav-card-description">
+                Browse <span id="font-count">441</span> font families with <span id="font-file-count">1,279</span> font files. 
+                Preview all weights and styles, and get CSS code snippets.
+              </p>
+            </a>
+
+            <!-- Icons Card -->
+            <a href="phosphor-icons.html" class="card nav-card">
+              <i class="ph ph-icons nav-card-icon" aria-hidden="true"></i>
+              <h2 class="nav-card-title">Phosphor Icons</h2>
+              <p class="nav-card-description">
+                Explore <span id="icon-count">1,512</span> icons across <span id="icon-variant-count">6</span> variants. 
+                View all styles, customize size and color, and copy code snippets.
+              </p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p class="text-center text-sm text-secondary">
+          Asset Library &copy; 2024
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- FAB (Optional - can be used for quick actions) -->
+  <!-- <button class="fab" aria-label="Quick action">
+    <i class="ph ph-plus fab-icon" aria-hidden="true"></i>
+  </button> -->
+
+  <script type="module">
+    // Load and display statistics
+    async function loadStats() {
+      try {
+        // Load fonts data
+        const fontsRes = await fetch('data/fonts.json');
+        const fontsData = await fontsRes.json();
+        
+        document.getElementById('font-count').textContent = fontsData.totalFamilies.toLocaleString();
+        document.getElementById('font-file-count').textContent = fontsData.totalFiles.toLocaleString();
+
+        // Load icons data
+        const iconsRes = await fetch('data/icons.json');
+        const iconsData = await iconsRes.json();
+        
+        document.getElementById('icon-count').textContent = iconsData.totalIcons.toLocaleString();
+        document.getElementById('icon-variant-count').textContent = iconsData.variants.length;
+      } catch (err) {
+        console.error('Error loading statistics:', err);
+      }
+    }
+
+    loadStats();
+  </script>
+</body>
+</html>
+

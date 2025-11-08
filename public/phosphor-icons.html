@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse and preview Phosphor icons from the Asset Library">
+  <title>Phosphor Icons - Asset Library</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/utilities.css">
+</head>
+<body>
+  <!-- Floating Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav">
+      <a href="index.html" class="nav-logo">
+        <i class="ph ph-books nav-logo-icon" aria-hidden="true"></i>
+        <span class="nav-logo-text">Asset Library</span>
+      </a>
+      <div class="nav-links">
+        <a href="typefaces.html" class="nav-link">Typefaces</a>
+        <a href="phosphor-icons.html" class="nav-link active">Icons</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <main class="page-main" style="padding-top: calc(var(--space-4) + 48px + var(--space-8));">
+      <div class="container">
+        <section class="section">
+          <h1 class="text-4xl font-semibold mb-4">Phosphor Icons</h1>
+          <p class="text-lg text-secondary mb-8">
+            Browse <span id="total-icons">1,512</span> icons across <span id="total-variants">6</span> variants
+          </p>
+
+          <!-- Controls -->
+          <div class="mb-6 flex flex-col gap-4">
+            <!-- Search -->
+            <div>
+              <input 
+                type="search" 
+                id="search-input" 
+                class="search-input" 
+                placeholder="Search icons..."
+                aria-label="Search icons"
+              >
+            </div>
+
+            <!-- Variant Filter -->
+            <div>
+              <div class="filter-group">
+                <button class="filter-btn active" data-filter="all" data-variant="all">All</button>
+                <button class="filter-btn" data-filter="regular" data-variant="regular">Regular</button>
+                <button class="filter-btn" data-filter="bold" data-variant="bold">Bold</button>
+                <button class="filter-btn" data-filter="fill" data-variant="fill">Fill</button>
+                <button class="filter-btn" data-filter="duotone" data-variant="duotone">Duotone</button>
+                <button class="filter-btn" data-filter="thin" data-variant="thin">Thin</button>
+                <button class="filter-btn" data-filter="light" data-variant="light">Light</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Icon Grid -->
+          <div id="icon-grid" class="card-grid">
+            <!-- Icons will be loaded here -->
+          </div>
+
+          <!-- Empty State -->
+          <div id="empty-state" class="empty-state hidden">
+            <i class="ph ph-magnifying-glass empty-state-icon" aria-hidden="true"></i>
+            <h2 class="empty-state-title">No icons found</h2>
+            <p class="empty-state-description">Try adjusting your search or filter</p>
+          </div>
+
+          <!-- Loading State -->
+          <div id="loading-state" class="loading">
+            <div class="loading-spinner" aria-label="Loading"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p class="text-center text-sm text-secondary">
+          Asset Library &copy; 2024
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Icon Modal -->
+  <div class="modal-backdrop" aria-hidden="true"></div>
+  <div id="icon-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+    <div class="modal-header">
+      <h2 id="modal-title" class="modal-title">Icon</h2>
+      <button class="modal-close" aria-label="Close modal">
+        <i class="ph ph-x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div id="modal-content">
+        <!-- Modal content will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initApp, openModal } from './scripts/app.js';
+    import { filterBySearch, filterByVariant } from './scripts/filters.js';
+    import { CodeSnippet, copyToClipboard, showToast } from './scripts/ui-helpers.js';
+    import { debounce } from './scripts/ui-helpers.js';
+
+    let iconsData = [];
+    let filteredIcons = [];
+    let currentVariant = 'regular';
+    let currentSize = 48;
+    let currentColor = '#000000';
+
+    // Load icons data
+    async function loadIcons() {
+      try {
+        const response = await fetch('data/icons.json');
+        const data = await response.json();
+        iconsData = data.icons;
+        filteredIcons = iconsData;
+        
+        document.getElementById('total-icons').textContent = data.totalIcons.toLocaleString();
+        document.getElementById('total-variants').textContent = data.variants.length;
+        
+        renderIcons();
+        document.getElementById('loading-state').classList.add('hidden');
+      } catch (err) {
+        console.error('Error loading icons:', err);
+        document.getElementById('loading-state').classList.add('hidden');
+      }
+    }
+
+    // Render icon cards
+    function renderIcons() {
+      const grid = document.getElementById('icon-grid');
+      const emptyState = document.getElementById('empty-state');
+      
+      if (filteredIcons.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      grid.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+      
+      grid.innerHTML = filteredIcons.map(icon => {
+        const variantPath = icon.path[currentVariant] || icon.path.regular;
+        const hasVariant = icon.variants.includes(currentVariant);
+        
+        return `
+          <div class="card icon-card" data-icon-name="${icon.name}">
+            <div class="icon-card-preview">
+              ${hasVariant && variantPath ? 
+                `<img src="${variantPath}" alt="${icon.displayName}" width="48" height="48" style="color: ${currentColor};" />` :
+                `<div style="width: 48px; height: 48px; background: var(--color-bg-secondary); border-radius: var(--radius-md);"></div>`
+              }
+            </div>
+            <div class="icon-card-name">${icon.displayName}</div>
+          </div>
+        `;
+      }).join('');
+
+      // Add click handlers
+      grid.querySelectorAll('.icon-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const iconName = card.dataset.iconName;
+          const icon = iconsData.find(i => i.name === iconName);
+          if (icon) {
+            openIconModal(icon);
+          }
+        });
+      });
+    }
+
+    // Load SVG content
+    async function loadSVG(path) {
+      try {
+        const response = await fetch(path);
+        return await response.text();
+      } catch (err) {
+        console.error('Error loading SVG:', err);
+        return null;
+      }
+    }
+
+    // Open icon modal
+    async function openIconModal(icon) {
+      const modal = document.getElementById('icon-modal');
+      const title = document.getElementById('modal-title');
+      const content = document.getElementById('modal-content');
+      
+      title.textContent = icon.displayName;
+      
+      // Load SVG for each variant
+      const variantPreviews = {};
+      for (const variant of icon.variants) {
+        if (icon.path[variant]) {
+          const svgContent = await loadSVG(icon.path[variant]);
+          if (svgContent) {
+            variantPreviews[variant] = svgContent;
+          }
+        }
+      }
+
+      // Build modal content
+      content.innerHTML = `
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-4">Variants</h3>
+          <div class="grid grid-cols-3 gap-4 mb-4">
+            ${icon.variants.map(variant => {
+              const svg = variantPreviews[variant] || '';
+              const isActive = variant === currentVariant;
+              return `
+                <div class="p-4 border rounded-lg cursor-pointer ${isActive ? 'border-neutral-900 bg-neutral-100' : ''}" 
+                     data-variant="${variant}"
+                     style="text-align: center;">
+                  <div class="mb-2" style="display: flex; align-items: center; justify-content: center; height: 64px;">
+                    ${svg ? `<div style="width: 48px; height: 48px; color: ${currentColor};">${svg}</div>` : '<div style="width: 48px; height: 48px;"></div>'}
+                  </div>
+                  <div class="text-sm font-medium capitalize">${variant}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-4">Customize</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">Size</label>
+              <select id="size-selector" class="search-input">
+                <option value="16">16px</option>
+                <option value="24">24px</option>
+                <option value="32" selected>32px</option>
+                <option value="48">48px</option>
+                <option value="64">64px</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Color</label>
+              <input type="color" id="color-selector" class="w-full h-10 rounded" value="${currentColor}">
+            </div>
+          </div>
+          <div class="mt-4 p-6 bg-secondary rounded-lg" style="text-align: center;">
+            <div id="icon-preview" style="display: inline-block; color: ${currentColor};">
+              ${variantPreviews[currentVariant] || ''}
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-4">Code Snippets</h3>
+          
+          <div class="mb-4">
+            <h4 class="font-medium mb-2">SVG Inline</h4>
+            <div class="code-snippet">
+              <button class="code-snippet-copy">Copy</button>
+              <pre id="svg-code">${variantPreviews[currentVariant] || 'N/A'}</pre>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <h4 class="font-medium mb-2">React Component</h4>
+            <div class="code-snippet">
+              <button class="code-snippet-copy">Copy</button>
+              <pre id="react-import-code">${CodeSnippet.generateReactImport(icon.name, currentVariant)}</pre>
+            </div>
+            <div class="code-snippet mt-2">
+              <button class="code-snippet-copy">Copy</button>
+              <pre id="react-usage-code">${CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize)}</pre>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-medium mb-2">CSS Background</h4>
+            <div class="code-snippet">
+              <button class="code-snippet-copy">Copy</button>
+              <pre>${CodeSnippet.generateCSSBackground(icon.path[currentVariant] || icon.path.regular)}</pre>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Metadata</h3>
+          <dl class="grid grid-cols-2 gap-4">
+            <div>
+              <dt class="text-sm text-secondary">Icon Name</dt>
+              <dd class="font-medium">${icon.name}</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-secondary">Display Name</dt>
+              <dd class="font-medium">${icon.displayName}</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-secondary">Available Variants</dt>
+              <dd class="font-medium">${icon.variants.join(', ')}</dd>
+            </div>
+          </dl>
+        </div>
+      `;
+
+      // Variant selector
+      content.querySelectorAll('[data-variant]').forEach(el => {
+        el.addEventListener('click', () => {
+          currentVariant = el.dataset.variant;
+          updateIconPreview();
+        });
+      });
+
+      // Size selector
+      const sizeSelector = document.getElementById('size-selector');
+      sizeSelector.value = currentSize;
+      sizeSelector.addEventListener('change', (e) => {
+        currentSize = parseInt(e.target.value);
+        updateIconPreview();
+      });
+
+      // Color selector
+      const colorSelector = document.getElementById('color-selector');
+      colorSelector.addEventListener('input', (e) => {
+        currentColor = e.target.value;
+        updateIconPreview();
+      });
+
+      function updateIconPreview() {
+        const preview = document.getElementById('icon-preview');
+        const svg = variantPreviews[currentVariant];
+        if (svg && preview) {
+          // Update SVG size and color
+          const svgWithSize = svg.replace(/width="[^"]*"/, `width="${currentSize}"`);
+          const svgWithSizeAndColor = svgWithSize.replace(/height="[^"]*"/, `height="${currentSize}"`);
+          const svgWithColor = svgWithSizeAndColor.replace(/fill="[^"]*"/g, `fill="${currentColor}"`);
+          
+          preview.innerHTML = svgWithColor;
+          preview.style.width = `${currentSize}px`;
+          preview.style.height = `${currentSize}px`;
+          preview.style.color = currentColor;
+
+          // Update code snippets
+          const reactUsage = document.getElementById('react-usage-code');
+          if (reactUsage) {
+            reactUsage.textContent = CodeSnippet.generateReactUsage(icon.name, currentVariant, currentSize);
+          }
+        }
+      }
+
+      // Open modal
+      openModal('icon-modal');
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('search-input');
+    const debouncedSearch = debounce(() => {
+      const searchTerm = searchInput.value;
+      let filtered = filterBySearch(iconsData, searchTerm, ['name', 'displayName']);
+      filtered = filterByVariant(filtered, currentVariant, 'variants');
+      filteredIcons = filtered;
+      renderIcons();
+    }, 300);
+
+    searchInput.addEventListener('input', debouncedSearch);
+
+    // Variant filter
+    document.querySelectorAll('[data-variant]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const variant = btn.dataset.variant;
+        currentVariant = variant === 'all' ? 'regular' : variant;
+        
+        // Update active state
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter icons
+        let filtered = filterBySearch(iconsData, searchInput.value, ['name', 'displayName']);
+        if (variant !== 'all') {
+          filtered = filterByVariant(filtered, variant, 'variants');
+        }
+        filteredIcons = filtered;
+        renderIcons();
+      });
+    });
+
+    // Initialize app
+    initApp();
+    loadIcons();
+  </script>
+</body>
+</html>
+
