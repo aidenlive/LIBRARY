@@ -13,6 +13,7 @@ LIBRARY/
 │   └── scripts/         # Generation and optimization scripts
 │       └── phosphor/    # Platform-specific scripts (React, Swift, Web)
 ├── progress-tracker.md  # Development progress tracking
+├── SYSTEM-MESSAGE.xml   # Global LLM Rules 
 └── README.md            # This file
 ```
 
