@@ -1,60 +1,11 @@
 /**
  * Data Generator
- * Generates typeface and icon data from directory listings
- * This would typically run server-side or during build
+ * Loads font metadata from pre-generated JSON file
+ * Metadata is generated at build time by scripts/generate-font-metadata.js
  */
 
-// Full typeface list (443+ fonts)
-export const TYPEFACES = [
-  'Aboca', 'Adren', 'Aeonik', 'After', 'Ageo', 'Aimflash', 'Alloy', 'Almonde',
-  'Altone', 'Alumtani', 'Ambient', 'Amio', 'Analog', 'Anko', 'Arcade', 'Argon',
-  'Article', 'Ashitta', 'Atlantic', 'Avaboca', 'Avoidance', 'Awita', 'Bacone',
-  'Baglietta', 'Balder', 'Bandal', 'Banditos', 'Banget', 'Baserock', 'Belgro',
-  'Belmonte', 'Bently', 'Besgrid', 'Betting', 'Bickley', 'Bigcity', 'Billiard',
-  'Binate', 'Binomo', 'Bistro', 'Blanka', 'Blazer', 'Blenda', 'Blockly', 'Bloggie',
-  'Bloomy', 'Blowbrush', 'Bobber', 'Bocage', 'Bodacious', 'Bodoni', 'Bogart',
-  'Boldey', 'Bonfire', 'Boogaloo', 'Bookish', 'Booster', 'Borax', 'Border',
-  'Bosque', 'Boston', 'Bottle', 'Boulevard', 'Bouncy', 'Boxer', 'Bracken',
-  'Bradley', 'Bragley', 'Brainstorm', 'Bramble', 'Branch', 'Brandon', 'Brandy',
-  'Brasserie', 'Bravery', 'Breakout', 'Breeze', 'Brewery', 'Brigade', 'Bright',
-  'Brilliant', 'Bristol', 'British', 'Broadway', 'Broken', 'Brooklyn', 'Brother',
-  'Brownstone', 'Brunel', 'Bruno', 'Brush', 'Brutal', 'Bryant', 'Bubble',
-  'Buckley', 'Builder', 'Bulky', 'Bumper', 'Bundle', 'Burger', 'Burgin',
-  'Burlington', 'Burnaby', 'Burnt', 'Burton', 'Business', 'Buster', 'Butler',
-  'Butterfly', 'Button', 'Cabin', 'Cable', 'Cactus', 'Cadbury', 'Cafe',
-  'Calibri', 'California', 'Calling', 'Calm', 'Cambridge', 'Camden', 'Camelot',
-  'Campaign', 'Campus', 'Canada', 'Canal', 'Candice', 'Candle', 'Candy',
-  'Canyon', 'Capital', 'Capitol', 'Captain', 'Carbon', 'Cardiac', 'Cardinal',
-  'Cargo', 'Caribbean', 'Carlton', 'Carnival', 'Carolina', 'Carousel', 'Carpenter',
-  'Carter', 'Cartoon', 'Cascade', 'Castle', 'Casual', 'Catalog', 'Catch',
-  'Cathedral', 'Cedar', 'Celebrate', 'Celebrity', 'Celtic', 'Cement', 'Center',
-  'Central', 'Century', 'Ceramic', 'Ceremony', 'Certain', 'Champion', 'Chance',
-  'Channel', 'Chapel', 'Chapter', 'Charge', 'Charity', 'Charles', 'Charlie',
-  'Charlotte', 'Charter', 'Chase', 'Chaser', 'Chasing', 'Chatham', 'Checker',
-  'Chelsea', 'Chemical', 'Cherry', 'Chicago', 'Chief', 'Child', 'China',
-  'Chisel', 'Choice', 'Chorus', 'Chrome', 'Chronicle', 'Church', 'Circle',
-  'Circuit', 'Circular', 'Circus', 'Citadel', 'Citizen', 'City', 'Civic',
-  'Civil', 'Classic', 'Claude', 'Clayton', 'Clear', 'Clever', 'Clifford',
-  'Climate', 'Clinic', 'Clock', 'Cloud', 'Clover', 'Club', 'Cluster',
-  'Coach', 'Coastal', 'Cobalt', 'Cobra', 'Coffee', 'Cognito', 'Colab',
-  'Coldplay', 'Coleman', 'Colin', 'College', 'Cologne', 'Colonial', 'Colony',
-  'Colorado', 'Colossal', 'Columbia', 'Column', 'Combat', 'Comedy', 'Comfort',
-  'Comic', 'Command', 'Commerce', 'Common', 'Community', 'Compact', 'Company',
-  'Compare', 'Compass', 'Complete', 'Complex', 'Compose', 'Computer', 'Concert',
-  'Concrete', 'Condor', 'Confident', 'Connect', 'Conquest', 'Console', 'Constant',
-  'Contact', 'Content', 'Contest', 'Context', 'Continue', 'Contract', 'Contrast',
-  'Control', 'Convert', 'Cookie', 'Cooper', 'Copper', 'Copy', 'Coral',
-  'Cordova', 'Core', 'Corona', 'Corporate', 'Correct', 'Cosmic', 'Cosmos',
-  'Costume', 'Cottage', 'Cotton', 'Council', 'Counter', 'Country', 'County',
-  'Couple', 'Courage', 'Course', 'Court', 'Cousin', 'Cover', 'Cowboy',
-  'Cradle', 'Craft', 'Craig', 'Crash', 'Crater', 'Crazy', 'Create',
-  'Creative', 'Creator', 'Credit', 'Creek', 'Creepy', 'Crescent', 'Cricket',
-  'Crime', 'Crisis', 'Crispy', 'Criterion', 'Critical', 'Crosby', 'Cross',
-  'Crown', 'Cruise', 'Crush', 'Crystal', 'Culture', 'Cumberland', 'Cupid',
-  'Curious', 'Current', 'Cursor', 'Curve', 'Custom', 'Cycle', 'Cyclone',
-  'Cyprus', 'Dagger', 'Daily', 'Daisy', 'Dakota', 'Dallas', 'Damage',
-  'Dance', 'Danger', 'Daniel', 'Danish', 'Danny', 'Dante', 'Dapper'
-];
+// Font metadata loaded from JSON
+let FONT_METADATA = null;
 
 // Icon categories
 export const ICON_CATEGORIES = {
@@ -76,49 +27,96 @@ export const TYPEFACE_CATEGORIES = {
   'handwritten': 'Handwritten typefaces'
 };
 
-// Common font weights
-const FONT_WEIGHTS = ['Regular', 'Bold', 'Light', 'Medium', 'SemiBold', 'Black'];
+/**
+ * Load font metadata from JSON file
+ */
+export async function loadFontMetadata() {
+  if (FONT_METADATA) {
+    return FONT_METADATA;
+  }
 
-// Generate typeface objects with variants
-export function generateTypefaceData(names) {
-  return names.map(name => {
-    // Simulate weight detection (in real implementation, would scan directory)
-    const availableWeights = FONT_WEIGHTS.filter(() => Math.random() > 0.5);
-    const weights = availableWeights.length > 0 ? availableWeights : ['Regular'];
-
-    return {
-      name,
-      category: inferTypefaceCategory(name),
-      categories: [inferTypefaceCategory(name)],
-      path: `https://github.com/aidenlive/LIBRARY/tree/main/typefaces/${name}`,
-      rawPath: `https://raw.githubusercontent.com/aidenlive/LIBRARY/main/typefaces/${name}`,
-      preview: 'The quick brown fox jumps over the lazy dog',
-      alphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789',
-      weights,
-      variants: weights.length,
-      tags: [inferTypefaceCategory(name), 'font', 'typeface', 'typography'],
-      // Font face URL for preview
-      fontUrl: `https://raw.githubusercontent.com/aidenlive/LIBRARY/main/typefaces/${name}/${name}-Regular.otf`
-    };
-  });
+  try {
+    const response = await fetch('data/fonts-metadata.json');
+    if (!response.ok) {
+      throw new Error(`Failed to load font metadata: ${response.status}`);
+    }
+    FONT_METADATA = await response.json();
+    console.log(`✅ Loaded metadata for ${FONT_METADATA.totalFonts} fonts (${FONT_METADATA.totalFiles} files)`);
+    return FONT_METADATA;
+  } catch (error) {
+    console.error('Failed to load font metadata:', error);
+    throw error;
+  }
 }
 
-// Infer typeface category from name
-function inferTypefaceCategory(name) {
-  const lowerName = name.toLowerCase();
+/**
+ * Get all typefaces with metadata
+ * This replaces the old generateTypefaceData function
+ */
+export async function getTypefaceData() {
+  const metadata = await loadFontMetadata();
 
-  if (lowerName.includes('mono') || lowerName.includes('code') || lowerName.includes('console')) {
-    return 'mono';
-  }
-  if (lowerName.includes('serif') && !lowerName.includes('sans')) {
-    return 'serif';
-  }
-  if (lowerName.includes('script') || lowerName.includes('brush') || lowerName.includes('handwritten')) {
-    return 'script';
-  }
-  if (/[A-Z]{2,}/.test(name) || lowerName.includes('display') || lowerName.includes('headline')) {
-    return 'display';
-  }
+  // Transform metadata into format expected by the app
+  return metadata.fonts.map(font => ({
+    name: font.name,
+    category: font.category,
+    categories: font.categories,
+    path: font.path,
+    weights: font.weights,
+    variants: font.variants,
+    files: font.files,
+    defaultFile: font.defaultFile,
+    preview: font.preview,
+    alphabet: font.alphabet,
+    tags: font.tags,
+    // Use the default file for font preview (usually Regular weight)
+    fontUrl: font.defaultFile
+  }));
+}
 
-  return 'sans-serif';
+/**
+ * Get typeface by name
+ */
+export async function getTypefaceByName(name) {
+  const metadata = await loadFontMetadata();
+  return metadata.fonts.find(f => f.name === name);
+}
+
+/**
+ * Get typefaces by category
+ */
+export async function getTypefacesByCategory(category) {
+  const metadata = await loadFontMetadata();
+  return metadata.fonts.filter(f => f.category === category);
+}
+
+/**
+ * Get metadata stats
+ */
+export async function getMetadataStats() {
+  const metadata = await loadFontMetadata();
+  return {
+    totalFonts: metadata.totalFonts,
+    totalFiles: metadata.totalFiles,
+    categories: metadata.categories,
+    generated: metadata.generated
+  };
+}
+
+/**
+ * Legacy export for backward compatibility
+ * This is deprecated - use getTypefaceData() instead
+ */
+export function generateTypefaceData() {
+  console.warn('generateTypefaceData() is deprecated. Use getTypefaceData() instead.');
+  return getTypefaceData();
+}
+
+/**
+ * Get the old TYPEFACES array for backward compatibility
+ * This is deprecated - metadata now loaded from JSON
+ */
+export async function getTypefaceNames() {
+  const metadata = await loadFontMetadata();
+  return metadata.fonts.map(f => f.name);
 }
