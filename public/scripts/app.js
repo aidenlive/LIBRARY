@@ -217,14 +217,7 @@ function renderTypefaces(typefaces) {
     const fontId = `font-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
 
     return `
-      <style>
-        @font-face {
-          font-family: '${typeface.name}';
-          src: url('${typeface.fontUrl}') format('opentype');
-          font-display: swap;
-        }
-      </style>
-      <article class="card card-interactive hover-lift" data-typeface="${typeface.name}">
+      <article class="card card-interactive hover-lift" data-typeface="${typeface.name}" data-font-url="${typeface.fontUrl}" data-font-loaded="false">
         <div class="flex items-center justify-between mb-3">
           <h3 class="text-lg font-semibold truncate" style="flex: 1; margin-right: 0.5rem;">${typeface.name}</h3>
           <div class="badge badge-subtle">${typeface.category}</div>
@@ -232,15 +225,60 @@ function renderTypefaces(typefaces) {
         <div class="text-xs text-tertiary mb-3">
           ${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}
         </div>
-        <div class="text-base text-primary line-clamp-2" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
+        <div class="text-base text-primary line-clamp-2 font-preview-text" style="font-family: Inter, sans-serif; line-height: 1.4;">
           ${previewText}
         </div>
       </article>
     `;
   }).join('');
 
-  // Add click handlers
+  // Set up lazy font loading with Intersection Observer
+  const fontObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const fontName = card.dataset.typeface;
+        const fontUrl = card.dataset.fontUrl;
+        const fontLoaded = card.dataset.fontLoaded === 'true';
+
+        if (!fontLoaded) {
+          // Create and inject @font-face style
+          const styleId = `font-style-${fontName.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+          if (!document.getElementById(styleId)) {
+            const style = document.createElement('style');
+            style.id = styleId;
+            style.textContent = `
+              @font-face {
+                font-family: '${fontName}';
+                src: url('${fontUrl}') format('opentype');
+                font-display: swap;
+                font-weight: 400;
+              }
+            `;
+            document.head.appendChild(style);
+          }
+
+          // Update preview text to use the font
+          const previewText = card.querySelector('.font-preview-text');
+          if (previewText) {
+            previewText.style.fontFamily = `'${fontName}', Inter, sans-serif`;
+          }
+
+          card.dataset.fontLoaded = 'true';
+          // Unobserve after loading
+          fontObserver.unobserve(card);
+        }
+      }
+    });
+  }, {
+    rootMargin: '50px' // Start loading fonts slightly before they come into view
+  });
+
+  // Observe all typeface cards
   grid.querySelectorAll('.card').forEach(card => {
+    fontObserver.observe(card);
+
+    // Add click handlers
     card.addEventListener('click', () => {
       const name = card.dataset.typeface;
       const typeface = typefaces.find(t => t.name === name);
@@ -439,17 +477,33 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
         <!-- Weights Section -->
         <div class="modal-section" data-section="weights">
           <div class="grid grid-mobile-1" style="gap: var(--space-3);">
-            ${typeface.weights.map(weight => `
-              <div class="weight-preview-card">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="text-xs font-medium text-secondary capitalize">${weight}</span>
-                  <span class="badge badge-subtle" style="font-size: 10px;">OTF</span>
+            ${typeface.weights.map(weight => {
+              // Map weight names to CSS font-weight values
+              const weightMap = {
+                'Thin': 100,
+                'ExtraLight': 200,
+                'Light': 300,
+                'Regular': 400,
+                'Medium': 500,
+                'SemiBold': 600,
+                'Bold': 700,
+                'ExtraBold': 800,
+                'Black': 900
+              };
+              const fontWeightValue = weightMap[weight] || 400;
+
+              return `
+                <div class="weight-preview-card">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-medium text-secondary capitalize">${weight}</span>
+                    <span class="badge badge-subtle" style="font-size: 10px;">OTF</span>
+                  </div>
+                  <div class="text-lg weight-preview-sample" data-weight="${weight}" style="font-family: '${typeface.name}', Inter, sans-serif; font-weight: ${fontWeightValue}; line-height: 1.4;">
+                    ${defaultPreview.split('.')[0]}.
+                  </div>
                 </div>
-                <div class="text-lg weight-preview-sample" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
-                  ${defaultPreview.split('.')[0]}.
-                </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
 
@@ -527,6 +581,41 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
 
   // Add event handlers after modal opens
   setTimeout(() => {
+    // Load all font weights dynamically
+    const weightMap = {
+      'Thin': 100,
+      'ExtraLight': 200,
+      'Light': 300,
+      'Regular': 400,
+      'Medium': 500,
+      'SemiBold': 600,
+      'Bold': 700,
+      'ExtraBold': 800,
+      'Black': 900
+    };
+
+    typeface.weights.forEach(weight => {
+      const fontWeightValue = weightMap[weight] || 400;
+      const weightFontUrl = `${typeface.rawPath}/${typeface.name}-${weight}.otf`;
+      const styleId = `font-weight-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-${weight.toLowerCase()}`;
+
+      // Check if this weight's @font-face is already loaded
+      if (!document.getElementById(styleId)) {
+        const style = document.createElement('style');
+        style.id = styleId;
+        style.textContent = `
+          @font-face {
+            font-family: '${typeface.name}';
+            src: url('${weightFontUrl}') format('opentype');
+            font-display: swap;
+            font-weight: ${fontWeightValue};
+            font-style: normal;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    });
+
     // Segmented control switching
     document.querySelectorAll('.segment-button').forEach(btn => {
       btn.addEventListener('click', () => {
