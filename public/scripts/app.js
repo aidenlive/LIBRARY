@@ -13,6 +13,7 @@ import { getTypefaceData, getMetadataStats } from './data-generator.js';
 const state = {
   typefaces: [],
   icons: [],
+  backgrounds: [],
   config: null,
   modal: null,
   theme: null,
@@ -56,6 +57,7 @@ async function init() {
   // Load data
   await loadTypefaces();
   await loadIcons();
+  await loadBackgrounds();
 
   console.log('✅ Asset Library initialized');
 
@@ -92,8 +94,10 @@ function setupEventListeners() {
     const activeTab = document.querySelector('.tab.active');
     if (activeTab?.dataset.tab === 'typefaces') {
       state.typefaceFilter?.search(query);
-    } else {
+    } else if (activeTab?.dataset.tab === 'icons') {
       state.iconFilter?.search(query);
+    } else if (activeTab?.dataset.tab === 'backgrounds') {
+      state.backgroundFilter?.search(query);
     }
   });
 }
@@ -202,6 +206,32 @@ async function loadIcons() {
   } catch (error) {
     console.error('Failed to load icons:', error);
     showToast('Failed to load icons');
+  }
+}
+
+// ============================================
+// Load Backgrounds
+// ============================================
+async function loadBackgrounds() {
+  console.log('🎨 Loading backgrounds...');
+
+  try {
+    // Generate background data from pre-defined list
+    state.backgrounds = generateBackgroundData(BACKGROUNDS);
+
+    // Set up filter manager
+    state.backgroundFilter = new FilterManager(state.backgrounds, renderBackgrounds);
+
+    // Set up filters
+    createFilterHandler(state.backgroundFilter, '#backgrounds-panel');
+
+    // Initial render
+    renderBackgrounds(state.backgrounds);
+
+    console.log(`✅ Loaded ${state.backgrounds.length} backgrounds`);
+  } catch (error) {
+    console.error('Failed to load backgrounds:', error);
+    showToast('Failed to load backgrounds');
   }
 }
 
@@ -340,6 +370,59 @@ function renderIcons(icons) {
 }
 
 // ============================================
+// Render Backgrounds
+// ============================================
+function renderBackgrounds(backgrounds) {
+  const grid = document.getElementById('backgrounds-grid');
+  const emptyState = document.getElementById('backgrounds-empty');
+  const countEl = document.getElementById('background-count');
+
+  if (!grid) return;
+
+  // Update count
+  if (countEl) {
+    countEl.textContent = backgrounds.length;
+  }
+
+  // Show empty state if no results
+  if (backgrounds.length === 0) {
+    grid.classList.add('hidden');
+    emptyState?.classList.remove('hidden');
+    return;
+  }
+
+  grid.classList.remove('hidden');
+  emptyState?.classList.add('hidden');
+
+  // Render background cards with visual preview
+  grid.innerHTML = backgrounds.map(bg => `
+    <article class="card card-interactive hover-lift" data-background="${bg.name}">
+      <div class="bg-preview" style="
+        background: ${bg.cssValue};
+        height: 160px;
+        border-radius: var(--radius-lg);
+        margin-bottom: var(--space-3);
+        border: 1px solid var(--color-border-subtle);
+      "></div>
+      <div class="flex items-center justify-between mb-2">
+        <h4 class="text-sm font-semibold truncate" style="flex: 1; margin-right: 0.5rem;">${bg.displayName}</h4>
+        <div class="badge badge-subtle capitalize" style="font-size: 10px;">${bg.category}</div>
+      </div>
+      <div class="text-xs text-tertiary capitalize">${bg.type}</div>
+    </article>
+  `).join('');
+
+  // Add click handlers
+  grid.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      const name = card.dataset.background;
+      const background = backgrounds.find(b => b.name === name);
+      showBackgroundModal(background);
+    });
+  });
+}
+
+// ============================================
 // Helper: Add Syntax Highlighting to Code
 // ============================================
 function highlightCode(code, language = 'html') {
@@ -458,15 +541,53 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
 
         <!-- Preview Section -->
         <div class="modal-section active" data-section="preview">
-          <!-- Color Controls -->
+          <!-- Professional Editor Controls -->
           <div class="preview-controls">
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="text-color-picker">Text Color</label>
-              <input type="color" id="text-color-picker" class="color-picker-input" value="#000000">
+            <!-- Left: Color Controls -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="text-color-picker">Text Color</label>
+                <input type="color" id="text-color-picker" class="color-picker-input" value="#000000">
+              </div>
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="bg-color-picker">Background</label>
+                <input type="color" id="bg-color-picker" class="color-picker-input" value="#f5f5f5">
+              </div>
             </div>
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="bg-color-picker">Background</label>
-              <input type="color" id="bg-color-picker" class="color-picker-input" value="#f5f5f5">
+
+            <!-- Right: Size & Weight Controls -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="font-size-select">Size</label>
+                <select id="font-size-select" class="preview-select">
+                  <option value="12">12px</option>
+                  <option value="14">14px</option>
+                  <option value="16">16px</option>
+                  <option value="18">18px</option>
+                  <option value="20">20px</option>
+                  <option value="24">24px</option>
+                  <option value="28">28px</option>
+                  <option value="32" selected>32px</option>
+                  <option value="36">36px</option>
+                  <option value="48">48px</option>
+                  <option value="64">64px</option>
+                  <option value="72">72px</option>
+                </select>
+              </div>
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="font-weight-select">Weight</label>
+                <select id="font-weight-select" class="preview-select">
+                  <option value="100">Thin</option>
+                  <option value="200">Extra Light</option>
+                  <option value="300">Light</option>
+                  <option value="400" selected>Regular</option>
+                  <option value="500">Medium</option>
+                  <option value="600">Semi Bold</option>
+                  <option value="700">Bold</option>
+                  <option value="800">Extra Bold</option>
+                  <option value="900">Black</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -474,24 +595,40 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             class="font-preview-input"
             id="font-preview-text-${typeface.name.replace(/\s/g, '')}"
             placeholder="Type to preview this typeface..."
-            style="font-family: '${typeface.name}', Inter, sans-serif; color: #000000; background-color: #f5f5f5;"
+            style="font-family: '${typeface.name}', Inter, sans-serif; color: #000000; background-color: #f5f5f5; font-size: 32px; font-weight: 400;"
           >${defaultPreview}</textarea>
         </div>
 
         <!-- Weights Section -->
         <div class="modal-section" data-section="weights">
           <div class="grid grid-mobile-1" style="gap: var(--space-3);">
-            ${typeface.weights.map(weight => `
-              <div class="weight-preview-card">
-                <div class="flex items-center justify-between mb-2">
-                  <span class="text-xs font-medium text-secondary capitalize">${weight}</span>
-                  <span class="badge badge-subtle" style="font-size: 10px;">OTF</span>
+            ${typeface.weights.map(weight => {
+              // Map weight names to CSS font-weight values
+              const weightMap = {
+                'Thin': 100,
+                'ExtraLight': 200,
+                'Light': 300,
+                'Regular': 400,
+                'Medium': 500,
+                'SemiBold': 600,
+                'Bold': 700,
+                'ExtraBold': 800,
+                'Black': 900
+              };
+              const fontWeightValue = weightMap[weight] || 400;
+
+              return `
+                <div class="weight-preview-card">
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-medium text-secondary capitalize">${weight}</span>
+                    <span class="badge badge-subtle" style="font-size: 10px;">OTF</span>
+                  </div>
+                  <div class="text-lg weight-preview-sample" data-weight="${weight}" style="font-family: '${typeface.name}', Inter, sans-serif; font-weight: ${fontWeightValue}; line-height: 1.4;">
+                    ${defaultPreview.split('.')[0]}.
+                  </div>
                 </div>
-                <div class="text-lg weight-preview-sample" style="font-family: '${typeface.name}', Inter, sans-serif; line-height: 1.4;">
-                  ${defaultPreview.split('.')[0]}.
-                </div>
-              </div>
-            `).join('')}
+              `;
+            }).join('')}
           </div>
         </div>
 
@@ -569,6 +706,41 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
 
   // Add event handlers after modal opens
   setTimeout(() => {
+    // Load all font weights dynamically
+    const weightMap = {
+      'Thin': 100,
+      'ExtraLight': 200,
+      'Light': 300,
+      'Regular': 400,
+      'Medium': 500,
+      'SemiBold': 600,
+      'Bold': 700,
+      'ExtraBold': 800,
+      'Black': 900
+    };
+
+    typeface.weights.forEach(weight => {
+      const fontWeightValue = weightMap[weight] || 400;
+      const weightFontUrl = `${typeface.rawPath}/${typeface.name}-${weight}.otf`;
+      const styleId = `font-weight-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-${weight.toLowerCase()}`;
+
+      // Check if this weight's @font-face is already loaded
+      if (!document.getElementById(styleId)) {
+        const style = document.createElement('style');
+        style.id = styleId;
+        style.textContent = `
+          @font-face {
+            font-family: '${typeface.name}';
+            src: url('${weightFontUrl}') format('opentype');
+            font-display: swap;
+            font-weight: ${fontWeightValue};
+            font-style: normal;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    });
+
     // Segmented control switching
     document.querySelectorAll('.segment-button').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -624,6 +796,8 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
     // Color picker controls
     const textColorPicker = document.getElementById('text-color-picker');
     const bgColorPicker = document.getElementById('bg-color-picker');
+    const fontSizeSelect = document.getElementById('font-size-select');
+    const fontWeightSelect = document.getElementById('font-weight-select');
 
     if (textColorPicker && previewInput) {
       textColorPicker.addEventListener('input', (e) => {
@@ -634,6 +808,20 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
     if (bgColorPicker && previewInput) {
       bgColorPicker.addEventListener('input', (e) => {
         previewInput.style.backgroundColor = e.target.value;
+      });
+    }
+
+    // Font size control
+    if (fontSizeSelect && previewInput) {
+      fontSizeSelect.addEventListener('change', (e) => {
+        previewInput.style.fontSize = `${e.target.value}px`;
+      });
+    }
+
+    // Font weight control
+    if (fontWeightSelect && previewInput) {
+      fontWeightSelect.addEventListener('change', (e) => {
+        previewInput.style.fontWeight = e.target.value;
       });
     }
   }, 100);
@@ -742,20 +930,41 @@ struct ContentView: View {
 
         <!-- Preview Section -->
         <div class="modal-section active" data-section="preview">
-          <!-- Color Controls -->
+          <!-- Professional Editor Controls -->
           <div class="preview-controls">
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="icon-color-picker">Icon Color</label>
-              <input type="color" id="icon-color-picker" class="color-picker-input" value="#000000">
+            <!-- Left: Color Controls -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="icon-color-picker">Icon Color</label>
+                <input type="color" id="icon-color-picker" class="color-picker-input" value="#000000">
+              </div>
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="icon-bg-picker">Background</label>
+                <input type="color" id="icon-bg-picker" class="color-picker-input" value="#f5f5f5">
+              </div>
             </div>
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="icon-bg-picker">Background</label>
-              <input type="color" id="icon-bg-picker" class="color-picker-input" value="#f5f5f5">
+
+            <!-- Right: Size Control -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="icon-size-select">Size</label>
+                <select id="icon-size-select" class="preview-select">
+                  <option value="24">24px</option>
+                  <option value="32">32px</option>
+                  <option value="48">48px</option>
+                  <option value="64">64px</option>
+                  <option value="96">96px</option>
+                  <option value="128" selected>128px</option>
+                  <option value="160">160px</option>
+                  <option value="192">192px</option>
+                  <option value="256">256px</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <div class="flex-center" id="icon-preview-container" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); border-radius: var(--radius-xl); height: 240px; border: 1px solid var(--color-border-subtle); transition: background var(--transition-base);">
-            <i class="ph ${icon.weightClass} ${icon.className}" id="icon-preview-element" style="font-size: 128px; color: #000000; transition: color var(--transition-base);"></i>
+          <div class="flex-center" id="icon-preview-container" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); border-radius: var(--radius-xl); min-height: 480px; border: 2px solid var(--color-border-default); transition: background var(--transition-base);">
+            <i class="ph ${icon.weightClass} ${icon.className}" id="icon-preview-element" style="font-size: 128px; color: #000000; transition: all var(--transition-base);"></i>
           </div>
         </div>
 
@@ -888,6 +1097,7 @@ struct ContentView: View {
     // Icon color picker controls
     const iconColorPicker = document.getElementById('icon-color-picker');
     const iconBgPicker = document.getElementById('icon-bg-picker');
+    const iconSizeSelect = document.getElementById('icon-size-select');
     const iconPreviewElement = document.getElementById('icon-preview-element');
     const iconPreviewContainer = document.getElementById('icon-preview-container');
 
@@ -904,6 +1114,226 @@ struct ContentView: View {
         iconPreviewContainer.style.background = `linear-gradient(135deg, ${color} 0%, ${color}dd 100%)`;
       });
     }
+
+    // Icon size control
+    if (iconSizeSelect && iconPreviewElement) {
+      iconSizeSelect.addEventListener('change', (e) => {
+        iconPreviewElement.style.fontSize = `${e.target.value}px`;
+      });
+    }
+  }, 100);
+}
+
+// ============================================
+// Modal: Background Preview
+// ============================================
+function showBackgroundModal(background) {
+  if (!background) return;
+
+  // Code examples
+  const cssCode = `/* ${background.displayName} Background */
+.background {
+  background: ${background.cssValue};
+  min-height: 100vh;
+}
+
+/* With backdrop filter for glass effect */
+.glass-panel {
+  background: ${background.cssValue};
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}`;
+
+  const tailwindCode = `<!-- ${background.displayName} with Tailwind -->
+<div class="min-h-screen" style="background: ${background.cssValue}">
+  <div class="container mx-auto p-6">
+    <!-- Your content -->
+  </div>
+</div>
+
+<!-- As utility class in tailwind.config.js -->
+module.exports = {
+  theme: {
+    extend: {
+      backgroundImage: {
+        'custom': '${background.cssValue}',
+      }
+    }
+  }
+}`;
+
+  const reactCode = `// ${background.displayName} in React
+export function Hero() {
+  return (
+    <div
+      style={{
+        background: '${background.cssValue}',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      <h1>Your Content</h1>
+    </div>
+  );
+}
+
+// As styled component
+const HeroSection = styled.div\\\`
+  background: ${background.cssValue};
+  min-height: 100vh;
+\\\`;`;
+
+  // Escape and highlight code
+  const cssEscaped = highlightCode(escapeHtml(cssCode));
+  const tailwindEscaped = highlightCode(escapeHtml(tailwindCode));
+  const reactEscaped = highlightCode(escapeHtml(reactCode));
+
+  state.modal.open({
+    title: background.displayName,
+    body: `
+      <div>
+        <!-- Metadata Badges -->
+        <div class="flex items-center gap-2 flex-wrap" style="margin-bottom: var(--space-4);">
+          <div class="badge badge-default capitalize">${background.category}</div>
+          <div class="badge badge-subtle capitalize">${background.type}</div>
+          ${background.formats.map(format => `<div class="badge badge-subtle">${format}</div>`).join('')}
+        </div>
+
+        <!-- Segmented Control -->
+        <div class="segment-control">
+          <button class="segment-button active" data-segment="preview">
+            <i class="ph ph-eye"></i>
+            <span>Preview</span>
+          </button>
+          <button class="segment-button" data-segment="usage">
+            <i class="ph ph-code"></i>
+            <span>Usage</span>
+          </button>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="modal-section active" data-section="preview">
+          <div id="background-preview-container" style="
+            background: ${background.cssValue};
+            border-radius: var(--radius-xl);
+            height: 320px;
+            border: 1px solid var(--color-border-subtle);
+            transition: background var(--transition-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          ">
+            ${background.displayName}
+          </div>
+        </div>
+
+        <!-- Usage Section -->
+        <div class="modal-section" data-section="usage">
+          <div class="tabs" role="tablist" id="code-tabs-bg" style="margin-bottom: var(--space-3);">
+            <button class="tab active" data-code-tab="css">CSS</button>
+            <button class="tab" data-code-tab="tailwind">Tailwind</button>
+            <button class="tab" data-code-tab="react">React</button>
+          </div>
+
+          <div id="code-bg-css" class="code-panel">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">CSS</span>
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(cssCode)}">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${cssEscaped}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="code-bg-tailwind" class="code-panel hidden">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">Tailwind CSS</span>
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(tailwindCode)}">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${tailwindEscaped}</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div id="code-bg-react" class="code-panel hidden">
+            <div class="code-block">
+              <div class="code-header flex-between">
+                <span class="code-title">React</span>
+                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(reactCode)}">
+                  <i class="ph ph-copy"></i>
+                </button>
+              </div>
+              <div class="code-content">
+                <pre><code>${reactEscaped}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `,
+    onCopy: () => {
+      copyToClipboard(cssCode);
+    },
+    onDownload: () => {
+      window.open(background.path, '_blank');
+      showToast(`Opening ${background.displayName} in GitHub`);
+    }
+  });
+
+  // Add event handlers after modal opens
+  setTimeout(() => {
+    // Segmented control switching
+    document.querySelectorAll('.segment-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const segment = btn.dataset.segment;
+
+        // Update buttons
+        document.querySelectorAll('.segment-button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update sections
+        document.querySelectorAll('.modal-section').forEach(s => s.classList.remove('active'));
+        document.querySelector(`[data-section="${segment}"]`)?.classList.add('active');
+      });
+    });
+
+    // Code tab switching
+    document.querySelectorAll('[data-code-tab]').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const codeTab = tab.dataset.codeTab;
+
+        // Update tabs
+        document.querySelectorAll('[data-code-tab]').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Update panels
+        document.querySelectorAll('.code-panel').forEach(panel => panel.classList.add('hidden'));
+        document.getElementById(`code-bg-${codeTab}`)?.classList.remove('hidden');
+      });
+    });
+
+    // Copy code button handlers
+    document.querySelectorAll('.copy-code-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const code = btn.dataset.code;
+        copyToClipboard(code);
+      });
+    });
   }, 100);
 }
 
