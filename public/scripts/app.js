@@ -5,7 +5,7 @@
 
 import { Modal, Dropdown, Tabs, ThemeManager, showToast, copyToClipboard, downloadFile } from './ui-helpers.js';
 import { FilterManager, createSearchHandler, createFilterHandler } from './filters.js';
-import { TYPEFACES, generateTypefaceData, BACKGROUNDS, generateBackgroundData } from './data-generator.js';
+import { getTypefaceData, getMetadataStats } from './data-generator.js';
 
 // ============================================
 // Application State
@@ -19,7 +19,7 @@ const state = {
   theme: null,
   typefaceFilter: null,
   iconFilter: null,
-  backgroundFilter: null
+  fontLoader: null
 };
 
 // ============================================
@@ -36,6 +36,15 @@ async function init() {
   // Make showToast globally accessible for inline handlers
   window.showToast = showToast;
 
+  // Initialize font loader with lazy loading
+  state.fontLoader = createFontLoader({
+    concurrent: 6, // Max 6 concurrent font loads
+    timeout: 15000, // 15 second timeout per font
+    onError: (fontFamily, error) => {
+      console.warn(`⚠️ Font load error for ${fontFamily}:`, error.message);
+    }
+  });
+
   // Initialize UI components
   state.modal = new Modal('modal-overlay');
   state.theme = new ThemeManager();
@@ -51,6 +60,12 @@ async function init() {
   await loadBackgrounds();
 
   console.log('✅ Asset Library initialized');
+
+  // Log font loading stats after 5 seconds
+  setTimeout(() => {
+    const stats = state.fontLoader.getStats();
+    console.log('📈 Font loading stats:', stats);
+  }, 5000);
 }
 
 // ============================================
@@ -94,8 +109,12 @@ async function loadTypefaces() {
   console.log('📚 Loading typefaces...');
 
   try {
-    // Generate typeface data from pre-defined list
-    state.typefaces = generateTypefaceData(TYPEFACES);
+    // Load typeface data from metadata JSON
+    state.typefaces = await getTypefaceData();
+
+    // Log stats
+    const stats = await getMetadataStats();
+    console.log(`📊 Total files: ${stats.totalFiles}, Categories:`, stats.categories);
 
     // Set up filter manager
     state.typefaceFilter = new FilterManager(state.typefaces, renderTypefaces);
@@ -241,14 +260,18 @@ function renderTypefaces(typefaces) {
   grid.classList.remove('hidden');
   emptyState?.classList.add('hidden');
 
-  // Render typeface cards with actual font preview
+  // Render typeface cards with lazy font loading
   const previewText = "Typography is the art and technique of arranging type to make written language legible, readable and appealing when displayed.";
 
   grid.innerHTML = typefaces.map(typeface => {
     const fontId = `font-${typeface.name.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
 
     return `
-      <article class="card card-interactive hover-lift" data-typeface="${typeface.name}" data-font-url="${typeface.fontUrl}" data-font-loaded="false">
+      <article class="card card-interactive hover-lift font-card"
+               data-typeface="${typeface.name}"
+               data-font-family="${typeface.name}"
+               data-font-url="${typeface.fontUrl}"
+               data-font-state="unloaded">
         <div class="flex items-center justify-between mb-3">
           <h3 class="text-lg font-semibold truncate" style="flex: 1; margin-right: 0.5rem;">${typeface.name}</h3>
           <div class="badge badge-subtle">${typeface.category}</div>
@@ -256,58 +279,38 @@ function renderTypefaces(typefaces) {
         <div class="text-xs text-tertiary mb-3">
           ${typeface.variants} variant${typeface.variants !== 1 ? 's' : ''}
         </div>
-        <div class="text-base text-primary line-clamp-2 font-preview-text" style="font-family: Inter, sans-serif; line-height: 1.4;">
+        <div class="font-preview text-base text-primary line-clamp-2"
+             style="font-family: Inter, sans-serif; line-height: 1.4;"
+             data-preview-text="${typeface.name}">
           ${previewText}
         </div>
       </article>
     `;
   }).join('');
 
-  // Set up lazy font loading with Intersection Observer
-  const fontObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const card = entry.target;
-        const fontName = card.dataset.typeface;
-        const fontUrl = card.dataset.fontUrl;
-        const fontLoaded = card.dataset.fontLoaded === 'true';
+  // Set up lazy loading for font cards
+  grid.querySelectorAll('.font-card').forEach(card => {
+    const fontFamily = card.dataset.fontFamily;
+    const previewEl = card.querySelector('.font-preview');
 
-        if (!fontLoaded) {
-          // Create and inject @font-face style
-          const styleId = `font-style-${fontName.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
-          if (!document.getElementById(styleId)) {
-            const style = document.createElement('style');
-            style.id = styleId;
-            style.textContent = `
-              @font-face {
-                font-family: '${fontName}';
-                src: url('${fontUrl}') format('opentype');
-                font-display: swap;
-                font-weight: 400;
-              }
-            `;
-            document.head.appendChild(style);
-          }
+    // Observe card for lazy loading
+    state.fontLoader.observe(card, fontFamily);
 
-          // Update preview text to use the font
-          const previewText = card.querySelector('.font-preview-text');
-          if (previewText) {
-            previewText.style.fontFamily = `'${fontName}', Inter, sans-serif`;
-          }
+    // Listen for when font is loaded
+    card.addEventListener('fontload-trigger', (event) => {
+      const { state: loadState } = event.detail;
 
-          card.dataset.fontLoaded = 'true';
-          // Unobserve after loading
-          fontObserver.unobserve(card);
+      if (loadState === 'loaded') {
+        // Apply font to preview after loading
+        if (previewEl) {
+          previewEl.style.fontFamily = `'${fontFamily}', Inter, sans-serif`;
         }
+        card.dataset.fontState = 'loaded';
+      } else if (loadState === 'error') {
+        card.dataset.fontState = 'error';
+        // Keep fallback font on error
       }
     });
-  }, {
-    rootMargin: '50px' // Start loading fonts slightly before they come into view
-  });
-
-  // Observe all typeface cards
-  grid.querySelectorAll('.card').forEach(card => {
-    fontObserver.observe(card);
 
     // Add click handlers
     card.addEventListener('click', () => {
