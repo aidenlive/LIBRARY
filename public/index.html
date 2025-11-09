@@ -133,6 +133,17 @@
             <i class="ph ph-shapes" aria-hidden="true"></i>
             <span class="hide-mobile ml-2">Icons</span>
           </button>
+          <button
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="backgrounds-panel"
+            id="backgrounds-tab"
+            data-tab="backgrounds"
+          >
+            <i class="ph ph-image" aria-hidden="true"></i>
+            <span class="hide-mobile ml-2">Backgrounds</span>
+          </button>
         </div>
       </section>
 
@@ -234,6 +245,59 @@
             <div id="icons-empty" class="text-center py-16 hidden">
               <i class="ph ph-shapes text-6xl text-tertiary mb-4"></i>
               <h3 class="text-xl font-semibold mb-2">No icons found</h3>
+              <p class="text-secondary">Try adjusting your search or filters</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backgrounds Panel -->
+        <div
+          id="backgrounds-panel"
+          class="tab-panel hidden"
+          role="tabpanel"
+          aria-labelledby="backgrounds-tab"
+        >
+          <div class="section-compact">
+
+            <!-- Background Filters -->
+            <div class="flex items-center gap-3 mb-6 overflow-x-auto">
+              <div class="chip cursor-pointer" data-filter="all">
+                <span>All Backgrounds</span>
+                <span class="badge badge-subtle" id="background-count">60</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="gradient">
+                <span>Gradient</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="pattern">
+                <span>Pattern</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="texture">
+                <span>Texture</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="animated">
+                <span>Animated</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="geometric">
+                <span>Geometric</span>
+              </div>
+              <div class="chip cursor-pointer" data-filter="abstract">
+                <span>Abstract</span>
+              </div>
+            </div>
+
+            <!-- Backgrounds Grid -->
+            <div class="grid grid-mobile-1 grid-tablet-2 grid-desktop-4" id="backgrounds-grid">
+              <!-- Loading State -->
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+              <div class="card skeleton skeleton-card"></div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="backgrounds-empty" class="text-center py-16 hidden">
+              <i class="ph ph-image text-6xl text-tertiary mb-4"></i>
+              <h3 class="text-xl font-semibold mb-2">No backgrounds found</h3>
               <p class="text-secondary">Try adjusting your search or filters</p>
             </div>
           </div>
