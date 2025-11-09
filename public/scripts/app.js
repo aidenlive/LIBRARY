@@ -454,15 +454,53 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
 
         <!-- Preview Section -->
         <div class="modal-section active" data-section="preview">
-          <!-- Color Controls -->
+          <!-- Professional Editor Controls -->
           <div class="preview-controls">
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="text-color-picker">Text Color</label>
-              <input type="color" id="text-color-picker" class="color-picker-input" value="#000000">
+            <!-- Left: Color Controls -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="text-color-picker">Text Color</label>
+                <input type="color" id="text-color-picker" class="color-picker-input" value="#000000">
+              </div>
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="bg-color-picker">Background</label>
+                <input type="color" id="bg-color-picker" class="color-picker-input" value="#f5f5f5">
+              </div>
             </div>
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="bg-color-picker">Background</label>
-              <input type="color" id="bg-color-picker" class="color-picker-input" value="#f5f5f5">
+
+            <!-- Right: Size & Weight Controls -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="font-size-select">Size</label>
+                <select id="font-size-select" class="preview-select">
+                  <option value="12">12px</option>
+                  <option value="14">14px</option>
+                  <option value="16">16px</option>
+                  <option value="18">18px</option>
+                  <option value="20">20px</option>
+                  <option value="24">24px</option>
+                  <option value="28">28px</option>
+                  <option value="32" selected>32px</option>
+                  <option value="36">36px</option>
+                  <option value="48">48px</option>
+                  <option value="64">64px</option>
+                  <option value="72">72px</option>
+                </select>
+              </div>
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="font-weight-select">Weight</label>
+                <select id="font-weight-select" class="preview-select">
+                  <option value="100">Thin</option>
+                  <option value="200">Extra Light</option>
+                  <option value="300">Light</option>
+                  <option value="400" selected>Regular</option>
+                  <option value="500">Medium</option>
+                  <option value="600">Semi Bold</option>
+                  <option value="700">Bold</option>
+                  <option value="800">Extra Bold</option>
+                  <option value="900">Black</option>
+                </select>
+              </div>
             </div>
           </div>
 
@@ -470,7 +508,7 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
             class="font-preview-input"
             id="font-preview-text-${typeface.name.replace(/\s/g, '')}"
             placeholder="Type to preview this typeface..."
-            style="font-family: '${typeface.name}', Inter, sans-serif; color: #000000; background-color: #f5f5f5;"
+            style="font-family: '${typeface.name}', Inter, sans-serif; color: #000000; background-color: #f5f5f5; font-size: 32px; font-weight: 400;"
           >${defaultPreview}</textarea>
         </div>
 
@@ -671,6 +709,8 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
     // Color picker controls
     const textColorPicker = document.getElementById('text-color-picker');
     const bgColorPicker = document.getElementById('bg-color-picker');
+    const fontSizeSelect = document.getElementById('font-size-select');
+    const fontWeightSelect = document.getElementById('font-weight-select');
 
     if (textColorPicker && previewInput) {
       textColorPicker.addEventListener('input', (e) => {
@@ -681,6 +721,20 @@ label.font = UIFont(name: "${typeface.name}", size: 16)`;
     if (bgColorPicker && previewInput) {
       bgColorPicker.addEventListener('input', (e) => {
         previewInput.style.backgroundColor = e.target.value;
+      });
+    }
+
+    // Font size control
+    if (fontSizeSelect && previewInput) {
+      fontSizeSelect.addEventListener('change', (e) => {
+        previewInput.style.fontSize = `${e.target.value}px`;
+      });
+    }
+
+    // Font weight control
+    if (fontWeightSelect && previewInput) {
+      fontWeightSelect.addEventListener('change', (e) => {
+        previewInput.style.fontWeight = e.target.value;
       });
     }
   }, 100);
@@ -789,20 +843,41 @@ struct ContentView: View {
 
         <!-- Preview Section -->
         <div class="modal-section active" data-section="preview">
-          <!-- Color Controls -->
+          <!-- Professional Editor Controls -->
           <div class="preview-controls">
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="icon-color-picker">Icon Color</label>
-              <input type="color" id="icon-color-picker" class="color-picker-input" value="#000000">
+            <!-- Left: Color Controls -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="icon-color-picker">Icon Color</label>
+                <input type="color" id="icon-color-picker" class="color-picker-input" value="#000000">
+              </div>
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="icon-bg-picker">Background</label>
+                <input type="color" id="icon-bg-picker" class="color-picker-input" value="#f5f5f5">
+              </div>
             </div>
-            <div class="preview-control-item">
-              <label class="preview-control-label" for="icon-bg-picker">Background</label>
-              <input type="color" id="icon-bg-picker" class="color-picker-input" value="#f5f5f5">
+
+            <!-- Right: Size Control -->
+            <div class="preview-control-group">
+              <div class="preview-control-item">
+                <label class="preview-control-label" for="icon-size-select">Size</label>
+                <select id="icon-size-select" class="preview-select">
+                  <option value="24">24px</option>
+                  <option value="32">32px</option>
+                  <option value="48">48px</option>
+                  <option value="64">64px</option>
+                  <option value="96">96px</option>
+                  <option value="128" selected>128px</option>
+                  <option value="160">160px</option>
+                  <option value="192">192px</option>
+                  <option value="256">256px</option>
+                </select>
+              </div>
             </div>
           </div>
 
-          <div class="flex-center" id="icon-preview-container" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); border-radius: var(--radius-xl); height: 240px; border: 1px solid var(--color-border-subtle); transition: background var(--transition-base);">
-            <i class="ph ${icon.weightClass} ${icon.className}" id="icon-preview-element" style="font-size: 128px; color: #000000; transition: color var(--transition-base);"></i>
+          <div class="flex-center" id="icon-preview-container" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); border-radius: var(--radius-xl); min-height: 480px; border: 2px solid var(--color-border-default); transition: background var(--transition-base);">
+            <i class="ph ${icon.weightClass} ${icon.className}" id="icon-preview-element" style="font-size: 128px; color: #000000; transition: all var(--transition-base);"></i>
           </div>
         </div>
 
@@ -935,6 +1010,7 @@ struct ContentView: View {
     // Icon color picker controls
     const iconColorPicker = document.getElementById('icon-color-picker');
     const iconBgPicker = document.getElementById('icon-bg-picker');
+    const iconSizeSelect = document.getElementById('icon-size-select');
     const iconPreviewElement = document.getElementById('icon-preview-element');
     const iconPreviewContainer = document.getElementById('icon-preview-container');
 
@@ -949,6 +1025,13 @@ struct ContentView: View {
         const color = e.target.value;
         // Create a lighter gradient based on the selected color
         iconPreviewContainer.style.background = `linear-gradient(135deg, ${color} 0%, ${color}dd 100%)`;
+      });
+    }
+
+    // Icon size control
+    if (iconSizeSelect && iconPreviewElement) {
+      iconSizeSelect.addEventListener('change', (e) => {
+        iconPreviewElement.style.fontSize = `${e.target.value}px`;
       });
     }
   }, 100);
