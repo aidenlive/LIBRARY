@@ -5,7 +5,7 @@
 
 import { Modal, Dropdown, Tabs, ThemeManager, showToast, copyToClipboard, downloadFile } from './ui-helpers.js';
 import { FilterManager, createSearchHandler, createFilterHandler } from './filters.js';
-import { TYPEFACES, generateTypefaceData, BACKGROUNDS, generateBackgroundData } from './data-generator.js';
+import { TYPEFACES, generateTypefaceData } from './data-generator.js';
 
 // ============================================
 // Application State
@@ -13,13 +13,11 @@ import { TYPEFACES, generateTypefaceData, BACKGROUNDS, generateBackgroundData } 
 const state = {
   typefaces: [],
   icons: [],
-  backgrounds: [],
   config: null,
   modal: null,
   theme: null,
   typefaceFilter: null,
-  iconFilter: null,
-  backgroundFilter: null
+  iconFilter: null
 };
 
 // ============================================
@@ -48,7 +46,6 @@ async function init() {
   // Load data
   await loadTypefaces();
   await loadIcons();
-  await loadBackgrounds();
 
   console.log('✅ Asset Library initialized');
 }
@@ -79,10 +76,8 @@ function setupEventListeners() {
     const activeTab = document.querySelector('.tab.active');
     if (activeTab?.dataset.tab === 'typefaces') {
       state.typefaceFilter?.search(query);
-    } else if (activeTab?.dataset.tab === 'icons') {
+    } else {
       state.iconFilter?.search(query);
-    } else if (activeTab?.dataset.tab === 'backgrounds') {
-      state.backgroundFilter?.search(query);
     }
   });
 }
@@ -187,32 +182,6 @@ async function loadIcons() {
   } catch (error) {
     console.error('Failed to load icons:', error);
     showToast('Failed to load icons');
-  }
-}
-
-// ============================================
-// Load Backgrounds
-// ============================================
-async function loadBackgrounds() {
-  console.log('🎨 Loading backgrounds...');
-
-  try {
-    // Generate background data from pre-defined list
-    state.backgrounds = generateBackgroundData(BACKGROUNDS);
-
-    // Set up filter manager
-    state.backgroundFilter = new FilterManager(state.backgrounds, renderBackgrounds);
-
-    // Set up filters
-    createFilterHandler(state.backgroundFilter, '#backgrounds-panel');
-
-    // Initial render
-    renderBackgrounds(state.backgrounds);
-
-    console.log(`✅ Loaded ${state.backgrounds.length} backgrounds`);
-  } catch (error) {
-    console.error('Failed to load backgrounds:', error);
-    showToast('Failed to load backgrounds');
   }
 }
 
@@ -362,59 +331,6 @@ function renderIcons(icons) {
       const name = card.dataset.icon;
       const icon = icons.find(i => i.name === name);
       showIconModal(icon);
-    });
-  });
-}
-
-// ============================================
-// Render Backgrounds
-// ============================================
-function renderBackgrounds(backgrounds) {
-  const grid = document.getElementById('backgrounds-grid');
-  const emptyState = document.getElementById('backgrounds-empty');
-  const countEl = document.getElementById('background-count');
-
-  if (!grid) return;
-
-  // Update count
-  if (countEl) {
-    countEl.textContent = backgrounds.length;
-  }
-
-  // Show empty state if no results
-  if (backgrounds.length === 0) {
-    grid.classList.add('hidden');
-    emptyState?.classList.remove('hidden');
-    return;
-  }
-
-  grid.classList.remove('hidden');
-  emptyState?.classList.add('hidden');
-
-  // Render background cards with visual preview
-  grid.innerHTML = backgrounds.map(bg => `
-    <article class="card card-interactive hover-lift" data-background="${bg.name}">
-      <div class="bg-preview" style="
-        background: ${bg.cssValue};
-        height: 160px;
-        border-radius: var(--radius-lg);
-        margin-bottom: var(--space-3);
-        border: 1px solid var(--color-border-subtle);
-      "></div>
-      <div class="flex items-center justify-between mb-2">
-        <h4 class="text-sm font-semibold truncate" style="flex: 1; margin-right: 0.5rem;">${bg.displayName}</h4>
-        <div class="badge badge-subtle capitalize" style="font-size: 10px;">${bg.category}</div>
-      </div>
-      <div class="text-xs text-tertiary capitalize">${bg.type}</div>
-    </article>
-  `).join('');
-
-  // Add click handlers
-  grid.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', () => {
-      const name = card.dataset.background;
-      const background = backgrounds.find(b => b.name === name);
-      showBackgroundModal(background);
     });
   });
 }
@@ -1118,219 +1034,6 @@ struct ContentView: View {
         iconPreviewElement.style.fontSize = `${e.target.value}px`;
       });
     }
-  }, 100);
-}
-
-// ============================================
-// Modal: Background Preview
-// ============================================
-function showBackgroundModal(background) {
-  if (!background) return;
-
-  // Code examples
-  const cssCode = `/* ${background.displayName} Background */
-.background {
-  background: ${background.cssValue};
-  min-height: 100vh;
-}
-
-/* With backdrop filter for glass effect */
-.glass-panel {
-  background: ${background.cssValue};
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}`;
-
-  const tailwindCode = `<!-- ${background.displayName} with Tailwind -->
-<div class="min-h-screen" style="background: ${background.cssValue}">
-  <div class="container mx-auto p-6">
-    <!-- Your content -->
-  </div>
-</div>
-
-<!-- As utility class in tailwind.config.js -->
-module.exports = {
-  theme: {
-    extend: {
-      backgroundImage: {
-        'custom': '${background.cssValue}',
-      }
-    }
-  }
-}`;
-
-  const reactCode = `// ${background.displayName} in React
-export function Hero() {
-  return (
-    <div
-      style={{
-        background: '${background.cssValue}',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      <h1>Your Content</h1>
-    </div>
-  );
-}
-
-// As styled component
-const HeroSection = styled.div\\\`
-  background: ${background.cssValue};
-  min-height: 100vh;
-\\\`;`;
-
-  // Escape and highlight code
-  const cssEscaped = highlightCode(escapeHtml(cssCode));
-  const tailwindEscaped = highlightCode(escapeHtml(tailwindCode));
-  const reactEscaped = highlightCode(escapeHtml(reactCode));
-
-  state.modal.open({
-    title: background.displayName,
-    body: `
-      <div>
-        <!-- Metadata Badges -->
-        <div class="flex items-center gap-2 flex-wrap" style="margin-bottom: var(--space-4);">
-          <div class="badge badge-default capitalize">${background.category}</div>
-          <div class="badge badge-subtle capitalize">${background.type}</div>
-          ${background.formats.map(format => `<div class="badge badge-subtle">${format}</div>`).join('')}
-        </div>
-
-        <!-- Segmented Control -->
-        <div class="segment-control">
-          <button class="segment-button active" data-segment="preview">
-            <i class="ph ph-eye"></i>
-            <span>Preview</span>
-          </button>
-          <button class="segment-button" data-segment="usage">
-            <i class="ph ph-code"></i>
-            <span>Usage</span>
-          </button>
-        </div>
-
-        <!-- Preview Section -->
-        <div class="modal-section active" data-section="preview">
-          <div id="background-preview-container" style="
-            background: ${background.cssValue};
-            border-radius: var(--radius-xl);
-            height: 320px;
-            border: 1px solid var(--color-border-subtle);
-            transition: background var(--transition-base);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-          ">
-            ${background.displayName}
-          </div>
-        </div>
-
-        <!-- Usage Section -->
-        <div class="modal-section" data-section="usage">
-          <div class="tabs" role="tablist" id="code-tabs-bg" style="margin-bottom: var(--space-3);">
-            <button class="tab active" data-code-tab="css">CSS</button>
-            <button class="tab" data-code-tab="tailwind">Tailwind</button>
-            <button class="tab" data-code-tab="react">React</button>
-          </div>
-
-          <div id="code-bg-css" class="code-panel">
-            <div class="code-block">
-              <div class="code-header flex-between">
-                <span class="code-title">CSS</span>
-                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(cssCode)}">
-                  <i class="ph ph-copy"></i>
-                </button>
-              </div>
-              <div class="code-content">
-                <pre><code>${cssEscaped}</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div id="code-bg-tailwind" class="code-panel hidden">
-            <div class="code-block">
-              <div class="code-header flex-between">
-                <span class="code-title">Tailwind CSS</span>
-                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(tailwindCode)}">
-                  <i class="ph ph-copy"></i>
-                </button>
-              </div>
-              <div class="code-content">
-                <pre><code>${tailwindEscaped}</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div id="code-bg-react" class="code-panel hidden">
-            <div class="code-block">
-              <div class="code-header flex-between">
-                <span class="code-title">React</span>
-                <button class="btn-icon btn-icon-sm btn-ghost copy-code-btn" data-code="${escapeHtml(reactCode)}">
-                  <i class="ph ph-copy"></i>
-                </button>
-              </div>
-              <div class="code-content">
-                <pre><code>${reactEscaped}</code></pre>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    `,
-    onCopy: () => {
-      copyToClipboard(cssCode);
-    },
-    onDownload: () => {
-      window.open(background.path, '_blank');
-      showToast(`Opening ${background.displayName} in GitHub`);
-    }
-  });
-
-  // Add event handlers after modal opens
-  setTimeout(() => {
-    // Segmented control switching
-    document.querySelectorAll('.segment-button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const segment = btn.dataset.segment;
-
-        // Update buttons
-        document.querySelectorAll('.segment-button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Update sections
-        document.querySelectorAll('.modal-section').forEach(s => s.classList.remove('active'));
-        document.querySelector(`[data-section="${segment}"]`)?.classList.add('active');
-      });
-    });
-
-    // Code tab switching
-    document.querySelectorAll('[data-code-tab]').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const codeTab = tab.dataset.codeTab;
-
-        // Update tabs
-        document.querySelectorAll('[data-code-tab]').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        // Update panels
-        document.querySelectorAll('.code-panel').forEach(panel => panel.classList.add('hidden'));
-        document.getElementById(`code-bg-${codeTab}`)?.classList.remove('hidden');
-      });
-    });
-
-    // Copy code button handlers
-    document.querySelectorAll('.copy-code-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const code = btn.dataset.code;
-        copyToClipboard(code);
-      });
-    });
   }, 100);
 }
 
