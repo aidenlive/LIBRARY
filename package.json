@@ -1,0 +1,24 @@
+{
+  "name": "@library/typography-api",
+  "version": "1.0.0",
+  "description": "Typography Public API - Font metadata extraction and processing",
+  "type": "module",
+  "scripts": {
+    "extract-metadata": "node scripts/extract-metadata.js",
+    "normalize-names": "node scripts/normalize-names.js",
+    "generate-subsets": "node scripts/generate-subsets.js",
+    "convert-formats": "bash scripts/convert-to-web-formats.sh"
+  },
+  "keywords": ["fonts", "typography", "api", "woff2"],
+  "author": "Library Team",
+  "license": "MIT",
+  "dependencies": {
+    "opentype.js": "^1.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
