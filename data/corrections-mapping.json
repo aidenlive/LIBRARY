@@ -1,0 +1,6408 @@
+{
+  "metadata": {
+    "generated": "2025-12-24T21:09:33.101Z",
+    "totalFamilies": 441,
+    "familiesWithIssues": 147
+  },
+  "weightMappings": {
+    "Semi": "SemiBold",
+    "Huge": "ExtraBold",
+    "Heavy": "Black",
+    "Air": "Thin",
+    "Ultra": "Black"
+  },
+  "styleMappings": {
+    "Oblique": "Italic"
+  },
+  "familyCorrections": [
+    {
+      "family": "Adren",
+      "directory": "Adren",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Adren-Semi-Italic.otf",
+          "suggestion": "Adren-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Adren-Semi.otf",
+          "suggestion": "Adren-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Adren-Ultra-Italic.otf",
+          "suggestion": "Adren-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Adren-Ultra.otf",
+          "suggestion": "Adren-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Adren-Book-Italic.otf",
+          "standardized": "Adren-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Adren-Book.otf",
+          "standardized": "Adren-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Adren-Semi-Italic.otf",
+          "standardized": "Adren-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Adren-Semi.otf",
+          "standardized": "Adren-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Adren-Ultra-Italic.otf",
+          "standardized": "Adren-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Adren-Ultra.otf",
+          "standardized": "Adren-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Aeonik",
+      "directory": "Aeonik",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Air\" should be \"Thin\"",
+          "file": "Aeonik-Air-Italic.otf",
+          "suggestion": "Aeonik-Thin-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Air\" should be \"Thin\"",
+          "file": "Aeonik-Air.otf",
+          "suggestion": "Aeonik-Thin.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Aeonik-Air-Italic.otf",
+          "standardized": "Aeonik-Thin-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Aeonik-Air.otf",
+          "standardized": "Aeonik-Thin.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ageo",
+      "directory": "Ageo",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Ageo-Heavy.otf",
+          "suggestion": "Ageo-Black.otf"
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase, single",
+          "files": [
+            "Ageo-Bold.otf",
+            "Ageo-BoldItalic.otf",
+            "Ageo-ExtraBold.otf",
+            "Ageo-ExtraBoldItalic.otf",
+            "Ageo-Heavy.otf",
+            "Ageo-HeavyItalic.otf",
+            "Ageo-Light.otf",
+            "Ageo-LightItalic.otf",
+            "Ageo-Medium.otf",
+            "Ageo-MediumItalic.otf",
+            "Ageo-RegularItalic.otf",
+            "Ageo-SemiBold.otf",
+            "Ageo-SemiBoldItalic.otf",
+            "Ageo-Thin.otf",
+            "Ageo-ThinItalic.otf",
+            "Ageo.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Ageo-BoldItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-ExtraBoldItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-Heavy.otf",
+          "standardized": "Ageo-Black.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-HeavyItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-LightItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-MediumItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-RegularItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-SemiBoldItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo-ThinItalic.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ageo.otf",
+          "standardized": "Ageo-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Alloy",
+      "directory": "Alloy",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Alloy-Bold-Italic.ttf",
+            "Alloy-Bold.ttf",
+            "Alloy-Book-Italic.ttf",
+            "Alloy-Book.ttf",
+            "Alloy-ExtraBold-Italic.ttf",
+            "Alloy-ExtraBold.ttf",
+            "Alloy-Regular-Italic.ttf",
+            "Alloy-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Alloy-Book-Italic.ttf",
+          "standardized": "Alloy-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Alloy-Book.ttf",
+          "standardized": "Alloy-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Altone",
+      "directory": "Altone",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Altone-Heavy-Italic.ttf",
+          "suggestion": "Altone-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Altone-Heavy.ttf",
+          "suggestion": "Altone-Black.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Altone-Semi-Italic.ttf",
+          "suggestion": "Altone-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Altone-Semi.ttf",
+          "suggestion": "Altone-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Altone-Ultra-Italic.ttf",
+          "suggestion": "Altone-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Altone-Ultra.ttf",
+          "suggestion": "Altone-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Altone-Heavy-Italic.ttf",
+          "standardized": "Altone-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Heavy.ttf",
+          "standardized": "Altone-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Semi-Italic.ttf",
+          "standardized": "Altone-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Semi.ttf",
+          "standardized": "Altone-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Small-Italic.ttf",
+          "standardized": "Altone-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Small.ttf",
+          "standardized": "Altone-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Ultra-Italic.ttf",
+          "standardized": "Altone-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Altone-Ultra.ttf",
+          "standardized": "Altone-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Analog",
+      "directory": "Analog",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Analog Typewriter.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Analog Typewriter.ttf",
+          "standardized": "Analog-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Anko",
+      "directory": "Anko",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Anko-Semi-Italic.otf",
+          "suggestion": "Anko-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Anko-Semi.otf",
+          "suggestion": "Anko-SemiBold.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Anko-Semi-Italic.otf",
+          "standardized": "Anko-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Anko-Semi.otf",
+          "standardized": "Anko-SemiBold.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Article",
+      "directory": "Article",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Article-Ultra-Italic.otf",
+          "suggestion": "Article-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Article-Ultra.otf",
+          "suggestion": "Article-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Article-Ultra-Italic.otf",
+          "standardized": "Article-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Article-Ultra.otf",
+          "standardized": "Article-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Avoidance",
+      "directory": "Avoidance",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Avoidance-Semi.ttf",
+          "suggestion": "Avoidance-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Avoidance-Ultra-Italic.ttf",
+          "suggestion": "Avoidance-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Avoidance-Ultra.ttf",
+          "suggestion": "Avoidance-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Avoidance-Semi.ttf",
+          "standardized": "Avoidance-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Avoidance-Ultra-Italic.ttf",
+          "standardized": "Avoidance-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Avoidance-Ultra.ttf",
+          "standardized": "Avoidance-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Bizmo",
+      "directory": "Bizmo",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Bizmo-Black.otf",
+            "Bizmo-BlackOblique.otf",
+            "Bizmo-Bold.otf",
+            "Bizmo-BoldOblique.otf",
+            "Bizmo-ExtraBold.otf",
+            "Bizmo-ExtraBoldOblique.otf",
+            "Bizmo-ExtraLight.otf",
+            "Bizmo-ExtraLightOblique.otf",
+            "Bizmo-Light.otf",
+            "Bizmo-LightOblique.otf",
+            "Bizmo-Medium.otf",
+            "Bizmo-MediumOblique.otf",
+            "Bizmo-Oblique.otf",
+            "Bizmo-Regular.otf",
+            "Bizmo-SemiBold.otf",
+            "Bizmo-SemiBoldOblique.otf",
+            "Bizmo-Thin.otf",
+            "Bizmo-ThinOblique.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Bizmo-BlackOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-BoldOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-ExtraBoldOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-ExtraLightOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-LightOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-MediumOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-Oblique.otf",
+          "standardized": "Bizmo-Regular-Oblique.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-SemiBoldOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Bizmo-ThinOblique.otf",
+          "standardized": "Bizmo-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Blauer",
+      "directory": "Blauer",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Blauer-Heavy-Italic.ttf",
+          "suggestion": "Blauer-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Blauer-Heavy.ttf",
+          "suggestion": "Blauer-Black.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Huge\" should be \"ExtraBold\"",
+          "file": "Blauer-Huge-Italic.ttf",
+          "suggestion": "Blauer-ExtraBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Huge\" should be \"ExtraBold\"",
+          "file": "Blauer-Huge.ttf",
+          "suggestion": "Blauer-ExtraBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Blauer-Semi-Italic.ttf",
+          "suggestion": "Blauer-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Blauer-Semi.ttf",
+          "suggestion": "Blauer-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Blauer-Heavy-Italic.ttf",
+          "standardized": "Blauer-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Heavy.ttf",
+          "standardized": "Blauer-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Huge-Italic.ttf",
+          "standardized": "Blauer-ExtraBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Huge.ttf",
+          "standardized": "Blauer-ExtraBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Line-Italic.ttf",
+          "standardized": "Blauer-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Line.ttf",
+          "standardized": "Blauer-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Semi-Italic.ttf",
+          "standardized": "Blauer-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Blauer-Semi.ttf",
+          "standardized": "Blauer-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Blinker",
+      "directory": "Blinker",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Blinker Rogue.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Blinker Rogue.otf",
+          "standardized": "Blinker-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Blockhead",
+      "directory": "Blockhead",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Blockhead-Black.otf",
+            "Blockhead-Bold.otf",
+            "Blockhead.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Blockhead.otf",
+          "standardized": "Blockhead-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Boiling",
+      "directory": "Boiling",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Boiling-Semi.ttf",
+          "suggestion": "Boiling-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Boiling-Demi.ttf",
+          "standardized": "Boiling-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Boiling-Normal.ttf",
+          "standardized": "Boiling-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Boiling-Semi.ttf",
+          "standardized": "Boiling-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Boiling-Small.ttf",
+          "standardized": "Boiling-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Boiling-Smaller.ttf",
+          "standardized": "Boiling-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Boreck",
+      "directory": "Boreck",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Boreck\" does not match file prefix \"BoreckDisplay\"",
+          "files": [
+            "BoreckDisplay-Bold.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "BoreckDisplay-Bold.ttf",
+          "standardized": "Boreck-Bold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Bragile",
+      "directory": "Bragile",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Bragile\" does not match file prefix \"Bragille\"",
+          "files": [
+            "Bragille.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Bragille.ttf",
+          "standardized": "Bragile-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Brandan",
+      "directory": "Brandan",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Brandan-Strong.otf",
+            "Brandan.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Brandan-Strong.otf",
+          "standardized": "Brandan-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Brandan.otf",
+          "standardized": "Brandan-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "BronkenShield",
+      "directory": "BronkenShield",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"BronkenShield\" does not match file prefix \"Broken\"",
+          "files": [
+            "Broken Shield.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Broken Shield.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Broken Shield.ttf",
+          "standardized": "BronkenShield-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Cactus",
+      "directory": "Cactus",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Cactus Ridge - Grunge Italic.ttf",
+            "Cactus Ridge - Grunge.ttf",
+            "Cactus Ridge - Italic.ttf",
+            "Cactus Ridge.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Cactus Ridge - Grunge Italic.ttf",
+          "standardized": "Cactus-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Cactus Ridge - Grunge.ttf",
+          "standardized": "Cactus-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Cactus Ridge - Italic.ttf",
+          "standardized": "Cactus-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Cactus Ridge.ttf",
+          "standardized": "Cactus-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Camauflage",
+      "directory": "Camauflage",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Camauflage\" does not match file prefix \"Camaufalge\"",
+          "files": [
+            "Camaufalge.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Camaufalge.ttf",
+          "standardized": "Camauflage-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "CasualBrush",
+      "directory": "CasualBrush",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "CasualBrush-Light.otf",
+            "CasualBrush.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "CasualBrush.otf",
+          "standardized": "CasualBrush-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Certia",
+      "directory": "Certia",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Certia-Heavy-Italic.otf",
+          "suggestion": "Certia-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Certia-Heavy.otf",
+          "suggestion": "Certia-Black.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Huge\" should be \"ExtraBold\"",
+          "file": "Certia-Huge-Italic.otf",
+          "suggestion": "Certia-ExtraBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Huge\" should be \"ExtraBold\"",
+          "file": "Certia-Huge.otf",
+          "suggestion": "Certia-ExtraBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Certia-Semi-Italic.otf",
+          "suggestion": "Certia-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Certia-Semi.otf",
+          "suggestion": "Certia-SemiBold.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Certia-Heavy-Italic.otf",
+          "standardized": "Certia-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Certia-Heavy.otf",
+          "standardized": "Certia-Black.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Certia-Huge-Italic.otf",
+          "standardized": "Certia-ExtraBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Certia-Huge.otf",
+          "standardized": "Certia-ExtraBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Certia-Semi-Italic.otf",
+          "standardized": "Certia-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Certia-Semi.otf",
+          "standardized": "Certia-SemiBold.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Chromium ",
+      "directory": "Chromium ",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Chromium \" does not match file prefix \"Chromium\"",
+          "files": [
+            "Chromium.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Chromium.ttf",
+          "standardized": "Chromium -Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Cinema",
+      "directory": "Cinema",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Cinema\" does not match file prefix \"cinema\"",
+          "files": [
+            "cinema sunday.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "cinema sunday.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "cinema sunday.ttf",
+          "standardized": "Cinema-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Cita",
+      "directory": "Cita",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Cita\" does not match file prefix \"CitaPro\"",
+          "files": [
+            "CitaPro-Bold-Italic.otf",
+            "CitaPro-Bold.otf",
+            "CitaPro-Regular-Italic.otf",
+            "CitaPro-Regular.otf",
+            "CitaPro-Thin-Italic.otf",
+            "CitaPro-Thin.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "CitaPro-Bold-Italic.otf",
+          "standardized": "Cita-Bold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "CitaPro-Bold.otf",
+          "standardized": "Cita-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "CitaPro-Regular-Italic.otf",
+          "standardized": "Cita-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "CitaPro-Regular.otf",
+          "standardized": "Cita-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "CitaPro-Thin-Italic.otf",
+          "standardized": "Cita-Thin-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "CitaPro-Thin.otf",
+          "standardized": "Cita-Thin.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Cliquey",
+      "directory": "Cliquey",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Cliquey\" does not match file prefix \"Cliqey\"",
+          "files": [
+            "Cliqey.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Cliqey.ttf",
+          "standardized": "Cliquey-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Concious",
+      "directory": "Concious",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Concious\" does not match file prefix \"Conscious\"",
+          "files": [
+            "Conscious.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Conscious.ttf",
+          "standardized": "Concious-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Config",
+      "directory": "Config",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Config-Semi-Italic.otf",
+          "suggestion": "Config-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Config-Semi.otf",
+          "suggestion": "Config-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Config-Ultra-Italic.otf",
+          "suggestion": "Config-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Config-Ultra.otf",
+          "suggestion": "Config-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Config-Semi-Italic.otf",
+          "standardized": "Config-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Semi.otf",
+          "standardized": "Config-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Small-Italic.otf",
+          "standardized": "Config-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Small.otf",
+          "standardized": "Config-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Text-Italic.otf",
+          "standardized": "Config-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Text.otf",
+          "standardized": "Config-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Ultra-Italic.otf",
+          "standardized": "Config-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Ultra.otf",
+          "standardized": "Config-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Config-Round",
+      "directory": "Config-Round",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Config-Round\" does not match file prefix \"Config\"",
+          "files": [
+            "Config-Round-Black-Italic.otf",
+            "Config-Round-Black.otf",
+            "Config-Round-Bold-Italic.otf",
+            "Config-Round-Bold.otf",
+            "Config-Round-Light-Italic.otf",
+            "Config-Round-Light.otf",
+            "Config-Round-Medium-Italic.otf",
+            "Config-Round-Medium.otf",
+            "Config-Round-Regular-Italic.otf",
+            "Config-Round-Regular.otf",
+            "Config-Round-Semi-Italic.otf",
+            "Config-Round-Semi.otf",
+            "Config-Round-Small-Italic.otf",
+            "Config-Round-Small.otf",
+            "Config-Round-Text-Italic.otf",
+            "Config-Round-Text.otf",
+            "Config-Round-Thin-Italic.otf",
+            "Config-Round-Thin.otf",
+            "Config-Round-Ultra-Italic.otf",
+            "Config-Round-Ultra.otf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Config-Round-Semi-Italic.otf",
+          "suggestion": "Config-Round-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Config-Round-Semi.otf",
+          "suggestion": "Config-Round-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Config-Round-Ultra-Italic.otf",
+          "suggestion": "Config-Round-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Config-Round-Ultra.otf",
+          "suggestion": "Config-Round-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Config-Round-Semi-Italic.otf",
+          "standardized": "Config-Round-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Semi.otf",
+          "standardized": "Config-Round-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Small-Italic.otf",
+          "standardized": "Config-Round-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Small.otf",
+          "standardized": "Config-Round-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Text-Italic.otf",
+          "standardized": "Config-Round-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Text.otf",
+          "standardized": "Config-Round-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Ultra-Italic.otf",
+          "standardized": "Config-Round-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Config-Round-Ultra.otf",
+          "standardized": "Config-Round-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Cyber",
+      "directory": "Cyber",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Cyber\" does not match file prefix \"CyberTechno\"",
+          "files": [
+            "CyberTechno-Extrude.ttf",
+            "CyberTechno-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "CyberTechno-Extrude.ttf",
+          "standardized": "Cyber-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "CyberTechno-Regular.ttf",
+          "standardized": "Cyber-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Degrad",
+      "directory": "Degrad",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Degrad\" does not match file prefix \"403DegradMono\"",
+          "files": [
+            "403DegradMono-Medium.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "403DegradMono-Medium.ttf",
+          "standardized": "Degrad-Medium.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Deicho",
+      "directory": "Deicho",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Deicho-Semi-Italic.ttf",
+          "suggestion": "Deicho-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Deicho-Semi.ttf",
+          "suggestion": "Deicho-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Deicho-Ultra-Italic.ttf",
+          "suggestion": "Deicho-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Deicho-Ultra.ttf",
+          "suggestion": "Deicho-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Deicho-Semi-Italic.ttf",
+          "standardized": "Deicho-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Deicho-Semi.ttf",
+          "standardized": "Deicho-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Deicho-Small-Italic.ttf",
+          "standardized": "Deicho-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Deicho-Small.ttf",
+          "standardized": "Deicho-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Deicho-Ultra-Italic.ttf",
+          "standardized": "Deicho-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Deicho-Ultra.ttf",
+          "standardized": "Deicho-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Dinner",
+      "directory": "Dinner",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Dinner Groope-Italic.ttf",
+            "Dinner Groope-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Dinner Groope-Italic.ttf",
+          "standardized": "Dinner-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Dinner Groope-Regular.ttf",
+          "standardized": "Dinner-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Discgent",
+      "directory": "Discgent",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Discgent-Outline.ttf",
+            "Discgent.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Discgent-Outline.ttf",
+          "standardized": "Discgent-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Discgent.ttf",
+          "standardized": "Discgent-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Droper",
+      "directory": "Droper",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Droper\" does not match file prefix \"Broken\"",
+          "files": [
+            "Broken Droper.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Broken Droper.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Broken Droper.ttf",
+          "standardized": "Droper-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "EBCorp",
+      "directory": "EBCorp",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "EBCorp-Black.otf",
+            "EBCorp-BlackOblique.otf",
+            "EBCorp-Bold.otf",
+            "EBCorp-BoldOblique.otf",
+            "EBCorp-ExtraBold.otf",
+            "EBCorp-ExtraBoldOblique.otf",
+            "EBCorp-ExtraLight.otf",
+            "EBCorp-ExtraLightOblique.otf",
+            "EBCorp-Light.otf",
+            "EBCorp-LightOblique.otf",
+            "EBCorp-Medium.otf",
+            "EBCorp-MediumOblique.otf",
+            "EBCorp-Regular.otf",
+            "EBCorp-RegularOblique.otf",
+            "EBCorp-SemiBold.otf",
+            "EBCorp-SemiBoldOblique.otf",
+            "EBCorp-Thin.otf",
+            "EBCorp-ThinOblique.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "EBCorp-BlackOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-BoldOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-ExtraBoldOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-ExtraLightOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-LightOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-MediumOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-RegularOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-SemiBoldOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "EBCorp-ThinOblique.otf",
+          "standardized": "EBCorp-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Echocore",
+      "directory": "Echocore",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Echocore\" does not match file prefix \"EchocoreTechno\"",
+          "files": [
+            "EchocoreTechno-Italic.ttf",
+            "EchocoreTechno-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "EchocoreTechno-Italic.ttf",
+          "standardized": "Echocore-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EchocoreTechno-Regular.ttf",
+          "standardized": "Echocore-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ellis",
+      "directory": "Ellis",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Ellis-Outline.ttf",
+            "Ellis.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Ellis-Outline.ttf",
+          "standardized": "Ellis-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Ellis.ttf",
+          "standardized": "Ellis-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Evolve",
+      "directory": "Evolve",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Evolve\" does not match file prefix \"EvolveEarly\"",
+          "files": [
+            "EvolveEarly-BlackExpIta.ttf",
+            "EvolveEarly-BlackExpanded.ttf",
+            "EvolveEarly-BoldExpIta.ttf",
+            "EvolveEarly-BoldExpanded.ttf",
+            "EvolveEarly-Expanded.ttf",
+            "EvolveEarly-ExpandedItalic.ttf",
+            "EvolveEarly-ExtBdExpIta.ttf",
+            "EvolveEarly-ExtBlkExp.ttf",
+            "EvolveEarly-ExtBlkExpIta.ttf",
+            "EvolveEarly-ExtLtExp.ttf",
+            "EvolveEarly-ExtLtExpIta.ttf",
+            "EvolveEarly-ExtraBoldExpanded.ttf",
+            "EvolveEarly-HeavyExpIta.ttf",
+            "EvolveEarly-HeavyExpanded.ttf",
+            "EvolveEarly-LightExpIta.ttf",
+            "EvolveEarly-LightExpanded.ttf",
+            "EvolveEarly-MedExpIta.ttf",
+            "EvolveEarly-MediumExpanded.ttf",
+            "EvolveEarly-NewsExpIta.ttf",
+            "EvolveEarly-NewsExpanded.ttf",
+            "EvolveEarly-SemBdExpIta.ttf",
+            "EvolveEarly-SemiBoldExpanded.ttf",
+            "EvolveEarly-ThinExpIta.ttf",
+            "EvolveEarly-ThinExpanded.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: camelCase, hyphenated",
+          "files": [
+            "EvolveEarly-BlackExpIta.ttf",
+            "EvolveEarly-BlackExpanded.ttf",
+            "EvolveEarly-BoldExpIta.ttf",
+            "EvolveEarly-BoldExpanded.ttf",
+            "EvolveEarly-Expanded.ttf",
+            "EvolveEarly-ExpandedItalic.ttf",
+            "EvolveEarly-ExtBdExpIta.ttf",
+            "EvolveEarly-ExtBlkExp.ttf",
+            "EvolveEarly-ExtBlkExpIta.ttf",
+            "EvolveEarly-ExtLtExp.ttf",
+            "EvolveEarly-ExtLtExpIta.ttf",
+            "EvolveEarly-ExtraBoldExpanded.ttf",
+            "EvolveEarly-HeavyExpIta.ttf",
+            "EvolveEarly-HeavyExpanded.ttf",
+            "EvolveEarly-LightExpIta.ttf",
+            "EvolveEarly-LightExpanded.ttf",
+            "EvolveEarly-MedExpIta.ttf",
+            "EvolveEarly-MediumExpanded.ttf",
+            "EvolveEarly-NewsExpIta.ttf",
+            "EvolveEarly-NewsExpanded.ttf",
+            "EvolveEarly-SemBdExpIta.ttf",
+            "EvolveEarly-SemiBoldExpanded.ttf",
+            "EvolveEarly-ThinExpIta.ttf",
+            "EvolveEarly-ThinExpanded.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "EvolveEarly-BlackExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-BlackExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-BoldExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-BoldExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-Expanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExpandedItalic.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExtBdExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExtBlkExp.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExtBlkExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExtLtExp.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExtLtExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ExtraBoldExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-HeavyExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-HeavyExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-LightExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-LightExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-MedExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-MediumExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-NewsExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-NewsExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-SemBdExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-SemiBoldExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ThinExpIta.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "EvolveEarly-ThinExpanded.ttf",
+          "standardized": "Evolve-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Excite",
+      "directory": "Excite",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Excite\" does not match file prefix \"Exciting\"",
+          "files": [
+            "Exciting.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Exciting.ttf",
+          "standardized": "Excite-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Exensa",
+      "directory": "Exensa",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Exensa-Ultra.ttf",
+          "suggestion": "Exensa-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Exensa-Ultra.ttf",
+          "standardized": "Exensa-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Fashional",
+      "directory": "Fashional",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Fashional\" does not match file prefix \"Fashion\"",
+          "files": [
+            "Fashion.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Fashion.ttf",
+          "standardized": "Fashional-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Fedra",
+      "directory": "Fedra",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Fedra\" does not match file prefix \"Phaidra\"",
+          "files": [
+            "Phaidra.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Phaidra.ttf",
+          "standardized": "Fedra-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Fergan",
+      "directory": "Fergan",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Fergan\" does not match file prefix \"Fregan\"",
+          "files": [
+            "Fregan-Bold.otf",
+            "Fregan-Regular.otf",
+            "Fregan-Serif-Bold.otf",
+            "Fregan-Serif-Regular.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Fregan-Bold.otf",
+          "standardized": "Fergan-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Fregan-Regular.otf",
+          "standardized": "Fergan-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Fregan-Serif-Bold.otf",
+          "standardized": "Fergan-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Fregan-Serif-Regular.otf",
+          "standardized": "Fergan-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ferom",
+      "directory": "Ferom",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Ferom-Black.otf",
+            "Ferom-Bold.otf",
+            "Ferom-Light.otf",
+            "Ferom-Medium.otf",
+            "Ferom-Semibold.otf",
+            "Ferom-Thin.otf",
+            "Ferom.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Ferom-Semibold.otf",
+          "standardized": "Ferom-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Ferom.otf",
+          "standardized": "Ferom-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Flagoria",
+      "directory": "Flagoria",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Flagoria-Semi.ttf",
+          "suggestion": "Flagoria-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Flagoria-Ultra-Italic.ttf",
+          "suggestion": "Flagoria-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Flagoria-Ultra.ttf",
+          "suggestion": "Flagoria-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Flagoria-Semi.ttf",
+          "standardized": "Flagoria-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Flagoria-Ultra-Italic.ttf",
+          "standardized": "Flagoria-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Flagoria-Ultra.ttf",
+          "standardized": "Flagoria-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Founders",
+      "directory": "Founders",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Founders-Semi-Italic.ttf",
+          "suggestion": "Founders-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Founders-Semi.ttf",
+          "suggestion": "Founders-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Founders-Semi-Italic.ttf",
+          "standardized": "Founders-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Founders-Semi.ttf",
+          "standardized": "Founders-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Friday",
+      "directory": "Friday",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Friday Hype-SVG.ttf",
+            "Friday Hype.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Friday Hype-SVG.ttf",
+          "standardized": "Friday-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Friday Hype.ttf",
+          "standardized": "Friday-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Galpike",
+      "directory": "Galpike",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Galpike-Semi.ttf",
+          "suggestion": "Galpike-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Galpike-Ultra.ttf",
+          "suggestion": "Galpike-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Galpike-Semi.ttf",
+          "standardized": "Galpike-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Small.ttf",
+          "standardized": "Galpike-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Ultra.ttf",
+          "standardized": "Galpike-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gardena",
+      "directory": "Gardena",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Gardena-Semi.ttf",
+          "suggestion": "Gardena-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Gardena-Ultra-Italic.ttf",
+          "suggestion": "Gardena-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Gardena-Ultra.ttf",
+          "suggestion": "Gardena-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Gardena-Semi.ttf",
+          "standardized": "Gardena-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Gardena-Ultra-Italic.ttf",
+          "standardized": "Gardena-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Gardena-Ultra.ttf",
+          "standardized": "Gardena-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gifford",
+      "directory": "Gifford",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Gifford-Semi-Italic.otf",
+          "suggestion": "Gifford-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Gifford-Semi.otf",
+          "suggestion": "Gifford-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Gifford-Ultra-Italic.otf",
+          "suggestion": "Gifford-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Gifford-Ultra.otf",
+          "suggestion": "Gifford-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Gifford-Semi-Italic.otf",
+          "standardized": "Gifford-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gifford-Semi.otf",
+          "standardized": "Gifford-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gifford-Small-Italic.otf",
+          "standardized": "Gifford-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gifford-Small.otf",
+          "standardized": "Gifford-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gifford-Ultra-Italic.otf",
+          "standardized": "Gifford-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gifford-Ultra.otf",
+          "standardized": "Gifford-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "GigaSans",
+      "directory": "GigaSans",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "GigaSans-Semi-Italic.otf",
+          "suggestion": "GigaSans-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "GigaSans-Semi.otf",
+          "suggestion": "GigaSans-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "GigaSans-Ultra-Italic.otf",
+          "suggestion": "GigaSans-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "GigaSans-Ultra.otf",
+          "suggestion": "GigaSans-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "GigaSans-Semi-Italic.otf",
+          "standardized": "GigaSans-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GigaSans-Semi.otf",
+          "standardized": "GigaSans-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GigaSans-Small-Italic.otf",
+          "standardized": "GigaSans-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GigaSans-Small.otf",
+          "standardized": "GigaSans-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GigaSans-Ultra-Italic.otf",
+          "standardized": "GigaSans-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GigaSans-Ultra.otf",
+          "standardized": "GigaSans-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gillpike",
+      "directory": "Gillpike",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Gillpike\" does not match file prefix \"Galpike\"",
+          "files": [
+            "Galpike-Black.ttf",
+            "Galpike-Bold.ttf",
+            "Galpike-Light.ttf",
+            "Galpike-Medium.ttf",
+            "Galpike-Regular.ttf",
+            "Galpike-Semi.ttf",
+            "Galpike-Small.ttf",
+            "Galpike-Thin.ttf",
+            "Galpike-Ultra.ttf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Galpike-Semi.ttf",
+          "suggestion": "Galpike-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Galpike-Ultra.ttf",
+          "suggestion": "Galpike-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Galpike-Black.ttf",
+          "standardized": "Gillpike-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Bold.ttf",
+          "standardized": "Gillpike-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Light.ttf",
+          "standardized": "Gillpike-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Medium.ttf",
+          "standardized": "Gillpike-Medium.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Regular.ttf",
+          "standardized": "Gillpike-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Semi.ttf",
+          "standardized": "Gillpike-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Small.ttf",
+          "standardized": "Gillpike-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Thin.ttf",
+          "standardized": "Gillpike-Thin.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Galpike-Ultra.ttf",
+          "standardized": "Gillpike-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ginetta",
+      "directory": "Ginetta",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Ginetta\" does not match file prefix \"Gimetta\"",
+          "files": [
+            "Gimetta.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Gimetta.ttf",
+          "standardized": "Ginetta-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ginto",
+      "directory": "Ginto",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Ginto\" does not match file prefix \"GintoNord\"",
+          "files": [
+            "GintoNord-Black-Italic.ttf",
+            "GintoNord-Black.ttf",
+            "GintoNord-Bold-Italic.ttf",
+            "GintoNord-Bold.ttf",
+            "GintoNord-Light-Italic.ttf",
+            "GintoNord-Light.ttf",
+            "GintoNord-Line-Italic.ttf",
+            "GintoNord-Line.ttf",
+            "GintoNord-Medium-Italic.ttf",
+            "GintoNord-Medium.ttf",
+            "GintoNord-Regular-Italic.ttf",
+            "GintoNord-Regular.ttf",
+            "GintoNord-Thin-Italic.ttf",
+            "GintoNord-Thin.ttf",
+            "GintoNord-Ultra-Italic.ttf",
+            "GintoNord-Ultra.ttf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "GintoNord-Ultra-Italic.ttf",
+          "suggestion": "GintoNord-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "GintoNord-Ultra.ttf",
+          "suggestion": "GintoNord-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "GintoNord-Black-Italic.ttf",
+          "standardized": "Ginto-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Black.ttf",
+          "standardized": "Ginto-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Bold-Italic.ttf",
+          "standardized": "Ginto-Bold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Bold.ttf",
+          "standardized": "Ginto-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Light-Italic.ttf",
+          "standardized": "Ginto-Light-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Light.ttf",
+          "standardized": "Ginto-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Line-Italic.ttf",
+          "standardized": "Ginto-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Line.ttf",
+          "standardized": "Ginto-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Medium-Italic.ttf",
+          "standardized": "Ginto-Medium-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Medium.ttf",
+          "standardized": "Ginto-Medium.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Regular-Italic.ttf",
+          "standardized": "Ginto-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Regular.ttf",
+          "standardized": "Ginto-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Thin-Italic.ttf",
+          "standardized": "Ginto-Thin-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Thin.ttf",
+          "standardized": "Ginto-Thin.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Ultra-Italic.ttf",
+          "standardized": "Ginto-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "GintoNord-Ultra.ttf",
+          "standardized": "Ginto-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Givonic",
+      "directory": "Givonic",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Givonic-Semi.ttf",
+          "suggestion": "Givonic-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Givonic-Semi.ttf",
+          "standardized": "Givonic-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Glooosy",
+      "directory": "Glooosy",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Glooosy\" does not match file prefix \"glooxy\"",
+          "files": [
+            "glooxy.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "glooxy.ttf",
+          "standardized": "Glooosy-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gopher",
+      "directory": "Gopher",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Gopher-Heavy-Italic.otf",
+          "suggestion": "Gopher-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Gopher-Heavy.otf",
+          "suggestion": "Gopher-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Gopher-Heavy-Italic.otf",
+          "standardized": "Gopher-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gopher-Heavy.otf",
+          "standardized": "Gopher-Black.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gopher-Line-Italic.otf",
+          "standardized": "Gopher-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Gopher-Line.otf",
+          "standardized": "Gopher-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "GopherMono",
+      "directory": "GopherMono",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"GopherMono\" does not match file prefix \"GhopherMono\"",
+          "files": [
+            "GhopherMono-Black-Italic.otf",
+            "GhopherMono-Black.otf",
+            "GhopherMono-Bold-Italic.otf",
+            "GhopherMono-Bold.otf",
+            "GhopherMono-Light-Italic.otf",
+            "GhopherMono-Light.otf",
+            "GhopherMono-Medium-Italic.otf",
+            "GhopherMono-Medium.otf",
+            "GhopherMono-Regular-Italic.otf",
+            "GhopherMono-Regular.otf",
+            "GhopherMono-Semi-Italic.otf",
+            "GhopherMono-Semi.otf",
+            "GhopherMono-Thin-Italic.otf",
+            "GhopherMono-Thin.otf",
+            "GhopherMono-Ultra-Italic.otf",
+            "GhopherMono-Ultra.otf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "GhopherMono-Semi-Italic.otf",
+          "suggestion": "GhopherMono-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "GhopherMono-Semi.otf",
+          "suggestion": "GhopherMono-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "GhopherMono-Ultra-Italic.otf",
+          "suggestion": "GhopherMono-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "GhopherMono-Ultra.otf",
+          "suggestion": "GhopherMono-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "GhopherMono-Black-Italic.otf",
+          "standardized": "GopherMono-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Black.otf",
+          "standardized": "GopherMono-Black.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Bold-Italic.otf",
+          "standardized": "GopherMono-Bold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Bold.otf",
+          "standardized": "GopherMono-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Light-Italic.otf",
+          "standardized": "GopherMono-Light-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Light.otf",
+          "standardized": "GopherMono-Light.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Medium-Italic.otf",
+          "standardized": "GopherMono-Medium-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Medium.otf",
+          "standardized": "GopherMono-Medium.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Regular-Italic.otf",
+          "standardized": "GopherMono-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Regular.otf",
+          "standardized": "GopherMono-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Semi-Italic.otf",
+          "standardized": "GopherMono-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Semi.otf",
+          "standardized": "GopherMono-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Thin-Italic.otf",
+          "standardized": "GopherMono-Thin-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Thin.otf",
+          "standardized": "GopherMono-Thin.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Ultra-Italic.otf",
+          "standardized": "GopherMono-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "GhopherMono-Ultra.otf",
+          "standardized": "GopherMono-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gothif",
+      "directory": "Gothif",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Gothif\" does not match file prefix \"CookGothif\"",
+          "files": [
+            "CookGothif.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "CookGothif.ttf",
+          "standardized": "Gothif-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Govandi",
+      "directory": "Govandi",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Govandi-Semi.ttf",
+          "suggestion": "Govandi-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Govandi-Ultra-Italic.ttf",
+          "suggestion": "Govandi-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Govandi-Ultra.ttf",
+          "suggestion": "Govandi-Black.ttf"
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Govandi-Bold.ttf",
+            "Govandi-BoldItalic.ttf",
+            "Govandi-Regular-Italic.ttf",
+            "Govandi-Regular.ttf",
+            "Govandi-Semi.ttf",
+            "Govandi-Thin-Italic.ttf",
+            "Govandi-Thin.ttf",
+            "Govandi-Ultra-Italic.ttf",
+            "Govandi-Ultra.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Govandi-BoldItalic.ttf",
+          "standardized": "Govandi-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Govandi-Semi.ttf",
+          "standardized": "Govandi-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Govandi-Ultra-Italic.ttf",
+          "standardized": "Govandi-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Govandi-Ultra.ttf",
+          "standardized": "Govandi-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Granigen",
+      "directory": "Granigen",
+      "issues": [
+        {
+          "type": "prefix_mismatch",
+          "severity": "high",
+          "description": "Directory \"Granigen\" contains files with different prefixes: Granigen, Gronigen",
+          "files": [
+            "Granigen-Bold.ttf",
+            "Gronigen-Light.ttf",
+            "Gronigen-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Gronigen-Light.ttf",
+          "standardized": "Granigen-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Gronigen-Regular.ttf",
+          "standardized": "Granigen-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gregory",
+      "directory": "Gregory",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Gregory\" does not match file prefix \"George\"",
+          "files": [
+            "George-Bold-Italic.ttf",
+            "George-Bold.ttf",
+            "George-Light-Italic.ttf",
+            "George-Light.ttf",
+            "George-Regular-Italic.ttf",
+            "George-Regular.ttf",
+            "George-Semi-Italic.ttf",
+            "George-Semi.ttf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "George-Semi-Italic.ttf",
+          "suggestion": "George-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "George-Semi.ttf",
+          "suggestion": "George-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "George-Bold-Italic.ttf",
+          "standardized": "Gregory-Bold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Bold.ttf",
+          "standardized": "Gregory-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Light-Italic.ttf",
+          "standardized": "Gregory-Light-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Light.ttf",
+          "standardized": "Gregory-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Regular-Italic.ttf",
+          "standardized": "Gregory-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Regular.ttf",
+          "standardized": "Gregory-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Semi-Italic.ttf",
+          "standardized": "Gregory-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "George-Semi.ttf",
+          "standardized": "Gregory-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Greyson",
+      "directory": "Greyson",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Greyson\" does not match file prefix \"CSGreyson\"",
+          "files": [
+            "CSGreyson-Italic.ttf",
+            "CSGreyson-Regular.ttf",
+            "CSGreyson-ReverseItalic.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "CSGreyson-Italic.ttf",
+            "CSGreyson-Regular.ttf",
+            "CSGreyson-ReverseItalic.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "CSGreyson-Italic.ttf",
+          "standardized": "Greyson-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "CSGreyson-Regular.ttf",
+          "standardized": "Greyson-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "CSGreyson-ReverseItalic.ttf",
+          "standardized": "Greyson-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Gronigen",
+      "directory": "Gronigen",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Gronigen\" does not match file prefix \"Groningen\"",
+          "files": [
+            "Groningen-Bold.ttf",
+            "Groningen-Light.ttf",
+            "Groningen-Regular.ttf",
+            "Groningen-Thin.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Groningen-Bold.ttf",
+          "standardized": "Gronigen-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Groningen-Light.ttf",
+          "standardized": "Gronigen-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Groningen-Regular.ttf",
+          "standardized": "Gronigen-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Groningen-Thin.ttf",
+          "standardized": "Gronigen-Thin.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Groovy",
+      "directory": "Groovy",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Groovy\" does not match file prefix \"Flying\"",
+          "files": [
+            "Flying Soul.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Flying Soul.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Flying Soul.ttf",
+          "standardized": "Groovy-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Grotek",
+      "directory": "Grotek",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Grotek\" does not match file prefix \"Gotrek\"",
+          "files": [
+            "Gotrek.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Gotrek.ttf",
+          "standardized": "Grotek-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Grover",
+      "directory": "Grover",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Grover-Semi-Bold.ttf",
+          "suggestion": "Grover-SemiBold-Bold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Grover-Semi-Bold.ttf",
+          "standardized": "Grover-Bold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Hando",
+      "directory": "Hando",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Hando-Black.otf",
+            "Hando-BlackOblique.otf",
+            "Hando-Bold.otf",
+            "Hando-BoldOblique.otf",
+            "Hando-ExtraBold.otf",
+            "Hando-ExtraBoldOblique.otf",
+            "Hando-ExtraLight.otf",
+            "Hando-ExtraLightOblique.otf",
+            "Hando-HairLine.otf",
+            "Hando-HairLineOblique.otf",
+            "Hando-Light.otf",
+            "Hando-LightOblique.otf",
+            "Hando-Medium.otf",
+            "Hando-MediumOblique.otf",
+            "Hando-Oblique.otf",
+            "Hando-Regular.otf",
+            "Hando-SemiBold.otf",
+            "Hando-SemiBoldOblique.otf",
+            "Hando-Thin.otf",
+            "Hando-ThinOblique.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Hando-BlackOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-BoldOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-ExtraBoldOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-ExtraLightOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-HairLine.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-HairLineOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-LightOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-MediumOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-Oblique.otf",
+          "standardized": "Hando-Regular-Oblique.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-SemiBoldOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Hando-ThinOblique.otf",
+          "standardized": "Hando-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "HandoSoft",
+      "directory": "HandoSoft",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "HandoSoft-Black.ttf",
+            "HandoSoft-BlackOblique.ttf",
+            "HandoSoft-Bold.ttf",
+            "HandoSoft-BoldOblique.ttf",
+            "HandoSoft-ExtraBold.ttf",
+            "HandoSoft-ExtraBoldOblique.ttf",
+            "HandoSoft-ExtraLight.ttf",
+            "HandoSoft-ExtraLightOblique.ttf",
+            "HandoSoft-HairLine.ttf",
+            "HandoSoft-HairLineOblique.ttf",
+            "HandoSoft-Light.ttf",
+            "HandoSoft-LightOblique.ttf",
+            "HandoSoft-Medium.ttf",
+            "HandoSoft-MediumOblique.ttf",
+            "HandoSoft-Oblique.ttf",
+            "HandoSoft-Regular.ttf",
+            "HandoSoft-SemiBold.ttf",
+            "HandoSoft-SemiBoldOblique.ttf",
+            "HandoSoft-Thin.ttf",
+            "HandoSoft-ThinOblique.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "HandoSoft-BlackOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-BoldOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-ExtraBoldOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-ExtraLightOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-HairLine.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-HairLineOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-LightOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-MediumOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-Oblique.ttf",
+          "standardized": "HandoSoft-Regular-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-SemiBoldOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "HandoSoft-ThinOblique.ttf",
+          "standardized": "HandoSoft-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Headline",
+      "directory": "Headline",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Headline-Outline.ttf",
+            "Headline.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Headline-Outline.ttf",
+          "standardized": "Headline-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Headline.ttf",
+          "standardized": "Headline-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Heavyjack",
+      "directory": "Heavyjack",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Heavyjack\" does not match file prefix \"Heavy\"",
+          "files": [
+            "Heavy Jack - Shadow.ttf",
+            "Heavy Jack.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Heavy Jack - Shadow.ttf",
+            "Heavy Jack.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Heavy Jack - Shadow.ttf",
+          "standardized": "Heavyjack-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Heavy Jack.ttf",
+          "standardized": "Heavyjack-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Hiroki",
+      "directory": "Hiroki",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Hiroki\" does not match file prefix \"Herochi\"",
+          "files": [
+            "Herochi.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Herochi.ttf",
+          "standardized": "Hiroki-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Homade",
+      "directory": "Homade",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Homade-Semi-Italic.ttf",
+          "suggestion": "Homade-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Homade-Semi.ttf",
+          "suggestion": "Homade-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Homade-Ultra-Italic.ttf",
+          "suggestion": "Homade-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Homade-Ultra.ttf",
+          "suggestion": "Homade-Black.ttf"
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Homade-Bold.ttf",
+            "Homade-BoldItalic.ttf",
+            "Homade-Medium-Italic.ttf",
+            "Homade-Medium.ttf",
+            "Homade-Regular-Italic.ttf",
+            "Homade-Regular.ttf",
+            "Homade-Semi-Italic.ttf",
+            "Homade-Semi.ttf",
+            "Homade-Ultra-Italic.ttf",
+            "Homade-Ultra.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Homade-BoldItalic.ttf",
+          "standardized": "Homade-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Homade-Semi-Italic.ttf",
+          "standardized": "Homade-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Homade-Semi.ttf",
+          "standardized": "Homade-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Homade-Ultra-Italic.ttf",
+          "standardized": "Homade-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Homade-Ultra.ttf",
+          "standardized": "Homade-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Interform",
+      "directory": "Interform",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Interform\" does not match file prefix \"InterformMono\"",
+          "files": [
+            "InterformMono-Bold.ttf",
+            "InterformMono-Light.ttf",
+            "InterformMono-Medium.ttf",
+            "InterformMono-Regular.ttf",
+            "InterformMono-SemiBold.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "InterformMono-Bold.ttf",
+            "InterformMono-Light.ttf",
+            "InterformMono-Medium.ttf",
+            "InterformMono-Regular.ttf",
+            "InterformMono-SemiBold.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "InterformMono-Bold.ttf",
+          "standardized": "Interform-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "InterformMono-Light.ttf",
+          "standardized": "Interform-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "InterformMono-Medium.ttf",
+          "standardized": "Interform-Medium.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "InterformMono-Regular.ttf",
+          "standardized": "Interform-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "InterformMono-SemiBold.ttf",
+          "standardized": "Interform-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "JetBrains",
+      "directory": "JetBrains",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "JetBrains-Heavy.ttf",
+          "suggestion": "JetBrains-Black.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "JetBrains-Semi.ttf",
+          "suggestion": "JetBrains-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "JetBrains-Heavy.ttf",
+          "standardized": "JetBrains-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "JetBrains-Semi.ttf",
+          "standardized": "JetBrains-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "July ",
+      "directory": "July ",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"July \" does not match file prefix \"July\"",
+          "files": [
+            "July.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "July.ttf",
+          "standardized": "July -Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Kalico",
+      "directory": "Kalico",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Kalico-Semi.ttf",
+          "suggestion": "Kalico-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Kalico-Semi.ttf",
+          "standardized": "Kalico-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Kinote",
+      "directory": "Kinote",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Kinote\" does not match file prefix \"Kinsale\"",
+          "files": [
+            "Kinsale-Display-Italic.ttf",
+            "Kinsale-Display.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Kinsale-Display-Italic.ttf",
+          "standardized": "Kinote-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Kinsale-Display.ttf",
+          "standardized": "Kinote-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Kringe",
+      "directory": "Kringe",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Kringe Outline.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: spaces, single",
+          "files": [
+            "Kringe Outline.ttf",
+            "Kringe.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Kringe Outline.ttf",
+          "standardized": "Kringe-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Kringe.ttf",
+          "standardized": "Kringe-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Lechee",
+      "directory": "Lechee",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Lechee\" does not match file prefix \"Lecheet\"",
+          "files": [
+            "Lecheet.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Lecheet.ttf",
+          "standardized": "Lechee-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Lemands",
+      "directory": "Lemands",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Lemands-Semi.ttf",
+          "suggestion": "Lemands-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Lemands-Book.ttf",
+          "standardized": "Lemands-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Lemands-Semi.ttf",
+          "standardized": "Lemands-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Lenia",
+      "directory": "Lenia",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Lenia\" does not match file prefix \"LeniaMono\"",
+          "files": [
+            "LeniaMono-Bold.ttf",
+            "LeniaMono-ExtraBold.ttf",
+            "LeniaMono-Medium.ttf",
+            "LeniaMono-Regular.ttf",
+            "LeniaMono-SemiBold.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "LeniaMono-Bold.ttf",
+            "LeniaMono-ExtraBold.ttf",
+            "LeniaMono-Medium.ttf",
+            "LeniaMono-Regular.ttf",
+            "LeniaMono-SemiBold.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "LeniaMono-Bold.ttf",
+          "standardized": "Lenia-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "LeniaMono-ExtraBold.ttf",
+          "standardized": "Lenia-ExtraBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "LeniaMono-Medium.ttf",
+          "standardized": "Lenia-Medium.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "LeniaMono-Regular.ttf",
+          "standardized": "Lenia-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "LeniaMono-SemiBold.ttf",
+          "standardized": "Lenia-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Limelines",
+      "directory": "Limelines",
+      "issues": [
+        {
+          "type": "prefix_mismatch",
+          "severity": "high",
+          "description": "Directory \"Limelines\" contains files with different prefixes: LimeLines, LimeLinesRegular",
+          "files": [
+            "LimeLines-Stroke.ttf",
+            "LimeLinesRegular.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "LimeLines-Stroke.ttf",
+            "LimeLinesRegular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "LimeLines-Stroke.ttf",
+          "standardized": "Limelines-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "LimeLinesRegular.ttf",
+          "standardized": "Limelines-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Luckies",
+      "directory": "Luckies",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Luckies\" does not match file prefix \"LUCKIES\"",
+          "files": [
+            "LUCKIES.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "LUCKIES.ttf",
+          "standardized": "Luckies-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Magdeline",
+      "directory": "Magdeline",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Magdeline\" does not match file prefix \"Magdelin\"",
+          "files": [
+            "Magdelin-Black-Italic.otf",
+            "Magdelin-Black.otf",
+            "Magdelin-Bold-Italic.otf",
+            "Magdelin-Bold.otf",
+            "Magdelin-Italic.otf",
+            "Magdelin-Light-Italic.otf",
+            "Magdelin-Light.otf",
+            "Magdelin-Medium-Italic.otf",
+            "Magdelin-Medium.otf",
+            "Magdelin-Regular.otf",
+            "Magdelin-Semi-Italic.otf",
+            "Magdelin-Semi.otf",
+            "Magdelin-Small-Italic.otf",
+            "Magdelin-Small.otf",
+            "Magdelin-Text-Italic.otf",
+            "Magdelin-Text.otf",
+            "Magdelin-Thin-Italic.otf",
+            "Magdelin-Thin.otf",
+            "Magdelin-Ultra-Italic.otf",
+            "Magdelin-Ultra.otf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Magdelin-Semi-Italic.otf",
+          "suggestion": "Magdelin-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Magdelin-Semi.otf",
+          "suggestion": "Magdelin-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Magdelin-Ultra-Italic.otf",
+          "suggestion": "Magdelin-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Magdelin-Ultra.otf",
+          "suggestion": "Magdelin-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Magdelin-Black-Italic.otf",
+          "standardized": "Magdeline-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Black.otf",
+          "standardized": "Magdeline-Black.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Bold-Italic.otf",
+          "standardized": "Magdeline-Bold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Bold.otf",
+          "standardized": "Magdeline-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Italic.otf",
+          "standardized": "Magdeline-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Light-Italic.otf",
+          "standardized": "Magdeline-Light-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Light.otf",
+          "standardized": "Magdeline-Light.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Medium-Italic.otf",
+          "standardized": "Magdeline-Medium-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Medium.otf",
+          "standardized": "Magdeline-Medium.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Regular.otf",
+          "standardized": "Magdeline-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Semi-Italic.otf",
+          "standardized": "Magdeline-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Semi.otf",
+          "standardized": "Magdeline-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Small-Italic.otf",
+          "standardized": "Magdeline-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Small.otf",
+          "standardized": "Magdeline-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Text-Italic.otf",
+          "standardized": "Magdeline-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Text.otf",
+          "standardized": "Magdeline-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Thin-Italic.otf",
+          "standardized": "Magdeline-Thin-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Thin.otf",
+          "standardized": "Magdeline-Thin.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Ultra-Italic.otf",
+          "standardized": "Magdeline-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Magdelin-Ultra.otf",
+          "standardized": "Magdeline-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "MalibuSunday",
+      "directory": "MalibuSunday",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"MalibuSunday\" does not match file prefix \"Malibu\"",
+          "files": [
+            "Malibu Sunday Script.ttf",
+            "Malibu Sunday Serif.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Malibu Sunday Script.ttf",
+            "Malibu Sunday Serif.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Malibu Sunday Script.ttf",
+          "standardized": "MalibuSunday-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Malibu Sunday Serif.ttf",
+          "standardized": "MalibuSunday-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Mashle",
+      "directory": "Mashle",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Mashle Italic.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: spaces, single",
+          "files": [
+            "Mashle Italic.ttf",
+            "Mashle.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Mashle Italic.ttf",
+          "standardized": "Mashle-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Mashle.ttf",
+          "standardized": "Mashle-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Melbrick",
+      "directory": "Melbrick",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Melbrick-Italic.ttf",
+            "Melbrick-ItalicOutline.ttf",
+            "Melbrick-Outline.ttf",
+            "Melbrick-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Melbrick-Italic.ttf",
+          "standardized": "Melbrick-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Melbrick-ItalicOutline.ttf",
+          "standardized": "Melbrick-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Melbrick-Outline.ttf",
+          "standardized": "Melbrick-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Merville",
+      "directory": "Merville",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Merville-Outline.ttf",
+            "Merville.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Merville-Outline.ttf",
+          "standardized": "Merville-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Merville.ttf",
+          "standardized": "Merville-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Metalink",
+      "directory": "Metalink",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Metalink-Semi-Bold.ttf",
+          "suggestion": "Metalink-SemiBold-Bold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Metalink-Semi-Italic.ttf",
+          "suggestion": "Metalink-SemiBold-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Metalink-Ultra-Italic.ttf",
+          "suggestion": "Metalink-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Metalink-Ultra.ttf",
+          "suggestion": "Metalink-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Metalink-Semi-Bold.ttf",
+          "standardized": "Metalink-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Metalink-Semi-Italic.ttf",
+          "standardized": "Metalink-SemiBold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Metalink-Ultra-Italic.ttf",
+          "standardized": "Metalink-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Metalink-Ultra.ttf",
+          "standardized": "Metalink-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Mintbox",
+      "directory": "Mintbox",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Mintbox\" does not match file prefix \"MintBox\"",
+          "files": [
+            "MintBox-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "MintBox-Regular.ttf",
+          "standardized": "Mintbox-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Mirdone",
+      "directory": "Mirdone",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Mirdone\" does not match file prefix \"Miradane\"",
+          "files": [
+            "Miradane.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Miradane.ttf",
+          "standardized": "Mirdone-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Modeco",
+      "directory": "Modeco",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Modeco-Black.otf",
+            "Modeco-BlackOblique.otf",
+            "Modeco-Bold.otf",
+            "Modeco-BoldOblique.otf",
+            "Modeco-ExtraBold.otf",
+            "Modeco-ExtraBoldOblique.otf",
+            "Modeco-ExtraLight.otf",
+            "Modeco-ExtraLightOblique.otf",
+            "Modeco-Light.otf",
+            "Modeco-LightOblique.otf",
+            "Modeco-Medium.otf",
+            "Modeco-MediumOblique.otf",
+            "Modeco-Regular.otf",
+            "Modeco-RegularOblique.otf",
+            "Modeco-SemiBold.otf",
+            "Modeco-SemiBoldOblique.otf",
+            "Modeco-Thin.otf",
+            "Modeco-ThinOblique.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Modeco-BlackOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-BoldOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-ExtraBoldOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-ExtraLightOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-LightOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-MediumOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-RegularOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-SemiBoldOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Modeco-ThinOblique.otf",
+          "standardized": "Modeco-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Modives",
+      "directory": "Modives",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Modives\" does not match file prefix \"Moldives\"",
+          "files": [
+            "Moldives.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Moldives.otf",
+          "standardized": "Modives-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Mollen",
+      "directory": "Mollen",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Mollen-Bold.otf",
+            "Mollen-BoldCondensed.otf",
+            "Mollen-BoldCondensedItalic.otf",
+            "Mollen-BoldItalic.otf",
+            "Mollen-BoldNarrow.otf",
+            "Mollen-BoldNarrowItalic.otf",
+            "Mollen-Condensed.otf",
+            "Mollen-CondensedItalic.otf",
+            "Mollen-ExtBdCondIta.otf",
+            "Mollen-ExtraBold.otf",
+            "Mollen-ExtraBoldCondensed.otf",
+            "Mollen-ExtraBoldItalic.otf",
+            "Mollen-ExtraBoldNarrow.otf",
+            "Mollen-ExtraBoldNarrowItalic.otf",
+            "Mollen-Light.otf",
+            "Mollen-LightCondensed.otf",
+            "Mollen-LightCondensedItalic.otf",
+            "Mollen-LightItalic.otf",
+            "Mollen-LightNarrow.otf",
+            "Mollen-LightNarrowItalic.otf",
+            "Mollen-Medium.otf",
+            "Mollen-MediumCondensed.otf",
+            "Mollen-MediumCondensedItalic.otf",
+            "Mollen-MediumItalic.otf",
+            "Mollen-MediumNarrow.otf",
+            "Mollen-MediumNarrowItalic.otf",
+            "Mollen-Narrow.otf",
+            "Mollen-NarrowItalic.otf",
+            "Mollen-Regular.otf",
+            "Mollen-RegularItalic.otf",
+            "Mollen-SemBdCondIta.otf",
+            "Mollen-SemLtCondIta.otf",
+            "Mollen-SemiBold.otf",
+            "Mollen-SemiBoldCondensed.otf",
+            "Mollen-SemiBoldItalic.otf",
+            "Mollen-SemiBoldNarrow.otf",
+            "Mollen-SemiBoldNarrowItalic.otf",
+            "Mollen-SemiLight.otf",
+            "Mollen-SemiLightCondensed.otf",
+            "Mollen-SemiLightItalic.otf",
+            "Mollen-SemiLightNarrow.otf",
+            "Mollen-SemiLightNarrowItalic.otf",
+            "Mollen-Thin.otf",
+            "Mollen-ThinCondensed.otf",
+            "Mollen-ThinCondensedItalic.otf",
+            "Mollen-ThinItalic.otf",
+            "Mollen-ThinNarrow.otf",
+            "Mollen-ThinNarrowItalic.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Mollen-BoldCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-BoldCondensedItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-BoldItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-BoldNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-BoldNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-Condensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-CondensedItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ExtBdCondIta.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ExtraBoldCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ExtraBoldItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ExtraBoldNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ExtraBoldNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-LightCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-LightCondensedItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-LightItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-LightNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-LightNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-MediumCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-MediumCondensedItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-MediumItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-MediumNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-MediumNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-Narrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-NarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-RegularItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemBdCondIta.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemLtCondIta.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiBoldCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiBoldItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiBoldNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiBoldNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiLight.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiLightCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiLightItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiLightNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-SemiLightNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ThinCondensed.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ThinCondensedItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ThinItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ThinNarrow.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Mollen-ThinNarrowItalic.otf",
+          "standardized": "Mollen-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Monda",
+      "directory": "Monda",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Monda-Semi.ttf",
+          "suggestion": "Monda-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Monda-Ultra-Italic.ttf",
+          "suggestion": "Monda-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Monda-Ultra.ttf",
+          "suggestion": "Monda-Black.ttf"
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Monda-Bold.ttf",
+            "Monda-BoldItalic.ttf",
+            "Monda-Regular-Italic.ttf",
+            "Monda-Regular.ttf",
+            "Monda-Semi.ttf",
+            "Monda-Thin-Italic.ttf",
+            "Monda-Thin.ttf",
+            "Monda-Ultra-Italic.ttf",
+            "Monda-Ultra.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Monda-BoldItalic.ttf",
+          "standardized": "Monda-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Monda-Semi.ttf",
+          "standardized": "Monda-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Monda-Ultra-Italic.ttf",
+          "standardized": "Monda-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Monda-Ultra.ttf",
+          "standardized": "Monda-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Monosuke",
+      "directory": "Monosuke",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Monosuke\" does not match file prefix \"403Monosuke\"",
+          "files": [
+            "403Monosuke-Slant.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "403Monosuke-Slant.ttf",
+          "standardized": "Monosuke-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Monty",
+      "directory": "Monty",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Monty Black.ttf",
+            "Monty Bold.ttf",
+            "Monty Light.ttf",
+            "Monty Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Monty Black.ttf",
+          "standardized": "Monty-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Monty Bold.ttf",
+          "standardized": "Monty-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Monty Light.ttf",
+          "standardized": "Monty-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Monty Regular.ttf",
+          "standardized": "Monty-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Moon",
+      "directory": "Moon",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Moon\" does not match file prefix \"TheMoon\"",
+          "files": [
+            "TheMoon-Regular.otf",
+            "TheMoon-Script.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "TheMoon-Regular.otf",
+          "standardized": "Moon-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "TheMoon-Script.otf",
+          "standardized": "Moon-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Mopella",
+      "directory": "Mopella",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Mopella-Ultra.ttf",
+          "suggestion": "Mopella-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Mopella-Ultra.ttf",
+          "standardized": "Mopella-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Murey",
+      "directory": "Murey",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Murey\" does not match file prefix \"MurayHouseStandard\"",
+          "files": [
+            "MurayHouseStandard-Regular.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "MurayHouseStandard-Regular.otf",
+          "standardized": "Murey-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Nailhead",
+      "directory": "Nailhead",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Nailhead Nova-Bold.otf",
+            "Nailhead Nova-Light.otf",
+            "Nailhead Nova.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Nailhead Nova-Bold.otf",
+          "standardized": "Nailhead-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Nailhead Nova-Light.otf",
+          "standardized": "Nailhead-Light.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Nailhead Nova.otf",
+          "standardized": "Nailhead-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Nissie",
+      "directory": "Nissie",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Nissie Tangle.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Nissie Tangle.ttf",
+          "standardized": "Nissie-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Nok",
+      "directory": "Nok",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Nok\" does not match file prefix \"NokRegular\"",
+          "files": [
+            "NokRegular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "NokRegular.ttf",
+          "standardized": "Nok-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Oldbones",
+      "directory": "Oldbones",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Oldbones 3D.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: spaces, single",
+          "files": [
+            "Oldbones 3D.ttf",
+            "Oldbones.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Oldbones 3D.ttf",
+          "standardized": "Oldbones-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Oldbones.ttf",
+          "standardized": "Oldbones-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Powerful",
+      "directory": "Powerful",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Powerful\" does not match file prefix \"Powerfull\"",
+          "files": [
+            "Powerfull.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Powerfull.ttf",
+          "standardized": "Powerful-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Quallity",
+      "directory": "Quallity",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Quallity\" does not match file prefix \"Quiallity\"",
+          "files": [
+            "Quiallity Noted.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Quiallity Noted.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Quiallity Noted.ttf",
+          "standardized": "Quallity-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Quiche",
+      "directory": "Quiche",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Quiche-Ultra-Italic.otf",
+          "suggestion": "Quiche-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Quiche-Ultra.otf",
+          "suggestion": "Quiche-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Quiche-Italic.otf",
+          "standardized": "Quiche-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Quiche-Ultra-Italic.otf",
+          "standardized": "Quiche-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Quiche-Ultra.otf",
+          "standardized": "Quiche-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ragmesh",
+      "directory": "Ragmesh",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Ragmesh\" does not match file prefix \"Rigamesh\"",
+          "files": [
+            "Rigamesh.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Rigamesh.ttf",
+          "standardized": "Ragmesh-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Raiden",
+      "directory": "Raiden",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Raiden\" does not match file prefix \"Raidney\"",
+          "files": [
+            "Raidney.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Raidney.ttf",
+          "standardized": "Raiden-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Raise",
+      "directory": "Raise",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Raise\" does not match file prefix \"CampaignSerif\"",
+          "files": [
+            "CampaignSerif.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "CampaignSerif.ttf",
+          "standardized": "Raise-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Rebar",
+      "directory": "Rebar",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Rebar\" does not match file prefix \"REBAR\"",
+          "files": [
+            "REBAR.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "REBAR.ttf",
+          "standardized": "Rebar-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Reprise",
+      "directory": "Reprise",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Reprise\" does not match file prefix \"Redkies\"",
+          "files": [
+            "Redkies.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Redkies.ttf",
+          "standardized": "Reprise-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Ricardo",
+      "directory": "Ricardo",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Ricardo-Semi.ttf",
+          "suggestion": "Ricardo-SemiBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Ricardo-Semi.ttf",
+          "standardized": "Ricardo-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Riots",
+      "directory": "Riots",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Riots\" does not match file prefix \"Grime\"",
+          "files": [
+            "Grime Riots.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Grime Riots.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Grime Riots.ttf",
+          "standardized": "Riots-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Rodstone",
+      "directory": "Rodstone",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Rodstone\" does not match file prefix \"Ropstone\"",
+          "files": [
+            "Ropstone-Sparkle.ttf",
+            "Ropstone.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Ropstone-Sparkle.ttf",
+            "Ropstone.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Ropstone-Sparkle.ttf",
+          "standardized": "Rodstone-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Ropstone.ttf",
+          "standardized": "Rodstone-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Romantica",
+      "directory": "Romantica",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Romantica\" does not match file prefix \"El\"",
+          "files": [
+            "El Romantica.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "El Romantica.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "El Romantica.ttf",
+          "standardized": "Romantica-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Rozor",
+      "directory": "Rozor",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Rozor\" does not match file prefix \"RozorEagle\"",
+          "files": [
+            "RozorEagle.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "RozorEagle.ttf",
+          "standardized": "Rozor-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Saltwater",
+      "directory": "Saltwater",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Saltwater Shorelines Font - Thick.ttf",
+            "Saltwater Shorelines Font - Thin.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Saltwater Shorelines Font - Thick.ttf",
+          "standardized": "Saltwater-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Saltwater Shorelines Font - Thin.ttf",
+          "standardized": "Saltwater-Thin.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Serial",
+      "directory": "Serial",
+      "issues": [
+        {
+          "type": "prefix_mismatch",
+          "severity": "high",
+          "description": "Directory \"Serial\" contains files with different prefixes: AOT, AOTSerialMono",
+          "files": [
+            "AOT Serial Mono-VF.ttf",
+            "AOTSerialMono-Bold.ttf",
+            "AOTSerialMono-Light.ttf",
+            "AOTSerialMono-Medium.ttf",
+            "AOTSerialMono-Regular.ttf",
+            "AOTSerialMono-SemiBold.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "AOT Serial Mono-VF.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: spaces, hyphenated, camelCase",
+          "files": [
+            "AOT Serial Mono-VF.ttf",
+            "AOTSerialMono-Bold.ttf",
+            "AOTSerialMono-Light.ttf",
+            "AOTSerialMono-Medium.ttf",
+            "AOTSerialMono-Regular.ttf",
+            "AOTSerialMono-SemiBold.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "AOT Serial Mono-VF.ttf",
+          "standardized": "Serial-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "AOTSerialMono-Bold.ttf",
+          "standardized": "Serial-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "AOTSerialMono-Light.ttf",
+          "standardized": "Serial-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "AOTSerialMono-Medium.ttf",
+          "standardized": "Serial-Medium.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "AOTSerialMono-Regular.ttf",
+          "standardized": "Serial-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "AOTSerialMono-SemiBold.ttf",
+          "standardized": "Serial-SemiBold.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Sign",
+      "directory": "Sign",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Sign Painting.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Sign Painting.ttf",
+          "standardized": "Sign-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Skyforge",
+      "directory": "Skyforge",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Skyforge\" does not match file prefix \"SKYFORGE\"",
+          "files": [
+            "SKYFORGE WEBSTER.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "SKYFORGE WEBSTER.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "SKYFORGE WEBSTER.ttf",
+          "standardized": "Skyforge-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Slippery",
+      "directory": "Slippery",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Slippery-Ultra-Italic.otf",
+          "suggestion": "Slippery-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Slippery-Ultra.otf",
+          "suggestion": "Slippery-Black.otf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Slippery-Ultra-Italic.otf",
+          "standardized": "Slippery-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Slippery-Ultra.otf",
+          "standardized": "Slippery-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Slowey",
+      "directory": "Slowey",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Slowey Retro.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Slowey Retro.ttf",
+          "standardized": "Slowey-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Space",
+      "directory": "Space",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Space\" does not match file prefix \"SpaceMono\"",
+          "files": [
+            "SpaceMono-Bold.ttf",
+            "SpaceMono-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "SpaceMono-Bold.ttf",
+          "standardized": "Space-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "SpaceMono-Regular.ttf",
+          "standardized": "Space-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Stage",
+      "directory": "Stage",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Stage\" does not match file prefix \"FootballStage\"",
+          "files": [
+            "FootballStage-Extrude.ttf",
+            "FootballStage-Italic.ttf",
+            "FootballStage-ItalicExtrude.ttf",
+            "FootballStage-ItalicOutline.ttf",
+            "FootballStage-Outline.ttf",
+            "FootballStage-Regular.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "FootballStage-Extrude.ttf",
+            "FootballStage-Italic.ttf",
+            "FootballStage-ItalicExtrude.ttf",
+            "FootballStage-ItalicOutline.ttf",
+            "FootballStage-Outline.ttf",
+            "FootballStage-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "FootballStage-Extrude.ttf",
+          "standardized": "Stage-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "FootballStage-Italic.ttf",
+          "standardized": "Stage-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "FootballStage-ItalicExtrude.ttf",
+          "standardized": "Stage-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "FootballStage-ItalicOutline.ttf",
+          "standardized": "Stage-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "FootballStage-Outline.ttf",
+          "standardized": "Stage-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "FootballStage-Regular.ttf",
+          "standardized": "Stage-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Swarsh",
+      "directory": "Swarsh",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Swarsh Daisy-Italic.ttf",
+            "Swarsh Daisy-Regular.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Swarsh Daisy-Italic.ttf",
+          "standardized": "Swarsh-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Swarsh Daisy-Regular.ttf",
+          "standardized": "Swarsh-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Talkman",
+      "directory": "Talkman",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Talkman Player.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Talkman Player.ttf",
+          "standardized": "Talkman-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Techbit",
+      "directory": "Techbit",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Techbit-Outline.ttf",
+            "Techbit-OutlineRounded.ttf",
+            "Techbit-Regular.ttf",
+            "Techbit-Rounded.ttf",
+            "Techbit-Slant.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Techbit-Outline.ttf",
+          "standardized": "Techbit-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Techbit-OutlineRounded.ttf",
+          "standardized": "Techbit-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Techbit-Rounded.ttf",
+          "standardized": "Techbit-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Techbit-Slant.ttf",
+          "standardized": "Techbit-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Things",
+      "directory": "Things",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Things-Italic.ttf",
+            "Things.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Things-Italic.ttf",
+          "standardized": "Things-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Things.ttf",
+          "standardized": "Things-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Travino",
+      "directory": "Travino",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Travino\" does not match file prefix \"TravinoDisplay\"",
+          "files": [
+            "TravinoDisplay.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "TravinoDisplay.ttf",
+          "standardized": "Travino-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Trellis",
+      "directory": "Trellis",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Trellis Italic.ttf",
+            "Trellis Line Italic.ttf",
+            "Trellis Line.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: spaces, single",
+          "files": [
+            "Trellis Italic.ttf",
+            "Trellis Line Italic.ttf",
+            "Trellis Line.ttf",
+            "Trellis.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Trellis Italic.ttf",
+          "standardized": "Trellis-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Trellis Line Italic.ttf",
+          "standardized": "Trellis-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Trellis Line.ttf",
+          "standardized": "Trellis-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Trellis.ttf",
+          "standardized": "Trellis-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Typeday",
+      "directory": "Typeday",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Typeday-Semi.ttf",
+          "suggestion": "Typeday-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Typeday-Ultra.ttf",
+          "suggestion": "Typeday-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Typeday-Semi.ttf",
+          "standardized": "Typeday-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Typeday-Small.ttf",
+          "standardized": "Typeday-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Typeday-Ultra.ttf",
+          "standardized": "Typeday-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Typeworm",
+      "directory": "Typeworm",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Typeworm\" does not match file prefix \"Typeworn\"",
+          "files": [
+            "Typeworn.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Typeworn.ttf",
+          "standardized": "Typeworm-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Vaguard",
+      "directory": "Vaguard",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Vaguard\" does not match file prefix \"Spark\"",
+          "files": [
+            "Spark-Night.ttf",
+            "Spark.ttf"
+          ]
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Spark-Night.ttf",
+            "Spark.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Spark-Night.ttf",
+          "standardized": "Vaguard-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Spark.ttf",
+          "standardized": "Vaguard-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Valorforge",
+      "directory": "Valorforge",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Valorforge\" does not match file prefix \"Valor\"",
+          "files": [
+            "Valor Forge.ttf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Valor Forge.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Valor Forge.ttf",
+          "standardized": "Valorforge-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Vegapunk",
+      "directory": "Vegapunk",
+      "issues": [
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, single",
+          "files": [
+            "Vegapunk-Narrow-Italic.otf",
+            "Vegapunk-Narrow.otf",
+            "Vegapunk-Narrower-Italic.otf",
+            "Vegapunk-Narrower.otf",
+            "Vegapunk-Regular-Italic.otf",
+            "Vegapunk-Wide-Italic.otf",
+            "Vegapunk-Wide.otf",
+            "Vegapunk-Wider-Italic.otf",
+            "Vegapunk-Wider.otf",
+            "Vegapunk.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Vegapunk-Narrow-Italic.otf",
+          "standardized": "Vegapunk-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Narrow.otf",
+          "standardized": "Vegapunk-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Narrower-Italic.otf",
+          "standardized": "Vegapunk-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Narrower.otf",
+          "standardized": "Vegapunk-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Wide-Italic.otf",
+          "standardized": "Vegapunk-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Wide.otf",
+          "standardized": "Vegapunk-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Wider-Italic.otf",
+          "standardized": "Vegapunk-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk-Wider.otf",
+          "standardized": "Vegapunk-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Vegapunk.otf",
+          "standardized": "Vegapunk-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Vintage",
+      "directory": "Vintage",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Vintage Horror.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Vintage Horror.ttf",
+          "standardized": "Vintage-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Walkie",
+      "directory": "Walkie",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Walkie\" does not match file prefix \"Walkierie\"",
+          "files": [
+            "Walkierie-Bold-Italic.ttf",
+            "Walkierie-Bold.ttf",
+            "Walkierie-Regular-Italic.ttf",
+            "Walkierie-Regular.ttf",
+            "Walkierie-Semi.ttf",
+            "Walkierie-Thin-Italic.ttf",
+            "Walkierie-Thin.ttf",
+            "Walkierie-Ultra-Italic.ttf",
+            "Walkierie-Ultra.ttf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Walkierie-Semi.ttf",
+          "suggestion": "Walkierie-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Walkierie-Ultra-Italic.ttf",
+          "suggestion": "Walkierie-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Walkierie-Ultra.ttf",
+          "suggestion": "Walkierie-Black.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Walkierie-Bold-Italic.ttf",
+          "standardized": "Walkie-Bold-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Bold.ttf",
+          "standardized": "Walkie-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Regular-Italic.ttf",
+          "standardized": "Walkie-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Regular.ttf",
+          "standardized": "Walkie-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Semi.ttf",
+          "standardized": "Walkie-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Thin-Italic.ttf",
+          "standardized": "Walkie-Thin-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Thin.ttf",
+          "standardized": "Walkie-Thin.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Ultra-Italic.ttf",
+          "standardized": "Walkie-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walkierie-Ultra.ttf",
+          "standardized": "Walkie-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Walsheim",
+      "directory": "Walsheim",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Walsheim-Condensed-Heavy-Oblique.ttf",
+          "suggestion": "Walsheim-Condensed-Black-Oblique.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Walsheim-Condensed-Heavy.ttf",
+          "suggestion": "Walsheim-Condensed-Black.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Walsheim-Heavy-Oblique.ttf",
+          "suggestion": "Walsheim-Black-Oblique.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Heavy\" should be \"Black\"",
+          "file": "Walsheim-Heavy.ttf",
+          "suggestion": "Walsheim-Black.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Huge\" should be \"ExtraBold\"",
+          "file": "Walsheim-Huge-Oblique.ttf",
+          "suggestion": "Walsheim-ExtraBold-Oblique.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Huge\" should be \"ExtraBold\"",
+          "file": "Walsheim-Huge.ttf",
+          "suggestion": "Walsheim-ExtraBold.ttf"
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Walsheim-Condensed-Black.ttf",
+          "standardized": "Walsheim-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Bold-Oblique.ttf",
+          "standardized": "Walsheim-Bold-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Bold.ttf",
+          "standardized": "Walsheim-Bold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Heavy-Oblique.ttf",
+          "standardized": "Walsheim-Black-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Heavy.ttf",
+          "standardized": "Walsheim-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Light-Oblique.ttf",
+          "standardized": "Walsheim-Light-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Light.ttf",
+          "standardized": "Walsheim-Light.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Line-Oblique.ttf",
+          "standardized": "Walsheim-Regular-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Line.ttf",
+          "standardized": "Walsheim-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Medium-Oblique.ttf",
+          "standardized": "Walsheim-Medium-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Medium.ttf",
+          "standardized": "Walsheim-Medium.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Regular.ttf",
+          "standardized": "Walsheim-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Thin-Oblique.ttf",
+          "standardized": "Walsheim-Thin-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Condensed-Thin.ttf",
+          "standardized": "Walsheim-Thin.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Heavy-Oblique.ttf",
+          "standardized": "Walsheim-Black-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Heavy.ttf",
+          "standardized": "Walsheim-Black.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Huge-Oblique.ttf",
+          "standardized": "Walsheim-ExtraBold-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Huge.ttf",
+          "standardized": "Walsheim-ExtraBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Line-Oblique.ttf",
+          "standardized": "Walsheim-Regular-Oblique.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Walsheim-Line.ttf",
+          "standardized": "Walsheim-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Wevely",
+      "directory": "Wevely",
+      "issues": [
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Wevely-Semi.ttf",
+          "suggestion": "Wevely-SemiBold.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Wevely-Ultra-Italic.ttf",
+          "suggestion": "Wevely-Black-Italic.ttf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Wevely-Ultra.ttf",
+          "suggestion": "Wevely-Black.ttf"
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, camelCase",
+          "files": [
+            "Wevely-Bold.ttf",
+            "Wevely-BoldItalic.ttf",
+            "Wevely-Italic.ttf",
+            "Wevely-Regular.ttf",
+            "Wevely-Semi.ttf",
+            "Wevely-Thin-Italic.ttf",
+            "Wevely-Thin.ttf",
+            "Wevely-Ultra-Italic.ttf",
+            "Wevely-Ultra.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Wevely-BoldItalic.ttf",
+          "standardized": "Wevely-Regular.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Wevely-Italic.ttf",
+          "standardized": "Wevely-Regular-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Wevely-Semi.ttf",
+          "standardized": "Wevely-SemiBold.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Wevely-Ultra-Italic.ttf",
+          "standardized": "Wevely-Black-Italic.ttf",
+          "action": "rename"
+        },
+        {
+          "original": "Wevely-Ultra.ttf",
+          "standardized": "Wevely-Black.ttf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Widdy",
+      "directory": "Widdy",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"Widdy\" does not match file prefix \"Widy\"",
+          "files": [
+            "Widy-Bold-Italic.otf",
+            "Widy-Bold.otf",
+            "Widy-Light-Italic.otf",
+            "Widy-Light.otf",
+            "Widy-Medium-Italic.otf",
+            "Widy-Medium.otf",
+            "Widy-Regular-Italic.otf",
+            "Widy-Regular.otf",
+            "Widy-Semi-Italic.otf",
+            "Widy-Semi.otf",
+            "Widy-Small-Italic.otf",
+            "Widy-Small.otf",
+            "Widy-Thin Italic.otf",
+            "Widy-Thin.otf",
+            "Widy-Tiny-Italic.otf",
+            "Widy-Tiny.otf",
+            "Widy-Ultra-Italic.otf",
+            "Widy-Ultra.otf"
+          ]
+        },
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Widy-Thin Italic.otf"
+          ]
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Widy-Semi-Italic.otf",
+          "suggestion": "Widy-SemiBold-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Semi\" should be \"SemiBold\"",
+          "file": "Widy-Semi.otf",
+          "suggestion": "Widy-SemiBold.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Widy-Ultra-Italic.otf",
+          "suggestion": "Widy-Black-Italic.otf"
+        },
+        {
+          "type": "non_standard_weight",
+          "severity": "medium",
+          "description": "Non-standard weight \"Ultra\" should be \"Black\"",
+          "file": "Widy-Ultra.otf",
+          "suggestion": "Widy-Black.otf"
+        },
+        {
+          "type": "inconsistent_pattern",
+          "severity": "medium",
+          "description": "Inconsistent naming patterns: hyphenated, spaces",
+          "files": [
+            "Widy-Bold-Italic.otf",
+            "Widy-Bold.otf",
+            "Widy-Light-Italic.otf",
+            "Widy-Light.otf",
+            "Widy-Medium-Italic.otf",
+            "Widy-Medium.otf",
+            "Widy-Regular-Italic.otf",
+            "Widy-Regular.otf",
+            "Widy-Semi-Italic.otf",
+            "Widy-Semi.otf",
+            "Widy-Small-Italic.otf",
+            "Widy-Small.otf",
+            "Widy-Thin Italic.otf",
+            "Widy-Thin.otf",
+            "Widy-Tiny-Italic.otf",
+            "Widy-Tiny.otf",
+            "Widy-Ultra-Italic.otf",
+            "Widy-Ultra.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Widy-Bold-Italic.otf",
+          "standardized": "Widdy-Bold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Bold.otf",
+          "standardized": "Widdy-Bold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Light-Italic.otf",
+          "standardized": "Widdy-Light-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Light.otf",
+          "standardized": "Widdy-Light.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Medium-Italic.otf",
+          "standardized": "Widdy-Medium-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Medium.otf",
+          "standardized": "Widdy-Medium.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Regular-Italic.otf",
+          "standardized": "Widdy-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Regular.otf",
+          "standardized": "Widdy-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Semi-Italic.otf",
+          "standardized": "Widdy-SemiBold-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Semi.otf",
+          "standardized": "Widdy-SemiBold.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Small-Italic.otf",
+          "standardized": "Widdy-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Small.otf",
+          "standardized": "Widdy-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Thin Italic.otf",
+          "standardized": "Widdy-Thin-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Thin.otf",
+          "standardized": "Widdy-Thin.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Tiny-Italic.otf",
+          "standardized": "Widdy-Regular-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Tiny.otf",
+          "standardized": "Widdy-Regular.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Ultra-Italic.otf",
+          "standardized": "Widdy-Black-Italic.otf",
+          "action": "rename"
+        },
+        {
+          "original": "Widy-Ultra.otf",
+          "standardized": "Widdy-Black.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Woller",
+      "directory": "Woller",
+      "issues": [
+        {
+          "type": "prefix_mismatch",
+          "severity": "high",
+          "description": "Directory \"Woller\" contains files with different prefixes: Woller, Wolves",
+          "files": [
+            "Woller-Regular-Italic.otf",
+            "Wolves-Regular.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Wolves-Regular.otf",
+          "standardized": "Woller-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "Zesty",
+      "directory": "Zesty",
+      "issues": [
+        {
+          "type": "spaces_in_filename",
+          "severity": "high",
+          "description": "Filenames contain spaces (problematic for URLs)",
+          "files": [
+            "Zesty Scribs.otf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Zesty Scribs.otf",
+          "standardized": "Zesty-Regular.otf",
+          "action": "rename"
+        }
+      ]
+    },
+    {
+      "family": "vacelyn",
+      "directory": "vacelyn",
+      "issues": [
+        {
+          "type": "directory_file_mismatch",
+          "severity": "high",
+          "description": "Directory \"vacelyn\" does not match file prefix \"Vacelyn\"",
+          "files": [
+            "Vacelyn.ttf"
+          ]
+        }
+      ],
+      "corrections": [
+        {
+          "original": "Vacelyn.ttf",
+          "standardized": "vacelyn-Regular.ttf",
+          "action": "rename"
+        }
+      ]
+    }
+  ]
+}
