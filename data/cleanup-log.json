@@ -1,0 +1,1604 @@
+{
+  "timestamp": "2025-12-25T02:26:40.386Z",
+  "directoriesRenamed": [
+    {
+      "old": "Chromium ",
+      "new": "Chromium"
+    },
+    {
+      "old": "July ",
+      "new": "July"
+    }
+  ],
+  "filesRenamed": [
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-BlackOblique.otf",
+      "new": "Bizmo-BlackItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-BoldOblique.otf",
+      "new": "Bizmo-BoldItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-ExtraBoldOblique.otf",
+      "new": "Bizmo-ExtraBoldItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-ExtraLightOblique.otf",
+      "new": "Bizmo-ExtraLightItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-LightOblique.otf",
+      "new": "Bizmo-LightItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-MediumOblique.otf",
+      "new": "Bizmo-MediumItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-Regular-Oblique.otf",
+      "new": "Bizmo-Regular-Italic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-SemiBoldOblique.otf",
+      "new": "Bizmo-SemiBoldItalic.otf"
+    },
+    {
+      "family": "Bizmo",
+      "old": "Bizmo-ThinOblique.otf",
+      "new": "Bizmo-ThinItalic.otf"
+    },
+    {
+      "family": "Cactus",
+      "old": "Cactus Ridge - Italic.ttf",
+      "new": "Cactus-Ridge---Italic.ttf"
+    },
+    {
+      "family": "Cactus",
+      "old": "Cactus Ridge.ttf",
+      "new": "Cactus-Ridge.ttf"
+    },
+    {
+      "family": "Chromium",
+      "old": "Chromium -Regular.ttf",
+      "new": "Chromium--Regular.ttf"
+    },
+    {
+      "family": "Cliquey",
+      "old": "Cliqey.ttf",
+      "new": "Cliquey-Cliqey.ttf"
+    },
+    {
+      "family": "Concious",
+      "old": "Conscious.ttf",
+      "new": "Concious-Conscious.ttf"
+    },
+    {
+      "family": "Config",
+      "old": "Config-Semi-Italic.otf",
+      "new": "Config-SemiBold-Italic.otf"
+    },
+    {
+      "family": "Config",
+      "old": "Config-Semi.otf",
+      "new": "Config-SemiBold.otf"
+    },
+    {
+      "family": "Config-Round",
+      "old": "Config-Round-Semi-Italic.otf",
+      "new": "Config-Round-SemiBold-Italic.otf"
+    },
+    {
+      "family": "Config-Round",
+      "old": "Config-Round-Semi.otf",
+      "new": "Config-Round-SemiBold.otf"
+    },
+    {
+      "family": "Degrad",
+      "old": "403DegradMono-Medium.ttf",
+      "new": "Degrad-403DegradMono-Medium.ttf"
+    },
+    {
+      "family": "Deicho",
+      "old": "Deicho-Semi-Italic.ttf",
+      "new": "Deicho-SemiBold-Italic.ttf"
+    },
+    {
+      "family": "Deicho",
+      "old": "Deicho-Semi.ttf",
+      "new": "Deicho-SemiBold.ttf"
+    },
+    {
+      "family": "Dinner",
+      "old": "Dinner Groope-Italic.ttf",
+      "new": "Dinner-Groope-Italic.ttf"
+    },
+    {
+      "family": "Dinner",
+      "old": "Dinner Groope-Regular.ttf",
+      "new": "Dinner-Groope-Regular.ttf"
+    },
+    {
+      "family": "Droper",
+      "old": "Broken Droper.ttf",
+      "new": "Droper-Broken-Droper.ttf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-BlackOblique.otf",
+      "new": "EBCorp-BlackItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-BoldOblique.otf",
+      "new": "EBCorp-BoldItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-ExtraBoldOblique.otf",
+      "new": "EBCorp-ExtraBoldItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-ExtraLightOblique.otf",
+      "new": "EBCorp-ExtraLightItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-LightOblique.otf",
+      "new": "EBCorp-LightItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-MediumOblique.otf",
+      "new": "EBCorp-MediumItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-RegularOblique.otf",
+      "new": "EBCorp-RegularItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-SemiBoldOblique.otf",
+      "new": "EBCorp-SemiBoldItalic.otf"
+    },
+    {
+      "family": "EBCorp",
+      "old": "EBCorp-ThinOblique.otf",
+      "new": "EBCorp-ThinItalic.otf"
+    },
+    {
+      "family": "Excite",
+      "old": "Exciting.ttf",
+      "new": "Excite-Exciting.ttf"
+    },
+    {
+      "family": "Fashional",
+      "old": "Fashion.ttf",
+      "new": "Fashional-Fashion.ttf"
+    },
+    {
+      "family": "Fedra",
+      "old": "Phaidra.ttf",
+      "new": "Fedra-Phaidra.ttf"
+    },
+    {
+      "family": "Fergan",
+      "old": "Fregan-Bold.otf",
+      "new": "Fergan-Fregan-Bold.otf"
+    },
+    {
+      "family": "Fergan",
+      "old": "Fregan-Regular.otf",
+      "new": "Fergan-Fregan-Regular.otf"
+    },
+    {
+      "family": "Fergan",
+      "old": "Fregan-Serif-Bold.otf",
+      "new": "Fergan-Fregan-Serif-Bold.otf"
+    },
+    {
+      "family": "Fergan",
+      "old": "Fregan-Serif-Regular.otf",
+      "new": "Fergan-Fregan-Serif-Regular.otf"
+    },
+    {
+      "family": "Flagoria",
+      "old": "Flagoria-Semi.ttf",
+      "new": "Flagoria-SemiBold.ttf"
+    },
+    {
+      "family": "Flagoria",
+      "old": "Flagoria-Ultra-Italic.ttf",
+      "new": "Flagoria-Black-Italic.ttf"
+    },
+    {
+      "family": "Flagoria",
+      "old": "Flagoria-Ultra.ttf",
+      "new": "Flagoria-Black.ttf"
+    },
+    {
+      "family": "Founders",
+      "old": "Founders-Semi-Italic.ttf",
+      "new": "Founders-SemiBold-Italic.ttf"
+    },
+    {
+      "family": "Founders",
+      "old": "Founders-Semi.ttf",
+      "new": "Founders-SemiBold.ttf"
+    },
+    {
+      "family": "Friday",
+      "old": "Friday Hype-SVG.ttf",
+      "new": "Friday-Hype-SVG.ttf"
+    },
+    {
+      "family": "Friday",
+      "old": "Friday Hype.ttf",
+      "new": "Friday-Hype.ttf"
+    },
+    {
+      "family": "Galpike",
+      "old": "Galpike-Semi.ttf",
+      "new": "Galpike-SemiBold.ttf"
+    },
+    {
+      "family": "Gardena",
+      "old": "Gardena-Semi.ttf",
+      "new": "Gardena-SemiBold.ttf"
+    },
+    {
+      "family": "Gardena",
+      "old": "Gardena-Ultra-Italic.ttf",
+      "new": "Gardena-Black-Italic.ttf"
+    },
+    {
+      "family": "Gardena",
+      "old": "Gardena-Ultra.ttf",
+      "new": "Gardena-Black.ttf"
+    },
+    {
+      "family": "Gifford",
+      "old": "Gifford-Semi-Italic.otf",
+      "new": "Gifford-SemiBold-Italic.otf"
+    },
+    {
+      "family": "Gifford",
+      "old": "Gifford-Semi.otf",
+      "new": "Gifford-SemiBold.otf"
+    },
+    {
+      "family": "GigaSans",
+      "old": "GigaSans-Semi-Italic.otf",
+      "new": "GigaSans-SemiBold-Italic.otf"
+    },
+    {
+      "family": "GigaSans",
+      "old": "GigaSans-Semi.otf",
+      "new": "GigaSans-SemiBold.otf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Black.ttf",
+      "new": "Gillpike-Galpike-Black.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Bold.ttf",
+      "new": "Gillpike-Galpike-Bold.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Light.ttf",
+      "new": "Gillpike-Galpike-Light.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Medium.ttf",
+      "new": "Gillpike-Galpike-Medium.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Regular.ttf",
+      "new": "Gillpike-Galpike-Regular.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Semi.ttf",
+      "new": "Gillpike-Galpike-SemiBold.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Small.ttf",
+      "new": "Gillpike-Galpike-Small.ttf"
+    },
+    {
+      "family": "Gillpike",
+      "old": "Galpike-Thin.ttf",
+      "new": "Gillpike-Galpike-Thin.ttf"
+    },
+    {
+      "family": "Ginetta",
+      "old": "Gimetta.ttf",
+      "new": "Ginetta-Gimetta.ttf"
+    },
+    {
+      "family": "Givonic",
+      "old": "Givonic-Semi.ttf",
+      "new": "Givonic-SemiBold.ttf"
+    },
+    {
+      "family": "Glooosy",
+      "old": "glooxy.ttf",
+      "new": "Glooosy-glooxy.ttf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Black-Italic.otf",
+      "new": "GopherMono-GhopherMono-Black-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Black.otf",
+      "new": "GopherMono-GhopherMono-Black.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Bold-Italic.otf",
+      "new": "GopherMono-GhopherMono-Bold-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Bold.otf",
+      "new": "GopherMono-GhopherMono-Bold.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Light-Italic.otf",
+      "new": "GopherMono-GhopherMono-Light-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Light.otf",
+      "new": "GopherMono-GhopherMono-Light.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Medium-Italic.otf",
+      "new": "GopherMono-GhopherMono-Medium-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Medium.otf",
+      "new": "GopherMono-GhopherMono-Medium.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Regular-Italic.otf",
+      "new": "GopherMono-GhopherMono-Regular-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Regular.otf",
+      "new": "GopherMono-GhopherMono-Regular.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Semi-Italic.otf",
+      "new": "GopherMono-GhopherMono-SemiBold-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Semi.otf",
+      "new": "GopherMono-GhopherMono-SemiBold.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Thin-Italic.otf",
+      "new": "GopherMono-GhopherMono-Thin-Italic.otf"
+    },
+    {
+      "family": "GopherMono",
+      "old": "GhopherMono-Thin.otf",
+      "new": "GopherMono-GhopherMono-Thin.otf"
+    },
+    {
+      "family": "Gothif",
+      "old": "CookGothif.ttf",
+      "new": "Gothif-CookGothif.ttf"
+    },
+    {
+      "family": "Govandi",
+      "old": "Govandi-Semi.ttf",
+      "new": "Govandi-SemiBold.ttf"
+    },
+    {
+      "family": "Govandi",
+      "old": "Govandi-Ultra-Italic.ttf",
+      "new": "Govandi-Black-Italic.ttf"
+    },
+    {
+      "family": "Govandi",
+      "old": "Govandi-Ultra.ttf",
+      "new": "Govandi-Black.ttf"
+    },
+    {
+      "family": "Granigen",
+      "old": "Gronigen-Light.ttf",
+      "new": "Granigen-Gronigen-Light.ttf"
+    },
+    {
+      "family": "Granigen",
+      "old": "Gronigen-Regular.ttf",
+      "new": "Granigen-Gronigen-Regular.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Bold-Italic.ttf",
+      "new": "Gregory-George-Bold-Italic.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Bold.ttf",
+      "new": "Gregory-George-Bold.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Light-Italic.ttf",
+      "new": "Gregory-George-Light-Italic.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Light.ttf",
+      "new": "Gregory-George-Light.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Regular-Italic.ttf",
+      "new": "Gregory-George-Regular-Italic.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Regular.ttf",
+      "new": "Gregory-George-Regular.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Semi-Italic.ttf",
+      "new": "Gregory-George-SemiBold-Italic.ttf"
+    },
+    {
+      "family": "Gregory",
+      "old": "George-Semi.ttf",
+      "new": "Gregory-George-SemiBold.ttf"
+    },
+    {
+      "family": "Greyson",
+      "old": "CSGreyson-Italic.ttf",
+      "new": "Greyson-CSGreyson-Italic.ttf"
+    },
+    {
+      "family": "Greyson",
+      "old": "CSGreyson-Regular.ttf",
+      "new": "Greyson-CSGreyson-Regular.ttf"
+    },
+    {
+      "family": "Greyson",
+      "old": "CSGreyson-ReverseItalic.ttf",
+      "new": "Greyson-CSGreyson-ReverseItalic.ttf"
+    },
+    {
+      "family": "Gronigen",
+      "old": "Groningen-Bold.ttf",
+      "new": "Gronigen-Groningen-Bold.ttf"
+    },
+    {
+      "family": "Gronigen",
+      "old": "Groningen-Light.ttf",
+      "new": "Gronigen-Groningen-Light.ttf"
+    },
+    {
+      "family": "Gronigen",
+      "old": "Groningen-Regular.ttf",
+      "new": "Gronigen-Groningen-Regular.ttf"
+    },
+    {
+      "family": "Gronigen",
+      "old": "Groningen-Thin.ttf",
+      "new": "Gronigen-Groningen-Thin.ttf"
+    },
+    {
+      "family": "Groovy",
+      "old": "Flying Soul.ttf",
+      "new": "Groovy-Flying-Soul.ttf"
+    },
+    {
+      "family": "Grotek",
+      "old": "Gotrek.ttf",
+      "new": "Grotek-Gotrek.ttf"
+    },
+    {
+      "family": "Grover",
+      "old": "Grover-Semi-Bold.ttf",
+      "new": "Grover-SemiBold-Bold.ttf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-BlackOblique.otf",
+      "new": "Hando-BlackItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-BoldOblique.otf",
+      "new": "Hando-BoldItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-ExtraBoldOblique.otf",
+      "new": "Hando-ExtraBoldItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-ExtraLightOblique.otf",
+      "new": "Hando-ExtraLightItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-HairLineOblique.otf",
+      "new": "Hando-HairLineItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-LightOblique.otf",
+      "new": "Hando-LightItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-MediumOblique.otf",
+      "new": "Hando-MediumItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-Oblique.otf",
+      "new": "Hando-Italic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-SemiBoldOblique.otf",
+      "new": "Hando-SemiBoldItalic.otf"
+    },
+    {
+      "family": "Hando",
+      "old": "Hando-ThinOblique.otf",
+      "new": "Hando-ThinItalic.otf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-BlackOblique.ttf",
+      "new": "HandoSoft-BlackItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-BoldOblique.ttf",
+      "new": "HandoSoft-BoldItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-ExtraBoldOblique.ttf",
+      "new": "HandoSoft-ExtraBoldItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-ExtraLightOblique.ttf",
+      "new": "HandoSoft-ExtraLightItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-HairLineOblique.ttf",
+      "new": "HandoSoft-HairLineItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-LightOblique.ttf",
+      "new": "HandoSoft-LightItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-MediumOblique.ttf",
+      "new": "HandoSoft-MediumItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-Oblique.ttf",
+      "new": "HandoSoft-Italic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-SemiBoldOblique.ttf",
+      "new": "HandoSoft-SemiBoldItalic.ttf"
+    },
+    {
+      "family": "HandoSoft",
+      "old": "HandoSoft-ThinOblique.ttf",
+      "new": "HandoSoft-ThinItalic.ttf"
+    },
+    {
+      "family": "Heavyjack",
+      "old": "Heavy Jack - Shadow.ttf",
+      "new": "Heavyjack-Heavy-Jack---Shadow.ttf"
+    },
+    {
+      "family": "Heavyjack",
+      "old": "Heavy Jack.ttf",
+      "new": "Heavyjack-Heavy-Jack.ttf"
+    },
+    {
+      "family": "Hiroki",
+      "old": "Herochi.ttf",
+      "new": "Hiroki-Herochi.ttf"
+    },
+    {
+      "family": "Homade",
+      "old": "Homade-Semi-Italic.ttf",
+      "new": "Homade-SemiBold-Italic.ttf"
+    },
+    {
+      "family": "Homade",
+      "old": "Homade-Semi.ttf",
+      "new": "Homade-SemiBold.ttf"
+    },
+    {
+      "family": "Homade",
+      "old": "Homade-Ultra-Italic.ttf",
+      "new": "Homade-Black-Italic.ttf"
+    },
+    {
+      "family": "Homade",
+      "old": "Homade-Ultra.ttf",
+      "new": "Homade-Black.ttf"
+    },
+    {
+      "family": "JetBrains",
+      "old": "JetBrains-Heavy.ttf",
+      "new": "JetBrains-Black.ttf"
+    },
+    {
+      "family": "JetBrains",
+      "old": "JetBrains-Semi.ttf",
+      "new": "JetBrains-SemiBold.ttf"
+    },
+    {
+      "family": "Kalico",
+      "old": "Kalico-Semi.ttf",
+      "new": "Kalico-SemiBold.ttf"
+    },
+    {
+      "family": "Kinote",
+      "old": "Kinsale-Display-Italic.ttf",
+      "new": "Kinote-Kinsale-Display-Italic.ttf"
+    },
+    {
+      "family": "Kinote",
+      "old": "Kinsale-Display.ttf",
+      "new": "Kinote-Kinsale-Display.ttf"
+    },
+    {
+      "family": "Kringe",
+      "old": "Kringe Outline.ttf",
+      "new": "Kringe-Outline.ttf"
+    },
+    {
+      "family": "Lemands",
+      "old": "Lemands-Semi.ttf",
+      "new": "Lemands-SemiBold.ttf"
+    },
+    {
+      "family": "Limelines",
+      "old": "LimeLines-Stroke.ttf",
+      "new": "Limelines-LimeLines-Stroke.ttf"
+    },
+    {
+      "family": "Limelines",
+      "old": "LimeLinesRegular.ttf",
+      "new": "Limelines-LimeLinesRegular.ttf"
+    },
+    {
+      "family": "Luckies",
+      "old": "LUCKIES.ttf",
+      "new": "Luckies-LUCKIES.ttf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Black-Italic.otf",
+      "new": "Magdeline-Magdelin-Black-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Black.otf",
+      "new": "Magdeline-Magdelin-Black.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Bold-Italic.otf",
+      "new": "Magdeline-Magdelin-Bold-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Bold.otf",
+      "new": "Magdeline-Magdelin-Bold.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Italic.otf",
+      "new": "Magdeline-Magdelin-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Light-Italic.otf",
+      "new": "Magdeline-Magdelin-Light-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Light.otf",
+      "new": "Magdeline-Magdelin-Light.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Medium-Italic.otf",
+      "new": "Magdeline-Magdelin-Medium-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Medium.otf",
+      "new": "Magdeline-Magdelin-Medium.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Regular.otf",
+      "new": "Magdeline-Magdelin-Regular.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Semi-Italic.otf",
+      "new": "Magdeline-Magdelin-SemiBold-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Semi.otf",
+      "new": "Magdeline-Magdelin-SemiBold.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Small-Italic.otf",
+      "new": "Magdeline-Magdelin-Small-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Small.otf",
+      "new": "Magdeline-Magdelin-Small.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Text-Italic.otf",
+      "new": "Magdeline-Magdelin-Text-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Text.otf",
+      "new": "Magdeline-Magdelin-Text.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Thin-Italic.otf",
+      "new": "Magdeline-Magdelin-Thin-Italic.otf"
+    },
+    {
+      "family": "Magdeline",
+      "old": "Magdelin-Thin.otf",
+      "new": "Magdeline-Magdelin-Thin.otf"
+    },
+    {
+      "family": "MalibuSunday",
+      "old": "Malibu Sunday Script.ttf",
+      "new": "MalibuSunday-Malibu-Sunday-Script.ttf"
+    },
+    {
+      "family": "MalibuSunday",
+      "old": "Malibu Sunday Serif.ttf",
+      "new": "MalibuSunday-Malibu-Sunday-Serif.ttf"
+    },
+    {
+      "family": "Mashle",
+      "old": "Mashle Italic.ttf",
+      "new": "Mashle-Italic.ttf"
+    },
+    {
+      "family": "Metalink",
+      "old": "Metalink-Semi-Bold.ttf",
+      "new": "Metalink-SemiBold-Bold.ttf"
+    },
+    {
+      "family": "Metalink",
+      "old": "Metalink-Semi-Italic.ttf",
+      "new": "Metalink-SemiBold-Italic.ttf"
+    },
+    {
+      "family": "Metalink",
+      "old": "Metalink-Ultra-Italic.ttf",
+      "new": "Metalink-Black-Italic.ttf"
+    },
+    {
+      "family": "Metalink",
+      "old": "Metalink-Ultra.ttf",
+      "new": "Metalink-Black.ttf"
+    },
+    {
+      "family": "Mintbox",
+      "old": "MintBox-Regular.ttf",
+      "new": "Mintbox-MintBox-Regular.ttf"
+    },
+    {
+      "family": "Mirdone",
+      "old": "Miradane.ttf",
+      "new": "Mirdone-Miradane.ttf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-BlackOblique.otf",
+      "new": "Modeco-BlackItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-BoldOblique.otf",
+      "new": "Modeco-BoldItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-ExtraBoldOblique.otf",
+      "new": "Modeco-ExtraBoldItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-ExtraLightOblique.otf",
+      "new": "Modeco-ExtraLightItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-LightOblique.otf",
+      "new": "Modeco-LightItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-MediumOblique.otf",
+      "new": "Modeco-MediumItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-RegularOblique.otf",
+      "new": "Modeco-RegularItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-SemiBoldOblique.otf",
+      "new": "Modeco-SemiBoldItalic.otf"
+    },
+    {
+      "family": "Modeco",
+      "old": "Modeco-ThinOblique.otf",
+      "new": "Modeco-ThinItalic.otf"
+    },
+    {
+      "family": "Modives",
+      "old": "Moldives.otf",
+      "new": "Modives-Moldives.otf"
+    },
+    {
+      "family": "Monda",
+      "old": "Monda-Semi.ttf",
+      "new": "Monda-SemiBold.ttf"
+    },
+    {
+      "family": "Monda",
+      "old": "Monda-Ultra-Italic.ttf",
+      "new": "Monda-Black-Italic.ttf"
+    },
+    {
+      "family": "Monda",
+      "old": "Monda-Ultra.ttf",
+      "new": "Monda-Black.ttf"
+    },
+    {
+      "family": "Monosuke",
+      "old": "403Monosuke-Slant.ttf",
+      "new": "Monosuke-403Monosuke-Slant.ttf"
+    },
+    {
+      "family": "Monty",
+      "old": "Monty Black.ttf",
+      "new": "Monty-Black.ttf"
+    },
+    {
+      "family": "Monty",
+      "old": "Monty Bold.ttf",
+      "new": "Monty-Bold.ttf"
+    },
+    {
+      "family": "Monty",
+      "old": "Monty Light.ttf",
+      "new": "Monty-Light.ttf"
+    },
+    {
+      "family": "Monty",
+      "old": "Monty Regular.ttf",
+      "new": "Monty-Regular.ttf"
+    },
+    {
+      "family": "Moon",
+      "old": "TheMoon-Regular.otf",
+      "new": "Moon-TheMoon-Regular.otf"
+    },
+    {
+      "family": "Moon",
+      "old": "TheMoon-Script.otf",
+      "new": "Moon-TheMoon-Script.otf"
+    },
+    {
+      "family": "Murey",
+      "old": "MurayHouseStandard-Regular.otf",
+      "new": "Murey-MurayHouseStandard-Regular.otf"
+    },
+    {
+      "family": "Nailhead",
+      "old": "Nailhead Nova-Bold.otf",
+      "new": "Nailhead-Nova-Bold.otf"
+    },
+    {
+      "family": "Nailhead",
+      "old": "Nailhead Nova-Light.otf",
+      "new": "Nailhead-Nova-Light.otf"
+    },
+    {
+      "family": "Nailhead",
+      "old": "Nailhead Nova.otf",
+      "new": "Nailhead-Nova.otf"
+    },
+    {
+      "family": "Nissie",
+      "old": "Nissie Tangle.ttf",
+      "new": "Nissie-Tangle.ttf"
+    },
+    {
+      "family": "Oldbones",
+      "old": "Oldbones 3D.ttf",
+      "new": "Oldbones-3D.ttf"
+    },
+    {
+      "family": "Quallity",
+      "old": "Quiallity Noted.ttf",
+      "new": "Quallity-Quiallity-Noted.ttf"
+    },
+    {
+      "family": "Ragmesh",
+      "old": "Rigamesh.ttf",
+      "new": "Ragmesh-Rigamesh.ttf"
+    },
+    {
+      "family": "Raiden",
+      "old": "Raidney.ttf",
+      "new": "Raiden-Raidney.ttf"
+    },
+    {
+      "family": "Raise",
+      "old": "CampaignSerif.ttf",
+      "new": "Raise-CampaignSerif.ttf"
+    },
+    {
+      "family": "Rebar",
+      "old": "REBAR.ttf",
+      "new": "Rebar-REBAR.ttf"
+    },
+    {
+      "family": "Reprise",
+      "old": "Redkies.ttf",
+      "new": "Reprise-Redkies.ttf"
+    },
+    {
+      "family": "Ricardo",
+      "old": "Ricardo-Semi.ttf",
+      "new": "Ricardo-SemiBold.ttf"
+    },
+    {
+      "family": "Riots",
+      "old": "Grime Riots.ttf",
+      "new": "Riots-Grime-Riots.ttf"
+    },
+    {
+      "family": "Rodstone",
+      "old": "Ropstone-Sparkle.ttf",
+      "new": "Rodstone-Ropstone-Sparkle.ttf"
+    },
+    {
+      "family": "Rodstone",
+      "old": "Ropstone.ttf",
+      "new": "Rodstone-Ropstone.ttf"
+    },
+    {
+      "family": "Romantica",
+      "old": "El Romantica.ttf",
+      "new": "Romantica-El-Romantica.ttf"
+    },
+    {
+      "family": "Saltwater",
+      "old": "Saltwater Shorelines Font - Thick.ttf",
+      "new": "Saltwater-Shorelines-Font---Thick.ttf"
+    },
+    {
+      "family": "Saltwater",
+      "old": "Saltwater Shorelines Font - Thin.ttf",
+      "new": "Saltwater-Shorelines-Font---Thin.ttf"
+    },
+    {
+      "family": "Serial",
+      "old": "AOT Serial Mono-VF.ttf",
+      "new": "Serial-AOT-Serial-Mono-VF.ttf"
+    },
+    {
+      "family": "Serial",
+      "old": "AOTSerialMono-Bold.ttf",
+      "new": "Serial-AOTSerialMono-Bold.ttf"
+    },
+    {
+      "family": "Serial",
+      "old": "AOTSerialMono-Light.ttf",
+      "new": "Serial-AOTSerialMono-Light.ttf"
+    },
+    {
+      "family": "Serial",
+      "old": "AOTSerialMono-Medium.ttf",
+      "new": "Serial-AOTSerialMono-Medium.ttf"
+    },
+    {
+      "family": "Serial",
+      "old": "AOTSerialMono-Regular.ttf",
+      "new": "Serial-AOTSerialMono-Regular.ttf"
+    },
+    {
+      "family": "Serial",
+      "old": "AOTSerialMono-SemiBold.ttf",
+      "new": "Serial-AOTSerialMono-SemiBold.ttf"
+    },
+    {
+      "family": "Sign",
+      "old": "Sign Painting.ttf",
+      "new": "Sign-Painting.ttf"
+    },
+    {
+      "family": "Skyforge",
+      "old": "SKYFORGE WEBSTER.ttf",
+      "new": "Skyforge-SKYFORGE-WEBSTER.ttf"
+    },
+    {
+      "family": "Slippery",
+      "old": "Slippery-Ultra-Italic.otf",
+      "new": "Slippery-Black-Italic.otf"
+    },
+    {
+      "family": "Slippery",
+      "old": "Slippery-Ultra.otf",
+      "new": "Slippery-Black.otf"
+    },
+    {
+      "family": "Slowey",
+      "old": "Slowey Retro.ttf",
+      "new": "Slowey-Retro.ttf"
+    },
+    {
+      "family": "Stage",
+      "old": "FootballStage-Extrude.ttf",
+      "new": "Stage-FootballStage-Extrude.ttf"
+    },
+    {
+      "family": "Stage",
+      "old": "FootballStage-Italic.ttf",
+      "new": "Stage-FootballStage-Italic.ttf"
+    },
+    {
+      "family": "Stage",
+      "old": "FootballStage-ItalicExtrude.ttf",
+      "new": "Stage-FootballStage-ItalicExtrude.ttf"
+    },
+    {
+      "family": "Stage",
+      "old": "FootballStage-ItalicOutline.ttf",
+      "new": "Stage-FootballStage-ItalicOutline.ttf"
+    },
+    {
+      "family": "Stage",
+      "old": "FootballStage-Outline.ttf",
+      "new": "Stage-FootballStage-Outline.ttf"
+    },
+    {
+      "family": "Stage",
+      "old": "FootballStage-Regular.ttf",
+      "new": "Stage-FootballStage-Regular.ttf"
+    },
+    {
+      "family": "Swarsh",
+      "old": "Swarsh Daisy-Italic.ttf",
+      "new": "Swarsh-Daisy-Italic.ttf"
+    },
+    {
+      "family": "Swarsh",
+      "old": "Swarsh Daisy-Regular.ttf",
+      "new": "Swarsh-Daisy-Regular.ttf"
+    },
+    {
+      "family": "Talkman",
+      "old": "Talkman Player.ttf",
+      "new": "Talkman-Player.ttf"
+    },
+    {
+      "family": "Trellis",
+      "old": "Trellis Italic.ttf",
+      "new": "Trellis-Italic.ttf"
+    },
+    {
+      "family": "Trellis",
+      "old": "Trellis Line Italic.ttf",
+      "new": "Trellis-Line-Italic.ttf"
+    },
+    {
+      "family": "Trellis",
+      "old": "Trellis Line.ttf",
+      "new": "Trellis-Line.ttf"
+    },
+    {
+      "family": "Typeday",
+      "old": "Typeday-Semi.ttf",
+      "new": "Typeday-SemiBold.ttf"
+    },
+    {
+      "family": "Typeworm",
+      "old": "Typeworn.ttf",
+      "new": "Typeworm-Typeworn.ttf"
+    },
+    {
+      "family": "Vaguard",
+      "old": "Spark-Night.ttf",
+      "new": "Vaguard-Spark-Night.ttf"
+    },
+    {
+      "family": "Vaguard",
+      "old": "Spark.ttf",
+      "new": "Vaguard-Spark.ttf"
+    },
+    {
+      "family": "Valorforge",
+      "old": "Valor Forge.ttf",
+      "new": "Valorforge-Valor-Forge.ttf"
+    },
+    {
+      "family": "Vintage",
+      "old": "Vintage Horror.ttf",
+      "new": "Vintage-Horror.ttf"
+    },
+    {
+      "family": "Walkie",
+      "old": "Walkierie-Semi.ttf",
+      "new": "Walkierie-SemiBold.ttf"
+    },
+    {
+      "family": "Walkie",
+      "old": "Walkierie-Ultra-Italic.ttf",
+      "new": "Walkierie-Black-Italic.ttf"
+    },
+    {
+      "family": "Walkie",
+      "old": "Walkierie-Ultra.ttf",
+      "new": "Walkierie-Black.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Bold-Oblique.ttf",
+      "new": "Walsheim-Bold-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Condensed-Bold-Oblique.ttf",
+      "new": "Walsheim-Condensed-Bold-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Condensed-Heavy-Oblique.ttf",
+      "new": "Walsheim-Condensed-Black-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Condensed-Light-Oblique.ttf",
+      "new": "Walsheim-Condensed-Light-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Condensed-Line-Oblique.ttf",
+      "new": "Walsheim-Condensed-Line-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Condensed-Medium-Oblique.ttf",
+      "new": "Walsheim-Condensed-Medium-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Condensed-Thin-Oblique.ttf",
+      "new": "Walsheim-Condensed-Thin-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Heavy-Oblique.ttf",
+      "new": "Walsheim-Black-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Heavy.ttf",
+      "new": "Walsheim-Black.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Huge-Oblique.ttf",
+      "new": "Walsheim-ExtraBold-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Huge.ttf",
+      "new": "Walsheim-ExtraBold.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Light-Oblique.ttf",
+      "new": "Walsheim-Light-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Line-Oblique.ttf",
+      "new": "Walsheim-Line-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Medium-Oblique.ttf",
+      "new": "Walsheim-Medium-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Regular-Oblique.ttf",
+      "new": "Walsheim-Regular-Italic.ttf"
+    },
+    {
+      "family": "Walsheim",
+      "old": "Walsheim-Thin-Oblique.ttf",
+      "new": "Walsheim-Thin-Italic.ttf"
+    },
+    {
+      "family": "Wevely",
+      "old": "Wevely-Semi.ttf",
+      "new": "Wevely-SemiBold.ttf"
+    },
+    {
+      "family": "Wevely",
+      "old": "Wevely-Ultra-Italic.ttf",
+      "new": "Wevely-Black-Italic.ttf"
+    },
+    {
+      "family": "Wevely",
+      "old": "Wevely-Ultra.ttf",
+      "new": "Wevely-Black.ttf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Bold-Italic.otf",
+      "new": "Widdy-Widy-Bold-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Bold.otf",
+      "new": "Widdy-Widy-Bold.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Light-Italic.otf",
+      "new": "Widdy-Widy-Light-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Light.otf",
+      "new": "Widdy-Widy-Light.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Medium-Italic.otf",
+      "new": "Widdy-Widy-Medium-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Medium.otf",
+      "new": "Widdy-Widy-Medium.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Regular-Italic.otf",
+      "new": "Widdy-Widy-Regular-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Regular.otf",
+      "new": "Widdy-Widy-Regular.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Semi-Italic.otf",
+      "new": "Widdy-Widy-SemiBold-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Semi.otf",
+      "new": "Widdy-Widy-SemiBold.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Small-Italic.otf",
+      "new": "Widdy-Widy-Small-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Small.otf",
+      "new": "Widdy-Widy-Small.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Thin Italic.otf",
+      "new": "Widdy-Widy-Thin-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Thin.otf",
+      "new": "Widdy-Widy-Thin.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Tiny-Italic.otf",
+      "new": "Widdy-Widy-Tiny-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Tiny.otf",
+      "new": "Widdy-Widy-Tiny.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Ultra-Italic.otf",
+      "new": "Widdy-Widy-Black-Italic.otf"
+    },
+    {
+      "family": "Widdy",
+      "old": "Widy-Ultra.otf",
+      "new": "Widdy-Widy-Black.otf"
+    },
+    {
+      "family": "Woller",
+      "old": "Wolves-Regular.otf",
+      "new": "Woller-Wolves-Regular.otf"
+    },
+    {
+      "family": "Zesty",
+      "old": "Zesty Scribs.otf",
+      "new": "Zesty-Scribs.otf"
+    },
+    {
+      "family": "vacelyn",
+      "old": "Vacelyn.ttf",
+      "new": "vacelyn-Vacelyn.ttf"
+    }
+  ],
+  "errors": [
+    {
+      "type": "file",
+      "family": "Adren",
+      "file": "Adren-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Adren",
+      "file": "Adren-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Aeonik",
+      "file": "Aeonik-Air-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Aeonik",
+      "file": "Aeonik-Air.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Altone",
+      "file": "Altone-Ultra-Italic.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Altone",
+      "file": "Altone-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Config",
+      "file": "Config-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Config",
+      "file": "Config-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Config-Round",
+      "file": "Config-Round-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Config-Round",
+      "file": "Config-Round-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Deicho",
+      "file": "Deicho-Ultra-Italic.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Deicho",
+      "file": "Deicho-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Exensa",
+      "file": "Exensa-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Galpike",
+      "file": "Galpike-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Gifford",
+      "file": "Gifford-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Gifford",
+      "file": "Gifford-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "GigaSans",
+      "file": "GigaSans-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "GigaSans",
+      "file": "GigaSans-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Gillpike",
+      "file": "Galpike-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Ginto",
+      "file": "GintoNord-Ultra-Italic.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Ginto",
+      "file": "GintoNord-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Gopher",
+      "file": "Gopher-Heavy-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Gopher",
+      "file": "Gopher-Heavy.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "GopherMono",
+      "file": "GhopherMono-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "GopherMono",
+      "file": "GhopherMono-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Magdeline",
+      "file": "Magdelin-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Magdeline",
+      "file": "Magdelin-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Mopella",
+      "file": "Mopella-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Quiche",
+      "file": "Quiche-Ultra-Italic.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Quiche",
+      "file": "Quiche-Ultra.otf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Typeday",
+      "file": "Typeday-Ultra.ttf",
+      "error": "Target exists"
+    },
+    {
+      "type": "file",
+      "family": "Walsheim",
+      "file": "Walsheim-Condensed-Heavy.ttf",
+      "error": "Target exists"
+    }
+  ]
+}
