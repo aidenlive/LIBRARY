@@ -1239,14 +1239,14 @@
           "otf": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Black.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-ThinOblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-ThinOblique.woff",
-          "otf": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-ThinOblique.otf"
+          "woff2": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-ThinItalic.woff2",
+          "woff": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-ThinItalic.woff",
+          "otf": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-ThinItalic.otf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Regular-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Regular-Oblique.woff",
-          "otf": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Regular-Oblique.otf"
+          "woff2": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Regular-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/bizmo/v1/Bizmo-Regular-Italic.otf"
         }
       }
     },
@@ -1912,15 +1912,15 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
-        "regular": {
-          "woff2": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Regular.ttf"
-        },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Regular-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Regular-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Regular-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Ridge---Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Ridge---Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Ridge---Italic.ttf"
+        },
+        "regular": {
+          "woff2": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Ridge.woff2",
+          "woff": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Ridge.woff",
+          "ttf": "https://cdn.library.dev/fonts/cactus/v1/Cactus-Ridge.ttf"
         }
       }
     },
@@ -2246,9 +2246,9 @@
         }
       }
     },
-    "chromium ": {
-      "family": "Chromium ",
-      "displayName": "Chromium ",
+    "chromium": {
+      "family": "Chromium",
+      "displayName": "Chromium",
       "category": "sans-serif",
       "variants": [
         "regular"
@@ -2260,9 +2260,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/chromium /v1/Chromium -Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/chromium /v1/Chromium -Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/chromium /v1/Chromium -Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/chromium/v1/Chromium--Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/chromium/v1/Chromium--Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/chromium/v1/Chromium--Regular.ttf"
         }
       }
     },
@@ -2390,9 +2390,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/cliquey/v1/Cliqey.woff2",
-          "woff": "https://cdn.library.dev/fonts/cliquey/v1/Cliqey.woff",
-          "ttf": "https://cdn.library.dev/fonts/cliquey/v1/Cliqey.ttf"
+          "woff2": "https://cdn.library.dev/fonts/cliquey/v1/Cliquey-Cliqey.woff2",
+          "woff": "https://cdn.library.dev/fonts/cliquey/v1/Cliquey-Cliqey.woff",
+          "ttf": "https://cdn.library.dev/fonts/cliquey/v1/Cliquey-Cliqey.ttf"
         }
       }
     },
@@ -2510,9 +2510,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/concious/v1/Conscious.woff2",
-          "woff": "https://cdn.library.dev/fonts/concious/v1/Conscious.woff",
-          "ttf": "https://cdn.library.dev/fonts/concious/v1/Conscious.ttf"
+          "woff2": "https://cdn.library.dev/fonts/concious/v1/Concious-Conscious.woff2",
+          "woff": "https://cdn.library.dev/fonts/concious/v1/Concious-Conscious.woff",
+          "ttf": "https://cdn.library.dev/fonts/concious/v1/Concious-Conscious.ttf"
         }
       }
     },
@@ -2527,6 +2527,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -2554,6 +2556,11 @@
           "woff2": "https://cdn.library.dev/fonts/config/v1/Config-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/config/v1/Config-Medium.woff",
           "otf": "https://cdn.library.dev/fonts/config/v1/Config-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/config/v1/Config-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/config/v1/Config-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/config/v1/Config-SemiBold.otf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/config/v1/Config-Bold.woff2",
@@ -2595,6 +2602,11 @@
           "woff": "https://cdn.library.dev/fonts/config/v1/Config-Ultra.woff",
           "otf": "https://cdn.library.dev/fonts/config/v1/Config-Ultra.otf"
         },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/config/v1/Config-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/config/v1/Config-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/config/v1/Config-SemiBold-Italic.otf"
+        },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/config/v1/Config-Thin-Italic.woff2",
           "woff": "https://cdn.library.dev/fonts/config/v1/Config-Thin-Italic.woff",
@@ -2613,6 +2625,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -2640,6 +2654,11 @@
           "woff2": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Medium.woff",
           "otf": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-SemiBold.otf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Bold.woff2",
@@ -2680,6 +2699,11 @@
           "woff2": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Ultra.woff2",
           "woff": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Ultra.woff",
           "otf": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Ultra.otf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-SemiBold-Italic.otf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/config-round/v1/Config-Round-Thin-Italic.woff2",
@@ -2914,9 +2938,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "500": {
-          "woff2": "https://cdn.library.dev/fonts/degrad/v1/403DegradMono-Medium.woff2",
-          "woff": "https://cdn.library.dev/fonts/degrad/v1/403DegradMono-Medium.woff",
-          "ttf": "https://cdn.library.dev/fonts/degrad/v1/403DegradMono-Medium.ttf"
+          "woff2": "https://cdn.library.dev/fonts/degrad/v1/Degrad-403DegradMono-Medium.woff2",
+          "woff": "https://cdn.library.dev/fonts/degrad/v1/Degrad-403DegradMono-Medium.woff",
+          "ttf": "https://cdn.library.dev/fonts/degrad/v1/Degrad-403DegradMono-Medium.ttf"
         }
       }
     },
@@ -2931,6 +2955,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -2958,6 +2984,11 @@
           "woff2": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Medium.ttf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/deicho/v1/Deicho-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/deicho/v1/Deicho-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/deicho/v1/Deicho-SemiBold.ttf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Bold.woff2",
@@ -2998,6 +3029,11 @@
           "woff2": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Ultra.woff2",
           "woff": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Ultra.woff",
           "ttf": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Ultra.ttf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/deicho/v1/Deicho-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/deicho/v1/Deicho-SemiBold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/deicho/v1/Deicho-SemiBold-Italic.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/deicho/v1/Deicho-Thin-Italic.woff2",
@@ -3081,14 +3117,14 @@
       "lastModified": "2025-12-25",
       "files": {
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/dinner/v1/Dinner Groope-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/dinner/v1/Dinner Groope-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/dinner/v1/Dinner Groope-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/dinner/v1/Dinner-Groope-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/dinner/v1/Dinner-Groope-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/dinner/v1/Dinner-Groope-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/dinner/v1/Dinner Groope-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/dinner/v1/Dinner Groope-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/dinner/v1/Dinner Groope-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/dinner/v1/Dinner-Groope-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/dinner/v1/Dinner-Groope-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/dinner/v1/Dinner-Groope-Regular.ttf"
         }
       }
     },
@@ -3206,9 +3242,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/droper/v1/Broken Droper.woff2",
-          "woff": "https://cdn.library.dev/fonts/droper/v1/Broken Droper.woff",
-          "ttf": "https://cdn.library.dev/fonts/droper/v1/Broken Droper.ttf"
+          "woff2": "https://cdn.library.dev/fonts/droper/v1/Droper-Broken-Droper.woff2",
+          "woff": "https://cdn.library.dev/fonts/droper/v1/Droper-Broken-Droper.woff",
+          "ttf": "https://cdn.library.dev/fonts/droper/v1/Droper-Broken-Droper.ttf"
         }
       }
     },
@@ -3314,9 +3350,9 @@
           "otf": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-Black.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-ThinOblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-ThinOblique.woff",
-          "otf": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-ThinOblique.otf"
+          "woff2": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-ThinItalic.woff2",
+          "woff": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-ThinItalic.woff",
+          "otf": "https://cdn.library.dev/fonts/ebcorp/v1/EBCorp-ThinItalic.otf"
         }
       }
     },
@@ -3612,9 +3648,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/excite/v1/Exciting.woff2",
-          "woff": "https://cdn.library.dev/fonts/excite/v1/Exciting.woff",
-          "ttf": "https://cdn.library.dev/fonts/excite/v1/Exciting.ttf"
+          "woff2": "https://cdn.library.dev/fonts/excite/v1/Excite-Exciting.woff2",
+          "woff": "https://cdn.library.dev/fonts/excite/v1/Excite-Exciting.woff",
+          "ttf": "https://cdn.library.dev/fonts/excite/v1/Excite-Exciting.ttf"
         }
       }
     },
@@ -3690,9 +3726,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/fashional/v1/Fashion.woff2",
-          "woff": "https://cdn.library.dev/fonts/fashional/v1/Fashion.woff",
-          "ttf": "https://cdn.library.dev/fonts/fashional/v1/Fashion.ttf"
+          "woff2": "https://cdn.library.dev/fonts/fashional/v1/Fashional-Fashion.woff2",
+          "woff": "https://cdn.library.dev/fonts/fashional/v1/Fashional-Fashion.woff",
+          "ttf": "https://cdn.library.dev/fonts/fashional/v1/Fashional-Fashion.ttf"
         }
       }
     },
@@ -3730,9 +3766,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/fedra/v1/Phaidra.woff2",
-          "woff": "https://cdn.library.dev/fonts/fedra/v1/Phaidra.woff",
-          "ttf": "https://cdn.library.dev/fonts/fedra/v1/Phaidra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/fedra/v1/Fedra-Phaidra.woff2",
+          "woff": "https://cdn.library.dev/fonts/fedra/v1/Fedra-Phaidra.woff",
+          "ttf": "https://cdn.library.dev/fonts/fedra/v1/Fedra-Phaidra.ttf"
         }
       }
     },
@@ -3751,14 +3787,14 @@
       "lastModified": "2025-12-25",
       "files": {
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/fergan/v1/Fregan-Serif-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/fergan/v1/Fregan-Serif-Bold.woff",
-          "otf": "https://cdn.library.dev/fonts/fergan/v1/Fregan-Serif-Bold.otf"
+          "woff2": "https://cdn.library.dev/fonts/fergan/v1/Fergan-Fregan-Serif-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/fergan/v1/Fergan-Fregan-Serif-Bold.woff",
+          "otf": "https://cdn.library.dev/fonts/fergan/v1/Fergan-Fregan-Serif-Bold.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/fergan/v1/Fregan-Serif-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/fergan/v1/Fregan-Serif-Regular.woff",
-          "otf": "https://cdn.library.dev/fonts/fergan/v1/Fregan-Serif-Regular.otf"
+          "woff2": "https://cdn.library.dev/fonts/fergan/v1/Fergan-Fregan-Serif-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/fergan/v1/Fergan-Fregan-Serif-Regular.woff",
+          "otf": "https://cdn.library.dev/fonts/fergan/v1/Fergan-Fregan-Serif-Regular.otf"
         }
       }
     },
@@ -3819,8 +3855,11 @@
       "variants": [
         "100",
         "100italic",
+        "600",
         "700",
         "700italic",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -3835,10 +3874,25 @@
           "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Thin.woff",
           "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Thin.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Bold.ttf"
+        },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Black-Italic.ttf"
         },
         "700italic": {
           "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Bold-Italic.woff2",
@@ -3846,14 +3900,14 @@
           "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Bold-Italic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Regular-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Regular.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/flagoria/v1/Flagoria-Thin-Italic.woff2",
@@ -3911,6 +3965,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "italic",
@@ -3931,6 +3987,11 @@
           "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-Medium.ttf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-SemiBold.ttf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-Bold.woff2",
@@ -3953,14 +4014,19 @@
           "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-Medium-Italic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-Semi-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-Semi-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-Semi-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-Regular-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-Regular.ttf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/founders/v1/Founders-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/founders/v1/Founders-SemiBold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/founders/v1/Founders-SemiBold-Italic.ttf"
         }
       }
     },
@@ -4018,9 +4084,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/friday/v1/Friday Hype.woff2",
-          "woff": "https://cdn.library.dev/fonts/friday/v1/Friday Hype.woff",
-          "ttf": "https://cdn.library.dev/fonts/friday/v1/Friday Hype.ttf"
+          "woff2": "https://cdn.library.dev/fonts/friday/v1/Friday-Hype.woff2",
+          "woff": "https://cdn.library.dev/fonts/friday/v1/Friday-Hype.woff",
+          "ttf": "https://cdn.library.dev/fonts/friday/v1/Friday-Hype.ttf"
         }
       }
     },
@@ -4112,6 +4178,7 @@
         "100",
         "300",
         "500",
+        "600",
         "700",
         "900",
         "regular"
@@ -4137,6 +4204,11 @@
           "woff": "https://cdn.library.dev/fonts/galpike/v1/Galpike-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/galpike/v1/Galpike-Medium.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/galpike/v1/Galpike-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/galpike/v1/Galpike-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/galpike/v1/Galpike-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/galpike/v1/Galpike-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/galpike/v1/Galpike-Bold.woff",
@@ -4161,8 +4233,11 @@
       "variants": [
         "100",
         "100italic",
+        "600",
         "700",
         "700italic",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -4177,10 +4252,25 @@
           "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Thin.woff",
           "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Thin.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Bold.ttf"
+        },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Black-Italic.ttf"
         },
         "700italic": {
           "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Bold-Italic.woff2",
@@ -4188,14 +4278,14 @@
           "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Bold-Italic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Regular-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Regular.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/gardena/v1/Gardena-Thin-Italic.woff2",
@@ -4275,6 +4365,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -4302,6 +4394,11 @@
           "woff2": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Medium.woff",
           "otf": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/gifford/v1/Gifford-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gifford/v1/Gifford-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/gifford/v1/Gifford-SemiBold.otf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Bold.woff2",
@@ -4343,6 +4440,11 @@
           "woff": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Ultra.woff",
           "otf": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Ultra.otf"
         },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/gifford/v1/Gifford-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gifford/v1/Gifford-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gifford/v1/Gifford-SemiBold-Italic.otf"
+        },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Thin-Italic.woff2",
           "woff": "https://cdn.library.dev/fonts/gifford/v1/Gifford-Thin-Italic.woff",
@@ -4361,6 +4463,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -4388,6 +4492,11 @@
           "woff2": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Medium.woff",
           "otf": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-SemiBold.otf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Bold.woff2",
@@ -4429,6 +4538,11 @@
           "woff": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Ultra.woff",
           "otf": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Ultra.otf"
         },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-SemiBold-Italic.otf"
+        },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Thin-Italic.woff2",
           "woff": "https://cdn.library.dev/fonts/gigasans/v1/GigaSans-Thin-Italic.woff",
@@ -4444,6 +4558,7 @@
         "100",
         "300",
         "500",
+        "600",
         "700",
         "900",
         "regular"
@@ -4455,34 +4570,39 @@
       "lastModified": "2025-12-25",
       "files": {
         "100": {
-          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Thin.woff2",
-          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Thin.woff",
-          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Thin.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Thin.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Thin.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Thin.ttf"
         },
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Light.woff",
-          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Light.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Light.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Light.ttf"
         },
         "500": {
-          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Medium.woff2",
-          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Medium.woff",
-          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Medium.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Medium.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Medium.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Medium.ttf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-SemiBold.ttf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Bold.woff",
-          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Bold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Bold.ttf"
         },
         "900": {
-          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Black.woff2",
-          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Black.woff",
-          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Black.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Black.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Galpike-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Small.woff2",
+          "woff": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Small.woff",
+          "ttf": "https://cdn.library.dev/fonts/gillpike/v1/Gillpike-Galpike-Small.ttf"
         }
       }
     },
@@ -4520,9 +4640,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/ginetta/v1/Gimetta.woff2",
-          "woff": "https://cdn.library.dev/fonts/ginetta/v1/Gimetta.woff",
-          "ttf": "https://cdn.library.dev/fonts/ginetta/v1/Gimetta.ttf"
+          "woff2": "https://cdn.library.dev/fonts/ginetta/v1/Ginetta-Gimetta.woff2",
+          "woff": "https://cdn.library.dev/fonts/ginetta/v1/Ginetta-Gimetta.woff",
+          "ttf": "https://cdn.library.dev/fonts/ginetta/v1/Ginetta-Gimetta.ttf"
         }
       }
     },
@@ -4639,6 +4759,7 @@
       "variants": [
         "100",
         "300",
+        "600",
         "700",
         "900",
         "regular"
@@ -4659,6 +4780,11 @@
           "woff": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Light.woff",
           "ttf": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Light.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/givonic/v1/Givonic-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/givonic/v1/Givonic-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/givonic/v1/Givonic-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Bold.woff",
@@ -4670,9 +4796,9 @@
           "ttf": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Black.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/givonic/v1/Givonic-Regular.ttf"
         }
       }
     },
@@ -4730,9 +4856,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/glooosy/v1/glooxy.woff2",
-          "woff": "https://cdn.library.dev/fonts/glooosy/v1/glooxy.woff",
-          "ttf": "https://cdn.library.dev/fonts/glooosy/v1/glooxy.ttf"
+          "woff2": "https://cdn.library.dev/fonts/glooosy/v1/Glooosy-glooxy.woff2",
+          "woff": "https://cdn.library.dev/fonts/glooosy/v1/Glooosy-glooxy.woff",
+          "ttf": "https://cdn.library.dev/fonts/glooosy/v1/Glooosy-glooxy.ttf"
         }
       }
     },
@@ -4879,6 +5005,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -4893,64 +5021,74 @@
       "lastModified": "2025-12-25",
       "files": {
         "100": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Thin.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Thin.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Thin.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Thin.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Thin.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Thin.otf"
         },
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Light.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Light.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Light.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Light.otf"
         },
         "500": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Medium.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Medium.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Medium.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Medium.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Medium.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-SemiBold.otf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Bold.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Bold.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Bold.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Bold.otf"
         },
         "900": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Black.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Black.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Black.otf"
-        },
-        "900italic": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Black-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Black-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Black-Italic.otf"
-        },
-        "700italic": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Bold-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Bold-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Bold-Italic.otf"
-        },
-        "300italic": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Light-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Light-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Light-Italic.otf"
-        },
-        "500italic": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Medium-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Medium-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Medium-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Black.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Black.otf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Ultra-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Ultra-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Regular-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Regular-Italic.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Ultra.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Ultra.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Regular.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Regular.otf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Black-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Black-Italic.otf"
+        },
+        "700italic": {
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Bold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Bold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Bold-Italic.otf"
+        },
+        "300italic": {
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Light-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Light-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Light-Italic.otf"
+        },
+        "500italic": {
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Medium-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Medium-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Medium-Italic.otf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-SemiBold-Italic.otf"
         },
         "100italic": {
-          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Thin-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Thin-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GhopherMono-Thin-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Thin-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Thin-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/gophermono/v1/GopherMono-GhopherMono-Thin-Italic.otf"
         }
       }
     },
@@ -4994,9 +5132,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/gothif/v1/CookGothif.woff2",
-          "woff": "https://cdn.library.dev/fonts/gothif/v1/CookGothif.woff",
-          "ttf": "https://cdn.library.dev/fonts/gothif/v1/CookGothif.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gothif/v1/Gothif-CookGothif.woff2",
+          "woff": "https://cdn.library.dev/fonts/gothif/v1/Gothif-CookGothif.woff",
+          "ttf": "https://cdn.library.dev/fonts/gothif/v1/Gothif-CookGothif.ttf"
         }
       }
     },
@@ -5007,7 +5145,10 @@
       "variants": [
         "100",
         "100italic",
+        "600",
         "700",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -5022,20 +5163,35 @@
           "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Thin.woff",
           "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Thin.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Bold.ttf"
         },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Black-Italic.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Regular.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Regular-Italic.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/govandi/v1/Govandi-Thin-Italic.woff2",
@@ -5060,9 +5216,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/granigen/v1/Gronigen-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/granigen/v1/Gronigen-Light.woff",
-          "ttf": "https://cdn.library.dev/fonts/granigen/v1/Gronigen-Light.ttf"
+          "woff2": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Gronigen-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Gronigen-Light.woff",
+          "ttf": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Gronigen-Light.ttf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Bold.woff2",
@@ -5070,9 +5226,9 @@
           "ttf": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Bold.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/granigen/v1/Gronigen-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/granigen/v1/Gronigen-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/granigen/v1/Gronigen-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Gronigen-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Gronigen-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/granigen/v1/Granigen-Gronigen-Regular.ttf"
         }
       }
     },
@@ -5109,6 +5265,8 @@
       "variants": [
         "300",
         "300italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "italic",
@@ -5121,34 +5279,44 @@
       "lastModified": "2025-12-25",
       "files": {
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/gregory/v1/George-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/gregory/v1/George-Light.woff",
-          "ttf": "https://cdn.library.dev/fonts/gregory/v1/George-Light.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Light.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Light.ttf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-SemiBold.ttf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/gregory/v1/George-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/gregory/v1/George-Bold.woff",
-          "ttf": "https://cdn.library.dev/fonts/gregory/v1/George-Bold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Bold.ttf"
         },
         "700italic": {
-          "woff2": "https://cdn.library.dev/fonts/gregory/v1/George-Bold-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gregory/v1/George-Bold-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/gregory/v1/George-Bold-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Bold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Bold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Bold-Italic.ttf"
         },
         "300italic": {
-          "woff2": "https://cdn.library.dev/fonts/gregory/v1/George-Light-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gregory/v1/George-Light-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/gregory/v1/George-Light-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Light-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Light-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Light-Italic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/gregory/v1/George-Semi-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/gregory/v1/George-Semi-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/gregory/v1/George-Semi-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Regular-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/gregory/v1/George-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/gregory/v1/George-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/gregory/v1/George-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-Regular.ttf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-SemiBold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/gregory/v1/Gregory-George-SemiBold-Italic.ttf"
         }
       }
     },
@@ -5167,14 +5335,14 @@
       "lastModified": "2025-12-25",
       "files": {
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/greyson/v1/CSGreyson-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/greyson/v1/CSGreyson-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/greyson/v1/CSGreyson-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/greyson/v1/Greyson-CSGreyson-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/greyson/v1/Greyson-CSGreyson-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/greyson/v1/Greyson-CSGreyson-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/greyson/v1/CSGreyson-ReverseItalic.woff2",
-          "woff": "https://cdn.library.dev/fonts/greyson/v1/CSGreyson-ReverseItalic.woff",
-          "ttf": "https://cdn.library.dev/fonts/greyson/v1/CSGreyson-ReverseItalic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/greyson/v1/Greyson-CSGreyson-ReverseItalic.woff2",
+          "woff": "https://cdn.library.dev/fonts/greyson/v1/Greyson-CSGreyson-ReverseItalic.woff",
+          "ttf": "https://cdn.library.dev/fonts/greyson/v1/Greyson-CSGreyson-ReverseItalic.ttf"
         }
       }
     },
@@ -5215,24 +5383,24 @@
       "lastModified": "2025-12-25",
       "files": {
         "100": {
-          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Thin.woff2",
-          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Thin.woff",
-          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Thin.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Thin.woff2",
+          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Thin.woff",
+          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Thin.ttf"
         },
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Light.woff",
-          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Light.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Light.woff",
+          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Light.ttf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Bold.woff",
-          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Bold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Bold.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Groningen-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/gronigen/v1/Gronigen-Groningen-Regular.ttf"
         }
       }
     },
@@ -5250,9 +5418,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/groovy/v1/Flying Soul.woff2",
-          "woff": "https://cdn.library.dev/fonts/groovy/v1/Flying Soul.woff",
-          "ttf": "https://cdn.library.dev/fonts/groovy/v1/Flying Soul.ttf"
+          "woff2": "https://cdn.library.dev/fonts/groovy/v1/Groovy-Flying-Soul.woff2",
+          "woff": "https://cdn.library.dev/fonts/groovy/v1/Groovy-Flying-Soul.woff",
+          "ttf": "https://cdn.library.dev/fonts/groovy/v1/Groovy-Flying-Soul.ttf"
         }
       }
     },
@@ -5290,9 +5458,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/grotek/v1/Gotrek.woff2",
-          "woff": "https://cdn.library.dev/fonts/grotek/v1/Gotrek.woff",
-          "ttf": "https://cdn.library.dev/fonts/grotek/v1/Gotrek.ttf"
+          "woff2": "https://cdn.library.dev/fonts/grotek/v1/Grotek-Gotrek.woff2",
+          "woff": "https://cdn.library.dev/fonts/grotek/v1/Grotek-Gotrek.woff",
+          "ttf": "https://cdn.library.dev/fonts/grotek/v1/Grotek-Gotrek.ttf"
         }
       }
     },
@@ -5312,9 +5480,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/grover/v1/Grover-Semi-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/grover/v1/Grover-Semi-Bold.woff",
-          "ttf": "https://cdn.library.dev/fonts/grover/v1/Grover-Semi-Bold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/grover/v1/Grover-SemiBold-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/grover/v1/Grover-SemiBold-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/grover/v1/Grover-SemiBold-Bold.ttf"
         },
         "900": {
           "woff2": "https://cdn.library.dev/fonts/grover/v1/Grover-Black.woff2",
@@ -5511,14 +5679,14 @@
           "otf": "https://cdn.library.dev/fonts/hando/v1/Hando-Black.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/hando/v1/Hando-ThinOblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/hando/v1/Hando-ThinOblique.woff",
-          "otf": "https://cdn.library.dev/fonts/hando/v1/Hando-ThinOblique.otf"
+          "woff2": "https://cdn.library.dev/fonts/hando/v1/Hando-ThinItalic.woff2",
+          "woff": "https://cdn.library.dev/fonts/hando/v1/Hando-ThinItalic.woff",
+          "otf": "https://cdn.library.dev/fonts/hando/v1/Hando-ThinItalic.otf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/hando/v1/Hando-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/hando/v1/Hando-Oblique.woff",
-          "otf": "https://cdn.library.dev/fonts/hando/v1/Hando-Oblique.otf"
+          "woff2": "https://cdn.library.dev/fonts/hando/v1/Hando-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/hando/v1/Hando-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/hando/v1/Hando-Italic.otf"
         }
       }
     },
@@ -5585,14 +5753,14 @@
           "ttf": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Black.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-ThinOblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-ThinOblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-ThinOblique.ttf"
+          "woff2": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-ThinItalic.woff2",
+          "woff": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-ThinItalic.woff",
+          "ttf": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-ThinItalic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Oblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Oblique.ttf"
+          "woff2": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/handosoft/v1/HandoSoft-Italic.ttf"
         }
       }
     },
@@ -5710,9 +5878,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/heavyjack/v1/Heavy Jack.woff2",
-          "woff": "https://cdn.library.dev/fonts/heavyjack/v1/Heavy Jack.woff",
-          "ttf": "https://cdn.library.dev/fonts/heavyjack/v1/Heavy Jack.ttf"
+          "woff2": "https://cdn.library.dev/fonts/heavyjack/v1/Heavyjack-Heavy-Jack.woff2",
+          "woff": "https://cdn.library.dev/fonts/heavyjack/v1/Heavyjack-Heavy-Jack.woff",
+          "ttf": "https://cdn.library.dev/fonts/heavyjack/v1/Heavyjack-Heavy-Jack.ttf"
         }
       }
     },
@@ -5876,9 +6044,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/hiroki/v1/Herochi.woff2",
-          "woff": "https://cdn.library.dev/fonts/hiroki/v1/Herochi.woff",
-          "ttf": "https://cdn.library.dev/fonts/hiroki/v1/Herochi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/hiroki/v1/Hiroki-Herochi.woff2",
+          "woff": "https://cdn.library.dev/fonts/hiroki/v1/Hiroki-Herochi.woff",
+          "ttf": "https://cdn.library.dev/fonts/hiroki/v1/Hiroki-Herochi.ttf"
         }
       }
     },
@@ -5889,7 +6057,11 @@
       "variants": [
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -5904,15 +6076,30 @@
           "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Medium.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Bold.ttf"
         },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Black-Italic.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Regular.ttf"
         },
         "500italic": {
           "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Medium-Italic.woff2",
@@ -5920,9 +6107,14 @@
           "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Medium-Italic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-Regular-Italic.ttf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/homade/v1/Homade-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/homade/v1/Homade-SemiBold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/homade/v1/Homade-SemiBold-Italic.ttf"
         }
       }
     },
@@ -6078,7 +6270,9 @@
         "100",
         "300",
         "500",
+        "600",
         "700",
+        "900",
         "regular"
       ],
       "subsets": [
@@ -6102,15 +6296,25 @@
           "woff": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Medium.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Bold.ttf"
         },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Black.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/jetbrains/v1/JetBrains-Regular.ttf"
         }
       }
     },
@@ -6154,9 +6358,9 @@
         }
       }
     },
-    "july ": {
-      "family": "July ",
-      "displayName": "July ",
+    "july": {
+      "family": "July",
+      "displayName": "July",
       "category": "sans-serif",
       "variants": [
         "regular"
@@ -6168,9 +6372,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/july /v1/July.woff2",
-          "woff": "https://cdn.library.dev/fonts/july /v1/July.woff",
-          "ttf": "https://cdn.library.dev/fonts/july /v1/July.ttf"
+          "woff2": "https://cdn.library.dev/fonts/july/v1/July.woff2",
+          "woff": "https://cdn.library.dev/fonts/july/v1/July.woff",
+          "ttf": "https://cdn.library.dev/fonts/july/v1/July.ttf"
         }
       }
     },
@@ -6179,6 +6383,7 @@
       "displayName": "Kalico",
       "category": "sans-serif",
       "variants": [
+        "600",
         "700",
         "regular"
       ],
@@ -6188,15 +6393,20 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/kalico/v1/Kalico-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/kalico/v1/Kalico-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/kalico/v1/Kalico-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Bold.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/kalico/v1/Kalico-Regular.ttf"
         }
       }
     },
@@ -6319,14 +6529,14 @@
       "lastModified": "2025-12-25",
       "files": {
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/kinote/v1/Kinsale-Display-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/kinote/v1/Kinsale-Display-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/kinote/v1/Kinsale-Display-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/kinote/v1/Kinote-Kinsale-Display-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/kinote/v1/Kinote-Kinsale-Display-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/kinote/v1/Kinote-Kinsale-Display-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/kinote/v1/Kinsale-Display.woff2",
-          "woff": "https://cdn.library.dev/fonts/kinote/v1/Kinsale-Display.woff",
-          "ttf": "https://cdn.library.dev/fonts/kinote/v1/Kinsale-Display.ttf"
+          "woff2": "https://cdn.library.dev/fonts/kinote/v1/Kinote-Kinsale-Display.woff2",
+          "woff": "https://cdn.library.dev/fonts/kinote/v1/Kinote-Kinsale-Display.woff",
+          "ttf": "https://cdn.library.dev/fonts/kinote/v1/Kinote-Kinsale-Display.ttf"
         }
       }
     },
@@ -6427,6 +6637,7 @@
       "displayName": "Lemands",
       "category": "sans-serif",
       "variants": [
+        "600",
         "700",
         "regular"
       ],
@@ -6436,15 +6647,20 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/lemands/v1/Lemands-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/lemands/v1/Lemands-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/lemands/v1/Lemands-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Bold.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/lemands/v1/Lemands-Regular.ttf"
         }
       }
     },
@@ -6506,9 +6722,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/limelines/v1/LimeLinesRegular.woff2",
-          "woff": "https://cdn.library.dev/fonts/limelines/v1/LimeLinesRegular.woff",
-          "ttf": "https://cdn.library.dev/fonts/limelines/v1/LimeLinesRegular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/limelines/v1/Limelines-LimeLinesRegular.woff2",
+          "woff": "https://cdn.library.dev/fonts/limelines/v1/Limelines-LimeLinesRegular.woff",
+          "ttf": "https://cdn.library.dev/fonts/limelines/v1/Limelines-LimeLinesRegular.ttf"
         }
       }
     },
@@ -6526,9 +6742,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/luckies/v1/LUCKIES.woff2",
-          "woff": "https://cdn.library.dev/fonts/luckies/v1/LUCKIES.woff",
-          "ttf": "https://cdn.library.dev/fonts/luckies/v1/LUCKIES.ttf"
+          "woff2": "https://cdn.library.dev/fonts/luckies/v1/Luckies-LUCKIES.woff2",
+          "woff": "https://cdn.library.dev/fonts/luckies/v1/Luckies-LUCKIES.woff",
+          "ttf": "https://cdn.library.dev/fonts/luckies/v1/Luckies-LUCKIES.ttf"
         }
       }
     },
@@ -6563,6 +6779,8 @@
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
         "900",
@@ -6577,64 +6795,74 @@
       "lastModified": "2025-12-25",
       "files": {
         "100": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Thin.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Thin.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Thin.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Thin.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Thin.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Thin.otf"
         },
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Light.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Light.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Light.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Light.otf"
         },
         "500": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Medium.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Medium.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Medium.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Medium.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Medium.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-SemiBold.otf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Bold.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Bold.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Bold.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Bold.otf"
         },
         "900": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Black.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Black.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Black.otf"
-        },
-        "900italic": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Black-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Black-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Black-Italic.otf"
-        },
-        "700italic": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Bold-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Bold-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Bold-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Black.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Black.otf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Ultra-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Ultra-Italic.otf"
-        },
-        "300italic": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Light-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Light-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Light-Italic.otf"
-        },
-        "500italic": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Medium-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Medium-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Medium-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Text-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Text-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Text-Italic.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Ultra.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Ultra.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Text.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Text.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Text.otf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Black-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Black-Italic.otf"
+        },
+        "700italic": {
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Bold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Bold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Bold-Italic.otf"
+        },
+        "300italic": {
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Light-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Light-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Light-Italic.otf"
+        },
+        "500italic": {
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Medium-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Medium-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Medium-Italic.otf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-SemiBold-Italic.otf"
         },
         "100italic": {
-          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Thin-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Thin-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdelin-Thin-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Thin-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Thin-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/magdeline/v1/Magdeline-Magdelin-Thin-Italic.otf"
         }
       }
     },
@@ -6770,9 +6998,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/malibusunday/v1/Malibu Sunday Serif.woff2",
-          "woff": "https://cdn.library.dev/fonts/malibusunday/v1/Malibu Sunday Serif.woff",
-          "ttf": "https://cdn.library.dev/fonts/malibusunday/v1/Malibu Sunday Serif.ttf"
+          "woff2": "https://cdn.library.dev/fonts/malibusunday/v1/MalibuSunday-Malibu-Sunday-Serif.woff2",
+          "woff": "https://cdn.library.dev/fonts/malibusunday/v1/MalibuSunday-Malibu-Sunday-Serif.woff",
+          "ttf": "https://cdn.library.dev/fonts/malibusunday/v1/MalibuSunday-Malibu-Sunday-Serif.ttf"
         }
       }
     },
@@ -7013,6 +7241,7 @@
       "displayName": "Mashle",
       "category": "sans-serif",
       "variants": [
+        "italic",
         "regular"
       ],
       "subsets": [
@@ -7021,6 +7250,11 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
+        "italic": {
+          "woff2": "https://cdn.library.dev/fonts/mashle/v1/Mashle-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/mashle/v1/Mashle-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/mashle/v1/Mashle-Italic.ttf"
+        },
         "regular": {
           "woff2": "https://cdn.library.dev/fonts/mashle/v1/Mashle.woff2",
           "woff": "https://cdn.library.dev/fonts/mashle/v1/Mashle.woff",
@@ -7101,10 +7335,11 @@
       "variants": [
         "500",
         "500italic",
+        "600italic",
         "700",
         "700italic",
-        "italic",
-        "regular"
+        "900",
+        "900italic"
       ],
       "subsets": [
         "latin"
@@ -7118,9 +7353,19 @@
           "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Medium.ttf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Semi-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Semi-Bold.woff",
-          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Semi-Bold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-SemiBold-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-SemiBold-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-SemiBold-Bold.ttf"
+        },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Black-Italic.ttf"
         },
         "700italic": {
           "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Bold-Italic.woff2",
@@ -7132,15 +7377,10 @@
           "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Medium-Italic.woff",
           "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Medium-Italic.ttf"
         },
-        "italic": {
-          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Ultra-Italic.ttf"
-        },
-        "regular": {
-          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-Ultra.ttf"
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/metalink/v1/Metalink-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/metalink/v1/Metalink-SemiBold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/metalink/v1/Metalink-SemiBold-Italic.ttf"
         }
       }
     },
@@ -7178,9 +7418,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/mintbox/v1/MintBox-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/mintbox/v1/MintBox-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/mintbox/v1/MintBox-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/mintbox/v1/Mintbox-MintBox-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/mintbox/v1/Mintbox-MintBox-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/mintbox/v1/Mintbox-MintBox-Regular.ttf"
         }
       }
     },
@@ -7218,9 +7458,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/mirdone/v1/Miradane.woff2",
-          "woff": "https://cdn.library.dev/fonts/mirdone/v1/Miradane.woff",
-          "ttf": "https://cdn.library.dev/fonts/mirdone/v1/Miradane.ttf"
+          "woff2": "https://cdn.library.dev/fonts/mirdone/v1/Mirdone-Miradane.woff2",
+          "woff": "https://cdn.library.dev/fonts/mirdone/v1/Mirdone-Miradane.woff",
+          "ttf": "https://cdn.library.dev/fonts/mirdone/v1/Mirdone-Miradane.ttf"
         }
       }
     },
@@ -7346,9 +7586,9 @@
           "otf": "https://cdn.library.dev/fonts/modeco/v1/Modeco-Black.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/modeco/v1/Modeco-ThinOblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/modeco/v1/Modeco-ThinOblique.woff",
-          "otf": "https://cdn.library.dev/fonts/modeco/v1/Modeco-ThinOblique.otf"
+          "woff2": "https://cdn.library.dev/fonts/modeco/v1/Modeco-ThinItalic.woff2",
+          "woff": "https://cdn.library.dev/fonts/modeco/v1/Modeco-ThinItalic.woff",
+          "otf": "https://cdn.library.dev/fonts/modeco/v1/Modeco-ThinItalic.otf"
         }
       }
     },
@@ -7456,9 +7696,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/modives/v1/Moldives.woff2",
-          "woff": "https://cdn.library.dev/fonts/modives/v1/Moldives.woff",
-          "otf": "https://cdn.library.dev/fonts/modives/v1/Moldives.otf"
+          "woff2": "https://cdn.library.dev/fonts/modives/v1/Modives-Moldives.woff2",
+          "woff": "https://cdn.library.dev/fonts/modives/v1/Modives-Moldives.woff",
+          "otf": "https://cdn.library.dev/fonts/modives/v1/Modives-Moldives.otf"
         }
       }
     },
@@ -7651,7 +7891,10 @@
       "variants": [
         "100",
         "100italic",
+        "600",
         "700",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -7666,20 +7909,35 @@
           "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Thin.woff",
           "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Thin.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Bold.ttf"
         },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Black-Italic.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Regular.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/monda/v1/Monda-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/monda/v1/Monda-Regular-Italic.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/monda/v1/Monda-Thin-Italic.woff2",
@@ -7800,9 +8058,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/monosuke/v1/403Monosuke-Slant.woff2",
-          "woff": "https://cdn.library.dev/fonts/monosuke/v1/403Monosuke-Slant.woff",
-          "ttf": "https://cdn.library.dev/fonts/monosuke/v1/403Monosuke-Slant.ttf"
+          "woff2": "https://cdn.library.dev/fonts/monosuke/v1/Monosuke-403Monosuke-Slant.woff2",
+          "woff": "https://cdn.library.dev/fonts/monosuke/v1/Monosuke-403Monosuke-Slant.woff",
+          "ttf": "https://cdn.library.dev/fonts/monosuke/v1/Monosuke-403Monosuke-Slant.ttf"
         }
       }
     },
@@ -7811,6 +8069,9 @@
       "displayName": "Monty",
       "category": "sans-serif",
       "variants": [
+        "300",
+        "700",
+        "900",
         "regular"
       ],
       "subsets": [
@@ -7819,10 +8080,25 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
+        "300": {
+          "woff2": "https://cdn.library.dev/fonts/monty/v1/Monty-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/monty/v1/Monty-Light.woff",
+          "ttf": "https://cdn.library.dev/fonts/monty/v1/Monty-Light.ttf"
+        },
+        "700": {
+          "woff2": "https://cdn.library.dev/fonts/monty/v1/Monty-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/monty/v1/Monty-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/monty/v1/Monty-Bold.ttf"
+        },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/monty/v1/Monty-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/monty/v1/Monty-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/monty/v1/Monty-Black.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/monty/v1/Monty Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/monty/v1/Monty Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/monty/v1/Monty Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/monty/v1/Monty-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/monty/v1/Monty-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/monty/v1/Monty-Regular.ttf"
         }
       }
     },
@@ -7840,9 +8116,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/moon/v1/TheMoon-Script.woff2",
-          "woff": "https://cdn.library.dev/fonts/moon/v1/TheMoon-Script.woff",
-          "otf": "https://cdn.library.dev/fonts/moon/v1/TheMoon-Script.otf"
+          "woff2": "https://cdn.library.dev/fonts/moon/v1/Moon-TheMoon-Script.woff2",
+          "woff": "https://cdn.library.dev/fonts/moon/v1/Moon-TheMoon-Script.woff",
+          "otf": "https://cdn.library.dev/fonts/moon/v1/Moon-TheMoon-Script.otf"
         }
       }
     },
@@ -7932,9 +8208,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/murey/v1/MurayHouseStandard-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/murey/v1/MurayHouseStandard-Regular.woff",
-          "otf": "https://cdn.library.dev/fonts/murey/v1/MurayHouseStandard-Regular.otf"
+          "woff2": "https://cdn.library.dev/fonts/murey/v1/Murey-MurayHouseStandard-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/murey/v1/Murey-MurayHouseStandard-Regular.woff",
+          "otf": "https://cdn.library.dev/fonts/murey/v1/Murey-MurayHouseStandard-Regular.otf"
         }
       }
     },
@@ -7974,19 +8250,19 @@
       "lastModified": "2025-12-25",
       "files": {
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova-Light.woff",
-          "otf": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova-Light.otf"
+          "woff2": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova-Light.woff",
+          "otf": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova-Light.otf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova-Bold.woff",
-          "otf": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova-Bold.otf"
+          "woff2": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova-Bold.woff",
+          "otf": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova-Bold.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova.woff2",
-          "woff": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova.woff",
-          "otf": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead Nova.otf"
+          "woff2": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova.woff2",
+          "woff": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova.woff",
+          "otf": "https://cdn.library.dev/fonts/nailhead/v1/Nailhead-Nova.otf"
         }
       }
     },
@@ -8124,9 +8400,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/nissie/v1/Nissie Tangle.woff2",
-          "woff": "https://cdn.library.dev/fonts/nissie/v1/Nissie Tangle.woff",
-          "ttf": "https://cdn.library.dev/fonts/nissie/v1/Nissie Tangle.ttf"
+          "woff2": "https://cdn.library.dev/fonts/nissie/v1/Nissie-Tangle.woff2",
+          "woff": "https://cdn.library.dev/fonts/nissie/v1/Nissie-Tangle.woff",
+          "ttf": "https://cdn.library.dev/fonts/nissie/v1/Nissie-Tangle.ttf"
         }
       }
     },
@@ -8732,9 +9008,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/quallity/v1/Quiallity Noted.woff2",
-          "woff": "https://cdn.library.dev/fonts/quallity/v1/Quiallity Noted.woff",
-          "ttf": "https://cdn.library.dev/fonts/quallity/v1/Quiallity Noted.ttf"
+          "woff2": "https://cdn.library.dev/fonts/quallity/v1/Quallity-Quiallity-Noted.woff2",
+          "woff": "https://cdn.library.dev/fonts/quallity/v1/Quallity-Quiallity-Noted.woff",
+          "ttf": "https://cdn.library.dev/fonts/quallity/v1/Quallity-Quiallity-Noted.ttf"
         }
       }
     },
@@ -8918,9 +9194,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/ragmesh/v1/Rigamesh.woff2",
-          "woff": "https://cdn.library.dev/fonts/ragmesh/v1/Rigamesh.woff",
-          "ttf": "https://cdn.library.dev/fonts/ragmesh/v1/Rigamesh.ttf"
+          "woff2": "https://cdn.library.dev/fonts/ragmesh/v1/Ragmesh-Rigamesh.woff2",
+          "woff": "https://cdn.library.dev/fonts/ragmesh/v1/Ragmesh-Rigamesh.woff",
+          "ttf": "https://cdn.library.dev/fonts/ragmesh/v1/Ragmesh-Rigamesh.ttf"
         }
       }
     },
@@ -8938,9 +9214,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/raiden/v1/Raidney.woff2",
-          "woff": "https://cdn.library.dev/fonts/raiden/v1/Raidney.woff",
-          "ttf": "https://cdn.library.dev/fonts/raiden/v1/Raidney.ttf"
+          "woff2": "https://cdn.library.dev/fonts/raiden/v1/Raiden-Raidney.woff2",
+          "woff": "https://cdn.library.dev/fonts/raiden/v1/Raiden-Raidney.woff",
+          "ttf": "https://cdn.library.dev/fonts/raiden/v1/Raiden-Raidney.ttf"
         }
       }
     },
@@ -8978,9 +9254,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/raise/v1/CampaignSerif.woff2",
-          "woff": "https://cdn.library.dev/fonts/raise/v1/CampaignSerif.woff",
-          "ttf": "https://cdn.library.dev/fonts/raise/v1/CampaignSerif.ttf"
+          "woff2": "https://cdn.library.dev/fonts/raise/v1/Raise-CampaignSerif.woff2",
+          "woff": "https://cdn.library.dev/fonts/raise/v1/Raise-CampaignSerif.woff",
+          "ttf": "https://cdn.library.dev/fonts/raise/v1/Raise-CampaignSerif.ttf"
         }
       }
     },
@@ -8998,9 +9274,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/rebar/v1/REBAR.woff2",
-          "woff": "https://cdn.library.dev/fonts/rebar/v1/REBAR.woff",
-          "ttf": "https://cdn.library.dev/fonts/rebar/v1/REBAR.ttf"
+          "woff2": "https://cdn.library.dev/fonts/rebar/v1/Rebar-REBAR.woff2",
+          "woff": "https://cdn.library.dev/fonts/rebar/v1/Rebar-REBAR.woff",
+          "ttf": "https://cdn.library.dev/fonts/rebar/v1/Rebar-REBAR.ttf"
         }
       }
     },
@@ -9116,9 +9392,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/reprise/v1/Redkies.woff2",
-          "woff": "https://cdn.library.dev/fonts/reprise/v1/Redkies.woff",
-          "ttf": "https://cdn.library.dev/fonts/reprise/v1/Redkies.ttf"
+          "woff2": "https://cdn.library.dev/fonts/reprise/v1/Reprise-Redkies.woff2",
+          "woff": "https://cdn.library.dev/fonts/reprise/v1/Reprise-Redkies.woff",
+          "ttf": "https://cdn.library.dev/fonts/reprise/v1/Reprise-Redkies.ttf"
         }
       }
     },
@@ -9227,6 +9503,7 @@
       "variants": [
         "300",
         "500",
+        "600",
         "700",
         "regular"
       ],
@@ -9246,15 +9523,20 @@
           "woff": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Medium.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Bold.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Semi.woff2",
-          "woff": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Semi.woff",
-          "ttf": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Semi.ttf"
+          "woff2": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/ricardo/v1/Ricardo-Regular.ttf"
         }
       }
     },
@@ -9272,9 +9554,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/riots/v1/Grime Riots.woff2",
-          "woff": "https://cdn.library.dev/fonts/riots/v1/Grime Riots.woff",
-          "ttf": "https://cdn.library.dev/fonts/riots/v1/Grime Riots.ttf"
+          "woff2": "https://cdn.library.dev/fonts/riots/v1/Riots-Grime-Riots.woff2",
+          "woff": "https://cdn.library.dev/fonts/riots/v1/Riots-Grime-Riots.woff",
+          "ttf": "https://cdn.library.dev/fonts/riots/v1/Riots-Grime-Riots.ttf"
         }
       }
     },
@@ -9412,9 +9694,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/rodstone/v1/Ropstone.woff2",
-          "woff": "https://cdn.library.dev/fonts/rodstone/v1/Ropstone.woff",
-          "ttf": "https://cdn.library.dev/fonts/rodstone/v1/Ropstone.ttf"
+          "woff2": "https://cdn.library.dev/fonts/rodstone/v1/Rodstone-Ropstone.woff2",
+          "woff": "https://cdn.library.dev/fonts/rodstone/v1/Rodstone-Ropstone.woff",
+          "ttf": "https://cdn.library.dev/fonts/rodstone/v1/Rodstone-Ropstone.ttf"
         }
       }
     },
@@ -9432,9 +9714,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/romantica/v1/El Romantica.woff2",
-          "woff": "https://cdn.library.dev/fonts/romantica/v1/El Romantica.woff",
-          "ttf": "https://cdn.library.dev/fonts/romantica/v1/El Romantica.ttf"
+          "woff2": "https://cdn.library.dev/fonts/romantica/v1/Romantica-El-Romantica.woff2",
+          "woff": "https://cdn.library.dev/fonts/romantica/v1/Romantica-El-Romantica.woff",
+          "ttf": "https://cdn.library.dev/fonts/romantica/v1/Romantica-El-Romantica.ttf"
         }
       }
     },
@@ -9623,6 +9905,7 @@
       "displayName": "Saltwater",
       "category": "sans-serif",
       "variants": [
+        "100",
         "regular"
       ],
       "subsets": [
@@ -9631,10 +9914,15 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
+        "100": {
+          "woff2": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater-Shorelines-Font---Thin.woff2",
+          "woff": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater-Shorelines-Font---Thin.woff",
+          "ttf": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater-Shorelines-Font---Thin.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater Shorelines Font - Thin.woff2",
-          "woff": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater Shorelines Font - Thin.woff",
-          "ttf": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater Shorelines Font - Thin.ttf"
+          "woff2": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater-Shorelines-Font---Thick.woff2",
+          "woff": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater-Shorelines-Font---Thick.woff",
+          "ttf": "https://cdn.library.dev/fonts/saltwater/v1/Saltwater-Shorelines-Font---Thick.ttf"
         }
       }
     },
@@ -9776,29 +10064,29 @@
       "lastModified": "2025-12-25",
       "files": {
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Light.woff",
-          "ttf": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Light.ttf"
+          "woff2": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Light.woff",
+          "ttf": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Light.ttf"
         },
         "500": {
-          "woff2": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Medium.woff2",
-          "woff": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Medium.woff",
-          "ttf": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Medium.ttf"
+          "woff2": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Medium.woff2",
+          "woff": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Medium.woff",
+          "ttf": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Medium.ttf"
         },
         "600": {
-          "woff2": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-SemiBold.woff2",
-          "woff": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-SemiBold.woff",
-          "ttf": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-SemiBold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-SemiBold.ttf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Bold.woff",
-          "ttf": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Bold.ttf"
+          "woff2": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Bold.woff",
+          "ttf": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Bold.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/serial/v1/AOTSerialMono-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/serial/v1/Serial-AOTSerialMono-Regular.ttf"
         }
       }
     },
@@ -9896,9 +10184,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/sign/v1/Sign Painting.woff2",
-          "woff": "https://cdn.library.dev/fonts/sign/v1/Sign Painting.woff",
-          "ttf": "https://cdn.library.dev/fonts/sign/v1/Sign Painting.ttf"
+          "woff2": "https://cdn.library.dev/fonts/sign/v1/Sign-Painting.woff2",
+          "woff": "https://cdn.library.dev/fonts/sign/v1/Sign-Painting.woff",
+          "ttf": "https://cdn.library.dev/fonts/sign/v1/Sign-Painting.ttf"
         }
       }
     },
@@ -10002,9 +10290,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/skyforge/v1/SKYFORGE WEBSTER.woff2",
-          "woff": "https://cdn.library.dev/fonts/skyforge/v1/SKYFORGE WEBSTER.woff",
-          "ttf": "https://cdn.library.dev/fonts/skyforge/v1/SKYFORGE WEBSTER.ttf"
+          "woff2": "https://cdn.library.dev/fonts/skyforge/v1/Skyforge-SKYFORGE-WEBSTER.woff2",
+          "woff": "https://cdn.library.dev/fonts/skyforge/v1/Skyforge-SKYFORGE-WEBSTER.woff",
+          "ttf": "https://cdn.library.dev/fonts/skyforge/v1/Skyforge-SKYFORGE-WEBSTER.ttf"
         }
       }
     },
@@ -10017,6 +10305,8 @@
         "500italic",
         "700",
         "700italic",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -10036,6 +10326,16 @@
           "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Bold.woff",
           "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Bold.otf"
         },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Black.woff",
+          "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Black.otf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Black-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Black-Italic.otf"
+        },
         "700italic": {
           "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Bold-Italic.woff2",
           "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Bold-Italic.woff",
@@ -10047,14 +10347,14 @@
           "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Medium-Italic.otf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Ultra-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Ultra-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Regular-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Regular-Italic.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Ultra.woff",
-          "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Ultra.otf"
+          "woff2": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Regular.woff",
+          "otf": "https://cdn.library.dev/fonts/slippery/v1/Slippery-Regular.otf"
         }
       }
     },
@@ -10072,9 +10372,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/slowey/v1/Slowey Retro.woff2",
-          "woff": "https://cdn.library.dev/fonts/slowey/v1/Slowey Retro.woff",
-          "ttf": "https://cdn.library.dev/fonts/slowey/v1/Slowey Retro.ttf"
+          "woff2": "https://cdn.library.dev/fonts/slowey/v1/Slowey-Retro.woff2",
+          "woff": "https://cdn.library.dev/fonts/slowey/v1/Slowey-Retro.woff",
+          "ttf": "https://cdn.library.dev/fonts/slowey/v1/Slowey-Retro.ttf"
         }
       }
     },
@@ -10413,14 +10713,14 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/stage/v1/FootballStage-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/stage/v1/FootballStage-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/stage/v1/FootballStage-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/stage/v1/Stage-FootballStage-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/stage/v1/Stage-FootballStage-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/stage/v1/Stage-FootballStage-Regular.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/stage/v1/FootballStage-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/stage/v1/FootballStage-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/stage/v1/FootballStage-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/stage/v1/Stage-FootballStage-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/stage/v1/Stage-FootballStage-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/stage/v1/Stage-FootballStage-Italic.ttf"
         }
       }
     },
@@ -10539,14 +10839,14 @@
       "lastModified": "2025-12-25",
       "files": {
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh Daisy-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh Daisy-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh Daisy-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh-Daisy-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh-Daisy-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh-Daisy-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh Daisy-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh Daisy-Regular.woff",
-          "ttf": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh Daisy-Regular.ttf"
+          "woff2": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh-Daisy-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh-Daisy-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/swarsh/v1/Swarsh-Daisy-Regular.ttf"
         }
       }
     },
@@ -10656,9 +10956,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/talkman/v1/Talkman Player.woff2",
-          "woff": "https://cdn.library.dev/fonts/talkman/v1/Talkman Player.woff",
-          "ttf": "https://cdn.library.dev/fonts/talkman/v1/Talkman Player.ttf"
+          "woff2": "https://cdn.library.dev/fonts/talkman/v1/Talkman-Player.woff2",
+          "woff": "https://cdn.library.dev/fonts/talkman/v1/Talkman-Player.woff",
+          "ttf": "https://cdn.library.dev/fonts/talkman/v1/Talkman-Player.ttf"
         }
       }
     },
@@ -10853,6 +11153,7 @@
       "displayName": "Trellis",
       "category": "sans-serif",
       "variants": [
+        "italic",
         "regular"
       ],
       "subsets": [
@@ -10861,6 +11162,11 @@
       "version": "v1.0.0",
       "lastModified": "2025-12-25",
       "files": {
+        "italic": {
+          "woff2": "https://cdn.library.dev/fonts/trellis/v1/Trellis-Line-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/trellis/v1/Trellis-Line-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/trellis/v1/Trellis-Line-Italic.ttf"
+        },
         "regular": {
           "woff2": "https://cdn.library.dev/fonts/trellis/v1/Trellis.woff2",
           "woff": "https://cdn.library.dev/fonts/trellis/v1/Trellis.woff",
@@ -10902,6 +11208,7 @@
         "100",
         "300",
         "500",
+        "600",
         "700",
         "900",
         "regular"
@@ -10926,6 +11233,11 @@
           "woff2": "https://cdn.library.dev/fonts/typeday/v1/Typeday-Medium.woff2",
           "woff": "https://cdn.library.dev/fonts/typeday/v1/Typeday-Medium.woff",
           "ttf": "https://cdn.library.dev/fonts/typeday/v1/Typeday-Medium.ttf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/typeday/v1/Typeday-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/typeday/v1/Typeday-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/typeday/v1/Typeday-SemiBold.ttf"
         },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/typeday/v1/Typeday-Bold.woff2",
@@ -10958,9 +11270,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/typeworm/v1/Typeworn.woff2",
-          "woff": "https://cdn.library.dev/fonts/typeworm/v1/Typeworn.woff",
-          "ttf": "https://cdn.library.dev/fonts/typeworm/v1/Typeworn.ttf"
+          "woff2": "https://cdn.library.dev/fonts/typeworm/v1/Typeworm-Typeworn.woff2",
+          "woff": "https://cdn.library.dev/fonts/typeworm/v1/Typeworm-Typeworn.woff",
+          "ttf": "https://cdn.library.dev/fonts/typeworm/v1/Typeworm-Typeworn.ttf"
         }
       }
     },
@@ -11062,9 +11374,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/vaguard/v1/Spark.woff2",
-          "woff": "https://cdn.library.dev/fonts/vaguard/v1/Spark.woff",
-          "ttf": "https://cdn.library.dev/fonts/vaguard/v1/Spark.ttf"
+          "woff2": "https://cdn.library.dev/fonts/vaguard/v1/Vaguard-Spark.woff2",
+          "woff": "https://cdn.library.dev/fonts/vaguard/v1/Vaguard-Spark.woff",
+          "ttf": "https://cdn.library.dev/fonts/vaguard/v1/Vaguard-Spark.ttf"
         }
       }
     },
@@ -11082,9 +11394,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/valorforge/v1/Valor Forge.woff2",
-          "woff": "https://cdn.library.dev/fonts/valorforge/v1/Valor Forge.woff",
-          "ttf": "https://cdn.library.dev/fonts/valorforge/v1/Valor Forge.ttf"
+          "woff2": "https://cdn.library.dev/fonts/valorforge/v1/Valorforge-Valor-Forge.woff2",
+          "woff": "https://cdn.library.dev/fonts/valorforge/v1/Valorforge-Valor-Forge.woff",
+          "ttf": "https://cdn.library.dev/fonts/valorforge/v1/Valorforge-Valor-Forge.ttf"
         }
       }
     },
@@ -11168,9 +11480,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/vintage/v1/Vintage Horror.woff2",
-          "woff": "https://cdn.library.dev/fonts/vintage/v1/Vintage Horror.woff",
-          "ttf": "https://cdn.library.dev/fonts/vintage/v1/Vintage Horror.ttf"
+          "woff2": "https://cdn.library.dev/fonts/vintage/v1/Vintage-Horror.woff2",
+          "woff": "https://cdn.library.dev/fonts/vintage/v1/Vintage-Horror.woff",
+          "ttf": "https://cdn.library.dev/fonts/vintage/v1/Vintage-Horror.ttf"
         }
       }
     },
@@ -11241,8 +11553,11 @@
       "variants": [
         "100",
         "100italic",
+        "600",
         "700",
         "700italic",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -11257,10 +11572,25 @@
           "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Thin.woff",
           "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Thin.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Bold.ttf"
+        },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Black-Italic.ttf"
         },
         "700italic": {
           "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Bold-Italic.woff2",
@@ -11268,14 +11598,14 @@
           "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Bold-Italic.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Regular-Italic.ttf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Regular.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/walkie/v1/Walkierie-Thin-Italic.woff2",
@@ -11317,7 +11647,10 @@
         "500italic",
         "700",
         "700italic",
+        "800",
+        "800italic",
         "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -11347,20 +11680,25 @@
           "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold.ttf"
         },
+        "800": {
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-ExtraBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-ExtraBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-ExtraBold.ttf"
+        },
         "900": {
           "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Black.woff2",
           "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Black.woff",
           "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Black.ttf"
         },
-        "700italic": {
-          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold-Oblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold-Oblique.ttf"
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Black-Italic.ttf"
         },
-        "italic": {
-          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular-Oblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular-Oblique.ttf"
+        "700italic": {
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Condensed-Bold-Italic.ttf"
         },
         "regular": {
           "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular.woff2",
@@ -11368,19 +11706,29 @@
           "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular.ttf"
         },
         "300italic": {
-          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Light-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Light-Oblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Light-Oblique.ttf"
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Light-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Light-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Light-Italic.ttf"
+        },
+        "italic": {
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Regular-Italic.ttf"
         },
         "500italic": {
-          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Medium-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Medium-Oblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Medium-Oblique.ttf"
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Medium-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Medium-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Medium-Italic.ttf"
         },
         "100italic": {
-          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Thin-Oblique.woff2",
-          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Thin-Oblique.woff",
-          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Thin-Oblique.ttf"
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Thin-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Thin-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-Thin-Italic.ttf"
+        },
+        "800italic": {
+          "woff2": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-ExtraBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-ExtraBold-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/walsheim/v1/Walsheim-ExtraBold-Italic.ttf"
         }
       }
     },
@@ -11437,7 +11785,10 @@
       "variants": [
         "100",
         "100italic",
+        "600",
         "700",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -11452,20 +11803,35 @@
           "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Thin.woff",
           "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Thin.ttf"
         },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-SemiBold.woff",
+          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-SemiBold.ttf"
+        },
         "700": {
           "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Bold.woff2",
           "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Bold.woff",
           "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Bold.ttf"
         },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Black.woff",
+          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Black.ttf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Black-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Black-Italic.ttf"
+        },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Ultra.woff",
-          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Ultra.ttf"
+          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Regular.woff",
+          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Regular.ttf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Ultra-Italic.woff",
-          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Ultra-Italic.ttf"
+          "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Italic.woff",
+          "ttf": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Italic.ttf"
         },
         "100italic": {
           "woff2": "https://cdn.library.dev/fonts/wevely/v1/Wevely-Thin-Italic.woff2",
@@ -11506,12 +11872,17 @@
       "category": "sans-serif",
       "variants": [
         "100",
+        "100italic",
         "300",
         "300italic",
         "500",
         "500italic",
+        "600",
+        "600italic",
         "700",
         "700italic",
+        "900",
+        "900italic",
         "italic",
         "regular"
       ],
@@ -11522,49 +11893,74 @@
       "lastModified": "2025-12-25",
       "files": {
         "100": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Thin.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Thin.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Thin.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Thin.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Thin.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Thin.otf"
         },
         "300": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Light.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Light.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Light.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Light.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Light.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Light.otf"
         },
         "500": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Medium.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Medium.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Medium.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Medium.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Medium.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Medium.otf"
+        },
+        "600": {
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-SemiBold.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-SemiBold.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-SemiBold.otf"
         },
         "700": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Bold.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Bold.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Bold.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Bold.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Bold.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Bold.otf"
+        },
+        "900": {
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Black.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Black.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Black.otf"
+        },
+        "900italic": {
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Black-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Black-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Black-Italic.otf"
         },
         "700italic": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Bold-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Bold-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Bold-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Bold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Bold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Bold-Italic.otf"
         },
         "300italic": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Light-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Light-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Light-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Light-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Light-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Light-Italic.otf"
         },
         "500italic": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Medium-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Medium-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Medium-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Medium-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Medium-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Medium-Italic.otf"
         },
         "italic": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Ultra-Italic.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Ultra-Italic.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Ultra-Italic.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Tiny-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Tiny-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Tiny-Italic.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widy-Ultra.woff2",
-          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widy-Ultra.woff",
-          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widy-Ultra.otf"
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Tiny.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Tiny.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Tiny.otf"
+        },
+        "600italic": {
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-SemiBold-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-SemiBold-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-SemiBold-Italic.otf"
+        },
+        "100italic": {
+          "woff2": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Thin-Italic.woff2",
+          "woff": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Thin-Italic.woff",
+          "otf": "https://cdn.library.dev/fonts/widdy/v1/Widdy-Widy-Thin-Italic.otf"
         }
       }
     },
@@ -11648,9 +12044,9 @@
           "otf": "https://cdn.library.dev/fonts/woller/v1/Woller-Regular-Italic.otf"
         },
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/woller/v1/Wolves-Regular.woff2",
-          "woff": "https://cdn.library.dev/fonts/woller/v1/Wolves-Regular.woff",
-          "otf": "https://cdn.library.dev/fonts/woller/v1/Wolves-Regular.otf"
+          "woff2": "https://cdn.library.dev/fonts/woller/v1/Woller-Wolves-Regular.woff2",
+          "woff": "https://cdn.library.dev/fonts/woller/v1/Woller-Wolves-Regular.woff",
+          "otf": "https://cdn.library.dev/fonts/woller/v1/Woller-Wolves-Regular.otf"
         }
       }
     },
@@ -11708,9 +12104,9 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/zesty/v1/Zesty Scribs.woff2",
-          "woff": "https://cdn.library.dev/fonts/zesty/v1/Zesty Scribs.woff",
-          "otf": "https://cdn.library.dev/fonts/zesty/v1/Zesty Scribs.otf"
+          "woff2": "https://cdn.library.dev/fonts/zesty/v1/Zesty-Scribs.woff2",
+          "woff": "https://cdn.library.dev/fonts/zesty/v1/Zesty-Scribs.woff",
+          "otf": "https://cdn.library.dev/fonts/zesty/v1/Zesty-Scribs.otf"
         }
       }
     },
@@ -11748,17 +12144,17 @@
       "lastModified": "2025-12-25",
       "files": {
         "regular": {
-          "woff2": "https://cdn.library.dev/fonts/vacelyn/v1/Vacelyn.woff2",
-          "woff": "https://cdn.library.dev/fonts/vacelyn/v1/Vacelyn.woff",
-          "ttf": "https://cdn.library.dev/fonts/vacelyn/v1/Vacelyn.ttf"
+          "woff2": "https://cdn.library.dev/fonts/vacelyn/v1/vacelyn-Vacelyn.woff2",
+          "woff": "https://cdn.library.dev/fonts/vacelyn/v1/vacelyn-Vacelyn.woff",
+          "ttf": "https://cdn.library.dev/fonts/vacelyn/v1/vacelyn-Vacelyn.ttf"
         }
       }
     }
   },
   "metadata": {
     "version": "1.0.0",
-    "generated": "2025-12-25T01:52:56.203Z",
+    "generated": "2025-12-25T02:27:01.789Z",
     "totalFamilies": 441,
-    "totalVariants": 930
+    "totalVariants": 996
   }
 }
