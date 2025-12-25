@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Library Explorer</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --success: #10b981;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-tertiary: #94a3b8;
+            --border: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --radius: 8px;
+            --radius-sm: 4px;
+            --radius-lg: 12px;
+        }
+
+        [data-theme="dark"] {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --success: #34d399;
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-tertiary: #64748b;
+            --border: #334155;
+            --border-hover: #475569;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.5rem 0.75rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+        }
+
+        /* Tabs */
+        .tabs {
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border);
+            margin-top: 1px;
+        }
+
+        .tab-list {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .tab-button {
+            padding: 1rem 1.5rem;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+
+        .tab-button.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Search & Filter Bar */
+        .toolbar {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toolbar-row {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.9375rem;
+            transition: all 0.2s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .select {
+            padding: 0.75rem 2.5rem 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+        }
+
+        .select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .toolbar-stats {
+            margin-left: auto;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Font Card */
+        .font-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .font-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .font-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .font-info h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .font-meta {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--radius-sm);
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            text-transform: capitalize;
+        }
+
+        .badge.primary {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+        }
+
+        .font-preview {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            text-align: center;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .font-variants {
+            display: flex;
+            gap: 0.375rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .variant-tag {
+            font-size: 0.6875rem;
+            padding: 0.1875rem 0.375rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+        }
+
+        .font-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 0.625rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn.primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn.primary:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+            color: white;
+        }
+
+        /* Icon Card */
+        .icon-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .icon-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .icon-preview {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+        }
+
+        .icon-preview svg {
+            width: 48px;
+            height: 48px;
+            color: var(--text-primary);
+        }
+
+        .icon-name {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-transform: capitalize;
+        }
+
+        .icon-variants {
+            display: flex;
+            gap: 0.25rem;
+            justify-content: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .variant-btn {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.6875rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+
+        .variant-btn:hover,
+        .variant-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .modal-close {
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .preview-section {
+            margin-bottom: 2rem;
+        }
+
+        .preview-section h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .preview-text {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .preview-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.9375rem;
+        }
+
+        .code-section {
+            margin-top: 1.5rem;
+        }
+
+        .code-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .code-tab {
+            padding: 0.5rem 0.75rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 0.8125rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .code-tab:hover,
+        .code-tab.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .code-block {
+            display: none;
+            position: relative;
+        }
+
+        .code-block.active {
+            display: block;
+        }
+
+        .code-pre {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: 0.8125rem;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.375rem 0.75rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+
+        .copy-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+            border-color: var(--success);
+            color: white;
+        }
+
+        /* Loading & Empty States */
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .empty-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--bg-tertiary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            font-size: 2rem;
+        }
+
+        .empty-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-text {
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-stats {
+                display: none;
+            }
+
+            .toolbar-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .filter-group {
+                flex-wrap: wrap;
+            }
+
+            .toolbar-stats {
+                margin-left: 0;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                padding: 1rem;
+            }
+        }
+
+        /* Utilities */
+        .hidden {
+            display: none !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">AL</div>
+                    <h1>Asset Library</h1>
+                </div>
+                <div class="header-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="totalFonts">442</span>
+                        <span class="stat-label">Fonts</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="totalIcons">1,512</span>
+                        <span class="stat-label">Icons</span>
+                    </div>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+        <div class="container">
+            <ul class="tab-list">
+                <li><button class="tab-button active" data-tab="fonts">Fonts</button></li>
+                <li><button class="tab-button" data-tab="icons">Icons</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Fonts Tab -->
+        <div id="fonts" class="tab-panel active">
+            <div class="toolbar">
+                <div class="toolbar-row">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="fontSearch" placeholder="Search fonts...">
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Category:</label>
+                        <select class="select" id="fontCategory">
+                            <option value="">All Categories</option>
+                            <option value="sans-serif">Sans Serif</option>
+                            <option value="serif">Serif</option>
+                            <option value="monospace">Monospace</option>
+                            <option value="display">Display</option>
+                            <option value="script">Script</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Sort:</label>
+                        <select class="select" id="fontSort">
+                            <option value="name">Name</option>
+                            <option value="variants">Most Variants</option>
+                            <option value="recent">Recently Added</option>
+                        </select>
+                    </div>
+                    <span class="toolbar-stats" id="fontCount">Loading...</span>
+                </div>
+            </div>
+            <div id="fontGrid" class="grid">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading fonts...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Icons Tab -->
+        <div id="icons" class="tab-panel">
+            <div class="toolbar">
+                <div class="toolbar-row">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="iconSearch" placeholder="Search icons...">
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Category:</label>
+                        <select class="select" id="iconCategory">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Variant:</label>
+                        <select class="select" id="iconVariant">
+                            <option value="regular">Regular</option>
+                            <option value="bold">Bold</option>
+                            <option value="fill">Fill</option>
+                            <option value="duotone">Duotone</option>
+                            <option value="thin">Thin</option>
+                            <option value="light">Light</option>
+                        </select>
+                    </div>
+                    <span class="toolbar-stats" id="iconCount">Loading...</span>
+                </div>
+            </div>
+            <div id="iconGrid" class="grid">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading icons...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Font Modal -->
+    <div id="fontModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalFontName">Font Name</h2>
+                <button class="modal-close" onclick="closeFontModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-section">
+                    <h4>Preview</h4>
+                    <div class="preview-text" id="modalFontPreview">
+                        The quick brown fox jumps over the lazy dog
+                    </div>
+                    <input type="text" class="preview-input" id="previewTextInput"
+                           value="The quick brown fox jumps over the lazy dog"
+                           placeholder="Type to preview...">
+                </div>
+
+                <div class="preview-section">
+                    <h4>Font Information</h4>
+                    <div id="modalFontInfo"></div>
+                </div>
+
+                <div class="code-section">
+                    <h4 class="mb-1">Usage</h4>
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-code-tab="css">CSS</button>
+                        <button class="code-tab" data-code-tab="html">HTML</button>
+                        <button class="code-tab" data-code-tab="url">CDN URL</button>
+                    </div>
+                    <div id="cssCode" class="code-block active">
+                        <button class="copy-btn" onclick="copyCode('cssCode')">Copy</button>
+                        <pre class="code-pre" id="cssCodeContent"></pre>
+                    </div>
+                    <div id="htmlCode" class="code-block">
+                        <button class="copy-btn" onclick="copyCode('htmlCode')">Copy</button>
+                        <pre class="code-pre" id="htmlCodeContent"></pre>
+                    </div>
+                    <div id="urlCode" class="code-block">
+                        <button class="copy-btn" onclick="copyCode('urlCode')">Copy</button>
+                        <pre class="code-pre" id="urlCodeContent"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Icon Modal -->
+    <div id="iconModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalIconName">Icon Name</h2>
+                <button class="modal-close" onclick="closeIconModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-section">
+                    <h4>Preview</h4>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                        <div style="text-align: center;">
+                            <div class="icon-preview" id="modalIconPreviewRegular"></div>
+                            <small style="color: var(--text-secondary);">Regular</small>
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="icon-preview" id="modalIconPreviewBold"></div>
+                            <small style="color: var(--text-secondary);">Bold</small>
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="icon-preview" id="modalIconPreviewFill"></div>
+                            <small style="color: var(--text-secondary);">Fill</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <h4 class="mb-1">Usage</h4>
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-code-tab="svg">SVG</button>
+                        <button class="code-tab" data-code-tab="react">React</button>
+                        <button class="code-tab" data-code-tab="cdn">CDN</button>
+                    </div>
+                    <div id="svgCode" class="code-block active">
+                        <button class="copy-btn" onclick="copyCode('svgCode')">Copy</button>
+                        <pre class="code-pre" id="svgCodeContent"></pre>
+                    </div>
+                    <div id="reactCode" class="code-block">
+                        <button class="copy-btn" onclick="copyCode('reactCode')">Copy</button>
+                        <pre class="code-pre" id="reactCodeContent"></pre>
+                    </div>
+                    <div id="cdnCode" class="code-block">
+                        <button class="copy-btn" onclick="copyCode('cdnCode')">Copy</button>
+                        <pre class="code-pre" id="cdnCodeContent"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API Base URL
+        const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+            ? 'http://localhost:3000/api/v1'
+            : '/api/v1';
+
+        // State
+        let allFonts = [];
+        let allIcons = [];
+        let currentFont = null;
+        let currentIcon = null;
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            themeText.textContent = theme === 'dark' ? 'Light' : 'Dark';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        setTheme(currentTheme);
+
+        // Tab Switching
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.dataset.tab;
+
+                // Update buttons
+                document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                button.classList.add('active');
+
+                // Update panels
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+
+        // Code Tab Switching
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('code-tab')) {
+                const tabName = e.target.dataset.codeTab;
+                const parent = e.target.closest('.code-section');
+
+                parent.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+
+                parent.querySelectorAll('.code-block').forEach(b => b.classList.remove('active'));
+                parent.querySelector(`#${tabName}Code`).classList.add('active');
+            }
+        });
+
+        // Copy Code
+        function copyCode(blockId) {
+            const block = document.getElementById(blockId);
+            const pre = block.querySelector('.code-pre');
+            const btn = block.querySelector('.copy-btn');
+
+            navigator.clipboard.writeText(pre.textContent).then(() => {
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Load Fonts
+        async function loadFonts() {
+            try {
+                // Try to load from API first
+                const response = await fetch(`${API_BASE}/fonts`);
+                if (response.ok) {
+                    const data = await response.json();
+                    allFonts = data.fonts || [];
+                } else {
+                    throw new Error('API not available');
+                }
+            } catch (error) {
+                // Fallback to local data file
+                try {
+                    const response = await fetch('../data/fonts-api-db.json');
+                    const data = await response.json();
+                    allFonts = data;
+                } catch (err) {
+                    console.error('Failed to load fonts:', err);
+                    allFonts = getMockFonts();
+                }
+            }
+
+            renderFonts();
+        }
+
+        // Load Icons
+        async function loadIcons() {
+            try {
+                // Try to load from API first
+                const response = await fetch(`${API_BASE}/icons`);
+                if (response.ok) {
+                    const data = await response.json();
+                    allIcons = data.icons || [];
+
+                    // Populate categories
+                    const categories = [...new Set(allIcons.map(i => i.category))].sort();
+                    const categorySelect = document.getElementById('iconCategory');
+                    categories.forEach(cat => {
+                        const option = document.createElement('option');
+                        option.value = cat;
+                        option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+                        categorySelect.appendChild(option);
+                    });
+                } else {
+                    throw new Error('API not available');
+                }
+            } catch (error) {
+                // Fallback to local data file
+                try {
+                    const response = await fetch('../data/icons-api-db.json');
+                    const data = await response.json();
+                    const phosphor = data.providers?.phosphor?.icons || {};
+                    allIcons = Object.values(phosphor);
+
+                    // Populate categories
+                    const categories = [...new Set(allIcons.map(i => i.category))].sort();
+                    const categorySelect = document.getElementById('iconCategory');
+                    categories.forEach(cat => {
+                        const option = document.createElement('option');
+                        option.value = cat;
+                        option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+                        categorySelect.appendChild(option);
+                    });
+                } catch (err) {
+                    console.error('Failed to load icons:', err);
+                    allIcons = getMockIcons();
+                }
+            }
+
+            renderIcons();
+        }
+
+        // Render Fonts
+        function renderFonts() {
+            const search = document.getElementById('fontSearch').value.toLowerCase();
+            const category = document.getElementById('fontCategory').value;
+            const sort = document.getElementById('fontSort').value;
+
+            let filtered = allFonts.filter(font => {
+                const matchesSearch = font.family?.toLowerCase().includes(search) ||
+                                    font.displayName?.toLowerCase().includes(search);
+                const matchesCategory = !category || font.category === category;
+                return matchesSearch && matchesCategory;
+            });
+
+            // Sort
+            if (sort === 'name') {
+                filtered.sort((a, b) => (a.family || a.displayName || '').localeCompare(b.family || b.displayName || ''));
+            } else if (sort === 'variants') {
+                filtered.sort((a, b) => (b.variants?.length || 0) - (a.variants?.length || 0));
+            }
+
+            const grid = document.getElementById('fontGrid');
+            document.getElementById('fontCount').textContent = `${filtered.length} fonts`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-icon">🔍</div>
+                        <h3 class="empty-title">No fonts found</h3>
+                        <p class="empty-text">Try adjusting your search or filters</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(font => `
+                <div class="font-card" onclick="openFontModal(${JSON.stringify(font).replace(/"/g, '&quot;')})">
+                    <div class="font-header">
+                        <div class="font-info">
+                            <h3>${font.displayName || font.family}</h3>
+                            <div class="font-meta">
+                                <span class="badge primary">${font.category || 'sans-serif'}</span>
+                                <span class="badge">${font.variants?.length || 0} variants</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="font-preview" style="font-family: '${font.family || font.displayName}', sans-serif;">
+                        Aa Bb Cc
+                    </div>
+                    <div class="font-variants">
+                        ${(font.variants || []).slice(0, 8).map(v =>
+                            `<span class="variant-tag">${v}</span>`
+                        ).join('')}
+                        ${(font.variants?.length || 0) > 8 ? '<span class="variant-tag">+' + ((font.variants?.length || 0) - 8) + '</span>' : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Render Icons
+        function renderIcons() {
+            const search = document.getElementById('iconSearch').value.toLowerCase();
+            const category = document.getElementById('iconCategory').value;
+            const variant = document.getElementById('iconVariant').value;
+
+            let filtered = allIcons.filter(icon => {
+                const matchesSearch = icon.name?.toLowerCase().includes(search) ||
+                                    icon.displayName?.toLowerCase().includes(search) ||
+                                    icon.tags?.some(t => t.toLowerCase().includes(search));
+                const matchesCategory = !category || icon.category === category;
+                return matchesSearch && matchesCategory;
+            });
+
+            const grid = document.getElementById('iconGrid');
+            document.getElementById('iconCount').textContent = `${filtered.length} icons`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-icon">🔍</div>
+                        <h3 class="empty-title">No icons found</h3>
+                        <p class="empty-text">Try adjusting your search or filters</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(icon => `
+                <div class="icon-card" onclick="openIconModal(${JSON.stringify(icon).replace(/"/g, '&quot;')})">
+                    <div class="icon-preview">
+                        <svg viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"/>
+                            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="currentColor" font-size="128">
+                                📦
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="icon-name">${icon.displayName || icon.name}</div>
+                    <div class="font-meta">
+                        <span class="badge">${icon.category || 'objects'}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Open Font Modal
+        function openFontModal(font) {
+            currentFont = font;
+            const modal = document.getElementById('fontModal');
+
+            document.getElementById('modalFontName').textContent = font.displayName || font.family;
+            document.getElementById('modalFontPreview').style.fontFamily = `'${font.family || font.displayName}', sans-serif`;
+
+            // Font Info
+            document.getElementById('modalFontInfo').innerHTML = `
+                <div class="font-meta mb-1">
+                    <span class="badge primary">${font.category || 'sans-serif'}</span>
+                    <span class="badge">${font.variants?.length || 0} variants</span>
+                </div>
+                <div class="font-variants">
+                    ${(font.variants || []).map(v => `<span class="variant-tag">${v}</span>`).join('')}
+                </div>
+            `;
+
+            // Generate code snippets
+            const family = font.family || font.displayName;
+            const weights = (font.variants || ['400']).join(';');
+
+            document.getElementById('cssCodeContent').textContent = `@import url('https://cdn.library.dev/css?family=${family}:wght@${weights}');
+
+.my-text {
+  font-family: '${family}', sans-serif;
+  font-weight: 400;
+}`;
+
+            document.getElementById('htmlCodeContent').textContent = `<link rel="stylesheet" href="https://cdn.library.dev/css?family=${family}:wght@${weights}">
+
+<p style="font-family: '${family}', sans-serif;">
+  Your text here
+</p>`;
+
+            document.getElementById('urlCodeContent').textContent = `https://cdn.library.dev/css?family=${family}:wght@${weights}`;
+
+            modal.classList.add('active');
+        }
+
+        function closeFontModal() {
+            document.getElementById('fontModal').classList.remove('active');
+        }
+
+        // Open Icon Modal
+        function openIconModal(icon) {
+            currentIcon = icon;
+            const modal = document.getElementById('iconModal');
+
+            document.getElementById('modalIconName').textContent = icon.displayName || icon.name;
+
+            // Would load actual SVG here in production
+            ['Regular', 'Bold', 'Fill'].forEach(variant => {
+                document.getElementById(`modalIconPreview${variant}`).innerHTML = `
+                    <svg viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"/>
+                        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="currentColor" font-size="128">
+                            📦
+                        </text>
+                    </svg>
+                `;
+            });
+
+            // Generate code snippets
+            const name = icon.name;
+            const displayName = icon.displayName || icon.name;
+
+            document.getElementById('svgCodeContent').textContent = `<!-- Inline SVG -->
+<svg width="24" height="24" viewBox="0 0 256 256">
+  <!-- SVG path data here -->
+</svg>`;
+
+            document.getElementById('reactCodeContent').textContent = `import { ${displayName.replace(/[^a-zA-Z0-9]/g, '')}Regular } from '@library/icons/phosphor/react';
+
+function MyComponent() {
+  return <${displayName.replace(/[^a-zA-Z0-9]/g, '')}Regular size={24} />;
+}`;
+
+            document.getElementById('cdnCodeContent').textContent = `https://cdn.library.dev/icons/phosphor/v1/svg/regular/${name}.svg`;
+
+            modal.classList.add('active');
+        }
+
+        function closeIconModal() {
+            document.getElementById('iconModal').classList.remove('active');
+        }
+
+        // Preview Text Input
+        document.getElementById('previewTextInput').addEventListener('input', (e) => {
+            document.getElementById('modalFontPreview').textContent = e.target.value;
+        });
+
+        // Close modals on background click
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+
+        // Search and Filter Event Listeners
+        document.getElementById('fontSearch').addEventListener('input', renderFonts);
+        document.getElementById('fontCategory').addEventListener('change', renderFonts);
+        document.getElementById('fontSort').addEventListener('change', renderFonts);
+        document.getElementById('iconSearch').addEventListener('input', renderIcons);
+        document.getElementById('iconCategory').addEventListener('change', renderIcons);
+        document.getElementById('iconVariant').addEventListener('change', renderIcons);
+
+        // Mock Data (fallback)
+        function getMockFonts() {
+            return [
+                { family: 'Aeonik', displayName: 'Aeonik', category: 'sans-serif', variants: ['100', '300', '400', '500', '700', '900'] },
+                { family: 'Adren', displayName: 'Adren', category: 'sans-serif', variants: ['400', '700'] },
+                { family: 'Aboca', displayName: 'Aboca', category: 'serif', variants: ['400', '700'] }
+            ];
+        }
+
+        function getMockIcons() {
+            return [
+                { name: 'acorn', displayName: 'Acorn', category: 'objects', tags: ['acorn'] },
+                { name: 'address-book', displayName: 'Address Book', category: 'communication', tags: ['address', 'book'] },
+                { name: 'alarm', displayName: 'Alarm', category: 'system', tags: ['alarm', 'clock'] }
+            ];
+        }
+
+        // Initialize
+        loadFonts();
+        loadIcons();
+    </script>
+</body>
+</html>
