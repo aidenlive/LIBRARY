@@ -1,6 +1,6 @@
 # Typography Public API
 
-Free, open-source typography API with 441 font families.
+Free, open-source typography API with **442 font families** and **2,558 web font files**.
 
 ## Quick Start
 
@@ -287,4 +287,4 @@ MIT License - see LICENSE file
 ## Related
 
 - [Google Fonts API](https://developers.google.com/fonts/docs/getting_started) - Inspiration for API design
-- [TYPOGRAPHY-PUBLIC-API-PROPOSAL.md](../TYPOGRAPHY-PUBLIC-API-PROPOSAL.md) - Full project proposal
+- [@archives/TYPOGRAPHY-PUBLIC-API-PROPOSAL.md](../@archives/TYPOGRAPHY-PUBLIC-API-PROPOSAL.md) - Original project proposal
