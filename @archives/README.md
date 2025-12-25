@@ -8,6 +8,7 @@ These files are preserved for reference but are no longer actively used.
 ### Root Files
 
 - **TYPOGRAPHY-PUBLIC-API-PROPOSAL.md** - Original project proposal (implemented Dec 2025)
+- **index.html** - Outdated redirect to public/index.html (public directory removed Dec 2025)
 
 ### data/
 
