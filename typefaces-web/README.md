@@ -1,25 +1,27 @@
 # Web Fonts Directory
 
-This directory contains web-optimized font files (WOFF2 and WOFF formats).
+Web-optimized font files in WOFF2 and WOFF formats.
 
 ## Overview
 
-- **Total Families:** [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
-- **Original Fonts:** 1279 files (131.84 MB)
-- **WOFF2 Fonts:** 1279 files (92.29 MB)
-- **WOFF Fonts:** 1279 files (105.47 MB)
+| Metric | Value |
+|--------|-------|
+| Total Families | 442 |
+| WOFF2 Files | 1,279 |
+| WOFF Files | 1,279 |
+| Total Size | 130.6 MB |
 
 ## Format Support
 
-### WOFF2 (Web Open Font Format 2)
+### WOFF2 (Web Open Font Format 2) - Primary
 - **Browser Support:** Chrome 36+, Firefox 39+, Safari 12+, Edge 14+
 - **Compression:** ~30% better than WOFF, ~50% better than TTF/OTF
-- **Priority:** Primary web format (serve first)
+- **Use:** Serve first for modern browsers
 
-### WOFF (Web Open Font Format)
+### WOFF (Web Open Font Format) - Fallback
 - **Browser Support:** Chrome 6+, Firefox 3.6+, Safari 5.1+, IE 9+
 - **Compression:** ~20% better than TTF/OTF
-- **Priority:** Fallback for older browsers
+- **Use:** Fallback for older browsers
 
 ## Directory Structure
 
@@ -33,18 +35,12 @@ typefaces-web/
 │   └── ...
 ├── Certia/
 │   └── ...
-└── ...
+└── [440 more families...]
 ```
 
-## Conversion
-
-Web fonts generated using:
-- `fonttools` (Python) - Font manipulation
-- `brotli` - WOFF2 compression
-
-See `scripts/convert-to-web-formats.sh` for conversion script.
-
 ## Usage in CSS
+
+### Basic Usage
 
 ```css
 @font-face {
@@ -57,14 +53,30 @@ See `scripts/convert-to-web-formats.sh` for conversion script.
 }
 ```
 
+### Using the API
+
+For automatic CSS generation, use the Typography API:
+
+```html
+<link href="http://localhost:3000/css?family=Aeonik:wght@400;700&display=swap" rel="stylesheet">
+```
+
+## Conversion
+
+Web fonts generated using:
+- `fonttools` (Python) - Font manipulation
+- `brotli` - WOFF2 compression
+
+See `scripts/batch-convert-web.py` for the conversion script.
+
 ## CDN Deployment
 
-Once converted, these files will be deployed to:
-- **CDN:** `cdn.library.dev/fonts/`
+When deployed, files will be available at:
+- **CDN URL:** `https://cdn.library.dev/fonts/{family}/v1/{file}`
 - **Cache:** 1 year (immutable)
 - **Compression:** Brotli + Gzip
 
 ---
 
-**Generated:** 2025-12-24T21:36:37.642Z
-**Status:** Converted
+**Generated:** December 25, 2025
+**Status:** Complete (1,279 WOFF2 + 1,279 WOFF files)

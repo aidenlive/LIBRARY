@@ -7,96 +7,133 @@ Automation scripts for the Typography Public API project.
 ```bash
 # Install Node.js dependencies
 npm install
+
+# Install Python dependencies (for web font conversion)
+pip3 install fonttools brotli zopfli
 ```
 
-## Scripts
+## Scripts Overview
 
-### 1. Font Metadata Extraction
+| Script | Purpose | Status |
+|--------|---------|--------|
+| `batch-convert-web.py` | Convert TTF/OTF to WOFF2/WOFF | Complete |
+| `generate-metadata.js` | Generate API database | Complete |
+| `extract-metadata.js` | Extract font metadata | Complete |
+| `analyze-naming.js` | Analyze naming patterns | Complete |
+| `normalize-names.js` | Standardize file names | Complete |
+| `classify-fonts.js` | Categorize fonts | Complete |
+| `prepare-web-fonts.js` | Prepare web conversion | Complete |
+| `comprehensive-cleanup.js` | Full repository cleanup | Complete |
+| `convert-to-web-formats.sh` | Shell conversion script | Complete |
 
-Extracts comprehensive metadata from all font files in the `typefaces/` directory.
+## Main Scripts
+
+### 1. Web Font Conversion (Python)
+
+Converts all TTF/OTF fonts to web formats (WOFF2 and WOFF).
 
 ```bash
-npm run extract-metadata
-# or
-node scripts/extract-metadata.js
+python3 scripts/batch-convert-web.py
 ```
 
 **Output:**
-- `data/fonts-metadata.json` - Complete metadata database
+- `typefaces-web/` - WOFF2 and WOFF files organized by family
+- Converts 1,279 fonts in ~5 minutes
 
-**Extracted Information:**
-- Font family and subfamily names
-- Weight and style information
-- OpenType features
-- Character coverage (Latin, Cyrillic, Greek, etc.)
-- File size and format
-- Designer and license information (when available)
-- Font metrics (ascender, descender, x-height, etc.)
+### 2. Metadata Generation
 
-### 2. Naming Analysis
-
-Analyzes naming patterns and generates standardization mapping.
+Generates the API database from font files.
 
 ```bash
-npm run analyze-naming
-# or
+node scripts/generate-metadata.js
+```
+
+**Output:**
+- `data/fonts-api-db.json` - API database (441 families, 996 variants)
+- `data/fonts-metadata.json` - Complete metadata
+
+### 3. Font Analysis
+
+Analyzes naming patterns and identifies inconsistencies.
+
+```bash
 node scripts/analyze-naming.js
 ```
 
 **Output:**
-- `data/naming-analysis.json` - Detailed issue report
-- `data/corrections-mapping.json` - Standardization mapping
+- `@archives/data/naming-analysis.json` - Issue report
+- `@archives/data/corrections-mapping.json` - Standardization mapping
 
-**Detects:**
-- Directory/file name mismatches
-- Non-standard weight names (Semi, Huge, Heavy, etc.)
-- Inconsistent naming patterns (hyphenated vs CamelCase)
-- Spaces in filenames
-- Oblique vs Italic inconsistencies
+### 4. Name Normalization
 
-### 3. Font Normalization (TODO)
-
-Renames font files according to standardization mapping.
+Renames font files to standardized format.
 
 ```bash
-npm run normalize-names -- --dry-run  # Preview changes
-npm run normalize-names                # Execute renaming
+# Preview changes (safe)
+node scripts/normalize-names.js --dry-run
+
+# Execute changes (creates backup)
+node scripts/normalize-names.js --execute
 ```
 
-**NOT YET IMPLEMENTED** - Will be created after review of analysis results.
+**Features:**
+- Creates backup before renaming
+- Standardizes weights (Semi → SemiBold, Heavy → Black, etc.)
+- Converts Oblique → Italic
+- Removes spaces from filenames
 
-### 4. Web Format Conversion (TODO)
+### 5. Font Classification
 
-Converts TTF/OTF fonts to WOFF2 and WOFF formats.
+Categorizes fonts (sans-serif, serif, mono, script, display).
 
 ```bash
-npm run convert-formats
+node scripts/classify-fonts.js
 ```
 
-**NOT YET IMPLEMENTED** - Requires Python fonttools installation.
+**Output:**
+- `data/font-categories.json` - Category assignments
 
 ## Output Files
 
-All generated files are saved to the `data/` directory:
+### Active (in `data/`)
 
 ```
 data/
-├── fonts-metadata.json        # Complete font metadata database
-├── naming-analysis.json       # Naming issues report
-└── corrections-mapping.json   # Standardization corrections
+├── fonts-api-db.json      # API database (active)
+├── fonts-metadata.json    # Font metadata (active)
+└── font-categories.json   # Category data (active)
+```
+
+### Archived (in `@archives/data/`)
+
+```
+@archives/data/
+├── cleanup-log.json       # Normalization log
+├── corrections-mapping.json
+├── naming-analysis.json
+├── conversion-queue.json
+├── web-fonts-analysis.json
+└── manual-review-queue.json
 ```
 
 ## Development Workflow
 
-1. **Extract metadata** - Get comprehensive font information
-2. **Analyze naming** - Identify naming inconsistencies
-3. **Review reports** - Manual review of generated files
-4. **Normalize names** - Apply standardization (after approval)
-5. **Convert formats** - Generate WOFF2/WOFF versions
+The complete workflow has been executed:
+
+1. **Extract metadata** - Get font information
+2. **Analyze naming** - Identify inconsistencies
+3. **Normalize names** - Standardize filenames (547 files renamed)
+4. **Classify fonts** - Assign categories
+5. **Convert formats** - Generate WOFF2/WOFF (2,558 files)
+6. **Generate API DB** - Create fonts-api-db.json
 
 ## Notes
 
-- Scripts use `opentype.js` for font parsing
-- All scripts are non-destructive (read-only) except normalization
-- Normalization script will create backups before renaming
-- Progress is displayed in the terminal with color-coded output
+- All scripts use `opentype.js` for font parsing (Node.js)
+- Web conversion uses `fonttools` (Python)
+- Normalization creates backups in `typefaces-backup/`
+- Original intermediate files archived in `@archives/data/`
+
+---
+
+**Last Updated:** December 25, 2025
