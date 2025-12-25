@@ -1,0 +1,29 @@
+{
+  "name": "@library/typography-api",
+  "version": "1.0.0",
+  "description": "Typography Public API - Free font API with 441 font families",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "echo \"API tests coming soon\" && exit 0"
+  },
+  "keywords": [
+    "fonts",
+    "typography",
+    "api",
+    "web-fonts",
+    "css"
+  ],
+  "author": "LIBRARY",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

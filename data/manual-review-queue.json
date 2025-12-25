@@ -1,0 +1,4134 @@
+{
+  "metadata": {
+    "generated": "2025-12-24T21:30:08.979Z",
+    "totalItems": 432
+  },
+  "fonts": [
+    {
+      "family": "Aboca",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Aboca.ttf"
+      ]
+    },
+    {
+      "family": "Adren",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Adren-Black-Italic.otf",
+        "Adren-Black.otf",
+        "Adren-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Aeonik",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Aeonik-Air-Italic.otf",
+        "Aeonik-Air.otf",
+        "Aeonik-Black-Italic.otf"
+      ]
+    },
+    {
+      "family": "After",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "After-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Ageo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ageo-Bold.otf",
+        "Ageo-BoldItalic.otf",
+        "Ageo-ExtraBold.otf"
+      ]
+    },
+    {
+      "family": "Aimflash",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Aimflash-Italic.ttf",
+        "Aimflash-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Alloy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Alloy-Bold-Italic.ttf",
+        "Alloy-Bold.ttf",
+        "Alloy-Book-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Almonde",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Almonde.ttf"
+      ]
+    },
+    {
+      "family": "Altone",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Altone-Bold-Italic.ttf",
+        "Altone-Bold.ttf",
+        "Altone-Heavy-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Alumtani",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Alumtani.ttf"
+      ]
+    },
+    {
+      "family": "Ambient",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ambient-Bold.ttf",
+        "Ambient-Medium.ttf",
+        "Ambient-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Amio",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Amio-Bold.otf",
+        "Amio-ExtraBold.otf",
+        "Amio-Light.otf"
+      ]
+    },
+    {
+      "family": "Analog",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Analog Typewriter.ttf"
+      ]
+    },
+    {
+      "family": "Anko",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Anko-Bold-Italic.otf",
+        "Anko-Bold.otf",
+        "Anko-Medium-Italic.otf"
+      ]
+    },
+    {
+      "family": "Arcade",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Arcade.ttf"
+      ]
+    },
+    {
+      "family": "Argon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Argon-Regular-Italic.otf",
+        "Argon-Regular.otf"
+      ]
+    },
+    {
+      "family": "Article",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Article-Bold-Italic.otf",
+        "Article-Bold.otf",
+        "Article-Light-Italic.otf"
+      ]
+    },
+    {
+      "family": "Ashitta",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ashitta.ttf"
+      ]
+    },
+    {
+      "family": "Atlantic",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Atlantic.otf"
+      ]
+    },
+    {
+      "family": "Avaboca",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Avaboca.ttf"
+      ]
+    },
+    {
+      "family": "Avoidance",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Avoidance-Bold-Italic.ttf",
+        "Avoidance-Bold.ttf",
+        "Avoidance-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Awita",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Awita.otf"
+      ]
+    },
+    {
+      "family": "Bacone",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bacone.ttf"
+      ]
+    },
+    {
+      "family": "Baglietta",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Baglietta.ttf"
+      ]
+    },
+    {
+      "family": "Balder",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Balder.ttf"
+      ]
+    },
+    {
+      "family": "Bandal",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bandal.ttf"
+      ]
+    },
+    {
+      "family": "Banditos",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Banditos.ttf"
+      ]
+    },
+    {
+      "family": "Banget",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Banget.ttf"
+      ]
+    },
+    {
+      "family": "Baserock",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Baserock.ttf"
+      ]
+    },
+    {
+      "family": "Belgro",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Belgro.ttf"
+      ]
+    },
+    {
+      "family": "Billgest",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Billgest.ttf"
+      ]
+    },
+    {
+      "family": "Bimazone",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bimazone.ttf"
+      ]
+    },
+    {
+      "family": "Biospace",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Biospace.ttf"
+      ]
+    },
+    {
+      "family": "Bird",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bird.ttf"
+      ]
+    },
+    {
+      "family": "Birgine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Birgine.ttf"
+      ]
+    },
+    {
+      "family": "Bittyfish",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bittyfish.ttf"
+      ]
+    },
+    {
+      "family": "Bizmo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bizmo-Black.otf",
+        "Bizmo-BlackOblique.otf",
+        "Bizmo-Bold.otf"
+      ]
+    },
+    {
+      "family": "Blastage",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Blastage.ttf"
+      ]
+    },
+    {
+      "family": "Blasting",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Blasting.ttf"
+      ]
+    },
+    {
+      "family": "Blauer",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Blauer-Bold-Italic.ttf",
+        "Blauer-Bold.ttf",
+        "Blauer-Heavy-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Blinker",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Blinker Rogue.otf"
+      ]
+    },
+    {
+      "family": "Blocker",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Blocker-Line-Italic.otf",
+        "Blocker-Line.otf",
+        "Blocker-Regular-Italic.otf"
+      ]
+    },
+    {
+      "family": "Blockhead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Blockhead-Black.otf",
+        "Blockhead-Bold.otf",
+        "Blockhead.otf"
+      ]
+    },
+    {
+      "family": "Bodyline",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bodyline.ttf"
+      ]
+    },
+    {
+      "family": "Boiling",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Boiling-Black.ttf",
+        "Boiling-Bold.ttf",
+        "Boiling-Demi.ttf"
+      ]
+    },
+    {
+      "family": "Bolder",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bolder.ttf"
+      ]
+    },
+    {
+      "family": "Bolt",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bolt.ttf"
+      ]
+    },
+    {
+      "family": "Bonitte",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bonitte.ttf"
+      ]
+    },
+    {
+      "family": "Boreck",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "BoreckDisplay-Bold.ttf"
+      ]
+    },
+    {
+      "family": "Bosh",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bosh.ttf"
+      ]
+    },
+    {
+      "family": "Bragile",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bragille.ttf"
+      ]
+    },
+    {
+      "family": "Brandan",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Brandan-Strong.otf",
+        "Brandan.otf"
+      ]
+    },
+    {
+      "family": "Brandon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Brandon.otf"
+      ]
+    },
+    {
+      "family": "Brasswood",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Brasswood.ttf"
+      ]
+    },
+    {
+      "family": "Bricksan",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bricksan.ttf"
+      ]
+    },
+    {
+      "family": "Bronie",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bronie-Italic.ttf",
+        "Bronie-Regular.ttf"
+      ]
+    },
+    {
+      "family": "BronkenShield",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Broken Shield.ttf"
+      ]
+    },
+    {
+      "family": "Bubble",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bubble-Regular-Italic.ttf",
+        "Bubble-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Bubboldy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Bubboldy.ttf"
+      ]
+    },
+    {
+      "family": "Buvica",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Buvica-Bold.otf",
+        "Buvica-Regular.otf",
+        "Buvica-Thin.otf"
+      ]
+    },
+    {
+      "family": "Cactus",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Cactus Ridge - Grunge Italic.ttf",
+        "Cactus Ridge - Grunge.ttf",
+        "Cactus Ridge - Italic.ttf"
+      ]
+    },
+    {
+      "family": "Calgary",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Calgary.ttf"
+      ]
+    },
+    {
+      "family": "California",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "California-Regular-Italic.ttf",
+        "California-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Calming",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Calming.ttf"
+      ]
+    },
+    {
+      "family": "Camauflage",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Camaufalge.ttf"
+      ]
+    },
+    {
+      "family": "Canadine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Canadine.ttf"
+      ]
+    },
+    {
+      "family": "Candice",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Candice.ttf"
+      ]
+    },
+    {
+      "family": "Caregold",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Caregold.otf"
+      ]
+    },
+    {
+      "family": "Castilon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Castilon.ttf"
+      ]
+    },
+    {
+      "family": "CasualBrush",
+      "suggestedCategory": "script",
+      "confidence": "medium",
+      "method": "name-keyword",
+      "files": [
+        "CasualBrush-Light.otf",
+        "CasualBrush.otf"
+      ]
+    },
+    {
+      "family": "Certia",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Certia-Bold-Italic.otf",
+        "Certia-Bold.otf",
+        "Certia-Heavy-Italic.otf"
+      ]
+    },
+    {
+      "family": "Chirp",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Chirp.ttf"
+      ]
+    },
+    {
+      "family": "Chromium ",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Chromium.ttf"
+      ]
+    },
+    {
+      "family": "Cinema",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "cinema sunday.ttf"
+      ]
+    },
+    {
+      "family": "Cita",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "CitaPro-Bold-Italic.otf",
+        "CitaPro-Bold.otf",
+        "CitaPro-Regular-Italic.otf"
+      ]
+    },
+    {
+      "family": "Cleodine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Cleodine.ttf"
+      ]
+    },
+    {
+      "family": "Cleophas",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Cleophas.ttf"
+      ]
+    },
+    {
+      "family": "Cliquey",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Cliqey.ttf"
+      ]
+    },
+    {
+      "family": "Clock",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Clock.ttf"
+      ]
+    },
+    {
+      "family": "Clockwise",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Clockwise.ttf"
+      ]
+    },
+    {
+      "family": "Coated",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Coated.ttf"
+      ]
+    },
+    {
+      "family": "Colorado",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Colorado-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Column",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Column.ttf"
+      ]
+    },
+    {
+      "family": "Concious",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Conscious.ttf"
+      ]
+    },
+    {
+      "family": "Config",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Config-Black-Italic.otf",
+        "Config-Black.otf",
+        "Config-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Config-Round",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Config-Round-Black-Italic.otf",
+        "Config-Round-Black.otf",
+        "Config-Round-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Cowboy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Cowboy.ttf"
+      ]
+    },
+    {
+      "family": "Crafter",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Crafter.ttf"
+      ]
+    },
+    {
+      "family": "Craked",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Craked.ttf"
+      ]
+    },
+    {
+      "family": "Cyber",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "CyberTechno-Extrude.ttf",
+        "CyberTechno-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Dearly",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Dearly.ttf"
+      ]
+    },
+    {
+      "family": "Decagon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Decagon.otf"
+      ]
+    },
+    {
+      "family": "December",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "December.ttf"
+      ]
+    },
+    {
+      "family": "Deco",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Deco-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Decohead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Decohead-Bold.otf",
+        "Decohead-Light.otf",
+        "Decohead-Regular.otf"
+      ]
+    },
+    {
+      "family": "Decor",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Decor.otf"
+      ]
+    },
+    {
+      "family": "Degrad",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "403DegradMono-Medium.ttf"
+      ]
+    },
+    {
+      "family": "Deicho",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Deicho-Black-Italic.ttf",
+        "Deicho-Black.ttf",
+        "Deicho-Bold-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Devator",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Devator.ttf"
+      ]
+    },
+    {
+      "family": "Digis",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Digis.ttf"
+      ]
+    },
+    {
+      "family": "Digital",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Digital.ttf"
+      ]
+    },
+    {
+      "family": "Dinner",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Dinner Groope-Italic.ttf",
+        "Dinner Groope-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Diomag",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Diomag.ttf"
+      ]
+    },
+    {
+      "family": "Discgent",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Discgent-Outline.ttf",
+        "Discgent.ttf"
+      ]
+    },
+    {
+      "family": "Disgent",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Disgent.ttf"
+      ]
+    },
+    {
+      "family": "Dominate",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Dominate.ttf"
+      ]
+    },
+    {
+      "family": "Dragon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Dragon.ttf"
+      ]
+    },
+    {
+      "family": "Droper",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Broken Droper.ttf"
+      ]
+    },
+    {
+      "family": "Dunley",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Dunley.otf"
+      ]
+    },
+    {
+      "family": "Duster",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Duster.ttf"
+      ]
+    },
+    {
+      "family": "EBCorp",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "EBCorp-Black.otf",
+        "EBCorp-BlackOblique.otf",
+        "EBCorp-Bold.otf"
+      ]
+    },
+    {
+      "family": "Echocore",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "EchocoreTechno-Italic.ttf",
+        "EchocoreTechno-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Elegance",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Elegance.ttf"
+      ]
+    },
+    {
+      "family": "Elegant",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Elegant.ttf"
+      ]
+    },
+    {
+      "family": "Ellis",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ellis-Outline.ttf",
+        "Ellis.ttf"
+      ]
+    },
+    {
+      "family": "Emelind",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Emelind.ttf"
+      ]
+    },
+    {
+      "family": "Emerland",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Emerland-Regular-Italic.ttf",
+        "Emerland-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Emerly",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Emerly.ttf"
+      ]
+    },
+    {
+      "family": "Engine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Engine.ttf"
+      ]
+    },
+    {
+      "family": "Ephira",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ephira.ttf"
+      ]
+    },
+    {
+      "family": "Escquire",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Escquire.ttf"
+      ]
+    },
+    {
+      "family": "Established",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Established-Regular-Italic.ttf",
+        "Established-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Evolve",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "EvolveEarly-BlackExpIta.ttf",
+        "EvolveEarly-BlackExpanded.ttf",
+        "EvolveEarly-BoldExpIta.ttf"
+      ]
+    },
+    {
+      "family": "Exana",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Exana.ttf"
+      ]
+    },
+    {
+      "family": "Excite",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Exciting.ttf"
+      ]
+    },
+    {
+      "family": "Exensa",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Exensa-Black.ttf",
+        "Exensa-Bold.ttf",
+        "Exensa-Light.ttf"
+      ]
+    },
+    {
+      "family": "Faked",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Faked.ttf"
+      ]
+    },
+    {
+      "family": "Fashional",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Fashion.ttf"
+      ]
+    },
+    {
+      "family": "Fedora",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Fedora.ttf"
+      ]
+    },
+    {
+      "family": "Fedra",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Phaidra.ttf"
+      ]
+    },
+    {
+      "family": "Fergan",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Fregan-Bold.otf",
+        "Fregan-Regular.otf",
+        "Fregan-Serif-Bold.otf"
+      ]
+    },
+    {
+      "family": "Ferom",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ferom-Black.otf",
+        "Ferom-Bold.otf",
+        "Ferom-Light.otf"
+      ]
+    },
+    {
+      "family": "Flagoria",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Flagoria-Bold-Italic.ttf",
+        "Flagoria-Bold.ttf",
+        "Flagoria-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Flamezinna",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Flamezinna.ttf"
+      ]
+    },
+    {
+      "family": "Fluence",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Fluence.ttf"
+      ]
+    },
+    {
+      "family": "Founders",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Founders-Bold-Italic.ttf",
+        "Founders-Bold.ttf",
+        "Founders-Light-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Freedom",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Freedom-Line.ttf",
+        "Freedom-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Frida",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Frida.ttf"
+      ]
+    },
+    {
+      "family": "Friday",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Friday Hype-SVG.ttf",
+        "Friday Hype.ttf"
+      ]
+    },
+    {
+      "family": "Fruitiy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Fruitiy.ttf"
+      ]
+    },
+    {
+      "family": "Funky",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Funky.ttf"
+      ]
+    },
+    {
+      "family": "Futler",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Futler.ttf"
+      ]
+    },
+    {
+      "family": "Gabriella",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gabriella.ttf"
+      ]
+    },
+    {
+      "family": "Galpike",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Galpike-Black.ttf",
+        "Galpike-Bold.ttf",
+        "Galpike-Light.ttf"
+      ]
+    },
+    {
+      "family": "Gardena",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gardena-Bold-Italic.ttf",
+        "Gardena-Bold.ttf",
+        "Gardena-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Genary",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Genary.ttf"
+      ]
+    },
+    {
+      "family": "Ghutters",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ghutters.ttf"
+      ]
+    },
+    {
+      "family": "Gifford",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gifford-Black-Italic.otf",
+        "Gifford-Black.otf",
+        "Gifford-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Gillpike",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Galpike-Black.ttf",
+        "Galpike-Bold.ttf",
+        "Galpike-Light.ttf"
+      ]
+    },
+    {
+      "family": "Gilnoza",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gilnoza.ttf"
+      ]
+    },
+    {
+      "family": "Ginetta",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gimetta.ttf"
+      ]
+    },
+    {
+      "family": "Ginto",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "GintoNord-Black-Italic.ttf",
+        "GintoNord-Black.ttf",
+        "GintoNord-Bold-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Gisgro",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gisgro.ttf"
+      ]
+    },
+    {
+      "family": "Givonic",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Givonic-Black.ttf",
+        "Givonic-Bold.ttf",
+        "Givonic-Light.ttf"
+      ]
+    },
+    {
+      "family": "Glachera",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Glachera.ttf"
+      ]
+    },
+    {
+      "family": "Glasser",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Glasser.ttf"
+      ]
+    },
+    {
+      "family": "Glooosy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "glooxy.ttf"
+      ]
+    },
+    {
+      "family": "Glow",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Glow-Regular-Italic.ttf",
+        "Glow-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Golger",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Golger.ttf"
+      ]
+    },
+    {
+      "family": "Gopher",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gopher-Black-Italic.otf",
+        "Gopher-Black.otf",
+        "Gopher-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Gorgea",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gorgea-Italic.ttf",
+        "Gorgea-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Gothif",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "CookGothif.ttf"
+      ]
+    },
+    {
+      "family": "Govandi",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Govandi-Bold.ttf",
+        "Govandi-BoldItalic.ttf",
+        "Govandi-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Granigen",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Granigen-Bold.ttf",
+        "Gronigen-Light.ttf",
+        "Gronigen-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Greenmark",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Greenmark-Regular-Italic.ttf",
+        "Greenmark-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Gregory",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "George-Bold-Italic.ttf",
+        "George-Bold.ttf",
+        "George-Light-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Greyson",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "CSGreyson-Italic.ttf",
+        "CSGreyson-Regular.ttf",
+        "CSGreyson-ReverseItalic.ttf"
+      ]
+    },
+    {
+      "family": "Gronde",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gronde.ttf"
+      ]
+    },
+    {
+      "family": "Gronigen",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Groningen-Bold.ttf",
+        "Groningen-Light.ttf",
+        "Groningen-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Groovy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Flying Soul.ttf"
+      ]
+    },
+    {
+      "family": "Grory",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Grory.ttf"
+      ]
+    },
+    {
+      "family": "Grotek",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gotrek.ttf"
+      ]
+    },
+    {
+      "family": "Grover",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Grover-Black.ttf",
+        "Grover-Bold.ttf",
+        "Grover-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Gulley",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gulley.ttf"
+      ]
+    },
+    {
+      "family": "Gustavo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Gustavo.ttf"
+      ]
+    },
+    {
+      "family": "Guttie",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Guttie.ttf"
+      ]
+    },
+    {
+      "family": "Halentica",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Halentica-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Hambaty",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hambaty.ttf"
+      ]
+    },
+    {
+      "family": "Handnote",
+      "suggestedCategory": "script",
+      "confidence": "medium",
+      "method": "name-keyword",
+      "files": [
+        "Handnote.ttf"
+      ]
+    },
+    {
+      "family": "Hando",
+      "suggestedCategory": "script",
+      "confidence": "medium",
+      "method": "name-keyword",
+      "files": [
+        "Hando-Black.otf",
+        "Hando-BlackOblique.otf",
+        "Hando-Bold.otf"
+      ]
+    },
+    {
+      "family": "HandoSoft",
+      "suggestedCategory": "script",
+      "confidence": "medium",
+      "method": "name-keyword",
+      "files": [
+        "HandoSoft-Black.ttf",
+        "HandoSoft-BlackOblique.ttf",
+        "HandoSoft-Bold.ttf"
+      ]
+    },
+    {
+      "family": "Hangeul",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hangeul.ttf"
+      ]
+    },
+    {
+      "family": "Hanserd",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hanserd-Line.otf",
+        "Hanserd-Regular.otf",
+        "Hanserd-Shadow.otf"
+      ]
+    },
+    {
+      "family": "Harchet",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Harchet.ttf"
+      ]
+    },
+    {
+      "family": "Hathiens",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hathiens.ttf"
+      ]
+    },
+    {
+      "family": "Headline",
+      "suggestedCategory": "display",
+      "confidence": "medium",
+      "method": "name-keyword",
+      "files": [
+        "Headline-Outline.ttf",
+        "Headline.ttf"
+      ]
+    },
+    {
+      "family": "Heavyjack",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Heavy Jack - Shadow.ttf",
+        "Heavy Jack.ttf"
+      ]
+    },
+    {
+      "family": "Heisman",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Heisman.ttf"
+      ]
+    },
+    {
+      "family": "Heloscope",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Heloscope.ttf"
+      ]
+    },
+    {
+      "family": "Helotypo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Helotypo.ttf"
+      ]
+    },
+    {
+      "family": "Highman",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Highman.otf"
+      ]
+    },
+    {
+      "family": "Highpath",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Highpath.ttf"
+      ]
+    },
+    {
+      "family": "Hillmate",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hillmate.ttf"
+      ]
+    },
+    {
+      "family": "Hilmar",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hilmar-Bold.ttf",
+        "Hilmar-Thin.ttf"
+      ]
+    },
+    {
+      "family": "Hiroki",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Herochi.ttf"
+      ]
+    },
+    {
+      "family": "Homade",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Homade-Bold.ttf",
+        "Homade-BoldItalic.ttf",
+        "Homade-Medium-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Honey",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Honey-Regular.ttf",
+        "Honey-Stencil-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Horesport",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Horesport.ttf"
+      ]
+    },
+    {
+      "family": "Horigan",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Horigan.ttf"
+      ]
+    },
+    {
+      "family": "Hubble",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hubble.otf"
+      ]
+    },
+    {
+      "family": "Hubhead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Hubhead.otf"
+      ]
+    },
+    {
+      "family": "Interform",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "InterformMono-Bold.ttf",
+        "InterformMono-Light.ttf",
+        "InterformMono-Medium.ttf"
+      ]
+    },
+    {
+      "family": "JetBrains",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "JetBrains-Bold.ttf",
+        "JetBrains-Heavy.ttf",
+        "JetBrains-Light.ttf"
+      ]
+    },
+    {
+      "family": "Jingjou",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Jingjou-Outline.ttf",
+        "Jingjou-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Julietta",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Julietta.otf"
+      ]
+    },
+    {
+      "family": "July ",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "July.ttf"
+      ]
+    },
+    {
+      "family": "Kalico",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kalico-Bold.ttf",
+        "Kalico-Regular.ttf",
+        "Kalico-Semi.ttf"
+      ]
+    },
+    {
+      "family": "Kaliso",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kaliso-Bold.ttf",
+        "Kaliso-Light.ttf",
+        "Kaliso-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Kaspert",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kaspert.otf"
+      ]
+    },
+    {
+      "family": "Kilograph",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kilograph.ttf"
+      ]
+    },
+    {
+      "family": "Kinemon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kinemon-Bold.ttf",
+        "Kinemon-Light.ttf",
+        "Kinemon-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Kinote",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kinsale-Display-Italic.ttf",
+        "Kinsale-Display.ttf"
+      ]
+    },
+    {
+      "family": "Kiter",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kiter-Bold.ttf",
+        "Kiter-Light.ttf",
+        "Kiter-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Kolgu",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kolgu.ttf"
+      ]
+    },
+    {
+      "family": "Kringe",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Kringe Outline.ttf",
+        "Kringe.ttf"
+      ]
+    },
+    {
+      "family": "Lechee",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Lecheet.ttf"
+      ]
+    },
+    {
+      "family": "Lemands",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Lemands-Bold.ttf",
+        "Lemands-Book.ttf",
+        "Lemands-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Lenia",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "LeniaMono-Bold.ttf",
+        "LeniaMono-ExtraBold.ttf",
+        "LeniaMono-Medium.ttf"
+      ]
+    },
+    {
+      "family": "Limelines",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "LimeLines-Stroke.ttf",
+        "LimeLinesRegular.ttf"
+      ]
+    },
+    {
+      "family": "Luckies",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "LUCKIES.ttf"
+      ]
+    },
+    {
+      "family": "Madia",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Madia.ttf"
+      ]
+    },
+    {
+      "family": "Magdeline",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Magdelin-Black-Italic.otf",
+        "Magdelin-Black.otf",
+        "Magdelin-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Magison",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Magison.ttf"
+      ]
+    },
+    {
+      "family": "Magnify",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Magnify-Bold-Italic.ttf",
+        "Magnify-Bold.ttf",
+        "Magnify-Line-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Maildore",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Maildore.ttf"
+      ]
+    },
+    {
+      "family": "Makiba",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Makiba.ttf"
+      ]
+    },
+    {
+      "family": "Malibu",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Malibu.ttf"
+      ]
+    },
+    {
+      "family": "MalibuSunday",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Malibu Sunday Script.ttf",
+        "Malibu Sunday Serif.ttf"
+      ]
+    },
+    {
+      "family": "Malike",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Malike.ttf"
+      ]
+    },
+    {
+      "family": "Malter",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Malter.ttf"
+      ]
+    },
+    {
+      "family": "Malwoon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Malwoon.ttf"
+      ]
+    },
+    {
+      "family": "Manific",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Manific.ttf"
+      ]
+    },
+    {
+      "family": "March",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "March.ttf"
+      ]
+    },
+    {
+      "family": "Marchon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Marchon.ttf"
+      ]
+    },
+    {
+      "family": "Margines",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Margines.otf"
+      ]
+    },
+    {
+      "family": "Marine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Marine-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Marques",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Marques-Regular-Italic.ttf",
+        "Marques-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Martron",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Martron.ttf"
+      ]
+    },
+    {
+      "family": "Marysville",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Marysville-Regular-Italic-Outline.ttf",
+        "Marysville-Regular-Italic.ttf",
+        "Marysville-Regular-Outline.ttf"
+      ]
+    },
+    {
+      "family": "Mashle",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Mashle Italic.ttf",
+        "Mashle.ttf"
+      ]
+    },
+    {
+      "family": "Melbrick",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Melbrick-Italic.ttf",
+        "Melbrick-ItalicOutline.ttf",
+        "Melbrick-Outline.ttf"
+      ]
+    },
+    {
+      "family": "Merinos",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Merinos.ttf"
+      ]
+    },
+    {
+      "family": "Merville",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Merville-Outline.ttf",
+        "Merville.ttf"
+      ]
+    },
+    {
+      "family": "Metalink",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Metalink-Bold-Italic.ttf",
+        "Metalink-Bold.ttf",
+        "Metalink-Medium-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Miguel",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Miguel.ttf"
+      ]
+    },
+    {
+      "family": "Mintbox",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "MintBox-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Minushe",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Minushe.ttf"
+      ]
+    },
+    {
+      "family": "Mirdone",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Miradane.ttf"
+      ]
+    },
+    {
+      "family": "Miron",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Miron.ttf"
+      ]
+    },
+    {
+      "family": "Modality",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Modality.ttf"
+      ]
+    },
+    {
+      "family": "Modeca",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Modeca.otf"
+      ]
+    },
+    {
+      "family": "Modeco",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Modeco-Black.otf",
+        "Modeco-BlackOblique.otf",
+        "Modeco-Bold.otf"
+      ]
+    },
+    {
+      "family": "Modernhead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Modernhead-Black.otf",
+        "Modernhead-Bold.otf",
+        "Modernhead-Regular.otf"
+      ]
+    },
+    {
+      "family": "Modhead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Modhead-Black.otf",
+        "Modhead-Bold.otf",
+        "Modhead-Regular.otf"
+      ]
+    },
+    {
+      "family": "Modial",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Modial-Regular-Italic.ttf",
+        "Modial-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Modives",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Moldives.otf"
+      ]
+    },
+    {
+      "family": "Mofica",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Mofica.ttf"
+      ]
+    },
+    {
+      "family": "Mofista",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Mofista-Regular-Italic.ttf",
+        "Mofista-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Mogies",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Mogies.ttf"
+      ]
+    },
+    {
+      "family": "Mollen",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Mollen-Bold.otf",
+        "Mollen-BoldCondensed.otf",
+        "Mollen-BoldCondensedItalic.otf"
+      ]
+    },
+    {
+      "family": "Molling",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Molling.ttf"
+      ]
+    },
+    {
+      "family": "Moment",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Moment.ttf"
+      ]
+    },
+    {
+      "family": "Monalic",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Monalic.ttf"
+      ]
+    },
+    {
+      "family": "Monda",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Monda-Bold.ttf",
+        "Monda-BoldItalic.ttf",
+        "Monda-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Moniec",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Moniec.ttf"
+      ]
+    },
+    {
+      "family": "Monik",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Monik-Black.ttf",
+        "Monik-Bold.ttf",
+        "Monik-Light.ttf"
+      ]
+    },
+    {
+      "family": "Monty",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Monty Black.ttf",
+        "Monty Bold.ttf",
+        "Monty Light.ttf"
+      ]
+    },
+    {
+      "family": "Moon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "TheMoon-Regular.otf",
+        "TheMoon-Script.otf"
+      ]
+    },
+    {
+      "family": "Mopella",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Mopella-Black.ttf",
+        "Mopella-Bold.ttf",
+        "Mopella-Ultra.ttf"
+      ]
+    },
+    {
+      "family": "Morality",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Morality.ttf"
+      ]
+    },
+    {
+      "family": "Moutre",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Moutre.ttf"
+      ]
+    },
+    {
+      "family": "Murey",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "MurayHouseStandard-Regular.otf"
+      ]
+    },
+    {
+      "family": "Musont",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Musont.ttf"
+      ]
+    },
+    {
+      "family": "Nailhead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Nailhead Nova-Bold.otf",
+        "Nailhead Nova-Light.otf",
+        "Nailhead Nova.otf"
+      ]
+    },
+    {
+      "family": "Neatness",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Neatness.ttf"
+      ]
+    },
+    {
+      "family": "Nedora",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Nedora.ttf"
+      ]
+    },
+    {
+      "family": "Neo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Neo.ttf"
+      ]
+    },
+    {
+      "family": "Netherland",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Netherland.ttf"
+      ]
+    },
+    {
+      "family": "Neural",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Neural.ttf"
+      ]
+    },
+    {
+      "family": "Nineland",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Nineland.ttf"
+      ]
+    },
+    {
+      "family": "Nissie",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Nissie Tangle.ttf"
+      ]
+    },
+    {
+      "family": "Nochannel",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Nochannel.ttf"
+      ]
+    },
+    {
+      "family": "Nok",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "NokRegular.ttf"
+      ]
+    },
+    {
+      "family": "Norway",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Norway.ttf"
+      ]
+    },
+    {
+      "family": "Noventa",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Noventa.ttf"
+      ]
+    },
+    {
+      "family": "Novus",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Novus-Bold-Italic.otf",
+        "Novus-Bold.otf",
+        "Novus-Italic.otf"
+      ]
+    },
+    {
+      "family": "Nusar",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Nusar.ttf"
+      ]
+    },
+    {
+      "family": "Objectife",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Objectife.ttf"
+      ]
+    },
+    {
+      "family": "Obscuria",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Obscuria.ttf"
+      ]
+    },
+    {
+      "family": "Oldbones",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Oldbones 3D.ttf",
+        "Oldbones.ttf"
+      ]
+    },
+    {
+      "family": "Origin",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Origin-Bold-Outline.ttf",
+        "Origin-Bold.ttf",
+        "Origin-Light-Outline.ttf"
+      ]
+    },
+    {
+      "family": "Padery",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Padery.ttf"
+      ]
+    },
+    {
+      "family": "Palloma",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Palloma.ttf"
+      ]
+    },
+    {
+      "family": "Palmist",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Palmist.ttf"
+      ]
+    },
+    {
+      "family": "Panwall",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Panwall.ttf"
+      ]
+    },
+    {
+      "family": "Papeda",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Papeda.ttf"
+      ]
+    },
+    {
+      "family": "Papermate",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Papermate.ttf"
+      ]
+    },
+    {
+      "family": "Penpad",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Penpad.ttf"
+      ]
+    },
+    {
+      "family": "Pierce",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Pierce-Bold.otf",
+        "Pierce-Regular.otf",
+        "Pierce-Script.otf"
+      ]
+    },
+    {
+      "family": "Pixary",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Pixary.ttf"
+      ]
+    },
+    {
+      "family": "Pop",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Pop.ttf"
+      ]
+    },
+    {
+      "family": "Popcicle",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Popcicle.ttf"
+      ]
+    },
+    {
+      "family": "Powerful",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Powerfull.ttf"
+      ]
+    },
+    {
+      "family": "Powerscape",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Powerscape.ttf"
+      ]
+    },
+    {
+      "family": "Proximate",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Proximate.ttf"
+      ]
+    },
+    {
+      "family": "Pudgeloo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Pudgeloo.ttf"
+      ]
+    },
+    {
+      "family": "Puffetto",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Puffetto.ttf"
+      ]
+    },
+    {
+      "family": "Pulse",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Pulse.otf"
+      ]
+    },
+    {
+      "family": "Quallity",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Quiallity Noted.ttf"
+      ]
+    },
+    {
+      "family": "Quiche",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Quiche-Black-Italic.otf",
+        "Quiche-Black.otf",
+        "Quiche-Bold-Italic.otf"
+      ]
+    },
+    {
+      "family": "Quickel",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Quickel.ttf"
+      ]
+    },
+    {
+      "family": "Quicken",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Quicken.ttf"
+      ]
+    },
+    {
+      "family": "Raconte",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Raconte.ttf"
+      ]
+    },
+    {
+      "family": "Raffler",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Raffler.ttf"
+      ]
+    },
+    {
+      "family": "Ragmesh",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rigamesh.ttf"
+      ]
+    },
+    {
+      "family": "Raiden",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Raidney.ttf"
+      ]
+    },
+    {
+      "family": "Raidney",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Raidney.ttf"
+      ]
+    },
+    {
+      "family": "Raise",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "CampaignSerif.ttf"
+      ]
+    },
+    {
+      "family": "Rebar",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "REBAR.ttf"
+      ]
+    },
+    {
+      "family": "Redhawk",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Redhawk.ttf"
+      ]
+    },
+    {
+      "family": "Redkies",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Redkies.ttf"
+      ]
+    },
+    {
+      "family": "Reggina",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Reggina-Bold.otf",
+        "Reggina-Light.otf",
+        "Reggina-Medium.otf"
+      ]
+    },
+    {
+      "family": "Reprise",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Redkies.ttf"
+      ]
+    },
+    {
+      "family": "Rerserve",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rerserve.ttf"
+      ]
+    },
+    {
+      "family": "Retroday",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Retroday-Bold.otf",
+        "Retroday-Light.otf",
+        "Retroday-Regular.otf"
+      ]
+    },
+    {
+      "family": "Return",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Return.ttf"
+      ]
+    },
+    {
+      "family": "Rewind",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rewind-Bold.ttf",
+        "Rewind-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Ricardo",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ricardo-Bold.ttf",
+        "Ricardo-Light.ttf",
+        "Ricardo-Medium.ttf"
+      ]
+    },
+    {
+      "family": "Riots",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Grime Riots.ttf"
+      ]
+    },
+    {
+      "family": "Rivery",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rivery.ttf"
+      ]
+    },
+    {
+      "family": "Roaster",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Roaster.ttf"
+      ]
+    },
+    {
+      "family": "Roboline",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Roboline.ttf"
+      ]
+    },
+    {
+      "family": "Robotline",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Robotline.ttf"
+      ]
+    },
+    {
+      "family": "Rockler",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rockler.ttf"
+      ]
+    },
+    {
+      "family": "Rockridge",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rockridge.ttf"
+      ]
+    },
+    {
+      "family": "Rodstone",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Ropstone-Sparkle.ttf",
+        "Ropstone.ttf"
+      ]
+    },
+    {
+      "family": "Romelia",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Romelia.ttf"
+      ]
+    },
+    {
+      "family": "Rowland",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rowland.ttf"
+      ]
+    },
+    {
+      "family": "Rozor",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "RozorEagle.ttf"
+      ]
+    },
+    {
+      "family": "Rumbler",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Rumbler.ttf"
+      ]
+    },
+    {
+      "family": "Runary",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Runary.ttf"
+      ]
+    },
+    {
+      "family": "Runway",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Runway.ttf"
+      ]
+    },
+    {
+      "family": "Sagist",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sagist.ttf"
+      ]
+    },
+    {
+      "family": "Sailor",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sailor.ttf"
+      ]
+    },
+    {
+      "family": "Salentina",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Salentina-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Saltwater",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Saltwater Shorelines Font - Thick.ttf",
+        "Saltwater Shorelines Font - Thin.ttf"
+      ]
+    },
+    {
+      "family": "Sandy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sandy.ttf"
+      ]
+    },
+    {
+      "family": "Sanitane",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sanitane.ttf"
+      ]
+    },
+    {
+      "family": "Sanitar",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sanitar.ttf"
+      ]
+    },
+    {
+      "family": "Scooter",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Scooter.ttf"
+      ]
+    },
+    {
+      "family": "Scout",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Scout.ttf"
+      ]
+    },
+    {
+      "family": "Scribble",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Scribble.ttf"
+      ]
+    },
+    {
+      "family": "Serial",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "AOT Serial Mono-VF.ttf",
+        "AOTSerialMono-Bold.ttf",
+        "AOTSerialMono-Light.ttf"
+      ]
+    },
+    {
+      "family": "Shadoville",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Shadoville.ttf"
+      ]
+    },
+    {
+      "family": "Shadowville",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Shadowville.ttf"
+      ]
+    },
+    {
+      "family": "Shield",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Shield.ttf"
+      ]
+    },
+    {
+      "family": "Shikaru",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Shikaru-Extrude.ttf",
+        "Shikaru-Outline.ttf",
+        "Shikaru-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Sign",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sign Painting.ttf"
+      ]
+    },
+    {
+      "family": "Signature",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Signature.ttf"
+      ]
+    },
+    {
+      "family": "Silma",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Silma-Regular-Italic.ttf",
+        "Silma-Regular.ttf",
+        "Silma-Stamp-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Sink",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sink.ttf"
+      ]
+    },
+    {
+      "family": "Skandi",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Skandi.ttf"
+      ]
+    },
+    {
+      "family": "Skyforge",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "SKYFORGE WEBSTER.ttf"
+      ]
+    },
+    {
+      "family": "Slippery",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Slippery-Bold-Italic.otf",
+        "Slippery-Bold.otf",
+        "Slippery-Medium-Italic.otf"
+      ]
+    },
+    {
+      "family": "Slowey",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Slowey Retro.ttf"
+      ]
+    },
+    {
+      "family": "Smartnotes",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Smartnotes.ttf"
+      ]
+    },
+    {
+      "family": "Snach",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Snach-Regular-Italic.ttf",
+        "Snach-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Snatch",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Snatch.ttf"
+      ]
+    },
+    {
+      "family": "Sonadine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sonadine.ttf"
+      ]
+    },
+    {
+      "family": "Sonyc",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sonyc.ttf"
+      ]
+    },
+    {
+      "family": "Space",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "SpaceMono-Bold.ttf",
+        "SpaceMono-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Space51",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Space51-Bold.ttf",
+        "Space51-Light.ttf",
+        "Space51-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Spaceboard",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spaceboard.ttf"
+      ]
+    },
+    {
+      "family": "Spacegate",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spacegate-Regular-Italic.ttf",
+        "Spacegate-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Spacemoid",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spacemoid.ttf"
+      ]
+    },
+    {
+      "family": "Spectral",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spectral-Bold.ttf",
+        "Spectral-Light.ttf",
+        "Spectral-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Spike",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spike.ttf"
+      ]
+    },
+    {
+      "family": "Spot",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spot-Bold-Italic.ttf",
+        "Spot-Bold.ttf",
+        "Spot-Outline-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Stage",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "FootballStage-Extrude.ttf",
+        "FootballStage-Italic.ttf",
+        "FootballStage-ItalicExtrude.ttf"
+      ]
+    },
+    {
+      "family": "Stance",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Stance.ttf"
+      ]
+    },
+    {
+      "family": "Sticker",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sticker.ttf"
+      ]
+    },
+    {
+      "family": "Styloria",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Styloria.ttf"
+      ]
+    },
+    {
+      "family": "Sunbrez",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sunbrez.ttf"
+      ]
+    },
+    {
+      "family": "SunnyMood",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "SunnyMood.ttf"
+      ]
+    },
+    {
+      "family": "Swarsh",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Swarsh Daisy-Italic.ttf",
+        "Swarsh Daisy-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Sweller",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Sweller.ttf"
+      ]
+    },
+    {
+      "family": "Swish",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Swish-Bold.ttf",
+        "Swish-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Synthetic",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Synthetic-Regular-Italic.ttf",
+        "Synthetic-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Taglod",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Taglod.ttf"
+      ]
+    },
+    {
+      "family": "Talkman",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Talkman Player.ttf"
+      ]
+    },
+    {
+      "family": "Tarte",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Tarte.ttf"
+      ]
+    },
+    {
+      "family": "Techbit",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Techbit-Outline.ttf",
+        "Techbit-OutlineRounded.ttf",
+        "Techbit-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Tengarine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Tengarine.otf"
+      ]
+    },
+    {
+      "family": "Terminus",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Terminus.ttf"
+      ]
+    },
+    {
+      "family": "Thillik",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Thillik.ttf"
+      ]
+    },
+    {
+      "family": "Things",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Things-Italic.ttf",
+        "Things.ttf"
+      ]
+    },
+    {
+      "family": "Tommy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Tommy.ttf"
+      ]
+    },
+    {
+      "family": "Townhall",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Townhall.ttf"
+      ]
+    },
+    {
+      "family": "Travino",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "TravinoDisplay.ttf"
+      ]
+    },
+    {
+      "family": "Trellis",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Trellis Italic.ttf",
+        "Trellis Line Italic.ttf",
+        "Trellis Line.ttf"
+      ]
+    },
+    {
+      "family": "Tropostine",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Tropostine-Regular-.ttf",
+        "Tropostine-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Typeday",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Typeday-Black.ttf",
+        "Typeday-Bold.ttf",
+        "Typeday-Light.ttf"
+      ]
+    },
+    {
+      "family": "Typeworm",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Typeworn.ttf"
+      ]
+    },
+    {
+      "family": "Typhone",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Typhone.ttf"
+      ]
+    },
+    {
+      "family": "University",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "University-Black-Italic.otf",
+        "University-Black.otf",
+        "University-Italic.otf"
+      ]
+    },
+    {
+      "family": "Vacation",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Vacation.ttf"
+      ]
+    },
+    {
+      "family": "Vaguard",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Spark-Night.ttf",
+        "Spark.ttf"
+      ]
+    },
+    {
+      "family": "Valorforge",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Valor Forge.ttf"
+      ]
+    },
+    {
+      "family": "Vapper",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Vapper.ttf"
+      ]
+    },
+    {
+      "family": "Vegande",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Vegande.ttf"
+      ]
+    },
+    {
+      "family": "Vegapunk",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Vegapunk-Narrow-Italic.otf",
+        "Vegapunk-Narrow.otf",
+        "Vegapunk-Narrower-Italic.otf"
+      ]
+    },
+    {
+      "family": "Vintage",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Vintage Horror.ttf"
+      ]
+    },
+    {
+      "family": "Voltro",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Voltro.ttf"
+      ]
+    },
+    {
+      "family": "Voxal",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Voxal.ttf"
+      ]
+    },
+    {
+      "family": "Wagoon",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wagoon-Regular.ttf",
+        "Wagoon-Stamp.ttf"
+      ]
+    },
+    {
+      "family": "Walkie",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Walkierie-Bold-Italic.ttf",
+        "Walkierie-Bold.ttf",
+        "Walkierie-Regular-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Wally",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wally.ttf"
+      ]
+    },
+    {
+      "family": "Walsheim",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Walsheim-Bold-Oblique.ttf",
+        "Walsheim-Bold.ttf",
+        "Walsheim-Condensed-Black.ttf"
+      ]
+    },
+    {
+      "family": "Wendia",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wendia-Italic.ttf",
+        "Wendia-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Western",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Western.ttf"
+      ]
+    },
+    {
+      "family": "Wevely",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wevely-Bold.ttf",
+        "Wevely-BoldItalic.ttf",
+        "Wevely-Italic.ttf"
+      ]
+    },
+    {
+      "family": "Whitefield",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Whitefield-Regular-Italic.ttf",
+        "Whitefield-Regular.ttf"
+      ]
+    },
+    {
+      "family": "Widdy",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Widy-Bold-Italic.otf",
+        "Widy-Bold.otf",
+        "Widy-Light-Italic.otf"
+      ]
+    },
+    {
+      "family": "Wigeland",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wigeland.ttf"
+      ]
+    },
+    {
+      "family": "Wildhead",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wildhead.otf"
+      ]
+    },
+    {
+      "family": "Wineland",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Wineland.ttf"
+      ]
+    },
+    {
+      "family": "Woller",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Woller-Regular-Italic.otf",
+        "Wolves-Regular.otf"
+      ]
+    },
+    {
+      "family": "Zaffar",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Zaffar.ttf"
+      ]
+    },
+    {
+      "family": "Zafir",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Zafir.ttf"
+      ]
+    },
+    {
+      "family": "Zesty",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Zesty Scribs.otf"
+      ]
+    },
+    {
+      "family": "Zhabuki",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Zhabuki-Outline.ttf",
+        "Zhabuki-Regular.ttf"
+      ]
+    },
+    {
+      "family": "vacelyn",
+      "suggestedCategory": "sans-serif",
+      "confidence": "low",
+      "method": "default",
+      "files": [
+        "Vacelyn.ttf"
+      ]
+    }
+  ]
+}
