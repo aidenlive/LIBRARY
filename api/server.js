@@ -1,13 +1,19 @@
 #!/usr/bin/env node
 
 /**
- * Typography Public API Server
- * REST API for font catalog and CSS generation
+ * Asset Library Public API Server
+ * REST API for fonts, icons, and asset catalog
  *
- * Endpoints:
+ * Font Endpoints:
  *   GET  /api/v1/fonts           - List all fonts
  *   GET  /api/v1/fonts/:family   - Get single font details
  *   GET  /css                    - Generate @font-face CSS
+ *
+ * Icon Endpoints:
+ *   GET  /api/v1/icons           - List all icons
+ *   GET  /api/v1/icons/providers - List all icon providers
+ *   GET  /api/v1/icons/:provider - Get icons for a provider
+ *   GET  /api/v1/icons/:provider/:name - Get single icon details
  */
 
 import express from 'express';
@@ -26,8 +32,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Load fonts database
+// Load databases
 let fontsDB = null;
+let iconsDB = null;
 
 async function loadFontsDatabase() {
   try {
@@ -37,6 +44,18 @@ async function loadFontsDatabase() {
     console.log(`✓ Loaded ${fontsDB.metadata.totalFamilies} font families`);
   } catch (error) {
     console.error('✗ Failed to load fonts database:', error.message);
+    process.exit(1);
+  }
+}
+
+async function loadIconsDatabase() {
+  try {
+    const dbPath = path.join(__dirname, '../data/icons-api-db.json');
+    const data = await fs.readFile(dbPath, 'utf-8');
+    iconsDB = JSON.parse(data);
+    console.log(`✓ Loaded ${iconsDB.metadata.totalIcons} icons from ${iconsDB.metadata.totalProviders} provider(s)`);
+  } catch (error) {
+    console.error('✗ Failed to load icons database:', error.message);
     process.exit(1);
   }
 }
@@ -211,7 +230,7 @@ app.get('/css', (req, res) => {
 
 /**
  * GET /api/v1/categories
- * List all available categories
+ * List all available font categories
  */
 app.get('/api/v1/categories', (req, res) => {
   const categories = {};
@@ -226,25 +245,247 @@ app.get('/api/v1/categories', (req, res) => {
   });
 });
 
+// ============================================================================
+// ICON ENDPOINTS
+// ============================================================================
+
+/**
+ * GET /api/v1/icons/providers
+ * List all icon providers
+ */
+app.get('/api/v1/icons/providers', (req, res) => {
+  const providers = Object.keys(iconsDB.providers).map(key => {
+    const provider = iconsDB.providers[key];
+    return {
+      key: key,
+      name: provider.provider,
+      displayName: provider.displayName,
+      description: provider.description,
+      license: provider.license,
+      website: provider.website,
+      iconCount: provider.count,
+      variants: provider.variants,
+      formats: provider.formats,
+      categories: provider.categories,
+      version: provider.version
+    };
+  });
+
+  res.json({
+    providers: providers,
+    metadata: {
+      total: providers.length
+    }
+  });
+});
+
+/**
+ * GET /api/v1/icons
+ * List all icons across all providers
+ */
+app.get('/api/v1/icons', (req, res) => {
+  const { provider, category, variant, search, limit = 100, offset = 0 } = req.query;
+
+  const allIcons = [];
+
+  // Collect icons from all providers
+  for (const [providerKey, providerData] of Object.entries(iconsDB.providers)) {
+    // Filter by provider if specified
+    if (provider && provider !== providerKey) {
+      continue;
+    }
+
+    for (const [iconKey, iconData] of Object.entries(providerData.icons)) {
+      // Filter by category
+      if (category && iconData.category !== category) {
+        continue;
+      }
+
+      // Filter by variant availability
+      if (variant && !iconData.variants.includes(variant)) {
+        continue;
+      }
+
+      // Search filter
+      if (search) {
+        const searchLower = search.toLowerCase();
+        const matchesName = iconData.name.includes(searchLower);
+        const matchesTags = iconData.tags.some(tag => tag.includes(searchLower));
+
+        if (!matchesName && !matchesTags) {
+          continue;
+        }
+      }
+
+      allIcons.push({
+        provider: providerKey,
+        ...iconData
+      });
+    }
+  }
+
+  // Pagination
+  const start = parseInt(offset);
+  const end = start + parseInt(limit);
+  const paginatedIcons = allIcons.slice(start, end);
+
+  res.json({
+    items: paginatedIcons,
+    metadata: {
+      total: allIcons.length,
+      returned: paginatedIcons.length,
+      limit: parseInt(limit),
+      offset: parseInt(offset),
+      hasMore: end < allIcons.length
+    }
+  });
+});
+
+/**
+ * GET /api/v1/icons/:provider
+ * Get all icons for a specific provider
+ */
+app.get('/api/v1/icons/:provider', (req, res) => {
+  const providerKey = req.params.provider.toLowerCase();
+  const provider = iconsDB.providers[providerKey];
+
+  if (!provider) {
+    return res.status(404).json({
+      error: 'Provider not found',
+      message: `Icon provider "${req.params.provider}" not found`,
+      availableProviders: Object.keys(iconsDB.providers)
+    });
+  }
+
+  const { category, variant, search, limit = 100, offset = 0 } = req.query;
+
+  let icons = Object.values(provider.icons);
+
+  // Filter by category
+  if (category) {
+    icons = icons.filter(icon => icon.category === category);
+  }
+
+  // Filter by variant
+  if (variant) {
+    icons = icons.filter(icon => icon.variants.includes(variant));
+  }
+
+  // Search filter
+  if (search) {
+    const searchLower = search.toLowerCase();
+    icons = icons.filter(icon => {
+      const matchesName = icon.name.includes(searchLower);
+      const matchesTags = icon.tags.some(tag => tag.includes(searchLower));
+      return matchesName || matchesTags;
+    });
+  }
+
+  // Pagination
+  const start = parseInt(offset);
+  const end = start + parseInt(limit);
+  const paginatedIcons = icons.slice(start, end);
+
+  res.json({
+    provider: {
+      key: providerKey,
+      name: provider.provider,
+      displayName: provider.displayName,
+      description: provider.description,
+      license: provider.license,
+      website: provider.website,
+      variants: provider.variants,
+      formats: provider.formats,
+      categories: provider.categories
+    },
+    items: paginatedIcons,
+    metadata: {
+      total: icons.length,
+      returned: paginatedIcons.length,
+      limit: parseInt(limit),
+      offset: parseInt(offset),
+      hasMore: end < icons.length
+    }
+  });
+});
+
+/**
+ * GET /api/v1/icons/:provider/:name
+ * Get details for a single icon
+ */
+app.get('/api/v1/icons/:provider/:name', (req, res) => {
+  const providerKey = req.params.provider.toLowerCase();
+  const iconName = req.params.name.toLowerCase();
+
+  const provider = iconsDB.providers[providerKey];
+
+  if (!provider) {
+    return res.status(404).json({
+      error: 'Provider not found',
+      message: `Icon provider "${req.params.provider}" not found`
+    });
+  }
+
+  const icon = provider.icons[iconName];
+
+  if (!icon) {
+    return res.status(404).json({
+      error: 'Icon not found',
+      message: `Icon "${req.params.name}" not found in provider "${req.params.provider}"`
+    });
+  }
+
+  res.json({
+    provider: {
+      key: providerKey,
+      name: provider.provider,
+      displayName: provider.displayName,
+      license: provider.license,
+      website: provider.website
+    },
+    icon: icon
+  });
+});
+
 /**
  * GET /api/v1/stats
  * Get API statistics
  */
 app.get('/api/v1/stats', (req, res) => {
   const stats = {
-    totalFamilies: fontsDB.metadata.totalFamilies,
-    totalVariants: fontsDB.metadata.totalVariants,
-    version: fontsDB.metadata.version,
-    generated: fontsDB.metadata.generated
+    fonts: {
+      totalFamilies: fontsDB.metadata.totalFamilies,
+      totalVariants: fontsDB.metadata.totalVariants,
+      version: fontsDB.metadata.version,
+      generated: fontsDB.metadata.generated
+    },
+    icons: {
+      totalProviders: iconsDB.metadata.totalProviders,
+      totalIcons: iconsDB.metadata.totalIcons,
+      generated: iconsDB.metadata.generatedAt
+    }
   };
 
-  // Category breakdown
-  const categories = {};
+  // Font category breakdown
+  const fontCategories = {};
   for (const font of Object.values(fontsDB.fonts)) {
-    categories[font.category] = (categories[font.category] || 0) + 1;
+    fontCategories[font.category] = (fontCategories[font.category] || 0) + 1;
   }
 
-  stats.categories = categories;
+  stats.fonts.categories = fontCategories;
+
+  // Icon statistics per provider
+  const iconProviders = {};
+  for (const [key, provider] of Object.entries(iconsDB.providers)) {
+    iconProviders[key] = {
+      name: provider.displayName,
+      count: provider.count,
+      variants: provider.variants.length,
+      categories: provider.categories.length
+    };
+  }
+
+  stats.icons.providers = iconProviders;
 
   res.json(stats);
 });
@@ -255,20 +496,42 @@ app.get('/api/v1/stats', (req, res) => {
  */
 app.get('/', (req, res) => {
   res.json({
-    name: 'Typography Public API',
-    version: '1.0.0',
-    description: 'Free, open-source typography API with 441 font families',
+    name: 'Asset Library Public API',
+    version: '2.0.0',
+    description: 'Free, open-source API for fonts and icons',
+    assets: {
+      fonts: `${fontsDB.metadata.totalFamilies} font families`,
+      icons: `${iconsDB.metadata.totalIcons} icons from ${iconsDB.metadata.totalProviders} provider(s)`
+    },
     endpoints: {
-      '/api/v1/fonts': 'List all fonts (supports ?category=, ?subset=, ?sort=)',
-      '/api/v1/fonts/:family': 'Get single font details',
-      '/api/v1/categories': 'List all categories',
-      '/api/v1/stats': 'Get API statistics',
-      '/css?family=Name:wght@400;700': 'Generate @font-face CSS'
+      fonts: {
+        '/api/v1/fonts': 'List all fonts (supports ?category=, ?subset=, ?sort=)',
+        '/api/v1/fonts/:family': 'Get single font details',
+        '/api/v1/categories': 'List font categories',
+        '/css?family=Name:wght@400;700': 'Generate @font-face CSS'
+      },
+      icons: {
+        '/api/v1/icons': 'List all icons (supports ?provider=, ?category=, ?variant=, ?search=, ?limit=, ?offset=)',
+        '/api/v1/icons/providers': 'List all icon providers',
+        '/api/v1/icons/:provider': 'Get icons for a provider',
+        '/api/v1/icons/:provider/:name': 'Get single icon details'
+      },
+      general: {
+        '/api/v1/stats': 'Get API statistics'
+      }
     },
     examples: {
-      listFonts: `${req.protocol}://${req.get('host')}/api/v1/fonts?category=sans-serif&sort=alpha`,
-      getFont: `${req.protocol}://${req.get('host')}/api/v1/fonts/aeonik`,
-      generateCSS: `${req.protocol}://${req.get('host')}/css?family=Aeonik:wght@400;700&display=swap`
+      fonts: {
+        listFonts: `${req.protocol}://${req.get('host')}/api/v1/fonts?category=sans-serif&sort=alpha`,
+        getFont: `${req.protocol}://${req.get('host')}/api/v1/fonts/aeonik`,
+        generateCSS: `${req.protocol}://${req.get('host')}/css?family=Aeonik:wght@400;700&display=swap`
+      },
+      icons: {
+        listProviders: `${req.protocol}://${req.get('host')}/api/v1/icons/providers`,
+        listIcons: `${req.protocol}://${req.get('host')}/api/v1/icons?provider=phosphor&limit=20`,
+        searchIcons: `${req.protocol}://${req.get('host')}/api/v1/icons?search=arrow&category=arrows`,
+        getIcon: `${req.protocol}://${req.get('host')}/api/v1/icons/phosphor/acorn`
+      }
     },
     documentation: 'https://github.com/aidenlive/LIBRARY'
   });
@@ -279,19 +542,26 @@ app.get('/', (req, res) => {
  */
 async function start() {
   await loadFontsDatabase();
+  await loadIconsDatabase();
 
   app.listen(PORT, () => {
     console.log(`\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
-    console.log(`  Typography Public API`);
+    console.log(`  Asset Library Public API`);
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
     console.log(`  Server running on port ${PORT}`);
     console.log(`  http://localhost:${PORT}\n`);
-    console.log(`  Endpoints:`);
+    console.log(`  Font Endpoints:`);
     console.log(`    GET  /api/v1/fonts`);
     console.log(`    GET  /api/v1/fonts/:family`);
     console.log(`    GET  /api/v1/categories`);
-    console.log(`    GET  /api/v1/stats`);
     console.log(`    GET  /css?family=Name:wght@400;700\n`);
+    console.log(`  Icon Endpoints:`);
+    console.log(`    GET  /api/v1/icons`);
+    console.log(`    GET  /api/v1/icons/providers`);
+    console.log(`    GET  /api/v1/icons/:provider`);
+    console.log(`    GET  /api/v1/icons/:provider/:name\n`);
+    console.log(`  General:`);
+    console.log(`    GET  /api/v1/stats\n`);
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
   });
 }
